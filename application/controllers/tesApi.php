@@ -30,8 +30,14 @@ class TesApi extends \Restserver\Libraries\REST_Controller{
             "SELECT * FROM `pariwisata_sub_jenis`"
         )->result_array();
         $this->response(
-            ['status'=>true, 
-            'data'=>$transaksi]);
+            ['msg_main'=> [
+                'status'           => true,
+                'msg'           => "get data success"
+            ] ,
+            'msg_detail'=> [
+                'item'           => $transaksi]
+            ]
+        );
 
     }
 }
