@@ -27,7 +27,7 @@ class TesApi extends \Restserver\Libraries\REST_Controller{
     public function sub_get(){
 
         $transaksi = $this->db->query(
-            "SELECT * FROM `pariwisata_sub_jenis`"
+            "SELECT * FROM `pariwisata_sub_jenis` LIMIT 15"
         )->result_array();
         $this->response(
             ['msg_main'=> [
