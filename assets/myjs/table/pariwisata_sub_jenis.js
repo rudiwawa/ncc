@@ -14,7 +14,6 @@ function buildTbody(tableX) {
 	
 	{ "data": "id_jenis" },
 	{ "data": "ket_sub_jenis" },
-	,
 	// { "msg_detail.item": "ket_sub_jenis" } ini salah ,
 		{
 			"render": function () {
