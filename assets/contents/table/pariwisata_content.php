@@ -10,7 +10,6 @@
                         <th>Lokasi</th>
                         <th>Deskripsi</th>
                         <th>Telp</th>
-                        <th>Time Update</th>
                         <th>Admin</th>
                     </tr>
                 </thead>

@@ -9,8 +9,6 @@
                         <th>No</th>
                         <th>Keterangan</th>
                         <th>Gambar</th>
-                        <th>Is Delete</th>
-                        <th>Time Update</th>
                         <th>Admin</th>
                     </tr>
                 </thead>

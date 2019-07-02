@@ -3,6 +3,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 
 
+
+
+
 <?php if($jquery):?>
     <script src='<?=base_url()?>assets/assets/plugins/jquery/jquery.min.js'></script>
 <?php endif; ?>
@@ -57,5 +60,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <script src="<?=base_url()?>assets/myjs/app.js"></script>
 <?php endif; ?>
 <script src="<?=base_url()?>assets/myjs/tableStyle.js"></script>
+
+
+<!-- Bootstrap modal -->
+    <!-- Sweet-Alert  -->
+<!--     <script src="<?=base_url()?>assets/assets/plugins/sweetalert/sweetalert.min.js"></script>
+    <script src="<?=base_url()?>assets/assets/plugins/sweetalert/jquery.sweet-alert.custom.js"></script> -->
+
+
+
 </body>
 </html>

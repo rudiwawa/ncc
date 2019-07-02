@@ -15,7 +15,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | path to your installation.
 |
 */
-$config['base_url']	= 'https://localhost/pkl/app';
+$config['base_url']	= '';
 
 /*
 |--------------------------------------------------------------------------

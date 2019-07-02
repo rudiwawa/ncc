@@ -51,7 +51,7 @@
             <div class="container-fluid" >
 
 
-
+                <div id="divmodals"></div>
                 <div id="content"></div>
                 <?php  
                 $this->load->view('template/right-sidebar');
