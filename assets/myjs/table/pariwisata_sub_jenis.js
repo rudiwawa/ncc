@@ -20,8 +20,8 @@ function buildTbody(tableX) {
 	// { "msg_detail.item": "ket_sub_jenis" } ini salah ,
 	{
 		"render": function (data, type, JsonResultRow, meta) {
-			return '<a href="javascript:void(0)" data-toggle="modal" data-target="#modal_form" data-original-title="Edit" onclick ="update_modal('+JsonResultRow.id_sub+')"><i class="fa fa-pencil text-inverse m-r-10"></i></a>'
-			+ '<a href="javascript:void(0)" data-toggle="tooltip" data-original-title="Close"><i class="fa fa-close text-danger"></i></a>'
+			return '<a href="javascript:void(0)" data-toggle="modal" data-target="#modal_form" data-original-title="Edit" onclick ="update_modal('+"'"+JsonResultRow.id_sub+"'"+')"><i class="fa fa-pencil text-inverse m-r-10"></i></a>'
+			+ '<a href="javascript:void(0)" data-toggle="tooltip" data-original-title="Close" onclick ="conf_delete('+"'"+JsonResultRow.id_sub+"'"+')"><i class="fa fa-close text-danger"></i></a>'
 			;
 		}
 
@@ -38,6 +38,12 @@ function update_modal(id){
     $('.form-group').removeClass('has-error'); // clear error class
     $('.help-block').empty(); // clear error string
     console.log("update_modal"+id);
+    $.when(ket_jenis_get()).then(function( x ) {
+        get_placehorder(id);
+    });
+
+    
+    
 
 }
 
@@ -46,10 +52,10 @@ function update_save() {
 	{
 		console.log("div gaada");
 	}
-	var id = ID;
+	var id_sub = ID;
 	var id_jenis = $("select[name='id_jenis']").val();
 	var ket_sub_jenis = $("textarea[name='ket_sub_jenis']").val();
-	var json = {id,id_jenis,ket_sub_jenis};
+	var json = {id_sub,id_jenis,ket_sub_jenis};
     //Ajax Load data from ajax
     console.log(ID);
     console.log(json);
@@ -76,7 +82,99 @@ function update_save() {
         },
         complete : function(){
         	console.log("loading");
+            swal("Sukses", "Data berhasil di Update", "success");
 
         }
     });
 }
+
+function get_placehorder(id) {
+	var json = {id};
+	var data;
+	console.log("get_placehorder"+id)
+	$.ajax({
+		url : window.url["data_byId"],
+		type: "POST",
+		dataType: "JSON",
+		data: json,
+        beforeSend : function(){
+        	console.log("before send get_placehorder");
+        },
+        success : function(dataObject){
+        	if (dataObject.msg_main.status==true) {
+        		data = dataObject.msg_detail.item;
+        		console.log("sukses get Placehorder"+data[0].ket_jenis);
+                // $( "#ket_jenis_select :option[value='2']" ).remove();
+                $("select[name='id_jenis']").append("<option value="+data[0].id_jenis+" selected >"+data[0].ket_jenis+"</option>");
+                $("textarea[name='ket_sub_jenis']").val(data[0].ket_sub_jenis);
+                console.log(data[0].id_sub);
+
+        		// console.log("placehorder");
+        	}
+        	else{
+        		alert("get data gagal \n"+ dataObject.msg_detail.item );
+        	}
+
+        },
+        complete : function(){
+        	console.log("loading");
+            // $("select[name='id_jenis']").hide().html(data).fadeIn('fast');
+
+        }
+    });
+	
+}
+
+function conf_delete(id) {
+    swal("apakah anda yakin ingin menghapus data?", {
+      buttons: {
+        cancel: "TIDAK",
+        catch: {
+            text: "Hapus",
+            value: "delete",
+        },
+    },
+})
+    .then((value) => {
+      switch (value) {
+
+        case "delete":
+        delete_byId(id);
+        break;
+        default:
+        // swal("cancel");
+    }
+});
+}
+
+function delete_byId(id) {
+    var json = {id};
+    $.ajax({
+        url : window.url[TableX],
+        type: "DELETE",
+        dataType: "JSON",
+        headers: {"X-HTTP-Method-Override": "DELETE"}, // X-HTTP-Method-Override set to PUT
+        data: json,
+        beforeSend : function(){
+            console.log("before send");
+        },
+        success : function(dataObject){
+            if (dataObject.msg_main.status==true) {
+                swal("Sukses", "Data berhasil di Hapus", "success");
+            }
+            else{
+                swal("Error", "Data tidak berhasil di Hapus", "error");
+            }
+
+        },
+        complete : function(){
+            console.log("loading");
+            refreshTableX(TableX);
+            
+
+        }
+    });
+}
+
+
+

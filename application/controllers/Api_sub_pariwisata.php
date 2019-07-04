@@ -36,8 +36,37 @@ class Api_sub_pariwisata extends \Restserver\Libraries\REST_Controller{
 
     }
 
-    public function index_post(){
+    public function data_byId_post(){
+        $id = $this->post('id');
+        $data = $this->Pariwisata_sub_jenis_model->get_byId($id);
+        $this->response(
+            ['msg_main'=> [
+                'status'           => true,
+                'msg'           => "get data success"
+            ] ,
+            'msg_detail'=> [
+                'item'           => $data]
+            ]
+        );
 
+    }
+
+    public function ket_jenis_get(){
+        $data = $this->Pariwisata_sub_jenis_model->ket_jenis_get();
+        $this->response(
+            ['msg_main'=> [
+                'status'           => true,
+                'msg'           => "get data success!"
+            ] ,
+            'msg_detail'=> [
+                'item'           => $data]
+            ]
+        );
+
+    }
+
+    public function index_post(){
+        $id = $this->put('id');
         $data = array(
             'id_jenis'       => $this->post('id_jenis'),
             'ket_sub_jenis'       => $this->post('ket_sub_jenis'),
@@ -46,7 +75,7 @@ class Api_sub_pariwisata extends \Restserver\Libraries\REST_Controller{
             'id_admin'          => "admin2");
         $query = $this->Pariwisata_sub_jenis_model->post_All($data);
         if ($query===TRUE) {
-         $this->response(
+           $this->response(
             ['msg_main'=> [
                 'status'           => true,
                 'msg'           => "UPDATE data success"
@@ -55,7 +84,7 @@ class Api_sub_pariwisata extends \Restserver\Libraries\REST_Controller{
                 'item'           => $query]
             ]
         );
-     } else {
+       } else {
         $this->response(
             ['msg_main'=> [
                 'status'           => false,
@@ -68,37 +97,65 @@ class Api_sub_pariwisata extends \Restserver\Libraries\REST_Controller{
 
     }
 }
-    public function index_put(){
-        $id = $this->put('id');
-        $data = array(
-            'id_jenis'       => $this->put('id_jenis'),
-            'ket_sub_jenis'       => $this->put('ket_sub_jenis'),
-            'id_admin'          => "admin2",
-            'time_update'          => $this->now
-        );
-        $query = $this->Pariwisata_sub_jenis_model->put_byId($id,$data);
-        if ($query===TRUE) {
-         $this->response(
-            ['msg_main'=> [
-                'status'           => true,
-                'msg'           => "UPDATE data success"
-            ] ,
-            'msg_detail'=> [
-                'item'           => $query]
-            ]
-        );
-     } else {
-        $this->response(
-            ['msg_main'=> [
-                'status'           => false,
-                'msg'           => "UPDATE data FAILED"
-            ] ,
-            'msg_detail'=> [
-                'item'           => [$query,$id]]
-            ]
-        );
-    }
+public function index_put(){
+    $id = $this->put('id_sub');
+    $data = array(
+        'id_jenis'       => $this->put('id_jenis'),
+        'ket_sub_jenis'       => $this->put('ket_sub_jenis'),
+        'id_admin'          => "admin2",
+        'time_update'          => $this->now
+    );
+    $query = $this->Pariwisata_sub_jenis_model->put_byId($id,$data);
+    if ($query===TRUE) {
+       $this->response(
+        ['msg_main'=> [
+            'status'           => true,
+            'msg'           => "UPDATE data success"
+        ] ,
+        'msg_detail'=> [
+            'item'           => $query]
+        ]
+    );
+   } else {
+    $this->response(
+        ['msg_main'=> [
+            'status'           => false,
+            'msg'           => "UPDATE data FAILED"
+        ] ,
+        'msg_detail'=> [
+            'item'           => [$query,$id]]
+        ]
+    );
+}
 
+}
+
+
+public function index_delete(){
+    $id = $this->delete('id');
+    $query = $this->Pariwisata_sub_jenis_model->delete_byId($id);
+    if ($query===TRUE) {
+       $this->response(
+        ['msg_main'=> [
+            'status'           => true,
+            'msg'           => "DELETE data success"
+        ] ,
+        'msg_detail'=> [
+            'item'           => $query]
+        ]
+    );
+   } else {
+    $this->response(
+        ['msg_main'=> [
+            'status'           => false,
+            'msg'           => "DELETE data FAILED"
+        ] ,
+        'msg_detail'=> [
+            'item'           => $query,$id]
+        ]
+    );
+
+}
 }
 }
 ?>

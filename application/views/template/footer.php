@@ -62,10 +62,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <script src="<?=base_url()?>assets/myjs/tableStyle.js"></script>
 
 
-<!-- Bootstrap modal -->
-    <!-- Sweet-Alert  -->
-<!--     <script src="<?=base_url()?>assets/assets/plugins/sweetalert/sweetalert.min.js"></script>
-    <script src="<?=base_url()?>assets/assets/plugins/sweetalert/jquery.sweet-alert.custom.js"></script> -->
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 
 
