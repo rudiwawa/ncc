@@ -68,15 +68,14 @@ class Api_sub_pariwisata extends \Restserver\Libraries\REST_Controller{
     public function index_post(){
         $id = $this->Pariwisata_sub_jenis_model->get_id();
         // var_dump($id);
-        // $data = array(
-        //     'id_sub'       => $id[0]['id'],
-        //     'id_jenis'       => $this->post('id_jenis'),
-        //     'ket_sub_jenis'       => $this->post('ket_sub_jenis'),
-        //     'is_delete'          => '0',
-        //     'time_update'          => $this->now,
-        //     'id_admin'          => "admin2");
-        // $query = $this->Pariwisata_sub_jenis_model->post_All($data);
-        $query = $this->Pariwisata_sub_jenis_model->post_All();
+        $data = array(
+            'id_sub'       => $id[0]['id'],
+            'id_jenis'       => $this->post('id_jenis'),
+            'ket_sub_jenis'       => $this->post('ket_sub_jenis'),
+            'is_delete'          => '0',
+            'time_update'          => $this->now,
+            'id_admin'          => "admin2");
+        $query = $this->Pariwisata_sub_jenis_model->post_All($data);
         if ($query===TRUE) {
            $this->response(
             ['msg_main'=> [
