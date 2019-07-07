@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+
 // CONFIG URL API
 window.bashUrl = "/app";
 window.url = new Array();
@@ -33,17 +34,20 @@ function buildTableX(tableX){
 	//load table
 	$( "#content" ).load( "./assets/contents/table/"+tableX+".php", function() {
 		//load modelnya tableX
-		$( "#divmodals" ).load( "./assets/contents/modal/"+tableX+".php", function() {
+		// $( "#divmodals" ).load( "./assets/contents/modal/"+tableX+"_update.php", function() {
 			$.getScript('./assets/myjs/table/'+tableX+'.js', function()
 			{
 				buildTbody(tableX);
 			});
-		});
+		// });
 
 	});
 }
 
 function refreshTableX(tableX){
+	//mencegah scroll saat
+	var clientHeight = $('#content').height();
+	$('#content').height(clientHeight);
 	$( "#content" ).load( "./assets/contents/table/"+tableX+".php", function() {
 		//load modelnya tableX
 		buildTbody(tableX);

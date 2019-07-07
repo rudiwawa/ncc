@@ -66,14 +66,17 @@ class Api_sub_pariwisata extends \Restserver\Libraries\REST_Controller{
     }
 
     public function index_post(){
-        $id = $this->put('id');
-        $data = array(
-            'id_jenis'       => $this->post('id_jenis'),
-            'ket_sub_jenis'       => $this->post('ket_sub_jenis'),
-            'is_delete'          => 0,
-            'time_update'          => $this->now,
-            'id_admin'          => "admin2");
-        $query = $this->Pariwisata_sub_jenis_model->post_All($data);
+        $id = $this->Pariwisata_sub_jenis_model->get_id();
+        // var_dump($id);
+        // $data = array(
+        //     'id_sub'       => $id[0]['id'],
+        //     'id_jenis'       => $this->post('id_jenis'),
+        //     'ket_sub_jenis'       => $this->post('ket_sub_jenis'),
+        //     'is_delete'          => '0',
+        //     'time_update'          => $this->now,
+        //     'id_admin'          => "admin2");
+        // $query = $this->Pariwisata_sub_jenis_model->post_All($data);
+        $query = $this->Pariwisata_sub_jenis_model->post_All();
         if ($query===TRUE) {
            $this->response(
             ['msg_main'=> [
@@ -81,7 +84,7 @@ class Api_sub_pariwisata extends \Restserver\Libraries\REST_Controller{
                 'msg'           => "UPDATE data success"
             ] ,
             'msg_detail'=> [
-                'item'           => $query]
+                'item'           => $query,$id]
             ]
         );
        } else {
@@ -91,7 +94,7 @@ class Api_sub_pariwisata extends \Restserver\Libraries\REST_Controller{
                 'msg'           => "UPDATE data FAILED"
             ] ,
             'msg_detail'=> [
-                'item'           => $query]
+                'item'           => $query,$id]
             ]
         );
 

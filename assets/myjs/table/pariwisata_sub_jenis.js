@@ -20,7 +20,7 @@ function buildTbody(tableX) {
 	// { "msg_detail.item": "ket_sub_jenis" } ini salah ,
 	{
 		"render": function (data, type, JsonResultRow, meta) {
-			return '<a href="javascript:void(0)" data-toggle="modal" data-target="#modal_form" data-original-title="Edit" onclick ="update_modal('+"'"+JsonResultRow.id_sub+"'"+')"><i class="fa fa-pencil text-inverse m-r-10"></i></a>'
+			return '<a href="javascript:void(0)" data-toggle="modal"  data-original-title="Edit" style="margin : 10px 10px;" onclick ="update_modal('+"'"+JsonResultRow.id_sub+"'"+')"><i class="fa fa-pencil text-inverse m-r-10"></i></a>'
 			+ '<a href="javascript:void(0)" data-toggle="tooltip" data-original-title="Close" onclick ="conf_delete('+"'"+JsonResultRow.id_sub+"'"+')"><i class="fa fa-close text-danger"></i></a>'
 			;
 		}
@@ -32,18 +32,39 @@ function buildTbody(tableX) {
 // //error solved
 
 function update_modal(id){
-	ID = id;
-	save_method = 'update';
-    $('#form')[0].reset(); // reset form on modals
-    $('.form-group').removeClass('has-error'); // clear error class
-    $('.help-block').empty(); // clear error string
-    console.log("update_modal"+id);
-    $.when(ket_jenis_get()).then(function( x ) {
-        get_placehorder(id);
-    });
+    ID = id;
+    $( "#divmodals" ).load( "./assets/contents/modal/"+TableX+"_update.php", function() {
+                        $('#form')[0].reset(); // reset form on modals
+                $('.form-group').removeClass('has-error'); // clear error class
+                $('.help-block').empty(); // clear error string
+                console.log("insert_modal");
+                $('#modal_form_update').modal('show');
+                $.when(ket_jenis_get()).then(function( x ) {
+                    get_placehorder(id);
+                });
+            });
 
-    
-    
+    // ID = id;
+    // save_method = 'update';
+    // $('#form')[0].reset(); // reset form on modals
+    // $('.form-group').removeClass('has-error'); // clear error class
+    // $('.help-block').empty(); // clear error string
+    // console.log("update_modal"+id);
+    // $.when(ket_jenis_get()).then(function( x ) {
+    //     get_placehorder(id);
+    // });
+}
+
+function insert_modal(){
+    $( "#divmodals" ).load( "./assets/contents/modal/"+TableX+"_insert.php", function() {
+        $.when(ket_jenis_get()).then(function( x ) {
+                $('#form')[0].reset(); // reset form on modals
+                $('.form-group').removeClass('has-error'); // clear error class
+                $('.help-block').empty(); // clear error string
+                console.log("insert_modal");
+                $('#modal_form_insert').modal('show');
+            });
+    });
 
 }
 
@@ -68,11 +89,12 @@ function update_save() {
         data: json,
         beforeSend : function(){
         	console.log("before send");
+            $("#content").append('')
         },
         success : function(dataObject){
         	if (dataObject.msg_main.status==true) {
-        		$('#modal_form').modal('toggle');
-        		refreshTableX(TableX);
+        		
+        		
         		// $(':input').val('');
         	}
         	else{
@@ -81,8 +103,44 @@ function update_save() {
 
         },
         complete : function(){
-        	console.log("loading");
-            swal("Sukses", "Data berhasil di Update", "success");
+            $('#modal_form_update').modal('toggle');
+            refreshTableX(TableX);
+            // swal("Sukses", "Data berhasil di Update", "success");
+
+        }
+    });
+}
+
+function insert_save() {
+    var id_jenis = $("select[name='id_jenis']").val();
+    var ket_sub_jenis = $("textarea[name='ket_sub_jenis']").val();
+    var json = {id_jenis,ket_sub_jenis};
+    //Ajax Load data from ajax
+    console.log(json);
+    console.log(TableX);
+    $.ajax({
+        url : window.url[TableX],
+        type: "POST",
+        dataType: "JSON",
+        data: json,
+        beforeSend : function(){
+            console.log("before send");
+        },
+        success : function(dataObject){
+            if (dataObject.msg_main.status==true) {
+                $('#modal_form_insert').modal('toggle');
+                
+                // $(':input').val('');
+            }
+            else{
+                alert("register gagal \n"+ dataObject.msg_detail.item );
+            }
+
+        },
+        complete : function(){
+            console.log("loading");
+            refreshTableX(TableX);
+            // swal("Sukses", "Data berhasil di Update", "success");
 
         }
     });
@@ -160,7 +218,7 @@ function delete_byId(id) {
         },
         success : function(dataObject){
             if (dataObject.msg_main.status==true) {
-                swal("Sukses", "Data berhasil di Hapus", "success");
+                // swal("Sukses", "Data berhasil di Hapus", "success");
             }
             else{
                 swal("Error", "Data tidak berhasil di Hapus", "error");
