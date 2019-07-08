@@ -1,8 +1,8 @@
 <?php
-class Pariwisata_sub_jenis_model extends CI_Model {
+class Pariwisata_jenis_model extends CI_Model {
 
 	public function get_All(){
-		$query = $this->db->query("SELECT id_sub,pariwisata_jenis.ket_jenis,pariwisata_jenis.id_jenis,ket_sub_jenis,pariwisata_sub_jenis.is_delete,pariwisata_sub_jenis.time_update,pariwisata_sub_jenis.id_admin FROM pariwisata_sub_jenis JOIN pariwisata_jenis ON pariwisata_sub_jenis.id_jenis = pariwisata_jenis.id_jenis AND  pariwisata_sub_jenis.is_delete='0' ORDER BY id_sub DESC");
+		$query = $this->db->query("SELECT * FROM `pariwisata_jenis` ORDER BY id_jenis DESC");
 
 		return $query->result_array();
 	}
@@ -24,12 +24,15 @@ class Pariwisata_sub_jenis_model extends CI_Model {
 	}
 
 	public function put_byId($id,$data){
-        $data = array(
-            'filename'      => $filename,
-            'title'         => $title
-        );
-        $this->db->insert('files', $data);
-        return $this->db->insert_id();
+		$cek = $this->db->get_where('pariwisata_sub_jenis', array('id_sub' => $id)); 
+		$count = $cek->num_rows();
+		if ($count === 0) {
+			return "ID not Exist";
+		}
+		else{
+			$this->db->where('id_sub', $id);
+			return $this->db->update('pariwisata_sub_jenis', $data);
+		}
 		
 	}
 

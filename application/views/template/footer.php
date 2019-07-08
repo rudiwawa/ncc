@@ -63,7 +63,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
+<script src="<?=base_url()?>assets/assets/plugins/dropify/dist/js/dropify.min.js"></script>
 
 
 </body>

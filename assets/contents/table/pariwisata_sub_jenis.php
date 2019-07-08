@@ -13,7 +13,7 @@
                     <tr>
                         <th>No</th>
                         <th>Jenis</th>
-                        <th>Keterangan</th>
+                        <th>Sub Jenis</th>
                         <th>Action</th>
                     </tr>
                 </thead>

@@ -41,7 +41,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 	<!--alerts CSS -->
     <!-- <link href="<?=base_url()?>assets/assets/plugins/sweetalert/sweetalert.css" rel="stylesheet" type="text/css"> -->
-
+	<link rel="stylesheet" href="<?=base_url()?>assets/assets/plugins/dropify/dist/css/dropify.min.css">
+	
 
 
 

@@ -4,7 +4,7 @@ $(document).ready(function() {
 // CONFIG URL API
 window.bashUrl = "/app";
 window.url = new Array();
-window.url["pariwisata_jenis"] = window.bashUrl +"/index.php/tesapi/sub";
+window.url["pariwisata_jenis"] = window.bashUrl +"/index.php/Api_jenis_pariwisata";
 window.url["pariwisata_sub_jenis"] = window.bashUrl +"/index.php/Api_sub_pariwisata";
 window.url["pariwisata_content"] = window.bashUrl +"/index.php/tesapi/sub";
 window.url["ket_jenis"] = window.bashUrl +"/index.php/Api_sub_pariwisata/ket_jenis";
