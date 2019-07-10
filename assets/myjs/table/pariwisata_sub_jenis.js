@@ -20,8 +20,8 @@ function buildTbody(tableX) {
 	// { "msg_detail.item": "ket_sub_jenis" } ini salah ,
 	{
 		"render": function (data, type, JsonResultRow, meta) {
-			return '<a href="javascript:void(0)" data-toggle="modal"  data-original-title="Edit" style="margin : 10px 10px;" onclick ="update_modal('+"'"+JsonResultRow.id_sub+"'"+')"><i class="fa fa-pencil text-inverse m-r-10"></i></a>'
-			+ '<a href="javascript:void(0)" data-toggle="tooltip" data-original-title="Close" onclick ="conf_delete('+"'"+JsonResultRow.id_sub+"'"+')"><i class="fa fa-close text-danger"></i></a>'
+			return '<button class="btn btn-info edit_sub"  style="width: 40px; margin-right : 5px;" onclick ="update_modal('+"'"+JsonResultRow.id_sub+"'"+')"><i class="fa fa-pencil-square-o"></i></button>'
+			+ '<button class="btn btn-danger delete_sub" style="width: 40px;" onclick ="conf_delete('+"'"+JsonResultRow.id_sub+"'"+')"><i class="fa fa-trash-o"></i></button>'
 			;
 		}
 
@@ -33,6 +33,7 @@ function buildTbody(tableX) {
 
 function update_modal(id){
     ID = id;
+    $('.edit_sub').prop('disabled', true);
     $( "#divmodals" ).load( "./assets/contents/modal/"+TableX+"_update.php", function() {
                         $('#form')[0].reset(); // reset form on modals
                 $('.form-group').removeClass('has-error'); // clear error class
@@ -42,6 +43,7 @@ function update_modal(id){
                 $.when(ket_jenis_get()).then(function( x ) {
                     get_placehorder(id);
                 });
+                $('.edit_sub').prop('disabled', false);
             });
 
     // ID = id;
@@ -139,7 +141,7 @@ function insert_save() {
         },
         complete : function(){
             console.log("loading");
-            refreshTableX(TableX);
+            refreshTableX(TableX,1);
             // swal("Sukses", "Data berhasil di Update", "success");
 
         }
@@ -151,7 +153,7 @@ function get_placehorder(id) {
 	var data;
 	console.log("get_placehorder"+id)
 	$.ajax({
-		url : window.url["data_byId"],
+		url : window.url["data_byId_sub"],
 		type: "POST",
 		dataType: "JSON",
 		data: json,
@@ -227,7 +229,7 @@ function delete_byId(id) {
         },
         complete : function(){
             console.log("loading");
-            refreshTableX(TableX);
+            refreshTableX(TableX,1);
             
 
         }

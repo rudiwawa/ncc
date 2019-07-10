@@ -8,6 +8,8 @@ class Api_sub_pariwisata extends \Restserver\Libraries\REST_Controller{
   public function __construct($config = 'rest'){
     parent::__construct($config);
     $this->load->library('session');
+     $this->load->helper(array('form', 'url'));
+    $this->load->library('form_validation');
     $this->load->model('Pariwisata_sub_jenis_model');
     // $this->db->db_debug = FALSE;
     

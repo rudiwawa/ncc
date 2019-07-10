@@ -46,7 +46,7 @@ class Api_jenis_pariwisata extends \Restserver\Libraries\REST_Controller{
                 'msg'           => "get data success"
             ] ,
             'msg_detail'=> [
-                'item'           => $data]
+                'item'           => $data,$id]
             ]
         );
 
@@ -67,38 +67,89 @@ class Api_jenis_pariwisata extends \Restserver\Libraries\REST_Controller{
     }
 
     public function index_post(){
+     // $file_element_name = $this->put('img');
         $id = $this->Pariwisata_jenis_model->get_id();
-        // var_dump($id);
-        $data = array(
-            'id_sub'       => $id[0]['id'],
-            'id_jenis'       => $this->post('id_jenis'),
-            'ket_sub_jenis'       => $this->post('ket_sub_jenis'),
-            'is_delete'          => '0',
+        $config['upload_path']          = './uploads/';
+        $config['allowed_types']        = 'gif|jpg|png';
+        $config['encrypt_name'] = TRUE;
+
+        $this->load->library('upload', $config);
+    // $file = $this->input->post('img');
+// if ( ! $this->upload->do_upload($file))  ERROR ! CUMA GARA GARA SEHARUSNYA LANGSUNG NAME NYA BUKAN MASUKIN POST ANJAYYY GG CI
+        if ( ! $this->upload->do_upload('img')) {
+          $id_jenis = $this->post('id_jenis');
+        // $file_id = $this->files_model->insert_file($file['file_name'], $_POST['title']);
+          $data = array(
+            'id_jenis'       => $id[0]['id'],
+            'ket_jenis'       => $this->post('ket_jenis'),
+            'img'       => "0",
+            'img_marker'       => "0",
+            'is_delete'       => "0",
             'time_update'          => $this->now,
-            'id_admin'          => "admin2");
+            'id_admin'          => "admin1"
+        );
+          $query = $this->Pariwisata_jenis_model->post_All($data);
+          $error = array('error' => $this->upload->display_errors());
+          if ($query===TRUE) {
+             $this->response(
+                ['msg_main'=> [
+                    'status'           => true,
+                    'msg'           => "UPDATE data success"
+                ] ,
+                'msg_detail'=> [
+                    'item'           => $query, "tidak ada image",$error]
+                ]
+            );
+         } else {
+            $this->response(
+                ['msg_main'=> [
+                    'status'           => false,
+                    'msg'           => "UPDATE data FAILED"
+                ] ,
+                'msg_detail'=> [
+                    'item'           => [$query,$id_jenis],"tidak ada image",$error]
+                ]
+            );
+        }
+
+    }
+    else{
+        $id_jenis = $this->post('id_jenis');
+        $file = $this->upload->data();
+        // $file_id = $this->files_model->insert_file($file['file_name'], $_POST['title']);
+        $data = array(
+            'id_jenis'       => $id[0]['id'],
+            'ket_jenis'       => $this->post('ket_jenis'),
+            'img'       => $file['file_name'],
+            'img_marker'       => "0",
+            'is_delete'       => "0",
+            'time_update'          => $this->now,
+            'id_admin'          => "admin1"
+        );
         $query = $this->Pariwisata_jenis_model->post_All($data);
         if ($query===TRUE) {
-           $this->response(
+         $this->response(
             ['msg_main'=> [
                 'status'           => true,
                 'msg'           => "UPDATE data success"
             ] ,
             'msg_detail'=> [
-                'item'           => $query,$id]
+                'item'           => $query]
             ]
         );
-       } else {
+     } else {
         $this->response(
             ['msg_main'=> [
                 'status'           => false,
                 'msg'           => "UPDATE data FAILED"
             ] ,
             'msg_detail'=> [
-                'item'           => $query,$id]
+                'item'           => [$query,$id_jenis]]
             ]
         );
-
     }
+}
+
 }
 public function update_post(){
     // $file_element_name = $this->put('img');

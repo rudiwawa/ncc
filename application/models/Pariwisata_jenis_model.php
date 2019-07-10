@@ -10,7 +10,7 @@ class Pariwisata_jenis_model extends CI_Model {
 	public function get_byId($id)
 	{
 		$id = "'".$id."'";
-		$query = $this->db->query('SELECT id_sub,pariwisata_jenis.id_jenis,pariwisata_jenis.ket_jenis,ket_sub_jenis FROM pariwisata_sub_jenis JOIN pariwisata_jenis ON pariwisata_sub_jenis.id_jenis = pariwisata_jenis.id_jenis where id_sub='.$id);
+		$query = $this->db->query('SELECT ket_jenis FROM pariwisata_jenis where id_jenis='.$id);
 
 		return $query->result_array();
 	}
@@ -44,7 +44,7 @@ class Pariwisata_jenis_model extends CI_Model {
 
 	public function get_id()
 	{
-		$query = $this->db->query("SELECT `get_ID_sub`() AS `id`;");
+		$query = $this->db->query("SELECT `get_ID_jenis`() AS `id`;");
 		return $query->result_array();
 	}
 	public function delete_byId($id){

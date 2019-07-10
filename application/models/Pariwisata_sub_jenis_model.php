@@ -19,17 +19,21 @@ class Pariwisata_sub_jenis_model extends CI_Model {
 	{
 		$this->db->select('id_jenis,ket_jenis');
 		$this->db->from('pariwisata_jenis');
+		$this->db->where('is_delete','0');
 		$query = $this->db->get();
 		return $query->result_array();
 	}
 
 	public function put_byId($id,$data){
-        $data = array(
-            'filename'      => $filename,
-            'title'         => $title
-        );
-        $this->db->insert('files', $data);
-        return $this->db->insert_id();
+		$cek = $this->db->get_where('pariwisata_sub_jenis', array('id_sub' => $id)); 
+		$count = $cek->num_rows();
+		if ($count === 0) {
+			return "ID not Exist";
+		}
+		else{
+			$this->db->where('id_sub', $id);
+			return $this->db->update('pariwisata_sub_jenis', $data);
+		}
 		
 	}
 

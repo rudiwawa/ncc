@@ -1,6 +1,6 @@
 <div class="card">
     <div class="card-body">
-        <button class="btn  waves-effect waves-light btn-primary " style="position: fixed; bottom: 80px;   right: 20px; padding: 18.5px;
+        <button class="btn  waves-effect waves-light btn-primary add_data" style="position: fixed; bottom: 80px;   right: 20px; padding: 18.5px;
     z-index: 10;" type="button" onclick="insert_modal()"><i class="fa fa-plus"></i></button>
         <h4 class="card-title">Jenis Pariwisata</h4>
         <h6 class="card-subtitle">Data table example</h6>
@@ -11,7 +11,7 @@
                         <th>No</th>
                         <th>Keterangan</th>
                         <th style="width: 210px;">Gambar</th>
-                        <th>Admin</th>
+                        <th style="width: 170px;">Action</th>
                     </tr>
                 </thead>
                 <tbody>
