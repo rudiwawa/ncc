@@ -10,7 +10,7 @@
                     <tr>
                         <th>No</th>
                         <th>Keterangan</th>
-                        <th>Gambar</th>
+                        <th style="width: 210px;">Gambar</th>
                         <th>Admin</th>
                     </tr>
                 </thead>

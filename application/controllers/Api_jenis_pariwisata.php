@@ -100,42 +100,82 @@ class Api_jenis_pariwisata extends \Restserver\Libraries\REST_Controller{
 
     }
 }
-public function index_put(){
-    $file_element_name = $this->put('img');
-    // $file_element_name = $this->post('img');
+public function update_post(){
+    // $file_element_name = $this->put('img');
+
     $config['upload_path']          = './uploads/';
     $config['allowed_types']        = 'gif|jpg|png';
     $config['encrypt_name'] = TRUE;
 
     $this->load->library('upload', $config);
-
-    if ( ! $this->upload->do_upload($file_element_name))
+    // $file = $this->input->post('img');
+// if ( ! $this->upload->do_upload($file))  ERROR ! CUMA GARA GARA SEHARUSNYA LANGSUNG NAME NYA BUKAN MASUKIN POST ANJAYYY GG CI
+    if ( ! $this->upload->do_upload('img'))
     {
-        $error = array('error' => $this->upload->display_errors());
+      $id_jenis = $this->post('id_jenis');
+        // $file_id = $this->files_model->insert_file($file['file_name'], $_POST['title']);
+      $data = array(
+        'ket_jenis'       => $this->post('ket_jenis'),
+        'time_update'          => $this->now
+    );
+      $query = $this->Pariwisata_jenis_model->update_byId($id_jenis,$data);
+      $error = array('error' => $this->upload->display_errors());
+      if ($query===TRUE) {
+         $this->response(
+            ['msg_main'=> [
+                'status'           => true,
+                'msg'           => "UPDATE data success"
+            ] ,
+            'msg_detail'=> [
+                'item'           => $query, "tidak ada image"]
+            ]
+        );
+     } else {
         $this->response(
             ['msg_main'=> [
                 'status'           => false,
-                'msg'           => $error
+                'msg'           => "UPDATE data FAILED"
             ] ,
             'msg_detail'=> [
-                'item'           => "cuk",$this->put('ket_jenis'),$this->put('img'),$this->post('ket_jenis')]
+                'item'           => [$query,$id_jenis],"tidak ada image"]
             ]
         );
+    }
 
-    }
-    else
-    {
-        $data = $this->upload->data();
-        $this->response(
-            ['msg_main'=> [
-                'status'           => false,
-                'msg'           => $error
-            ] ,
-            'msg_detail'=> [
-                'item'           => $query,$id]
-            ]
-        );
-    }
+}
+else
+{
+    $id_jenis = $this->post('id_jenis');
+    $file = $this->upload->data();
+        // $file_id = $this->files_model->insert_file($file['file_name'], $_POST['title']);
+    $data = array(
+        'ket_jenis'       => $this->post('ket_jenis'),
+        'img'          => $file['file_name'],
+        'time_update'          => $this->now
+    );
+    $query = $this->Pariwisata_jenis_model->update_byId($id_jenis,$data);
+    if ($query===TRUE) {
+     $this->response(
+        ['msg_main'=> [
+            'status'           => true,
+            'msg'           => "UPDATE data success"
+        ] ,
+        'msg_detail'=> [
+            'item'           => $query]
+        ]
+    );
+ } else {
+    $this->response(
+        ['msg_main'=> [
+            'status'           => false,
+            'msg'           => "UPDATE data FAILED"
+        ] ,
+        'msg_detail'=> [
+            'item'           => [$query,$id_jenis]]
+        ]
+    );
+}
+}
 
 }
 

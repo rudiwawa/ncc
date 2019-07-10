@@ -2,7 +2,7 @@
 class Pariwisata_jenis_model extends CI_Model {
 
 	public function get_All(){
-		$query = $this->db->query("SELECT * FROM `pariwisata_jenis` ORDER BY id_jenis DESC");
+		$query = $this->db->query("SELECT * FROM `pariwisata_jenis` where is_delete='0' ORDER BY id_jenis DESC ");
 
 		return $query->result_array();
 	}
@@ -23,15 +23,15 @@ class Pariwisata_jenis_model extends CI_Model {
 		return $query->result_array();
 	}
 
-	public function put_byId($id,$data){
-		$cek = $this->db->get_where('pariwisata_sub_jenis', array('id_sub' => $id)); 
+	public function update_byId($id,$data){
+		$cek = $this->db->get_where('pariwisata_jenis', array('id_jenis' => $id)); 
 		$count = $cek->num_rows();
 		if ($count === 0) {
 			return "ID not Exist";
 		}
 		else{
-			$this->db->where('id_sub', $id);
-			return $this->db->update('pariwisata_sub_jenis', $data);
+			$this->db->where('id_jenis', $id);
+			return $this->db->update('pariwisata_jenis', $data);
 		}
 		
 	}
@@ -39,7 +39,7 @@ class Pariwisata_jenis_model extends CI_Model {
 	public function post_All($data){
 		$this->db->set($data);
 		
-		return $this->db->insert('pariwisata_sub_jenis');
+		return $this->db->insert('pariwisata_jenis');
 	}
 
 	public function get_id()
@@ -49,7 +49,7 @@ class Pariwisata_jenis_model extends CI_Model {
 	}
 	public function delete_byId($id){
 
-		$query = $this->db->query("UPDATE `pariwisata_sub_jenis` SET `is_delete` = '1' WHERE `pariwisata_sub_jenis`.`id_sub` = '".$id."';");
+		$query = $this->db->query("UPDATE `pariwisata_jenis` SET `is_delete` = '1' WHERE `pariwisata_jenis`.`id_jenis` = '".$id."';");
 
 		return $query;
 
