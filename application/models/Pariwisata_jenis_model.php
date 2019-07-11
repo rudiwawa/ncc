@@ -10,7 +10,7 @@ class Pariwisata_jenis_model extends CI_Model {
 	public function get_byId($id)
 	{
 		$id = "'".$id."'";
-		$query = $this->db->query('SELECT ket_jenis FROM pariwisata_jenis where id_jenis='.$id);
+		$query = $this->db->query('SELECT ket_jenis,img FROM pariwisata_jenis where id_jenis='.$id);
 
 		return $query->result_array();
 	}
