@@ -76,7 +76,7 @@ class Api_jenis_pariwisata extends \Restserver\Libraries\REST_Controller
         // $file_element_name = $this->put('img');
         $id = $this->Pariwisata_jenis_model->get_id();
         $config['upload_path'] = './uploads/';
-        $config['allowed_types'] = 'gif|jpg|png';
+        $config['allowed_types'] = 'gif|jpg|png|JPG';
         $config['encrypt_name'] = true;
 
         $this->load->library('upload', $config);
@@ -99,7 +99,7 @@ class Api_jenis_pariwisata extends \Restserver\Libraries\REST_Controller
         $this->form_validation->set_data($data);
         $is_valid = $this->form_validation->run('jenis_insert');
         $errors = $this->form_validation->error_array();
-        $error_upload = array('error' => $this->upload->display_errors());
+        $error_upload = array('img' => $this->upload->display_errors());
 
         // $query = $this->Pariwisata_jenis_model->post_All($data);
 
@@ -134,7 +134,7 @@ class Api_jenis_pariwisata extends \Restserver\Libraries\REST_Controller
                     'msg' => "Form Tidak Valid",
                 ],
                     'msg_detail' => [
-                        'item' => $errors, $error_upload],
+                        'item' => [$errors, $error_upload]],
                 ]
             );
         }

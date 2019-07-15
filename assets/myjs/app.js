@@ -10,6 +10,7 @@ window.url["pariwisata_content"] = window.bashUrl +"/index.php/tesapi/sub";
 window.url["ket_jenis"] = window.bashUrl +"/index.php/Api_sub_pariwisata/ket_jenis";
 window.url["data_byId_sub"] = window.bashUrl +"/index.php/Api_sub_pariwisata/data_byId";
 window.url["data_byId_jenis"] = window.bashUrl +"/index.php/Api_jenis_pariwisata/data_byId";
+window.url["scroll"];
 
 
 // ONCLICK EVENT!
@@ -46,14 +47,17 @@ function buildTableX(tableX){
 }
 
 function refreshTableX(tableX){
+
 	//mencegah scroll saat
-		var clientHeight = $('#content').height();
-		$('#content').height(clientHeight);	
+	var clientHeight = $('#content').height();
+	$('#content').height(clientHeight);	
 	$( "#content" ).load( "./assets/contents/table/"+tableX+".php", function() {
 		//load modelnya tableX
 		
 		// $('#content').height(clientHeight);
 		buildTbody(tableX);
+		
+		
 	});
 }
 function refreshTableX(tableX,n){

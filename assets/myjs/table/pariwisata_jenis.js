@@ -9,30 +9,30 @@ function buildTbody(tableX) {
         // "ajax": window.url[tableX],
         "ajax": { url: window.url[tableX], dataSrc: 'msg_detail.item' },//diperbaiki add dataSrc dan lokasi array nya yg ditandai [{}]
         "columns": [
-            {
-                "render": function () {
-                    number++;
-                    return number;
-                }
-            },
+        {
+            "render": function () {
+                number++;
+                return number;
+            }
+        },
 
-            { "data": "ket_jenis" },
-            {
-                "render": function (data, type, JsonResultRow, meta) {
-                    return '<img src="' + window.bashUrl + "/uploads/" + JsonResultRow.img + '" alt="..." class="img-thumbnail style="width:200px;">'
-                }
-            },
+        { "data": "ket_jenis" },
+        {
+            "render": function (data, type, JsonResultRow, meta) {
+                return '<img src="' + window.bashUrl + "/uploads/" + JsonResultRow.img + '" alt="..." class="img-thumbnail style="width:200px;">'
+            }
+        },
             // { "msg_detail.item": "ket_sub_jenis" } ini salah ,
             {
                 "render": function (data, type, JsonResultRow, meta) {
                     return '<button class="btn btn-info edit_jenis"  style="width: 40px; margin-right : 5px;" onclick ="update_modal(' + "'" + JsonResultRow.id_jenis + "'" + ')"><i class="fa fa-pencil-square-o"></i></button>'
-                        + '<button class="btn btn-danger delete_jenis" style="width: 40px;" onclick ="conf_delete(' + "'" + JsonResultRow.id_jenis + "'" + ')"><i class="fa fa-trash-o"></i></a>'
-                        ;
+                    + '<button class="btn btn-danger delete_jenis" style="width: 40px;" onclick ="conf_delete(' + "'" + JsonResultRow.id_jenis + "'" + ')"><i class="fa fa-trash-o"></i></a>'
+                    ;
                 }
 
             }
-        ]
-    });
+            ]
+        });
 }
 // //error solved
 
@@ -49,7 +49,7 @@ function update_modal(id) {
         //preview image
         $("#img").change(function() {
             readURL(this);
-          });
+        });
 
         $.when(get_placehorder(id)).then(function (x) {
             $(function () {
@@ -62,7 +62,7 @@ function update_modal(id) {
                     // var file_data = $('#img').prop('files')[0];
                     mydata.append('id_jenis', id);
                     $.ajax({
-                        url: "http://192.168.86.219/app/index.php/Api_jenis_pariwisata/update",
+                        url: window.url["pariwisata_jenis"]+"/update",
                         type: "POST",
                         dataType: "json",
                         // mimeType:"multipart/form-data",
@@ -78,8 +78,11 @@ function update_modal(id) {
                         success: function (dataObject) {
                             if (dataObject.msg_main.status == true) {
                                 $('#modal_form_update').modal('toggle');
-                                refreshTableX(TableX, 1);
-                                // $(':input').val('');
+                                window.url["scroll"] = $(window).scrollTop();
+                                refreshTableX(TableX);
+
+
+                                
                             } else {
                                 //FORM VALIDATION
                                 $(".text-danger").html("");
@@ -95,9 +98,10 @@ function update_modal(id) {
                             }
                         },
                         complete: function () {
-                            console.log("complete");
-                            // $('#modal_form_update').modal('toggle');
-                            // refreshTableX(TableX);
+                            var body = $("html, body");
+                            body.stop().animate({scrollTop:window.url["scroll"]}, 1000, 'swing', function() { 
+                             console.log("Finished animating");
+                         });
                         }
                     });
                     return false;
@@ -118,7 +122,7 @@ function insert_modal() {
         $('#modal_form_update').modal('show');
         $("#img").change(function() {
             readURL(this);
-          });
+        });
         $.when(ket_jenis_get()).then(function (x) {
             $(function () {
                 $('#save').click(function (e) {
@@ -130,7 +134,7 @@ function insert_modal() {
                     // var file_data = $('#img').prop('files')[0];
                     // mydata.append('id_jenis', id); 
                     $.ajax({
-                        url: "http://192.168.86.219/app/index.php/Api_jenis_pariwisata",
+                        url: window.url["pariwisata_jenis"],
                         type: "POST",
                         dataType: "json",
                         // mimeType:"multipart/form-data",
@@ -151,8 +155,17 @@ function insert_modal() {
                             } else {
                                 //FORM VALIDATION
                                 $(".text-danger").html("");
-                                var data = dataObject.msg_detail.item;
-                                $.each(data, function (key, value) {
+                                var form_validation_msg = dataObject.msg_detail.item[0];
+                                var upload_msg = dataObject.msg_detail.item[1];
+                                $.each(form_validation_msg, function (key, value) {
+                                    if (value !== null) {
+                                        console.log("not null" + key);
+                                        console.log(('"' + '.text-danger.' + key + '"') + value);
+
+                                        $('.' + 'text-danger.' + key).html(value);
+                                    }
+                                })
+                                $.each(upload_msg, function (key, value) {
                                     if (value !== null) {
                                         console.log("not null" + key);
                                         console.log(('"' + '.text-danger.' + key + '"') + value);
@@ -187,13 +200,13 @@ function conf_delete(id) {
             },
         },
     })
-        .then((value) => {
-            switch (value) {
+    .then((value) => {
+        switch (value) {
 
-                case "delete":
-                    delete_byId(id);
-                    break;
-                default:
+            case "delete":
+            delete_byId(id);
+            break;
+            default:
                 // swal("cancel");
             }
         });
@@ -273,10 +286,9 @@ function readURL(input) {
       
       reader.onload = function(e) {
         $('.image_view').attr('src', e.target.result);
-      }
-      
-      reader.readAsDataURL(input.files[0]);
     }
-  }
-  
- 
+
+    reader.readAsDataURL(input.files[0]);
+}
+}
+

@@ -2,7 +2,7 @@
 class Pariwisata_sub_jenis_model extends CI_Model {
 
 	public function get_All(){
-		$query = $this->db->query("SELECT id_sub,pariwisata_jenis.ket_jenis,pariwisata_jenis.id_jenis,ket_sub_jenis,pariwisata_sub_jenis.is_delete,pariwisata_sub_jenis.time_update,pariwisata_sub_jenis.id_admin FROM pariwisata_sub_jenis JOIN pariwisata_jenis ON pariwisata_sub_jenis.id_jenis = pariwisata_jenis.id_jenis AND  pariwisata_sub_jenis.is_delete='0' ORDER BY id_sub DESC");
+		$query = $this->db->query("SELECT id_sub,pariwisata_jenis.ket_jenis,pariwisata_jenis.id_jenis,ket_sub_jenis,pariwisata_sub_jenis.is_delete,pariwisata_sub_jenis.time_update,pariwisata_sub_jenis.id_admin FROM pariwisata_sub_jenis JOIN pariwisata_jenis ON pariwisata_sub_jenis.id_jenis = pariwisata_jenis.id_jenis AND  pariwisata_sub_jenis.is_delete='0' AND pariwisata_jenis.is_delete='0' ORDER BY id_sub DESC");
 
 		return $query->result_array();
 	}
