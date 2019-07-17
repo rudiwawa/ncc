@@ -9,30 +9,30 @@ function buildTbody(tableX) {
         // "ajax": window.url[tableX],
         "ajax": { url: window.url[tableX], dataSrc: 'msg_detail.item' },//diperbaiki add dataSrc dan lokasi array nya yg ditandai [{}]
         "columns": [
-        {
-            "render": function () {
-                number++;
-                return number;
-            }
-        },
+            {
+                "render": function () {
+                    number++;
+                    return number;
+                }
+            },
 
-        { "data": "ket_jenis" },
-        {
-            "render": function (data, type, JsonResultRow, meta) {
-                return '<img src="' + window.bashUrl + "/uploads/" + JsonResultRow.img + '" alt="..." class="img-thumbnail style="width:200px;">'
-            }
-        },
+            { "data": "ket_jenis" },
+            {
+                "render": function (data, type, JsonResultRow, meta) {
+                    return '<img src="' + window.bashUrl + "/uploads/" + JsonResultRow.img + '" alt="..." class="img-thumbnail style="width:200px;">'
+                }
+            },
             // { "msg_detail.item": "ket_sub_jenis" } ini salah ,
             {
                 "render": function (data, type, JsonResultRow, meta) {
                     return '<button class="btn btn-info edit_jenis"  style="width: 40px; margin-right : 5px;" onclick ="update_modal(' + "'" + JsonResultRow.id_jenis + "'" + ')"><i class="fa fa-pencil-square-o"></i></button>'
-                    + '<button class="btn btn-danger delete_jenis" style="width: 40px;" onclick ="conf_delete(' + "'" + JsonResultRow.id_jenis + "'" + ')"><i class="fa fa-trash-o"></i></a>'
-                    ;
+                        + '<button class="btn btn-danger delete_jenis" style="width: 40px;" onclick ="conf_delete(' + "'" + JsonResultRow.id_jenis + "'" + ')"><i class="fa fa-trash-o"></i></a>'
+                        ;
                 }
 
             }
-            ]
-        });
+        ]
+    });
 }
 // //error solved
 
@@ -47,7 +47,7 @@ function update_modal(id) {
         console.log("insert_modal");
         $('#modal_form_update').modal('show');
         //preview image
-        $("#img").change(function() {
+        $("#img").change(function () {
             readURL(this);
         });
 
@@ -62,7 +62,7 @@ function update_modal(id) {
                     // var file_data = $('#img').prop('files')[0];
                     mydata.append('id_jenis', id);
                     $.ajax({
-                        url: window.url["pariwisata_jenis"]+"/update",
+                        url: window.url["pariwisata_jenis"] + "/update",
                         type: "POST",
                         dataType: "json",
                         // mimeType:"multipart/form-data",
@@ -82,7 +82,7 @@ function update_modal(id) {
                                 refreshTableX(TableX);
 
 
-                                
+
                             } else {
                                 //FORM VALIDATION
                                 $(".text-danger").html("");
@@ -99,9 +99,9 @@ function update_modal(id) {
                         },
                         complete: function () {
                             var body = $("html, body");
-                            body.stop().animate({scrollTop:window.url["scroll"]}, 1000, 'swing', function() { 
-                             console.log("Finished animating");
-                         });
+                            body.stop().animate({ scrollTop: window.url["scroll"] }, 1000, 'swing', function () {
+                                console.log("Finished animating");
+                            });
                         }
                     });
                     return false;
@@ -120,7 +120,7 @@ function insert_modal() {
         $('.help-block').empty(); // clear error string
         console.log("insert_modal");
         $('#modal_form_update').modal('show');
-        $("#img").change(function() {
+        $("#img").change(function () {
             readURL(this);
         });
         $.when(ket_jenis_get()).then(function (x) {
@@ -200,13 +200,13 @@ function conf_delete(id) {
             },
         },
     })
-    .then((value) => {
-        switch (value) {
+        .then((value) => {
+            switch (value) {
 
-            case "delete":
-            delete_byId(id);
-            break;
-            default:
+                case "delete":
+                    delete_byId(id);
+                    break;
+                default:
                 // swal("cancel");
             }
         });
@@ -260,7 +260,7 @@ function get_placehorder(id) {
                 console.log("sukses get Placehorder" + data[0].ket_jenis);
                 $("#ket_jenis").val(data[0].ket_jenis);
                 // $(".image_view").append('<img src="/app/uploads/'+data[0].img+'" class="rounded" alt="..." style = "width:200px;"></img>');
-                $('.image_view').attr('src', "/app/uploads/"+data[0].img );
+                $('.image_view').attr('src', "/app/uploads/" + data[0].img);
                 console.log(data[0].id_sub);
 
                 // console.log("placehorder");
@@ -282,13 +282,13 @@ function get_placehorder(id) {
 
 function readURL(input) {
     if (input.files && input.files[0]) {
-      var reader = new FileReader();
-      
-      reader.onload = function(e) {
-        $('.image_view').attr('src', e.target.result);
-    }
+        var reader = new FileReader();
 
-    reader.readAsDataURL(input.files[0]);
-}
+        reader.onload = function (e) {
+            $('.image_view').attr('src', e.target.result);
+        }
+
+        reader.readAsDataURL(input.files[0]);
+    }
 }
 

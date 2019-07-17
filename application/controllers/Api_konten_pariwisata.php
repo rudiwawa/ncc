@@ -2,7 +2,7 @@
 // import library dari REST_Controller
 require APPPATH . '/libraries/REST_Controller.php';
 // extends class dari REST_Controller
-class Api_jenis_pariwisata extends \Restserver\Libraries\REST_Controller
+class Api_konten_pariwisata extends \Restserver\Libraries\REST_Controller
 {
 
 // constructor
@@ -10,7 +10,7 @@ class Api_jenis_pariwisata extends \Restserver\Libraries\REST_Controller
     {
         parent::__construct($config);
         $this->load->library('session');
-        $this->load->model('Pariwisata_jenis_model');
+        $this->load->model('Pariwisata_konten_model');
         $this->load->helper(array('form', 'url'));
         $this->load->library('form_validation');
         // $this->db->db_debug = FALSE;
@@ -27,14 +27,14 @@ class Api_jenis_pariwisata extends \Restserver\Libraries\REST_Controller
     public function index_get()
     {
 
-        $data = $this->Pariwisata_jenis_model->get_All();
+        $data = $this->Pariwisata_konten_model->get_All();
         $this->response(
             ['msg_main' => [
                 'status' => true,
                 'msg' => "get data success",
             ],
-            'msg_detail' => [
-                'item' => $data],
+                'msg_detail' => [
+                    'item' => $data],
             ]
         );
 
@@ -43,29 +43,44 @@ class Api_jenis_pariwisata extends \Restserver\Libraries\REST_Controller
     public function data_byId_post()
     {
         $id = $this->post('id');
-        $data = $this->Pariwisata_jenis_model->get_byId($id);
+        $data = $this->Pariwisata_konten_model->get_byId($id);
         $this->response(
             ['msg_main' => [
                 'status' => true,
                 'msg' => "get data success",
             ],
-            'msg_detail' => [
-                'item' => $data, $id],
+                'msg_detail' => [
+                    'item' => $data, $id],
             ]
         );
 
     }
 
+    public function get_sub_byId_jenis_post()
+    {
+        $id = $this->post('id');
+        $data = $this->Pariwisata_konten_model->get_sub_byId_jenis($id);
+        $this->response(
+            ['msg_main' => [
+                'status' => true,
+                'msg' => "get data succeSss",
+            ],
+                'msg_detail' => [
+                    'item' => $data, $id],
+            ]
+        );
+    }
+
     public function ket_jenis_get()
     {
-        $data = $this->Pariwisata_jenis_model->ket_jenis_get();
+        $data = $this->Pariwisata_konten_model->ket_jenis_get();
         $this->response(
             ['msg_main' => [
                 'status' => true,
                 'msg' => "get data success!",
             ],
-            'msg_detail' => [
-                'item' => $data],
+                'msg_detail' => [
+                    'item' => $data],
             ]
         );
 
@@ -74,7 +89,7 @@ class Api_jenis_pariwisata extends \Restserver\Libraries\REST_Controller
     public function index_post()
     {
         // $file_element_name = $this->put('img');
-        $id = $this->Pariwisata_jenis_model->get_id();
+        $id = $this->Pariwisata_konten_model->get_id();
         $config['upload_path'] = './uploads/';
         $config['allowed_types'] = 'gif|jpg|png|JPG';
         $config['encrypt_name'] = true;
@@ -101,18 +116,18 @@ class Api_jenis_pariwisata extends \Restserver\Libraries\REST_Controller
         $errors = $this->form_validation->error_array();
         $error_upload = array('img' => $this->upload->display_errors());
 
-        // $query = $this->Pariwisata_jenis_model->post_All($data);
+        // $query = $this->Pariwisata_konten_model->post_All($data);
 
         if ($is_valid && $is_upload_succces) {
-            $query = $this->Pariwisata_jenis_model->post_All($data);
+            $query = $this->Pariwisata_konten_model->post_All($data);
             if ($query === true) {
                 $this->response(
                     ['msg_main' => [
                         'status' => true,
                         'msg' => "UPDATE data success",
                     ],
-                    'msg_detail' => [
-                        'item' => $query, $id, "valid" . $is_valid],
+                        'msg_detail' => [
+                            'item' => $query, $id, "valid" . $is_valid],
                     ]
                 );
             } else {
@@ -121,8 +136,8 @@ class Api_jenis_pariwisata extends \Restserver\Libraries\REST_Controller
                         'status' => false,
                         'msg' => "UPDATE data FAILED",
                     ],
-                    'msg_detail' => [
-                        'item' => $query, $id, $is_upload_succces],
+                        'msg_detail' => [
+                            'item' => $query, $id, $is_upload_succces],
                     ]
                 );
 
@@ -133,8 +148,8 @@ class Api_jenis_pariwisata extends \Restserver\Libraries\REST_Controller
                     'status' => false,
                     'msg' => "Form Tidak Valid",
                 ],
-                'msg_detail' => [
-                    'item' => [$errors, $error_upload]],
+                    'msg_detail' => [
+                        'item' => [$errors, $error_upload]],
                 ]
             );
         }
@@ -162,7 +177,7 @@ class Api_jenis_pariwisata extends \Restserver\Libraries\REST_Controller
             // $file = $this->input->post('img');
             // if ( ! $this->upload->do_upload($file))  ERROR ! CUMA GARA GARA SEHARUSNYA LANGSUNG NAME NYA BUKAN MASUKIN POST ANJAYYY GG CI
             if (!$this->upload->do_upload('img')) {
-                 $file = $this->upload->data();
+                $file = $this->upload->data();
                 $id_jenis = $this->post('id_jenis');
                 // $file_id = $this->files_model->insert_file($file['file_name'], $_POST['title']);
                 $data = array(
@@ -170,18 +185,18 @@ class Api_jenis_pariwisata extends \Restserver\Libraries\REST_Controller
                     'time_update' => $this->now,
                 );
 
-                $query = $this->Pariwisata_jenis_model->update_byId($id_jenis, $data);
+                $query = $this->Pariwisata_konten_model->update_byId($id_jenis, $data);
                 $error_upload = array('img' => $this->upload->display_errors());
                 // var_dump($file['file_name']);
-                if ($file['file_name']=="") {
+                if ($file['file_name'] == "") {
                     if ($query === true) {
                         $this->response(
                             ['msg_main' => [
                                 'status' => true,
                                 'msg' => "UPDATE data success",
                             ],
-                            'msg_detail' => [
-                                'item' => $query, "tidak ada image"],
+                                'msg_detail' => [
+                                    'item' => $query, "tidak ada image"],
                             ]
                         );
                     } else {
@@ -190,8 +205,8 @@ class Api_jenis_pariwisata extends \Restserver\Libraries\REST_Controller
                                 'status' => false,
                                 'msg' => "UPDATE data FAILED",
                             ],
-                            'msg_detail' => [
-                                'item' => [$query, $id_jenis], "tidak ada image"],
+                                'msg_detail' => [
+                                    'item' => [$query, $id_jenis], "tidak ada image"],
                             ]
                         );
                     }
@@ -201,14 +216,12 @@ class Api_jenis_pariwisata extends \Restserver\Libraries\REST_Controller
                             'status' => false,
                             'msg' => "UPDATE data success",
                         ],
-                        'msg_detail' => [
-                            'item' => $error_upload],
+                            'msg_detail' => [
+                                'item' => $error_upload],
                         ]
                     );
 
                 }
-                
-
 
             } else {
                 $id_jenis = $this->post('id_jenis');
@@ -219,15 +232,15 @@ class Api_jenis_pariwisata extends \Restserver\Libraries\REST_Controller
                     'img' => $file['file_name'],
                     'time_update' => $this->now,
                 );
-                $query = $this->Pariwisata_jenis_model->update_byId($id_jenis, $data);
+                $query = $this->Pariwisata_konten_model->update_byId($id_jenis, $data);
                 if ($query === true) {
                     $this->response(
                         ['msg_main' => [
                             'status' => true,
                             'msg' => "UPDATE data success",
                         ],
-                        'msg_detail' => [
-                            'item' => $query],
+                            'msg_detail' => [
+                                'item' => $query],
                         ]
                     );
                 } else {
@@ -236,8 +249,8 @@ class Api_jenis_pariwisata extends \Restserver\Libraries\REST_Controller
                             'status' => false,
                             'msg' => "UPDATE data FAILED",
                         ],
-                        'msg_detail' => [
-                            'item' => [$query, $id_jenis]],
+                            'msg_detail' => [
+                                'item' => [$query, $id_jenis]],
                         ]
                     );
                 }
@@ -248,8 +261,8 @@ class Api_jenis_pariwisata extends \Restserver\Libraries\REST_Controller
                     'status' => false,
                     'msg' => "Form Tidak Valid",
                 ],
-                'msg_detail' => [
-                    'item' => $errors],
+                    'msg_detail' => [
+                        'item' => $errors],
                 ]
             );
         }
@@ -259,15 +272,15 @@ class Api_jenis_pariwisata extends \Restserver\Libraries\REST_Controller
     public function index_delete()
     {
         $id = $this->delete('id');
-        $query = $this->Pariwisata_jenis_model->delete_byId($id);
+        $query = $this->Pariwisata_konten_model->delete_byId($id);
         if ($query === true) {
             $this->response(
                 ['msg_main' => [
                     'status' => true,
                     'msg' => "DELETE data success",
                 ],
-                'msg_detail' => [
-                    'item' => $query],
+                    'msg_detail' => [
+                        'item' => $query],
                 ]
             );
         } else {
@@ -276,8 +289,8 @@ class Api_jenis_pariwisata extends \Restserver\Libraries\REST_Controller
                     'status' => false,
                     'msg' => "DELETE data FAILED",
                 ],
-                'msg_detail' => [
-                    'item' => $query, $id],
+                    'msg_detail' => [
+                        'item' => $query, $id],
                 ]
             );
 
