@@ -56,7 +56,12 @@ class Welcome extends CI_Controller {
 				'switcher'=>true
 			]);
 		}else{
+			x();
 			redirect("https://kampungbudaya.com/user_authentication/index");
 		}
+	}
+
+	public function x (){
+
 	}
 }

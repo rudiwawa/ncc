@@ -51,7 +51,7 @@ class Pariwisata_konten_model extends CI_Model {
 
 	public function get_id()
 	{
-		$query = $this->db->query("SELECT `get_ID_jenis`() AS `id`;");
+		$query = $this->db->query("SELECT `get_ID_main`() AS `id`;");
 		return $query->result_array();
 	}
 	public function delete_byId($id){

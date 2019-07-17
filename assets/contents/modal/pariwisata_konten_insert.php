@@ -15,14 +15,14 @@
                             <h3 class="box-title m-t-5 col-lg-11">Kategori</h3>
                             <hr class="m-t-0 m-b-12  col-lg-11">
 
-                            <div class="form-group col-lg-3">
+                            <div class="form-group col-lg-6">
                                 <label>Kategori</label>
                                 <select name="id_jenis" id="id_jenis" class="form-control form-control-line">
                                 </select>
                                 <a id="msg_id_jenis" style="color: red;"></a>
                             </div>
 
-                            <div class="form-group col-lg-3">
+                            <div class="form-group col-lg-6">
                                 <label>Sub Kategori</label>
                                 <select name="id_sub" id="id_sub" class="form-control form-control-line">
                                     <!-- <option value="FSKS100001">Apotek</option> -->
@@ -31,10 +31,10 @@
                                 <a id="msg_id_sub" style="color: red;"></a>
                             </div>
 
-                            <div class="form-group col-lg-6">
+                            <div class="form-group col-lg-12    ">
                                 <label>Nama Pariwisata</label>
                                 <input name="ket_main" id="ket_main" class="form-control form-control-line">
-                                <a id="msg_nama_faskes" style="color: red;"></a>
+                                <a id="msg_ket_main" style="color: red;"></a>
                             </div>
 
                         </div>
@@ -51,13 +51,13 @@
                                     <label>(Latitude &amp; Longitude)</label>
                                     <input type="text" name="loc[]" id="loc_faskes"
                                         class="form-control form-control-line"></input>
-                                    <a id="msg_loc_faskes" style="color: red;"></a>
+                                    <a id="msg_loc" style="color: red;"></a>
                                 </div>
                                 <div class="form-group col-lg-7">
                                     <label>Alamat Lengkap</label>
                                     <input name="alamat[]" id="alamat_faskes"
                                         class="form-control form-control-line"></input>
-                                    <a id="msg_alamat_faskes" style="color: red;"></a>
+                                    <a id="msg_alamat" style="color: red;"></a>
                                 </div>
 
                             </div>
@@ -69,30 +69,30 @@
                             <hr class="m-t-0 m-b-12  col-lg-11">
                             <div class="form-group col-lg-6">
                                 <label>Deskripsi</label>
-                                <textarea name="alamat_faskes" id="alamat_faskes" class="form-control form-control-line"
+                                <textarea name="deskripsi" id="deskripsi" class="form-control form-control-line"
                                     rows="8"></textarea>
-                                <a id="msg_alamat_faskes" style="color: red;"></a>
+                                <a id="msg_deskripsi" style="color: red;"></a>
                             </div>
                             <div class="col-lg-6 row">
                                 <div class="form-group  col-lg-12">
                                     <label>Telepon</label>
-                                    <input type="text" name="tlp_faskes" id="tlp_faskes"
+                                    <input type="text" name="tlp" id="tlp"
                                         class="form-control form-control-line">
-                                    <a id="msg_tlp_faskes" style="color: red;"></a>
+                                    <a id="msg_tlp" style="color: red;"></a>
                                 </div>
 
                                 <div class="form-group col-lg-12">
                                     <label>Website</label>
-                                    <input type="text" name="web_faskes" id="web_faskes"
+                                    <input type="text" name="website" id="website"
                                         class="form-control form-control-line">
-                                    <a id="msg_web_faskes" style="color: red;"></a>
+                                    <a id="msg_website" style="color: red;"></a>
                                 </div>
 
                                 <div class="form-group col-lg-12">
                                     <label>Email</label>
-                                    <input type="text" name="web_faskes" id="web_faskes"
+                                    <input type="text" name="email" id="email"
                                         class="form-control form-control-line">
-                                    <a id="msg_web_faskes" style="color: red;"></a>
+                                    <a id="msg_email" style="color: red;"></a>
                                 </div>
                             </div>
                         </div>
@@ -118,7 +118,7 @@
 
 
                         </div>
-                        <div class="modal-footer">
+                        <div class="modal-footer col-lg-12">
                             <button type="submit" class="btn btn-primary" id="save">Save</button>
                             <button type="button" class="btn btn-danger" data-dismiss="modal"
                                 id="cancel">Cancel</button>

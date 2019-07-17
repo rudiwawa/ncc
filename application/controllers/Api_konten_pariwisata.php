@@ -85,9 +85,27 @@ class Api_konten_pariwisata extends \Restserver\Libraries\REST_Controller
         );
 
     }
+    public function get_alamat ($alamat,$loc){
+        foreach ($alamat as $i => $value) {
+            $result[$i] = array("alamat"=>$alamat[$i], "loc"=>$loc[$i]);
+        }
+        return $result;
+    }
 
+    public function upload_gambar ($img){
+        
+    }
     public function index_post()
     {
+        $alamat = $this->get_alamat($this->post('alamat'),$this->post('loc'));
+        $detail =  array(
+            "alamat"=>$alamat,
+            "ket"=> $this->post('deskripsi'),
+            "tlp"=>$this->post('tlp'),
+            "website"=>$this->post('website'),
+            "email"=>$this->post('email')
+        );
+        var_dump(json_encode($detail));
         // $file_element_name = $this->put('img');
         $id = $this->Pariwisata_konten_model->get_id();
         $config['upload_path'] = './uploads/';
@@ -95,17 +113,15 @@ class Api_konten_pariwisata extends \Restserver\Libraries\REST_Controller
         $config['encrypt_name'] = true;
 
         $this->load->library('upload', $config);
-        // $file = $this->input->post('img');
-        // if ( ! $this->upload->do_upload($file))  ERROR ! CUMA GARA GARA SEHARUSNYA LANGSUNG NAME NYA BUKAN MASUKIN POST ANJAYYY GG CI
         $is_upload_succces = $this->upload->do_upload('img');
-        // $id_jenis = $this->post('id_jenis');
         $file = $this->upload->data();
-        // $file_id = $this->files_model->insert_file($file['file_name'], $_POST['title']);
         $data = array(
-            'id_jenis' => $id[0]['id'],
-            'ket_jenis' => $this->post('ket_jenis'),
-            'img' => $file['file_name'],
-            'img_marker' => "0",
+            'id_pariwisata' => $id[0]['id'],
+            'id_jenis' => $this->post('id_jenis'),
+            'id_sub' => $this->post('id_sub'),
+            'ket_main' => $this->post('ket_main'),
+            'detail' => json_encode($detail),
+            'foto' => "0",
             'is_delete' => "0",
             'time_update' => $this->now,
             'id_admin' => "admin1",
