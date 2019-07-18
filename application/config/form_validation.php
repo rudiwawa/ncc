@@ -19,8 +19,60 @@ $config = array(
                         'rules' => 'required',
                 ),
                 array(
-                        'field' => 'img',
-                        'label' => 'img',
+                        'field' => 'img[]',
+                        'label' => 'img[]',
+                        'rules' => 'required',
+                ),
+        ),
+        'jenis_insert_konten' => array(
+                array(
+                        'field' => 'id_jenis',
+                        'label' => 'id_jenis',
+                        'rules' => 'required',
+                ),
+                array(
+                        'field' => 'id_sub',
+                        'label' => 'id_sub',
+                        'rules' => 'required',
+                ),
+                // array(
+                //         'field' => 'img[]',
+                //         'label' => 'img[]',
+                //         'rules' => 'required',
+                // ),
+                array(
+                        'field' => 'ket_main',
+                        'label' => 'ket_main',
+                        'rules' => 'required',
+                ),
+                array(
+                        'field' => 'alamat[]',
+                        'label' => 'alamat',
+                        'rules' => 'required',
+                ),
+                array(
+                        'field' => 'loc[]',
+                        'label' => 'loc[]',
+                        'rules' => 'required',
+                ),
+                array(
+                        'field' => 'deskripsi',
+                        'label' => 'deskripsi',
+                        'rules' => 'required',
+                ),
+                array(
+                        'field' => 'tlp',
+                        'label' => 'tlp',
+                        'rules' => 'required',
+                ),
+                array(
+                        'field' => 'website',
+                        'label' => 'website',
+                        'rules' => 'required',
+                ),
+                array(
+                        'field' => 'email',
+                        'label' => 'email',
                         'rules' => 'required',
                 ),
         ),

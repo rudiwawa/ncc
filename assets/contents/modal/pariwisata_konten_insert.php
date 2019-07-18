@@ -7,7 +7,7 @@
                         aria-hidden="true">&times;</span></button>
             </div>
             <div class="modal-body form">
-                <form method="POST" id="form" class="form-horizontal was-validated">
+                <form method="POST" id="form" class="form-horizontal was-validated"  enctype="multipart/form-data">
                     <!-- <input type="hidden" value="" name="id"/>  -->
                     <div class="form-body row">
 
@@ -17,24 +17,24 @@
 
                             <div class="form-group col-lg-6">
                                 <label>Kategori</label>
-                                <select name="id_jenis" id="id_jenis" class="form-control form-control-line">
+                                <select name="id_jenis" id="id_jenis" class="form-control form-control-line" required>
                                 </select>
-                                <a id="msg_id_jenis" style="color: red;"></a>
+                                <div class="text-danger id_jenis"></div>
                             </div>
 
                             <div class="form-group col-lg-6">
                                 <label>Sub Kategori</label>
-                                <select name="id_sub" id="id_sub" class="form-control form-control-line">
+                                <select name="id_sub" id="id_sub" class="form-control form-control-line" required>
                                     <!-- <option value="FSKS100001">Apotek</option> -->
                                     <!-- <option value="FSKS100002">Laboratorium</option> -->
                                 </select>
-                                <a id="msg_id_sub" style="color: red;"></a>
+                                <div class="text-danger id_sub"></div>
                             </div>
 
                             <div class="form-group col-lg-12    ">
                                 <label>Nama Pariwisata</label>
-                                <input name="ket_main" id="ket_main" class="form-control form-control-line">
-                                <a id="msg_ket_main" style="color: red;"></a>
+                                <input name="ket_main" id="ket_main" class="form-control form-control-line" required>
+                                <div class="text-danger ket_main"></div>
                             </div>
 
                         </div>
@@ -50,14 +50,14 @@
                                 <div class="form-group col-lg-4">
                                     <label>(Latitude &amp; Longitude)</label>
                                     <input type="text" name="loc[]" id="loc_faskes"
-                                        class="form-control form-control-line"></input>
-                                    <a id="msg_loc" style="color: red;"></a>
+                                        class="form-control form-control-line" required></input>
+                                        <div class="text-danger loc"></div>
                                 </div>
                                 <div class="form-group col-lg-7">
                                     <label>Alamat Lengkap</label>
                                     <input name="alamat[]" id="alamat_faskes"
-                                        class="form-control form-control-line"></input>
-                                    <a id="msg_alamat" style="color: red;"></a>
+                                        class="form-control form-control-line" required></input>
+                                        <div class="text-danger alamat"></div>
                                 </div>
 
                             </div>
@@ -70,29 +70,29 @@
                             <div class="form-group col-lg-6">
                                 <label>Deskripsi</label>
                                 <textarea name="deskripsi" id="deskripsi" class="form-control form-control-line"
-                                    rows="8"></textarea>
-                                <a id="msg_deskripsi" style="color: red;"></a>
+                                    rows="8"required></textarea>
+                                    <div class="text-danger deskripsi"></div>
                             </div>
                             <div class="col-lg-6 row">
                                 <div class="form-group  col-lg-12">
                                     <label>Telepon</label>
                                     <input type="text" name="tlp" id="tlp"
-                                        class="form-control form-control-line">
-                                    <a id="msg_tlp" style="color: red;"></a>
+                                        class="form-control form-control-line"required>
+                                        <div class="text-danger tlp"></div>
                                 </div>
 
                                 <div class="form-group col-lg-12">
                                     <label>Website</label>
                                     <input type="text" name="website" id="website"
-                                        class="form-control form-control-line">
-                                    <a id="msg_website" style="color: red;"></a>
+                                        class="form-control form-control-line"required>
+                                        <div class="text-danger website"></div>
                                 </div>
 
                                 <div class="form-group col-lg-12">
                                     <label>Email</label>
                                     <input type="text" name="email" id="email"
-                                        class="form-control form-control-line">
-                                    <a id="msg_email" style="color: red;"></a>
+                                        class="form-control form-control-line"required>
+                                        <div class="text-danger email"></div>
                                 </div>
                             </div>
                         </div>
@@ -106,8 +106,8 @@
                             <div class="form-group col-lg-12">
                                 <div class="form-group">
                                     <div class="card-body">
-                                        <h4 class="card-title">Unggah Gambar</h4>
-                                        <input type="file" name="img" id="img" class="dropify" multiple required>
+                                        <!-- <h4 class="card-title">Unggah Gambar</h4> -->
+                                        <input type="file" name="img[]" id="img" class="dropify" multiple="multiple" required>
                                         <div id="image_preview">
                                         </div>
                                     </div>
