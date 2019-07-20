@@ -110,7 +110,7 @@
                                         <!-- <h4 class="card-title">Unggah Gambar</h4> -->
                                         <div class="col-lg-9">
                                             <input type="file" name="img_temp" id="img_temp" class="dropify"  required>
-                                            <button type="button" class="btn btn-primary" id="add_img">Tambah</button>
+                                            <button  onclick="tambah_img()" type="button" class="btn btn-primary" id="add_img">Tambah</button>
                                             <div id="image_preview">
                                             </div>
                                         </div>

@@ -144,13 +144,13 @@ class Api_konten_pariwisata extends \Restserver\Libraries\REST_Controller
         // var_dump ($c);
         // var_dump ($this->post('c'));
         // var_dump ($_FILES['img']['name']);
-        $tmppicture = $_FILES['img']['name'];
+        $tmppicture = !empty($_FILES['img']['name'])?$_FILES['img']['name']:NULL;
         $tmppicture =$tmppicture[0];
         $this->form_validation->set_data(array_merge($this->input->post())); //digabungkan buat cek semua
         $is_valid = $this->form_validation->run('jenis_insert_konten');
         $errors = $this->form_validation->error_array();
         $error_upload = array('img' => $this->upload->display_errors());
-
+  
 
         // $query = $this->Pariwisata_konten_model->post_All($data);
 
