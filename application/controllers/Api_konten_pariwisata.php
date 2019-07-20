@@ -139,6 +139,11 @@ class Api_konten_pariwisata extends \Restserver\Libraries\REST_Controller
             'id_admin' => "admin1",
         );
         // VALIDASI FORM
+        // $c =$_FILES['img']['name'];
+        // echo("ssss");
+        // var_dump ($c);
+        // var_dump ($this->post('c'));
+        // var_dump ($_FILES['img']['name']);
         $tmppicture = $_FILES['img']['name'];
         $tmppicture =$tmppicture[0];
         $this->form_validation->set_data(array_merge($this->input->post())); //digabungkan buat cek semua

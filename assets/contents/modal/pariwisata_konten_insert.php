@@ -7,7 +7,7 @@
                         aria-hidden="true">&times;</span></button>
             </div>
             <div class="modal-body form">
-                <form method="POST" id="form" class="form-horizontal was-validated"  enctype="multipart/form-data">
+                <form method="POST" id="form" class="form-horizontal was-validated " enctype="multipart/form-data">
                     <!-- <input type="hidden" value="" name="id"/>  -->
                     <div class="form-body row">
 
@@ -51,13 +51,13 @@
                                     <label>(Latitude &amp; Longitude)</label>
                                     <input type="text" name="loc[]" id="loc_faskes"
                                         class="form-control form-control-line" required></input>
-                                        <div class="text-danger loc"></div>
+                                    <div class="text-danger loc"></div>
                                 </div>
                                 <div class="form-group col-lg-7">
                                     <label>Alamat Lengkap</label>
-                                    <input name="alamat[]" id="alamat_faskes"
-                                        class="form-control form-control-line" required></input>
-                                        <div class="text-danger alamat"></div>
+                                    <input name="alamat[]" id="alamat_faskes" class="form-control form-control-line"
+                                        required></input>
+                                    <div class="text-danger alamat"></div>
                                 </div>
 
                             </div>
@@ -70,29 +70,29 @@
                             <div class="form-group col-lg-6">
                                 <label>Deskripsi</label>
                                 <textarea name="deskripsi" id="deskripsi" class="form-control form-control-line"
-                                    rows="8"required></textarea>
-                                    <div class="text-danger deskripsi"></div>
+                                    rows="8" required></textarea>
+                                <div class="text-danger deskripsi"></div>
                             </div>
                             <div class="col-lg-6 row">
                                 <div class="form-group  col-lg-12">
                                     <label>Telepon</label>
-                                    <input type="text" name="tlp" id="tlp"
-                                        class="form-control form-control-line"required>
-                                        <div class="text-danger tlp"></div>
+                                    <input type="text" name="tlp" id="tlp" class="form-control form-control-line"
+                                        required>
+                                    <div class="text-danger tlp"></div>
                                 </div>
 
                                 <div class="form-group col-lg-12">
                                     <label>Website</label>
                                     <input type="text" name="website" id="website"
-                                        class="form-control form-control-line"required>
-                                        <div class="text-danger website"></div>
+                                        class="form-control form-control-line" required>
+                                    <div class="text-danger website"></div>
                                 </div>
 
                                 <div class="form-group col-lg-12">
                                     <label>Email</label>
-                                    <input type="text" name="email" id="email"
-                                        class="form-control form-control-line"required>
-                                        <div class="text-danger email"></div>
+                                    <input type="text" name="email" id="email" class="form-control form-control-line"
+                                        required>
+                                    <div class="text-danger email"></div>
                                 </div>
                             </div>
                         </div>
@@ -105,10 +105,19 @@
                             <hr class="m-t-0 m-b-12  col-lg-11">
                             <div class="form-group col-lg-12">
                                 <div class="form-group">
-                                    <div class="card-body">
+                                    <div class="card-body row">
+                                        
                                         <!-- <h4 class="card-title">Unggah Gambar</h4> -->
-                                        <input type="file" name="img[]" id="img" class="dropify" multiple="multiple" required>
-                                        <div id="image_preview">
+                                        <div class="col-lg-9">
+                                            <input type="file" name="img_temp" id="img_temp" class="dropify"  required>
+                                            <button type="button" class="btn btn-primary" id="add_img">Tambah</button>
+                                            <div id="image_preview">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                                <div id="image_preview_array">
+                                                    </div>
+
                                         </div>
                                     </div>
                                     <div class="text-danger img"></div>

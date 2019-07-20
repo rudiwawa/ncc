@@ -2,7 +2,15 @@
 class Pariwisata_konten_model extends CI_Model {
 
 	public function get_All(){
-		$query = $this->db->query("SELECT * FROM `pariwisata_main` where is_delete='0' ORDER BY id_jenis DESC ");
+		$query = $this->db->query("select m.id_pariwisata, m.id_jenis, m.id_sub,
+		m.ket_main,s.ket_sub_jenis,j.ket_jenis,
+		m.detail,m.img,m.is_delete,m.time_update
+		from pariwisata_main m
+		join pariwisata_sub_jenis s
+		join pariwisata_jenis j
+		on m.id_jenis = j.id_jenis AND m.id_sub = s.id_sub
+		WHERE m.is_delete = '0' AND s.is_delete = '0' AND j.is_delete='0'
+		ORDER BY m.id_pariwisata DESC ");
 
 		return $query->result_array();
 	}
