@@ -10,9 +10,11 @@ $(document).ready(function () {
 	window.url["ket_jenis"] = window.bashUrl + "/index.php/Api_sub_pariwisata/ket_jenis";
 	window.url["data_byId_sub"] = window.bashUrl + "/index.php/Api_sub_pariwisata/data_byId";
 	window.url["data_byId_jenis"] = window.bashUrl + "/index.php/Api_jenis_pariwisata/data_byId";
+	window.url["data_byId_konten"] = window.bashUrl + "/index.php/Api_konten_pariwisata/data_byId";
 	window.url["get_sub_byId_jenis"] = window.bashUrl + "/index.php/Api_konten_pariwisata/get_sub_byId_jenis";
 	window.url["scroll"];
 	window.url["tmp_firstIdjenis"] = "dancok";
+
 
 	// ONCLICK EVENT!
 	$('#pariwisata_jenis').on('click', function (e) {

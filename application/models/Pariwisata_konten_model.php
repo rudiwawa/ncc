@@ -25,7 +25,14 @@ class Pariwisata_konten_model extends CI_Model {
 	public function get_byId($id)
 	{
 		$id = "'".$id."'";
-		$query = $this->db->query('SELECT ket_jenis,img FROM pariwisata_main where id_jenis='.$id);
+		$query = $this->db->query("select m.id_pariwisata, m.id_jenis, m.id_sub,
+		m.ket_main,s.ket_sub_jenis,j.ket_jenis,
+		m.detail,m.img,m.is_delete,m.time_update
+		from pariwisata_main m
+		join pariwisata_sub_jenis s
+		join pariwisata_jenis j
+		on m.id_jenis = j.id_jenis AND m.id_sub = s.id_sub
+		WHERE m.id_pariwisata = ".$id );
 
 		return $query->result_array();
 	}
@@ -39,7 +46,7 @@ class Pariwisata_konten_model extends CI_Model {
 	}
 
 	public function update_byId($id,$data){
-		$cek = $this->db->get_where('pariwisata_main', array('id_jenis' => $id)); 
+		$cek = $this->db->get_where('pariwisata_main', array('id_konten' => $id)); 
 		$count = $cek->num_rows();
 		if ($count === 0) {
 			return "ID not Exist";

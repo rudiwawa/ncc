@@ -55,7 +55,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
     <script src="<?=base_url()?>assets/assets/plugins/datatables/jquery.dataTables.min.js"></script>
-
+    <script src="<?=base_url()?>assets/myjs/compress.js"></script>
     <?php if($app): ?>
     <script src="<?=base_url()?>assets/myjs/app.js"></script>
 <?php endif; ?>
@@ -64,7 +64,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="<?=base_url()?>assets/assets/plugins/dropify/dist/js/dropify.min.js"></script>
-<script src="<?=base_url()?>assets/js/dropzone.js"></script>
+<!-- <script src="<?=base_url()?>assets/js/dropzone.js"></script> -->
+<!-- <script src="<?=base_url()?>assets/myjs/cropper.js"></script> -->
+
+
 
 
 </body>

@@ -49,13 +49,13 @@
                             <div class="col-lg-12 row" id="form_alamat0">
                                 <div class="form-group col-lg-4">
                                     <label>(Latitude &amp; Longitude)</label>
-                                    <input type="text" name="loc[]" id="loc_faskes"
-                                        class="form-control form-control-line" required></input>
+                                    <input type="text" name="loc[]" 
+                                        class="form-control form-control-line" id="loc_0" required></input>
                                     <div class="text-danger loc"></div>
                                 </div>
                                 <div class="form-group col-lg-7">
                                     <label>Alamat Lengkap</label>
-                                    <input name="alamat[]" id="alamat_faskes" class="form-control form-control-line"
+                                    <input name="alamat[]"  class="form-control form-control-line" id="alamat_0"
                                         required></input>
                                     <div class="text-danger alamat"></div>
                                 </div>
@@ -109,7 +109,7 @@
                                         
                                         <!-- <h4 class="card-title">Unggah Gambar</h4> -->
                                         <div class="col-lg-9">
-                                            <input type="file" name="img_temp" id="img_temp" class="dropify"  required>
+                                            <input type="file" name="img_temp" id="img_temp" class="dropify"  >
                                             <button  onclick="tambah_img()" type="button" class="btn btn-primary" id="add_img">Tambah</button>
                                             <div id="image_preview">
                                             </div>
@@ -135,7 +135,7 @@
 
                 </form>
             </div>
-
+            
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
