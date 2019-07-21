@@ -108,8 +108,8 @@ class Api_konten_pariwisata extends \Restserver\Libraries\REST_Controller
             "email" => $this->post('email'),
         );
         $tmpAlamat = array(
-            'alamat'=>$this->post('alamat'),
-            'loc'=>$this->post('loc')
+            'alamat' => $this->post('alamat'),
+            'loc' => $this->post('loc'),
         );
         // var_dump(json_encode($detail));
         // $img = $_FILES['img']['name'];
@@ -120,6 +120,10 @@ class Api_konten_pariwisata extends \Restserver\Libraries\REST_Controller
         $config['upload_path'] = './uploads/';
         $config['allowed_types'] = 'gif|jpg|png|JPG';
         $config['encrypt_name'] = true;
+        // $config['encrypt_name'] = true;
+        $config['max_size'] = 600;
+        $config['max_width'] = 500;
+        $config['max_height'] = 500;
         $this->load->library('upload', $config);
 
         // $img =
@@ -144,19 +148,20 @@ class Api_konten_pariwisata extends \Restserver\Libraries\REST_Controller
         // var_dump ($c);
         // var_dump ($this->post('c'));
         // var_dump ($_FILES['img']['name']);
-        $tmppicture = !empty($_FILES['img']['name'])?$_FILES['img']['name']:NULL;
-        $tmppicture =$tmppicture[0];
+        $tmppicture = !empty($_FILES['img']['name']) ? $_FILES['img']['name'] : null;
+        $tmppicture = $tmppicture[0];
         $this->form_validation->set_data(array_merge($this->input->post())); //digabungkan buat cek semua
         $is_valid = $this->form_validation->run('jenis_insert_konten');
         $errors = $this->form_validation->error_array();
         $error_upload = array('img' => $this->upload->display_errors());
-  
 
         // $query = $this->Pariwisata_konten_model->post_All($data);
 
         if ($is_valid && !empty($tmppicture)) {
+            // var_dump("run");
 
             $filesCount = count($_FILES['img']['name']);
+            $is_upload_succces = true;
             for ($i = 0; $i < $filesCount; $i++) {
                 $_FILES['file']['name'] = $_FILES['img']['name'][$i];
                 $_FILES['file']['type'] = $_FILES['img']['type'][$i];
@@ -174,36 +179,58 @@ class Api_konten_pariwisata extends \Restserver\Libraries\REST_Controller
                     $fileData = $this->upload->data();
                     $upload_data_img[$i] = $fileData['file_name'];
                     // $upload_data_img[$i]['uploaded_on'] = date("Y-m-d H:i:s");
+                } else {
+                    $is_upload_succces = false;
+                    break;
                 }
             }
-            $data['img'] = json_encode($upload_data_img);
-            $query = $this->Pariwisata_konten_model->post_All($data);
-            if ($query === true) {
-                $this->response(
-                    ['msg_main' => [
-                        'status' => true,
-                        'msg' => "1. UPDATE data success",
-                    ],
-                        'msg_detail' => [
-                            'item' => $query, $id, "valid" . $is_valid],
-                    ]
-                );
+            if ($is_upload_succces) {
+                $data['img'] = json_encode($upload_data_img);
+                $query = $this->Pariwisata_konten_model->post_All($data);
+                if ($query === true) {
+                    $this->response(
+                        ['msg_main' => [
+                            'status' => true,
+                            'msg' => "1. UPDATE data success",
+                        ],
+                            'msg_detail' => [
+                                'item' => $query, $id, "valid" . $is_valid],
+                        ]
+                    );
+                } else {
+                    $this->response(
+                        ['msg_main' => [
+                            'status' => false,
+                            'msg' => "2 UPDATE data FAILED",
+                        ],
+                            'msg_detail' => [
+                                'item' => $query, $id, $is_upload_succces],
+                        ]
+                    );
+
+                }
             } else {
+                $msg = array();
+
+                $msg = array("img[]" => "Gambar ada yang tidak sesuai Ketentuan| " .
+                    "|max_size :" . $config['max_size'] .
+                    "|max_width :" . $config['max_width'] .
+                    "|max_height :" . $config['max_height']);
+
                 $this->response(
                     ['msg_main' => [
                         'status' => false,
-                        'msg' => "2 UPDATE data FAILED",
+                        'msg' => "4 Form Tidak Valid",
                     ],
                         'msg_detail' => [
-                            'item' => $query, $id, $is_upload_succces],
+                            'item' => [$msg, $errors, $error_upload]],
                     ]
                 );
-
             }
         } else {
-            $msg =array ();
-            if(empty($tmppicture)){
-                $msg =  array ("img[]"=>"gambar tidak boleh kosong");
+            $msg = array();
+            if (empty($tmppicture)) {
+                $msg = array("img[]" => "gambar tidak boleh kosong");
                 // echo ("kok");
             }
             $this->response(
@@ -212,7 +239,7 @@ class Api_konten_pariwisata extends \Restserver\Libraries\REST_Controller
                     'msg' => "3 Form Tidak Valid",
                 ],
                     'msg_detail' => [
-                        'item' => [$msg,$errors, $error_upload]],
+                        'item' => [$msg, $errors, $error_upload]],
                 ]
             );
         }
@@ -230,8 +257,8 @@ class Api_konten_pariwisata extends \Restserver\Libraries\REST_Controller
             "email" => $this->post('email'),
         );
         $tmpAlamat = array(
-            'alamat'=>$this->post('alamat'),
-            'loc'=>$this->post('loc')
+            'alamat' => $this->post('alamat'),
+            'loc' => $this->post('loc'),
         );
         // var_dump(json_encode($detail));
         // $img = $_FILES['img']['name'];
@@ -242,13 +269,16 @@ class Api_konten_pariwisata extends \Restserver\Libraries\REST_Controller
         $config['upload_path'] = './uploads/';
         $config['allowed_types'] = 'gif|jpg|png|JPG';
         $config['encrypt_name'] = true;
+        $config['max_size'] = 500;
+        $config['max_width'] = 600;
+        $config['max_height'] = 600;
         $this->load->library('upload', $config);
 
         // $img =
         // $is_upload_succces = $this->upload->do_multi_upload('img');
         // $file = $this->upload->data();
         // var_dump(json_encode($upload_data_img));
-       $arr_tmp = array();
+        $arr_tmp = array();
 
         $data = array(
             'id_jenis' => $this->post('id_jenis'),
@@ -261,26 +291,27 @@ class Api_konten_pariwisata extends \Restserver\Libraries\REST_Controller
             'id_admin' => "admin1",
         );
 
-
         // VALIDASI FORM
         // $c =$_FILES['img']['name'];
         // echo("ssss");
         // var_dump ();
         // var_dump ($this->post('c'));
         // var_dump ($_FILES['img']['name']);
-        $tmppicture = !empty($_FILES['img']['name'])?$_FILES['img']['name']:NULL;
-        $tmppicture =$tmppicture[0];
+        $tmppicture = !empty($_FILES['img']['name']) ? $_FILES['img']['name'] : null;
+        $tmppicture = $tmppicture[0];
         $this->form_validation->set_data(array_merge($this->input->post())); //digabungkan buat cek semua
         $is_valid = $this->form_validation->run('jenis_insert_konten');
         $errors = $this->form_validation->error_array();
         $error_upload = array('img' => $this->upload->display_errors());
-  
 
         // $query = $this->Pariwisata_konten_model->post_All($data);
         // var_dump(empty($this->post('img_update')));
         // $data['img'] = array();
+        $is_upload_succces = true;
         if ($is_valid) {
+           
             if (!empty($tmppicture)) {
+                
                 $filesCount = count($_FILES['img']['name']);
                 for ($i = 0; $i < $filesCount; $i++) {
                     $_FILES['file']['name'] = $_FILES['img']['name'][$i];
@@ -288,56 +319,79 @@ class Api_konten_pariwisata extends \Restserver\Libraries\REST_Controller
                     $_FILES['file']['tmp_name'] = $_FILES['img']['tmp_name'][$i];
                     $_FILES['file']['error'] = $_FILES['img']['error'][$i];
                     $_FILES['file']['size'] = $_FILES['img']['size'][$i];
-    
+
                     // Load and initialize upload library
                     $this->load->library('upload', $config);
                     $this->upload->initialize($config);
-    
+
                     // Upload file to server
                     if ($this->upload->do_upload('file')) {
                         // Uploaded file data
                         $fileData = $this->upload->data();
                         $upload_data_img[$i] = $fileData['file_name'];
+                        $arr_tmp = $upload_data_img;
                         // $upload_data_img[$i]['uploaded_on'] = date("Y-m-d H:i:s");
+                    } else {
+                        $is_upload_succces = false;
+                        break;
                     }
                 }
-                $arr_tmp = $upload_data_img;
             }
-            $img_update = $this->post('img_update');
-            $img_update_arr = array();
-            foreach( $img_update as $value) {
-                array_push($img_update_arr,$value);
-             }
-             $data['img'] = json_encode(array_merge($arr_tmp, $img_update_arr));
-            //  var_dump($data);
-             
-            $query = $this->Pariwisata_konten_model->update_byId($id,$data);
-            if ($query === true) {
-                $this->response(
-                    ['msg_main' => [
-                        'status' => true,
-                        'msg' => "1. UPDATE data success",
-                    ],
-                        'msg_detail' => [
-                            'item' => $query, $id, "valid" . $is_valid],
-                    ]
-                );
+            if ($is_upload_succces) {
+                $img_update = $this->post('img_update');
+                $img_update_arr = array();
+                foreach ($img_update as $value) {
+                    array_push($img_update_arr, $value);
+                }
+                $data['img'] = json_encode(array_merge($arr_tmp, $img_update_arr));
+                //  var_dump($data);
+
+                $query = $this->Pariwisata_konten_model->update_byId($id, $data);
+                if ($query === true) {
+                    $this->response(
+                        ['msg_main' => [
+                            'status' => true,
+                            'msg' => "1. UPDATE data success",
+                        ],
+                            'msg_detail' => [
+                                'item' => $query, $id, "valid" . $is_valid],
+                        ]
+                    );
+                } else {
+                    $this->response(
+                        ['msg_main' => [
+                            'status' => false,
+                            'msg' => "2 UPDATE data FAILED",
+                        ],
+                            'msg_detail' => [
+                                'item' => $query, $id],
+                        ]
+                    );
+
+                }
             } else {
+                $msg = array();
+
+                $msg = array("img[]" => "Gambar ada yang tidak sesuai Ketentuan| " .
+                    "|max_size :" . $config['max_size'] .
+                    "|max_width :" . $config['max_width'] .
+                    "|max_height :" . $config['max_height']);
+
                 $this->response(
                     ['msg_main' => [
                         'status' => false,
-                        'msg' => "2 UPDATE data FAILED",
+                        'msg' => "4 Form Tidak Valid",
                     ],
                         'msg_detail' => [
-                            'item' => $query, $id, $is_upload_succces],
+                            'item' => [$msg, $errors, $error_upload]],
                     ]
                 );
-
             }
+
         } else {
-            $msg =array ();
-            if(empty($tmppicture)){
-                $msg =  array ("img[]"=>"gambar tidak boleh kosong");
+            $msg = array();
+            if (empty($data['img'])) {
+                $msg = array("img[]" => "gambar tidak boleh kosong");
                 // echo ("kok");
             }
             $this->response(
@@ -346,7 +400,7 @@ class Api_konten_pariwisata extends \Restserver\Libraries\REST_Controller
                     'msg' => "3 Form Tidak Valid",
                 ],
                     'msg_detail' => [
-                        'item' => [$msg,$errors, $error_upload]],
+                        'item' => [$msg, $errors, $error_upload]],
                 ]
             );
         }

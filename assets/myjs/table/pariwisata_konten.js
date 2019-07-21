@@ -1,7 +1,7 @@
 var TableX;
 var ID;
 var files = new Array();
-var idc = 0, id_alamat_input = 1, is_update = false,id_update;
+var idc = 0, id_alamat_input = 1, is_update = false, id_update;
 var imgArr_update = new Array();
 
 
@@ -156,11 +156,20 @@ function update_modal(id) {
 $('#divmodals').on('hidden.bs.modal', function () {
 	console.log("modal hidden");
 	is_update = false;
+	$.when(refreshTableX(TableX)).done(function (x) {
+		var body = $("html, body");
+		body.stop().animate({ scrollTop: window.url["scroll"] }, 1000, 'swing', function () {
+			console.log("Finished animating");
+		});
+	});
+
 })
 
 function insert_modal() {
+	window.url["scroll"] = $(window).scrollTop();
 	id_alamat_input = 1;
 	files = new Array();
+	imgArr_update = new Array();
 	$("#divmodals").load("./assets/contents/modal/" + TableX + "_insert.php", function () {
 		// $('#form')[0].reset(); // reset form on modals
 		$('.form-group').removeClass('has-error'); // clear error class
@@ -219,6 +228,7 @@ function insert_modal() {
 						contentType: false,
 						beforeSend: function () {
 							console.log("before send");
+							
 							// $("#content").append('')
 						},
 						success: function (dataObject) {
@@ -232,9 +242,9 @@ function insert_modal() {
 								var is_image_exist = dataObject.msg_detail.item[0];
 								var form_validation_msg = dataObject.msg_detail.item[1];
 								var upload_msg = dataObject.msg_detail.item[1];
-								set_msg_error(is_image_exist)
-								set_msg_error(form_validation_msg)
-								set_msg_error(upload_msg)
+								set_msg_error(is_image_exist);
+								set_msg_error(form_validation_msg);
+								set_msg_error(upload_msg);
 
 								// $.each(form_validation_msg, function (key, value) {
 								// 	key = key.replace('[', '');

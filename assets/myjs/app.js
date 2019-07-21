@@ -53,7 +53,7 @@ function refreshTableX(tableX) {
 	//mencegah scroll saat
 	var clientHeight = $('#content').height();
 	$('#content').height(clientHeight);
-	$("#content").load("./assets/contents/table/" + tableX + ".php", function () {
+	return $("#content").load("./assets/contents/table/" + tableX + ".php", function () {
 		//load modelnya tableX
 
 		// $('#content').height(clientHeight);

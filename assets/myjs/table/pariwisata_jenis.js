@@ -157,22 +157,12 @@ function insert_modal() {
                                 $(".text-danger").html("");
                                 var form_validation_msg = dataObject.msg_detail.item[0];
                                 var upload_msg = dataObject.msg_detail.item[1];
-                                $.each(form_validation_msg, function (key, value) {
-                                    if (value !== null) {
-                                        console.log("not null" + key);
-                                        console.log(('"' + '.text-danger.' + key + '"') + value);
-
-                                        $('.' + 'text-danger.' + key).html(value);
-                                    }
-                                })
-                                $.each(upload_msg, function (key, value) {
-                                    if (value !== null) {
-                                        console.log("not null" + key);
-                                        console.log(('"' + '.text-danger.' + key + '"') + value);
-
-                                        $('.' + 'text-danger.' + key).html(value);
-                                    }
-                                })
+                                var is_image_exist = dataObject.msg_detail.item[0];
+								var form_validation_msg = dataObject.msg_detail.item[1];
+								var upload_msg = dataObject.msg_detail.item[1];
+								set_msg_error(is_image_exist)
+								set_msg_error(form_validation_msg)
+								set_msg_error(upload_msg)
                             }
                         },
                         complete: function () {
@@ -188,7 +178,15 @@ function insert_modal() {
         });
     });
 }
-
+function set_msg_error(data) {
+	$.each(data, function (key, value) {
+		key = key.replace('[', '');
+		key = key.replace(']', '');
+		if (value !== null) {
+			console.log($('.' + 'text-danger.' + key).html(value));
+		}
+	})
+}
 
 function conf_delete(id) {
     swal("apakah anda yakin ingin menghapus data?", {

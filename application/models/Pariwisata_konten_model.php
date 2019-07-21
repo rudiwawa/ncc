@@ -71,7 +71,7 @@ class Pariwisata_konten_model extends CI_Model {
 	}
 	public function delete_byId($id){
 
-		$query = $this->db->query("UPDATE `pariwisata_main` SET `is_delete` = '1' WHERE `pariwisata_main`.`id_jenis` = '".$id."';");
+		$query = $this->db->query("UPDATE `pariwisata_main` SET `is_delete` = '1' WHERE `pariwisata_main`.`id_pariwisata` = '".$id."';");
 
 		return $query;
 
