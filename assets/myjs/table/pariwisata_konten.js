@@ -2,6 +2,7 @@ var TableX;
 var ID;
 var files = new Array();
 var idc = 0, id_alamat_input = 1;
+var imgArr_update = new Array ();
 
 
 var c = 0;
@@ -322,6 +323,8 @@ function get_placehorder(id) {
 				$("#email").val(get_detail(data[0].detail, "email"));
 				$("#website").val(get_detail(data[0].detail, "website"));
 				render_alamat_from_db(data[0].detail);
+				imgArr_update = JSON.parse(data[0].img);
+				render_img_from_db();
 				console.log(data[0].id_sub);
 
 				// console.log("placehorder");
@@ -341,19 +344,38 @@ function get_placehorder(id) {
 }
 
 function render_alamat_from_db(data) {
-	var dataArr=JSON.parse(data);
-	var is_first = true,i=0;
+	var dataArr = JSON.parse(data);
+	var is_first = true, i = 0;
 	dataArr.alamat.forEach(element => {
-		console.log("ALAMAT LOKASI"+element.loc+element.alamat);
-		if(is_first){
-			is_first=false;
-		}else{
+		console.log("ALAMAT LOKASI" + element.loc + element.alamat);
+		if (is_first) {
+			is_first = false;
+		} else {
 			add_form_alamat();
 		}
-		$("#loc_input_"+i).val(element.loc);
-		$("#alamat_input_"+i).val(element.alamat);
+		$("#loc_input_" + i).val(element.loc);
+		$("#alamat_input_" + i).val(element.alamat);
 		i++;
 	});
+}
+
+function render_img_from_db() {
+	console.log("render_img_from_db ");
+	// $("#image_preview_array img").remove();
+	// $("#image_preview_array button").remove();
+	var id = 0;
+	console.log(imgArr_update);
+	imgArr_update.forEach(element => {
+		$("#image_preview_array").append('<div class="show-image"><img src="' + window.bashUrl + "/uploads/" + element + '" class="rounded image_view p-1" alt="..." style="width:100%;">' +
+			'<button type="button" class="btn btn-danger btn-sm dell "  onclick="dell_img_update(' + id + ')" style="position:absolute;"><i class="ti-minus text"></i></button></div>')
+		id++;
+	});
+
+}
+
+function dell_img_update(i) {
+	imgArr_update.splice(i, 1);
+	render_img_All();
 }
 
 function get_placehorder_sub(id) {
@@ -398,6 +420,11 @@ $(document.body).delegate('#id_jenis', 'change', function () {
 	ket_sub_get($(this).val());
 	console.log($(this).val());
 });
+
+function render_img_All(){
+	readURL_array(files);
+	render_img_from_db();
+}
 
 
 // function readURL(input) {
@@ -514,7 +541,8 @@ function tambah_img() {
 		console.log("add_img_btn");
 		// files.push.apply(input.files[0]);
 		files.push(tmp_file_0);
-		readURL_array(files);
+		// readURL_array(files);
+		render_img_All();
 		boolean_before_set = false;
 		$("#add_img").prop('disabled', true);
 		c++;
@@ -554,5 +582,6 @@ function readURL_array(input) {
 
 function dell_img(i) {
 	files.splice(i, 1);
-	readURL_array(files);
+	// readURL_array(files);
+	render_img_All();
 }
