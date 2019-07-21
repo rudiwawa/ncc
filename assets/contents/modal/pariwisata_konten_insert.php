@@ -50,12 +50,12 @@
                                 <div class="form-group col-lg-4">
                                     <label>(Latitude &amp; Longitude)</label>
                                     <input type="text" name="loc[]" 
-                                        class="form-control form-control-line" id="loc_0" required></input>
+                                        class="form-control form-control-line" id="loc_input_0" required></input>
                                     <div class="text-danger loc"></div>
                                 </div>
                                 <div class="form-group col-lg-7">
                                     <label>Alamat Lengkap</label>
-                                    <input name="alamat[]"  class="form-control form-control-line" id="alamat_0"
+                                    <input name="alamat[]"  class="form-control form-control-line" id="alamat_input_0"
                                         required></input>
                                     <div class="text-danger alamat"></div>
                                 </div>

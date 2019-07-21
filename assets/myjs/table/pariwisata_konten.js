@@ -1,7 +1,7 @@
 var TableX;
 var ID;
 var files = new Array();
-var idc = 0;
+var idc = 0, id_alamat_input = 1;
 
 
 var c = 0;
@@ -150,6 +150,7 @@ function update_modal(id) {
 }
 
 function insert_modal() {
+	id_alamat_input = 1;
 	files = new Array();
 	$("#divmodals").load("./assets/contents/modal/" + TableX + "_insert.php", function () {
 		// $('#form')[0].reset(); // reset form on modals
@@ -317,9 +318,10 @@ function get_placehorder(id) {
 				$("select[name='id_sub']").append("<option value=" + data[0].id_sub + " selected >" + data[0].ket_sub + "</option>");
 				$("#ket_main").val(data[0].ket_main);
 				$("#deskripsi").val(get_detail(data[0].detail, "ket"));
-				$("#tlp").val(get_detail(data[0].detail,"tlp"));
-				$("#email").val(get_detail(data[0].detail,"email"));
-				$("#website").val(get_detail(data[0].detail,"website"));
+				$("#tlp").val(get_detail(data[0].detail, "tlp"));
+				$("#email").val(get_detail(data[0].detail, "email"));
+				$("#website").val(get_detail(data[0].detail, "website"));
+				render_alamat_from_db(data[0].detail);
 				console.log(data[0].id_sub);
 
 				// console.log("placehorder");
@@ -336,6 +338,22 @@ function get_placehorder(id) {
 		}
 	});
 
+}
+
+function render_alamat_from_db(data) {
+	var dataArr=JSON.parse(data);
+	var is_first = true,i=0;
+	dataArr.alamat.forEach(element => {
+		console.log("ALAMAT LOKASI"+element.loc+element.alamat);
+		if(is_first){
+			is_first=false;
+		}else{
+			add_form_alamat();
+		}
+		$("#loc_input_"+i).val(element.loc);
+		$("#alamat_input_"+i).val(element.alamat);
+		i++;
+	});
 }
 
 function get_placehorder_sub(id) {
@@ -393,27 +411,29 @@ $(document.body).delegate('#id_jenis', 'change', function () {
 // 		reader.readAsDataURL(input.files[0]);
 // 	}
 // }
-var html_loc = '<div class="form-group col-lg-4">' +
-	'<label>(Latitude &amp; Longitude)</label>' +
-	'<input type="text" name="loc[]" id="loc_faskes"' +
-	'class="form-control form-control-line"></input>' +
-	'<a id="msg_loc_faskes" style="color: red;"></a>' +
-	'</div>';
-var html_alamat = '<div class="form-group col-lg-7">' +
-	'<label>Alamat Lengkap</label>' +
-	'<input name="alamat[]" id="alamat_faskes"' +
-	'class="form-control form-control-line"></>' +
-	'<a id="msg_alamat_faskes" style="color: red;"></a>' +
-	'</div>';
-var html_bt_alamat = '<div class="col-lg-1">' +
-	'<div style="margin-top: 2em;">' +
-	'<button type="button"  class="btn btn-danger btn-sm dell" style="">' +
-	'<i class="ti-minus text"></i>' +
-	'</button>' +
-	'</div>' +
-	'</div>';
+
 var id_form_alamat = 1;
 function add_form_alamat() {
+	var html_loc = '<div class="form-group col-lg-4">' +
+		'<label>(Latitude &amp; Longitude)</label>' +
+		'<input type="text" name="loc[]" id="loc_input_' + id_alamat_input + '"' +
+		'class="form-control form-control-line"></input>' +
+		'<a id="msg_loc_faskes" style="color: red;"></a>' +
+		'</div>';
+	var html_alamat = '<div class="form-group col-lg-7">' +
+		'<label>Alamat Lengkap</label>' +
+		'<input name="alamat[]" id="alamat_input_' + id_alamat_input + '"' +
+		'class="form-control form-control-line"></>' +
+		'<a id="msg_alamat_faskes" style="color: red;"></a>' +
+		'</div>';
+	var html_bt_alamat = '<div class="col-lg-1">' +
+		'<div style="margin-top: 2em;">' +
+		'<button type="button"  class="btn btn-danger btn-sm dell" style="">' +
+		'<i class="ti-minus text"></i>' +
+		'</button>' +
+		'</div>' +
+		'</div>';
+	id_alamat_input++;
 	console.log("add_form_alamat");
 	$("#form_alamat").append('<div class="col-lg-12 row" id="form_alamat' + id_form_alamat + '">' +
 		html_loc + html_alamat + html_bt_alamat +
