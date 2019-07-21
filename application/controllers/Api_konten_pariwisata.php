@@ -238,7 +238,7 @@ class Api_konten_pariwisata extends \Restserver\Libraries\REST_Controller
         // var_dump($img[0]);
 
         // $file_element_name = $this->put('img');
-        $id = $this->Pariwisata_konten_model->get_id();
+        $id = $this->post('id');
         $config['upload_path'] = './uploads/';
         $config['allowed_types'] = 'gif|jpg|png|JPG';
         $config['encrypt_name'] = true;
@@ -248,9 +248,9 @@ class Api_konten_pariwisata extends \Restserver\Libraries\REST_Controller
         // $is_upload_succces = $this->upload->do_multi_upload('img');
         // $file = $this->upload->data();
         // var_dump(json_encode($upload_data_img));
+       $arr_tmp = array();
 
         $data = array(
-            'id_pariwisata' => $id[0]['id'],
             'id_jenis' => $this->post('id_jenis'),
             'id_sub' => $this->post('id_sub'),
             'ket_main' => $this->post('ket_main'),
@@ -260,10 +260,12 @@ class Api_konten_pariwisata extends \Restserver\Libraries\REST_Controller
             'time_update' => $this->now,
             'id_admin' => "admin1",
         );
+
+
         // VALIDASI FORM
         // $c =$_FILES['img']['name'];
         // echo("ssss");
-        // var_dump ($c);
+        // var_dump ();
         // var_dump ($this->post('c'));
         // var_dump ($_FILES['img']['name']);
         $tmppicture = !empty($_FILES['img']['name'])?$_FILES['img']['name']:NULL;
@@ -275,30 +277,40 @@ class Api_konten_pariwisata extends \Restserver\Libraries\REST_Controller
   
 
         // $query = $this->Pariwisata_konten_model->post_All($data);
-
-        if ($is_valid && !empty($tmppicture)) {
-
-            $filesCount = count($_FILES['img']['name']);
-            for ($i = 0; $i < $filesCount; $i++) {
-                $_FILES['file']['name'] = $_FILES['img']['name'][$i];
-                $_FILES['file']['type'] = $_FILES['img']['type'][$i];
-                $_FILES['file']['tmp_name'] = $_FILES['img']['tmp_name'][$i];
-                $_FILES['file']['error'] = $_FILES['img']['error'][$i];
-                $_FILES['file']['size'] = $_FILES['img']['size'][$i];
-
-                // Load and initialize upload library
-                $this->load->library('upload', $config);
-                $this->upload->initialize($config);
-
-                // Upload file to server
-                if ($this->upload->do_upload('file')) {
-                    // Uploaded file data
-                    $fileData = $this->upload->data();
-                    $upload_data_img[$i] = $fileData['file_name'];
-                    // $upload_data_img[$i]['uploaded_on'] = date("Y-m-d H:i:s");
+        // var_dump(empty($this->post('img_update')));
+        // $data['img'] = array();
+        if ($is_valid) {
+            if (!empty($tmppicture)) {
+                $filesCount = count($_FILES['img']['name']);
+                for ($i = 0; $i < $filesCount; $i++) {
+                    $_FILES['file']['name'] = $_FILES['img']['name'][$i];
+                    $_FILES['file']['type'] = $_FILES['img']['type'][$i];
+                    $_FILES['file']['tmp_name'] = $_FILES['img']['tmp_name'][$i];
+                    $_FILES['file']['error'] = $_FILES['img']['error'][$i];
+                    $_FILES['file']['size'] = $_FILES['img']['size'][$i];
+    
+                    // Load and initialize upload library
+                    $this->load->library('upload', $config);
+                    $this->upload->initialize($config);
+    
+                    // Upload file to server
+                    if ($this->upload->do_upload('file')) {
+                        // Uploaded file data
+                        $fileData = $this->upload->data();
+                        $upload_data_img[$i] = $fileData['file_name'];
+                        // $upload_data_img[$i]['uploaded_on'] = date("Y-m-d H:i:s");
+                    }
                 }
+                $arr_tmp = $upload_data_img;
             }
-            $data['img'] = json_encode($upload_data_img);
+            $img_update = $this->post('img_update');
+            $img_update_arr = array();
+            foreach( $img_update as $value) {
+                array_push($img_update_arr,$value);
+             }
+             $data['img'] = json_encode(array_merge($arr_tmp, $img_update_arr));
+            //  var_dump($data);
+             
             $query = $this->Pariwisata_konten_model->update_byId($id,$data);
             if ($query === true) {
                 $this->response(

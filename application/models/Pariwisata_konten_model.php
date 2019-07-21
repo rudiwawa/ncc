@@ -46,13 +46,13 @@ class Pariwisata_konten_model extends CI_Model {
 	}
 
 	public function update_byId($id,$data){
-		$cek = $this->db->get_where('pariwisata_main', array('id_konten' => $id)); 
+		$cek = $this->db->get_where('pariwisata_main', array('id_pariwisata' => $id)); 
 		$count = $cek->num_rows();
 		if ($count === 0) {
 			return "ID not Exist";
 		}
 		else{
-			$this->db->where('id_jenis', $id);
+			$this->db->where('id_pariwisata', $id);
 			return $this->db->update('pariwisata_main', $data);
 		}
 		

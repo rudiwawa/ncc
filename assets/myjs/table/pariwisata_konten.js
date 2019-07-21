@@ -1,8 +1,8 @@
 var TableX;
 var ID;
 var files = new Array();
-var idc = 0, id_alamat_input = 1;
-var imgArr_update = new Array ();
+var idc = 0, id_alamat_input = 1, is_update = false,id_update;
+var imgArr_update = new Array();
 
 
 var c = 0;
@@ -144,11 +144,19 @@ function get_detail(data, i) {
 
 
 function update_modal(id) {
+	id_update = id;
+	is_update = true;
 	insert_modal();
 	$.when(ket_jenis_get()).then(function (x) {
 		get_placehorder(id);
+
 	});
 }
+
+$('#divmodals').on('hidden.bs.modal', function () {
+	console.log("modal hidden");
+	is_update = false;
+})
 
 function insert_modal() {
 	id_alamat_input = 1;
@@ -175,6 +183,19 @@ function insert_modal() {
 					files.forEach(element => {
 						mydata.append('img[]', element);
 					});
+					var url_temp;
+					if (is_update) {
+						imgArr_update.forEach(element => {
+							console.log(element);
+							mydata.append('img_update[]', element);
+							mydata.append('id', id_update);
+						});
+						// mydata.append("img_update[]", imgArr_update);
+						url_temp = window.url["pariwisata_konten"] + "/update";
+
+					} else {
+						url_temp = window.url["pariwisata_konten"];
+					}
 
 
 
@@ -187,7 +208,7 @@ function insert_modal() {
 					// var file_data = $('#img').prop('files')[0];
 					// mydata.append('id_jenis', id); 
 					$.ajax({
-						url: window.url["pariwisata_konten"],
+						url: url_temp,
 						type: "POST",
 						dataType: "json",
 						// mimeType:"multipart/form-data",
@@ -232,6 +253,7 @@ function insert_modal() {
 						},
 						complete: function () {
 							console.log("complete");
+
 							// $('#modal_form_update').modal('toggle');
 
 						}
@@ -239,6 +261,7 @@ function insert_modal() {
 					// return false;
 				});
 			});
+
 			console.log("");
 		});
 	});
@@ -421,7 +444,7 @@ $(document.body).delegate('#id_jenis', 'change', function () {
 	console.log($(this).val());
 });
 
-function render_img_All(){
+function render_img_All() {
 	readURL_array(files);
 	render_img_from_db();
 }
