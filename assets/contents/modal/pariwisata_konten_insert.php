@@ -111,16 +111,19 @@
                                         <div class="col-lg-9">
                                             <input type="file" name="img_temp" id="img_temp" class="dropify"  >
                                             <button  onclick="tambah_img()" type="button" class="btn btn-primary" id="add_img">Tambah</button>
+                                            <div class="text-danger img"></div>
                                             <div id="image_preview">
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
+                                                
                                                 <div id="image_preview_array">
+                                                    
                                                     </div>
 
                                         </div>
                                     </div>
-                                    <div class="text-danger img"></div>
+                                    
                                 </div>
                             </div>
 

@@ -15,11 +15,7 @@ $(document).ready(function () {
 	window.url["scroll"];
 	window.url["tmp_firstIdjenis"] = "dancok";
 
-	// CONFIG IMAGE
-	var config = new Array();
-	config['max_size'] = 500;
-	config['max_width'] = 600;
-	config['max_height'] = 600;
+	
 
 	// ONCLICK EVENT!
 	$('#pariwisata_jenis').on('click', function (e) {

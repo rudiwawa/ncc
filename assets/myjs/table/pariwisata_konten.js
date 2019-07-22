@@ -3,6 +3,11 @@ var ID, is_img_valid = false;
 var files = new Array();
 var idc = 0, id_alamat_input = 1, is_update = false, id_update;
 var imgArr_update = new Array(), imgArr_deleted = new Array();
+// CONFIG IMAGE
+var config = new Array();
+config['max_size'] = 500;
+config['max_width'] = 600;
+config['max_height'] = 600;
 
 
 var c = 0;
@@ -584,16 +589,18 @@ function readURL(input) {
 						"|max_height" + config['max_height'] +
 						"|max_size" + config['max_size']
 				};
+				set_msg_error(msg);
+			}else {
+				var msg = {img:""};
+				set_msg_error(msg);
+				is_img_valid = true;
 			}
-			set_msg_error(msg)
 		};
 		img.onerror = function () {
 			alert("not a valid file: " + file.type);
 		};
 		img.src = _URL.createObjectURL(file);
-	} else {
-		is_img_valid = true;
-	}
+	} 
 }
 
 
