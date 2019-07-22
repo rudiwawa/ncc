@@ -390,7 +390,7 @@ class Api_konten_pariwisata extends \Restserver\Libraries\REST_Controller
 
         } else {
             $msg = array();
-            if (empty($data['img'])) {
+            if (empty($tmppicture)&&empty($this->post('img_update'))) {
                 $msg = array("img[]" => "gambar tidak boleh kosong");
                 // echo ("kok");
             }

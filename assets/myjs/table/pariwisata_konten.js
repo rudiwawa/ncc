@@ -226,6 +226,7 @@ function insert_modal() {
 						async: false,
 						processData: false,
 						contentType: false,
+						timeout:1000,
 						beforeSend: function () {
 							console.log("before send");
 							
@@ -233,11 +234,17 @@ function insert_modal() {
 						},
 						success: function (dataObject) {
 							if (dataObject.msg_main.status == true) {
+								if(is_update){
+									swal("Update!", "Update data berhasil!", "success");
+								}else{
+									swal("Insert!", "Insert data berhasil!", "success");
+								}
 								$('#modal_form_update').modal('toggle');
 								refreshTableX(TableX, 1);
 								// $(':input').val('');
 							} else {
 								//FORM VALIDATION
+								swal("Ups!", "Periksa kembali form anda", "error");
 								$(".text-danger").html("");
 								var is_image_exist = dataObject.msg_detail.item[0];
 								var form_validation_msg = dataObject.msg_detail.item[1];
@@ -261,12 +268,17 @@ function insert_modal() {
 
 							}
 						},
-						complete: function () {
-							console.log("complete");
+						complete: function (xmlhttprequest, textstatus, message) {
+							// if(textstatus==="timeout") {
+							// 	alert(textstatus); //run function here!
+							// } else {
+								// alert(textstatus);
+							// }
+							// console.log("complete");
 
 							// $('#modal_form_update').modal('toggle');
 
-						}
+						},timeout: 3000
 					});
 					// return false;
 				});
