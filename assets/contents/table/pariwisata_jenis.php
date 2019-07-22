@@ -8,7 +8,7 @@
             <table id="table_pariwisata_jenis" class="table table-bordered table-striped">
                 <thead>
                     <tr>
-                        <th>No</th>
+                        <th style="width: 50px;">No</th>
                         <th>Keterangan</th>
                         <th style="width: 210px;">Gambar</th>
                         <th style="width: 170px;">Action</th>

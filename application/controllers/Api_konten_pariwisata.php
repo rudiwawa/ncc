@@ -420,7 +420,23 @@ class Api_konten_pariwisata extends \Restserver\Libraries\REST_Controller
     {
         $id = $this->delete('id');
         $query = $this->Pariwisata_konten_model->delete_byId($id);
-        if ($query === true) {
+        if (query==true) {
+            // $config['upload_path'] = './uploads/';
+            // $imgArr_tmp = $this->Pariwisata_konten_model->getImg_byId($id);
+            // if (!empty($imgArr_tmp)) {
+            //     var_dump($imgArr_tmp[0]["img"]);
+            //     $imgArr =  json_decode($imgArr_tmp[0]["img"]);
+            //     echo $id;
+            //     var_dump($imgArr);
+            //     foreach ($imgArr as $key => $value) {
+            //         try {
+            //         unlink($config['upload_path'] . $value);
+            //         }catch(Exception $e) {
+
+            //         }
+            //         // echo("siap ");
+            //     }
+            // }
             $this->response(
                 ['msg_main' => [
                     'status' => true,
@@ -430,6 +446,7 @@ class Api_konten_pariwisata extends \Restserver\Libraries\REST_Controller
                         'item' => $query],
                 ]
             );
+
         } else {
             $this->response(
                 ['msg_main' => [

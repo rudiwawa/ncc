@@ -76,5 +76,12 @@ class Pariwisata_konten_model extends CI_Model {
 		return $query;
 
 	}
+	public function getImg_byId($id){
+
+		$query = $this->db->query("SELECT `img` FROM `pariwisata_main` WHERE `pariwisata_main`.`id_pariwisata` = '".$id."';");
+
+		return $query->result_array();
+
+	}
 }
 ?>

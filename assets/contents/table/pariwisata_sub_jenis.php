@@ -11,10 +11,10 @@
             <table id="table_pariwisata_sub_jenis" class="display table table-bordered table-striped">
                 <thead>
                     <tr>
-                        <th>No</th>
+                        <th style="width: 50px;">No</th>
                         <th>Jenis</th>
                         <th>Sub Jenis</th>
-                        <th>Action</th>
+                        <th style="width: 200px;">Action</th>
                     </tr>
                 </thead>
                 <tbody>
