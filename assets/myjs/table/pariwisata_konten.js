@@ -1,5 +1,5 @@
 var TableX;
-var ID;
+var ID, is_img_valid = false;
 var files = new Array();
 var idc = 0, id_alamat_input = 1, is_update = false, id_update;
 var imgArr_update = new Array(), imgArr_deleted = new Array();
@@ -178,6 +178,7 @@ function insert_modal() {
 		console.log("insert_modal");
 		$('#modal_form_update').modal('show');
 		$("#img_temp").change(function () {
+
 			readURL(this);
 		});
 		$.when(ket_jenis_get()).then(function (x) {
@@ -550,14 +551,19 @@ function dell_form_alamat(id) {
 var tmp_file_0;
 var boolean_before_set
 function readURL(input) {
-	console.log("c " + c);
-	console.log(input.files[0]);
+
+	var img = new Image();
+
+	var _URL = window.URL || window.webkitURL;
+
+
 	$("#add_img").prop('disabled', false);
 	boolean_before_set = true;
 	$("#image_preview img").remove();
 	if (input.files) {
 		var filesAmount = input.files.length;
 		var reader = new FileReader();
+
 		reader.onload = function (e) {
 			$("#image_preview").append('<img src="' + e.target.result + '" class="rounded image_view" alt="..." style="width:480px;">')
 			// console.log( "e.target.result" );
@@ -565,39 +571,49 @@ function readURL(input) {
 		}
 		reader.readAsDataURL(input.files[0]);
 		tmp_file_0 = input.files[0];
-		// console.log("IMAGE ORIGINAL");
-		// console.log(input.files[0]);
-		// console.log(input.files[0]);
-
-		// $("#add_img").click(function (e) {
-		// 	if (boolean_before_set) {
-		// 		console.log("add_img_btn");
-		// 		// files.push.apply(input.files[0]);
-		// 		tmp_file_0 = input.files[0];
-		// 		readURL_array(files);
-		// 		boolean_before_set = false;
-		// 		$("#add_img").prop('disabled', true);
-		// 		c++;
-		// 	}
-		// })
-
-
+	}
+	// CEK IMAGE APAKAH VALID
+	var file, img;
+	if ((file = input.files[0])) {
+		img = new Image();
+		img.onload = function () {
+			if (this.width > config['max_width'] || this.height > config['max_height'] || this.size > config['max_size']) {
+				var msg = {
+					img: "GAMBAR YANG ANDA MASUKKAN BELUM SESUAI KRITERIA => " +
+						"|max_width" + config['max_width'] +
+						"|max_height" + config['max_height'] +
+						"|max_size" + config['max_size']
+				};
+			}
+			set_msg_error(msg)
+		};
+		img.onerror = function () {
+			alert("not a valid file: " + file.type);
+		};
+		img.src = _URL.createObjectURL(file);
+	} else {
+		is_img_valid = true;
 	}
 }
 
 
 function tambah_img() {
 	console.log("add_img_btn");
-	if (boolean_before_set) {
-		console.log("add_img_btn");
-		// files.push.apply(input.files[0]);
-		files.push(tmp_file_0);
-		// readURL_array(files);
-		render_img_All();
-		boolean_before_set = false;
-		$("#add_img").prop('disabled', true);
-		c++;
+	if (is_img_valid) {
+		if (boolean_before_set) {
+			console.log("add_img_btn");
+			// files.push.apply(input.files[0]);
+			files.push(tmp_file_0);
+			// readURL_array(files);
+			render_img_All();
+			boolean_before_set = false;
+			$("#add_img").prop('disabled', true);
+			c++;
+		}
+	}else{
+		swal("Ups!", "Gambar ERROR, periksa gambar yang telah anda masukkan", "error");
 	}
+
 }
 
 
