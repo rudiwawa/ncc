@@ -2,7 +2,7 @@ var TableX;
 var ID;
 var files = new Array();
 var idc = 0, id_alamat_input = 1, is_update = false, id_update;
-var imgArr_update = new Array();
+var imgArr_update = new Array(), imgArr_deleted = new Array();
 
 
 var c = 0;
@@ -170,6 +170,7 @@ function insert_modal() {
 	id_alamat_input = 1;
 	files = new Array();
 	imgArr_update = new Array();
+	imgArr_deleted = new Array();
 	$("#divmodals").load("./assets/contents/modal/" + TableX + "_insert.php", function () {
 		// $('#form')[0].reset(); // reset form on modals
 		$('.form-group').removeClass('has-error'); // clear error class
@@ -198,6 +199,10 @@ function insert_modal() {
 							console.log(element);
 							mydata.append('img_update[]', element);
 							mydata.append('id', id_update);
+							// console.log(imgArr_deleted);
+						});
+						imgArr_deleted.forEach(element => {
+							mydata.append('imgArr_deleted[]', element);
 						});
 						// mydata.append("img_update[]", imgArr_update);
 						url_temp = window.url["pariwisata_konten"] + "/update";
@@ -226,17 +231,17 @@ function insert_modal() {
 						async: false,
 						processData: false,
 						contentType: false,
-						timeout:1000,
+						timeout: 1000,
 						beforeSend: function () {
 							console.log("before send");
-							
+
 							// $("#content").append('')
 						},
 						success: function (dataObject) {
 							if (dataObject.msg_main.status == true) {
-								if(is_update){
+								if (is_update) {
 									swal("Update!", "Update data berhasil!", "success");
-								}else{
+								} else {
 									swal("Insert!", "Insert data berhasil!", "success");
 								}
 								$('#modal_form_update').modal('toggle');
@@ -272,13 +277,13 @@ function insert_modal() {
 							// if(textstatus==="timeout") {
 							// 	alert(textstatus); //run function here!
 							// } else {
-								// alert(textstatus);
+							// alert(textstatus);
 							// }
 							// console.log("complete");
 
 							// $('#modal_form_update').modal('toggle');
 
-						},timeout: 3000
+						}, timeout: 3000
 					});
 					// return false;
 				});
@@ -419,6 +424,7 @@ function render_img_from_db() {
 }
 
 function dell_img_update(i) {
+	imgArr_deleted.push(imgArr_update[i]);
 	imgArr_update.splice(i, 1);
 	render_img_All();
 }

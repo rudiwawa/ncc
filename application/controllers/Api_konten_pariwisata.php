@@ -278,6 +278,7 @@ class Api_konten_pariwisata extends \Restserver\Libraries\REST_Controller
         // $is_upload_succces = $this->upload->do_multi_upload('img');
         // $file = $this->upload->data();
         // var_dump(json_encode($upload_data_img));
+
         $arr_tmp = array();
 
         $data = array(
@@ -309,9 +310,9 @@ class Api_konten_pariwisata extends \Restserver\Libraries\REST_Controller
         // $data['img'] = array();
         $is_upload_succces = true;
         if ($is_valid) {
-           
+
             if (!empty($tmppicture)) {
-                
+
                 $filesCount = count($_FILES['img']['name']);
                 for ($i = 0; $i < $filesCount; $i++) {
                     $_FILES['file']['name'] = $_FILES['img']['name'][$i];
@@ -357,6 +358,14 @@ class Api_konten_pariwisata extends \Restserver\Libraries\REST_Controller
                                 'item' => $query, $id, "valid" . $is_valid],
                         ]
                     );
+                    $imgArr_deleted = !empty($this->post('imgArr_deleted')) ? $this->post('imgArr_deleted') : null;
+                    // var_dump($imgArr_deleted);
+                    if (!empty($imgArr_deleted)) {
+                        foreach ($imgArr_deleted as $key => $value) {
+                            unlink($config['upload_path'] . $value);
+                            // echo("siap ");
+                        }
+                    }
                 } else {
                     $this->response(
                         ['msg_main' => [
@@ -390,7 +399,7 @@ class Api_konten_pariwisata extends \Restserver\Libraries\REST_Controller
 
         } else {
             $msg = array();
-            if (empty($tmppicture)&&empty($this->post('img_update'))) {
+            if (empty($tmppicture) && empty($this->post('img_update'))) {
                 $msg = array("img[]" => "gambar tidak boleh kosong");
                 // echo ("kok");
             }
