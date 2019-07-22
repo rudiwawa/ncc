@@ -95,11 +95,13 @@ function update_save() {
         },
         success: function (dataObject) {
             if (dataObject.msg_main.status == true) {
+                swal("Berhasil", "Insert data berhasil", "success");
                 $('#modal_form_update').modal('toggle');
 
                 // $(':input').val('');
             }
             else {
+                swal("Kesalahan!", "Silahkan cek kembali form!", "error");
                 //FORM VALIDATION
                 $(".text-danger").html("");
                 var data = dataObject.msg_detail.item;
@@ -140,11 +142,13 @@ function insert_save() {
         },
         success: function (dataObject) {
             if (dataObject.msg_main.status == true) {
+                swal("Berhasil", "Insert data berhasil", "success");
                 $('#modal_form_insert').modal('toggle');
 
                 // $(':input').val('');
             }
             else {
+                swal("Kesalahan!", "Silahkan cek kembali form!", "error");
                 //FORM VALIDATION
                 $(".text-danger").html("");
                 var data = dataObject.msg_detail.item;

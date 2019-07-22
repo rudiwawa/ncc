@@ -77,13 +77,15 @@ function update_modal(id) {
                         },
                         success: function (dataObject) {
                             if (dataObject.msg_main.status == true) {
+                                swal("Berhasil!", "Update data berhasil!", "success");
                                 $('#modal_form_update').modal('toggle');
                                 window.url["scroll"] = $(window).scrollTop();
                                 refreshTableX(TableX);
-
-
-
+                                
+                                
+                                
                             } else {
+                                swal("Kesalahan!", "Silahkan cek kembali form!", "error");
                                 //FORM VALIDATION
                                 $(".text-danger").html("");
                                 var data = dataObject.msg_detail.item;
@@ -149,10 +151,12 @@ function insert_modal() {
                         },
                         success: function (dataObject) {
                             if (dataObject.msg_main.status == true) {
+                                swal("Berhasil!", "Insert data berhasil!", "success");
                                 $('#modal_form_update').modal('toggle');
                                 refreshTableX(TableX, 1);
                                 // $(':input').val('');
                             } else {
+                                swal("Kesalahan!", "Silahkan cek kembali form!", "error");
                                 //FORM VALIDATION
                                 $(".text-danger").html("");
                                 var form_validation_msg = dataObject.msg_detail.item[0];
@@ -223,7 +227,7 @@ function delete_byId(id) {
         },
         success: function (dataObject) {
             if (dataObject.msg_main.status == true) {
-                // swal("Sukses", "Data berhasil di Hapus", "success");
+                swal("Sukses", "Data berhasil di Hapus", "success");
             }
             else {
                 swal("Error", "Data tidak berhasil di Hapus", "error");
