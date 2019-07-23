@@ -40,7 +40,7 @@ function buildTbody(tableX) {
 
 			{
 				"render": function (data, type, JsonResultRow, meta) {
-					return get_detail(JsonResultRow.detail, "alamat");
+					return '<ol class="custom-counter">'+get_detail(JsonResultRow.detail, "alamat")+'</ol>';
 				}
 			},
 			{
@@ -126,9 +126,9 @@ function get_detail(data, i) {
 
 		case "official_account":
 			var tmp = ""
-			tmp += '<li class="list-group-item border-0 bg-transparent pt-1 pb-1">' + data.website + "</li>";
-			tmp += '<li class="list-group-item border-0 bg-transparent pt-1 pb-1">' + data.tlp + "</li>";
-			tmp += '<li class="list-group-item border-0 bg-transparent pt-1 pb-1">' + data.email + "</li>";
+			tmp += '<small class="text-muted">Website </small>'+'<li class="list-group-item border-0 bg-transparent pt-1 pb-1">' + data.website + "</li>";
+			tmp += '<small class="text-muted">Telp </small>'+'<li class="list-group-item border-0 bg-transparent pt-1 pb-1">' + data.tlp + "</li>";
+			tmp += '<small class="text-muted">Email </small>'+'<li class="list-group-item border-0 bg-transparent pt-1 pb-1">' + data.email + "</li>";
 
 			return '<ul class="list-group ">' + tmp + "<ul>";
 
