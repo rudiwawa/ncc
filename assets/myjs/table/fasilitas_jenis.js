@@ -1,10 +1,11 @@
 var TableX;
 var ID;
 // IMAGE CONFIG
-var Blob = null;
+var Blob;
 var img = new Array();
-img["width"] = 640;
-img["height"] = 480;
+img["width"] = 1024 ;
+img["height"] = 768 ;
+
 function buildTbody(tableX) {
     TableX = tableX;
     console.log("build TBODY " + tableX);
@@ -298,7 +299,7 @@ function get_placehorder(id) {
 
 
 function readURL(input) {
-    var avatar = document.getElementById("avatar");
+    // var avatar = document.getElementById("avatar");
     var image = document.getElementById('image');
     var $alert = $('.alert');
     var $modal = $('#modal_crop');
@@ -354,7 +355,7 @@ function readURL(input) {
         $modal.modal('hide');
         console.log(cropper.cropped);
         if (cropper.cropped) {
-            canvas = cropper.getCroppedCanvas({
+             canvas = cropper.getCroppedCanvas({
                 width: img["width"],
                 height: img["height"],
                 // imageSmoothingQuality: 'low',
@@ -375,10 +376,10 @@ function readURL(input) {
                 reader.readAsDataURL(blob);
                 // console.log(blob);
                 Blob = blob;
-            }, 'image/jpeg',
-                0.7
+            },'image/jpeg',
+            0.7
             );
-
+            
         }
     });
 }

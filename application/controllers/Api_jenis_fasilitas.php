@@ -79,8 +79,8 @@ class Api_jenis_fasilitas extends \Restserver\Libraries\REST_Controller
         $config['allowed_types'] = 'gif|jpg|png|JPG';
         $config['encrypt_name'] = true;
         $config['max_size']             = 600;
-        $config['max_width']            = 640;
-        $config['max_height']           = 480;
+        $config['max_width']            = 1024;
+        $config['max_height']           = 768;
 
         $this->load->library('upload', $config);
         // $file = $this->input->post('img');
@@ -152,8 +152,8 @@ class Api_jenis_fasilitas extends \Restserver\Libraries\REST_Controller
         $config['allowed_types'] = 'gif|jpg|png';
         $config['encrypt_name'] = true;
         $config['max_size']             = 600;
-        $config['max_width']            = 640;
-        $config['max_height']           = 480;
+        $config['max_width']            = 1024;
+        $config['max_height']           = 768;
 
         $this->load->library('upload', $config);
 
