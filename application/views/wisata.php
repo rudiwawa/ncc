@@ -90,7 +90,7 @@ $this->load->view('template/left-sidebar-nav');
                         </div>
                         <div class="modal-body">
                             <div class="img-container">
-                                <img id="image" src="https://avatars0.githubusercontent.com/u/3456749">
+                                <img id="image" src="">
                             </div>
                         </div>
                         <div class="modal-footer">

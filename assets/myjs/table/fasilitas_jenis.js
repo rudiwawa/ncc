@@ -1,7 +1,7 @@
 var TableX;
 var ID;
 // IMAGE CONFIG
-var Blob;
+var Blob = null;
 var img = new Array();
 img["width"] = 640;
 img["height"] = 480;
@@ -40,9 +40,13 @@ function buildTbody(tableX) {
     });
 }
 // //error solved
+$('#divmodals').on('hidden.bs.modal', function () {
+    console.log("modal hidden");
+    Blob = null;
+})
 
 function update_modal(id) {
-    Blob = null;
+
     $('.edit_jenis').prop('disabled', true);//mencegah error
     ID = id;
     console.log("ID    " + id)
@@ -65,8 +69,8 @@ function update_modal(id) {
                     console.log(mydata);
                     console.log("id " + ID);
                     console.log($('#img').prop('files')[0]);
-                    if (Blob!=null) {
-                        mydata.append('img', Blob,"aaaa.jpg");
+                    if (Blob != null) {
+                        mydata.append('img', Blob, "aaaa.jpg");
                     }
                     // var file_data = $('#img').prop('files')[0];
                     mydata.append('id_jenis', id);
@@ -90,9 +94,9 @@ function update_modal(id) {
                                 $('#modal_form_update').modal('toggle');
                                 window.url["scroll"] = $(window).scrollTop();
                                 refreshTableX(TableX);
-                                
-                                
-                                
+
+
+
                             } else {
                                 swal("Kesalahan!", "Silahkan cek kembali form!", "error");
                                 //FORM VALIDATION
@@ -125,7 +129,6 @@ function update_modal(id) {
 }
 
 function insert_modal() {
-    Blob = null;
     $("#divmodals").load("./assets/contents/modal/" + TableX + "_update.php", function () {
         // $('#form')[0].reset(); // reset form on modals
         $('.form-group').removeClass('has-error'); // clear error class
@@ -141,8 +144,8 @@ function insert_modal() {
                     e.preventDefault();
                     var mydata = new FormData(document.getElementById("form"));
                     console.log(mydata);
-                    if (Blob!=null) {
-                        mydata.append('img', Blob,"aaaa.jpg");
+                    if (Blob != null) {
+                        mydata.append('img', Blob, "aaaa.jpg");
                     }
                     console.log($('#img').prop('files')[0]);
                     // var file_data = $('#img').prop('files')[0];
@@ -174,11 +177,11 @@ function insert_modal() {
                                 var form_validation_msg = dataObject.msg_detail.item[0];
                                 var upload_msg = dataObject.msg_detail.item[1];
                                 var is_image_exist = dataObject.msg_detail.item[0];
-								var form_validation_msg = dataObject.msg_detail.item[1];
-								var upload_msg = dataObject.msg_detail.item[1];
-								set_msg_error(is_image_exist)
-								set_msg_error(form_validation_msg)
-								set_msg_error(upload_msg)
+                                var form_validation_msg = dataObject.msg_detail.item[1];
+                                var upload_msg = dataObject.msg_detail.item[1];
+                                set_msg_error(is_image_exist)
+                                set_msg_error(form_validation_msg)
+                                set_msg_error(upload_msg)
                             }
                         },
                         complete: function () {
@@ -195,13 +198,13 @@ function insert_modal() {
     });
 }
 function set_msg_error(data) {
-	$.each(data, function (key, value) {
-		key = key.replace('[', '');
-		key = key.replace(']', '');
-		if (value !== null) {
-			console.log($('.' + 'text-danger.' + key).html(value));
-		}
-	})
+    $.each(data, function (key, value) {
+        key = key.replace('[', '');
+        key = key.replace(']', '');
+        if (value !== null) {
+            console.log($('.' + 'text-danger.' + key).html(value));
+        }
+    })
 }
 
 function conf_delete(id) {
@@ -299,16 +302,17 @@ function readURL(input) {
     var image = document.getElementById('image');
     var $alert = $('.alert');
     var $modal = $('#modal_crop');
-    console.log($modal);
+    console.log("READ URL");
     var cropper;
     // $modal.modal('toggle');
     $('[data-toggle="tooltip"]').tooltip();
     var files = input.files;
+    // console.log(files);
     var done = function (url) {
         input.value = '';
         image.src = url;
         $alert.hide();
-        $modal.modal('toggle');
+        $modal.modal('show');
         console.log("PPP");
     };
     var reader;
@@ -337,37 +341,45 @@ function readURL(input) {
             viewMode: 3,
         });
     }).on('hidden.bs.modal', function () {
+        console.log("cropper destroy");
         cropper.destroy();
         cropper = null;
     });
 
     document.getElementById('crop').addEventListener('click', function () {
-        var initialAvatarURL;
+        // var initialAvatarURL;
         var canvas;
-        var reader = new FileReader();
+        // var reader = new FileReader();
 
         $modal.modal('hide');
-
-        if (cropper) {
+        console.log(cropper.cropped);
+        if (cropper.cropped) {
             canvas = cropper.getCroppedCanvas({
                 width: img["width"],
                 height: img["height"],
                 // imageSmoothingQuality: 'low',
             });
-            initialAvatarURL = avatar.src;
+            // initialAvatarURL = avatar.src;
             // console.log(canvas);
-            avatar.src = canvas.toDataURL("image/jpg", 0.7);
-            console.log(avatar.src);
+            console.log(canvas);
+            // console.log(avatar.src);
             // $progress.show();
             // $alert.removeClass('alert-success alert-warning');
+            // avatar.src = canvas.toDataURL("image/jpg", 0.7);
 
             canvas.toBlob(function (blob) {
-                console.log(blob);
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $('.image_view').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(blob);
+                // console.log(blob);
                 Blob = blob;
-            },'image/jpeg',
-            0.7
+            }, 'image/jpeg',
+                0.7
             );
+
         }
     });
-    }
+}
 

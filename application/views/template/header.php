@@ -28,7 +28,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<?php endif; ?>
 
 	<?php if($jquery):?>
-		<link rel="stylesheet" href="<?=base_url()?>assets/assets/plugins/jquery/jquery.min.js">
+		<!-- <link rel="stylesheet" href="<?=base_url()?>assets/assets/plugins/jquery/jquery.min.js"> -->
 	<?php endif; ?>
 
 	<?php if($bootstrap): //load bootstrap?>
