@@ -17,9 +17,9 @@
                         <div class="form-group">
                            <div class="card-body">
                             <h4 class="card-title">Unggah Gambar</h4>
-                            <input type="file" name="img" id="img" class="dropify" required>
+                            <input type="file" name="img_tmp" id="img" class="dropify" required>
                             <div>
-                            <img src="" class="rounded image_view" alt="..." style = "width:200px;">
+                            <img src="" class="rounded image_view" id="avatar" alt="..." style = "width:200px;">
                             </div>
                         </div>
                         <div class="text-danger img" ></div>

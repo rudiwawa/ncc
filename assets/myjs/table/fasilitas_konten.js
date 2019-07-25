@@ -5,9 +5,9 @@ var idc = 0, id_alamat_input = 1, is_update = false, id_update;
 var imgArr_update = new Array(), imgArr_deleted = new Array();
 // CONFIG IMAGE
 var config = new Array();
-config['max_size'] = 500;
-config['max_width'] = 600;
-config['max_height'] = 600;
+config['max_size'] = 300;
+config['max_width'] = 640;
+config['max_height'] = 480;
 
 
 var c = 0;

@@ -38,7 +38,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<?php if($morris): //load bootstrap?>
 		<link rel="stylesheet" href="<?=base_url()?>assets/assets/plugins/morrisjs/morris.css">
 	<?php endif; ?>
-	<!-- <link rel="stylesheet" href="<?=base_url()?>assets/css/cropper.css"> -->
+	<link rel="stylesheet" href="<?=base_url()?>assets/css/cropper.css">
 	<!--alerts CSS -->
     <!-- <link href="<?=base_url()?>assets/assets/plugins/sweetalert/sweetalert.css" rel="stylesheet" type="text/css"> -->
 

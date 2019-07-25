@@ -78,9 +78,9 @@ class Api_jenis_fasilitas extends \Restserver\Libraries\REST_Controller
         $config['upload_path'] = './uploads/';
         $config['allowed_types'] = 'gif|jpg|png|JPG';
         $config['encrypt_name'] = true;
-        $config['max_size']             = 100;
-        $config['max_width']            = 600;
-        $config['max_height']           = 600;
+        $config['max_size']             = 600;
+        $config['max_width']            = 640;
+        $config['max_height']           = 480;
 
         $this->load->library('upload', $config);
         // $file = $this->input->post('img');
@@ -151,9 +151,9 @@ class Api_jenis_fasilitas extends \Restserver\Libraries\REST_Controller
         $config['upload_path'] = './uploads/';
         $config['allowed_types'] = 'gif|jpg|png';
         $config['encrypt_name'] = true;
-        $config['max_size']             = 500;
-        $config['max_width']            = 600;
-        $config['max_height']           = 600;
+        $config['max_size']             = 600;
+        $config['max_width']            = 640;
+        $config['max_height']           = 480;
 
         $this->load->library('upload', $config);
 
@@ -164,6 +164,7 @@ class Api_jenis_fasilitas extends \Restserver\Libraries\REST_Controller
         $is_valid = $this->form_validation->run('jenis_update');
         $errors = $this->form_validation->error_array();
         // var_dump($is_valid);
+        // var_dump($_FILES["img"]);
         if ($is_valid) {
             // $file = $this->input->post('img');
             // if ( ! $this->upload->do_upload($file))  ERROR ! CUMA GARA GARA SEHARUSNYA LANGSUNG NAME NYA BUKAN MASUKIN POST ANJAYYY GG CI

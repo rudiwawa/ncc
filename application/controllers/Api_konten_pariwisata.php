@@ -121,9 +121,9 @@ class Api_konten_pariwisata extends \Restserver\Libraries\REST_Controller
         $config['allowed_types'] = 'gif|jpg|png|JPG';
         $config['encrypt_name'] = true;
         // $config['encrypt_name'] = true;
-        $config['max_size'] = 600;
-        $config['max_width'] = 500;
-        $config['max_height'] = 500;
+        $config['max_size'] = 300;
+        $config['max_width'] = 640;
+        $config['max_height'] = 480;
         $this->load->library('upload', $config);
 
         // $img =
@@ -269,9 +269,9 @@ class Api_konten_pariwisata extends \Restserver\Libraries\REST_Controller
         $config['upload_path'] = './uploads/';
         $config['allowed_types'] = 'gif|jpg|png|JPG';
         $config['encrypt_name'] = true;
-        $config['max_size'] = 500;
-        $config['max_width'] = 600;
-        $config['max_height'] = 600;
+        $config['max_size'] = 300;
+        $config['max_width'] =640;
+        $config['max_height'] = 480;
         $this->load->library('upload', $config);
 
         // $img =
