@@ -1,3 +1,8 @@
+<style>
+    #modal_form_update {
+    overflow-y: auto;
+}
+</style>
 <div class="modal fade" id="modal_form_update" role="dialog">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
@@ -113,6 +118,8 @@
                                             <button  onclick="tambah_img()" type="button" class="btn btn-primary" id="add_img">Tambah</button>
                                             <div class="text-danger img"></div>
                                             <div id="image_preview">
+                                            <img src="" class="rounded image_view" id="avatar" alt="..." style = "width:480px;">
+
                                             </div>
                                         </div>
                                         <div class="col-lg-3">

@@ -302,7 +302,7 @@ function get_placehorder(id) {
 
 
 function readURL(input) {
-    var avatar = document.getElementById("avatar");
+    // var avatar = document.getElementById("avatar");
     var image = document.getElementById('image');
     var $alert = $('.alert');
     var $modal = $('#modal_crop');

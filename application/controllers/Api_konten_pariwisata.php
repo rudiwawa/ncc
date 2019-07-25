@@ -121,9 +121,9 @@ class Api_konten_pariwisata extends \Restserver\Libraries\REST_Controller
         $config['allowed_types'] = 'gif|jpg|png|JPG';
         $config['encrypt_name'] = true;
         // $config['encrypt_name'] = true;
-        $config['max_size'] = 300;
-        $config['max_width'] = 640;
-        $config['max_height'] = 480;
+        $config['max_size'] = 600;
+        $config['max_width'] = 1024;
+        $config['max_height'] = 768;
         $this->load->library('upload', $config);
 
         // $img =
@@ -147,7 +147,7 @@ class Api_konten_pariwisata extends \Restserver\Libraries\REST_Controller
         // echo("ssss");
         // var_dump ($c);
         // var_dump ($this->post('c'));
-        // var_dump ($_FILES['img']['name']);
+        // var_dump ($_FILES['img']);
         $tmppicture = !empty($_FILES['img']['name']) ? $_FILES['img']['name'] : null;
         $tmppicture = $tmppicture[0];
         $this->form_validation->set_data(array_merge($this->input->post())); //digabungkan buat cek semua
@@ -269,9 +269,9 @@ class Api_konten_pariwisata extends \Restserver\Libraries\REST_Controller
         $config['upload_path'] = './uploads/';
         $config['allowed_types'] = 'gif|jpg|png|JPG';
         $config['encrypt_name'] = true;
-        $config['max_size'] = 300;
-        $config['max_width'] =640;
-        $config['max_height'] = 480;
+        $config['max_size'] = 600;
+        $config['max_width'] =1024;
+        $config['max_height'] = 768;
         $this->load->library('upload', $config);
 
         // $img =

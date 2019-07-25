@@ -3,11 +3,11 @@ var ID, is_img_valid = false;
 var files = new Array();
 var idc = 0, id_alamat_input = 1, is_update = false, id_update;
 var imgArr_update = new Array(), imgArr_deleted = new Array();
-// CONFIG IMAGE
-var config = new Array();
-config['max_size'] = 300;
-config['max_width'] = 640;
-config['max_height'] = 480;
+// IMAGE CONFIG
+var Blob;
+var img = new Array();
+img["width"] = 1024 ;
+img["height"] = 768 ;
 
 
 var c = 0;
@@ -197,7 +197,7 @@ function insert_modal() {
 					var mydata = new FormData(document.getElementById("form"));
 					console.log(mydata);
 					files.forEach(element => {
-						mydata.append('img[]', element);
+						mydata.append('img[]', element,"aaa.jpg");
 					});
 					var url_temp;
 					if (is_update) {
@@ -556,57 +556,101 @@ function dell_form_alamat(id) {
 var tmp_file_0;
 var boolean_before_set
 function readURL(input) {
+	
+	// var avatar = document.getElementById("avatar");
+    var image = document.getElementById('image');
+    var $alert = $('.alert');
+    var $modal = $('#modal_crop');
+    console.log("READ URL");
+    var cropper;
+    // $modal.modal('toggle');
+    $('[data-toggle="tooltip"]').tooltip();
+    var files = input.files;
+    // console.log(files);
+    var done = function (url) {
+        input.value = '';
+        image.src = url;
+        $alert.hide();
+        $modal.modal('show');
+        console.log("PPP");
+    };
+    var reader;
+    var file;
+    var url;
+    console.log(files);
 
-	var img = new Image();
+    if (files) {
+        file = files[0];
+        console.log(file);
 
-	var _URL = window.URL || window.webkitURL;
+        if (URL) {
+            done(URL.createObjectURL(file));
+        } else if (FileReader) {
+            reader = new FileReader();
+            reader.onload = function (e) {
+                done(reader.result);
+            };
+            reader.readAsDataURL(file);
+        }
+    }
 
+    $modal.on('shown.bs.modal', function () {
+        cropper = new Cropper(image, {
+            aspectRatio: 4 / 3,
+            viewMode: 3,
+        });
+    }).on('hidden.bs.modal', function () {
+        console.log("cropper destroy");
+        cropper.destroy();
+        cropper = null;
+    });
 
-	$("#add_img").prop('disabled', false);
+    document.getElementById('crop').addEventListener('click', function () {
+        // var initialAvatarURL;
+        var canvas;
+        // var reader = new FileReader();
+
+        $modal.modal('hide');
+        console.log(cropper.cropped);
+        if (cropper.cropped) {
+             canvas = cropper.getCroppedCanvas({
+                width: img["width"],
+                height: img["height"],
+                // imageSmoothingQuality: 'low',
+            });
+            // initialAvatarURL = avatar.src;
+            // console.log(canvas);
+            console.log(canvas);
+            // console.log(avatar.src);
+            // $progress.show();
+            // $alert.removeClass('alert-success alert-warning');
+            // avatar.src = canvas.toDataURL("image/jpg", 0.7);
+
+            canvas.toBlob(function (blob) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $('#avatar').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(blob);
+				// console.log(blob);
+				tmp_file_0 = blob;
+				// is_img_valid = true;
+				$("#add_img").prop('disabled', false);
 	boolean_before_set = true;
-	$("#image_preview img").remove();
-	if (input.files) {
-		var filesAmount = input.files.length;
-		var reader = new FileReader();
+                // Blob = blob;
+            },'image/jpeg',
+            0.7
+            );
+            
+        }
+    });
 
-		reader.onload = function (e) {
-			$("#image_preview").append('<img src="' + e.target.result + '" class="rounded image_view" alt="..." style="width:480px;">')
-			// console.log( "e.target.result" );
-			// console.log( e.target.result );
-		}
-		reader.readAsDataURL(input.files[0]);
-		tmp_file_0 = input.files[0];
-	}
-	// CEK IMAGE APAKAH VALID
-	var file, img;
-	if ((file = input.files[0])) {
-		img = new Image();
-		img.onload = function () {
-			if (this.width > config['max_width'] || this.height > config['max_height'] || this.size > config['max_size']) {
-				var msg = {
-					img: "GAMBAR YANG ANDA MASUKKAN BELUM SESUAI KRITERIA => " +
-						"|max_width" + config['max_width'] +
-						"|max_height" + config['max_height'] +
-						"|max_size" + config['max_size']
-				};
-				set_msg_error(msg);
-			}else {
-				var msg = {img:""};
-				set_msg_error(msg);
-				is_img_valid = true;
-			}
-		};
-		img.onerror = function () {
-			alert("not a valid file: " + file.type);
-		};
-		img.src = _URL.createObjectURL(file);
-	} 
 }
 
 
 function tambah_img() {
 	console.log("add_img_btn");
-	if (is_img_valid) {
+	// if (is_img_valid) {
 		if (boolean_before_set) {
 			console.log("add_img_btn");
 			// files.push.apply(input.files[0]);
@@ -617,9 +661,6 @@ function tambah_img() {
 			$("#add_img").prop('disabled', true);
 			c++;
 		}
-	}else{
-		swal("Ups!", "Gambar ERROR, periksa gambar yang telah anda masukkan", "error");
-	}
 
 }
 
