@@ -79,11 +79,11 @@ class Api_jenis_pariwisata extends \Restserver\Libraries\REST_Controller
         $config['allowed_types'] = 'gif|jpg|png|JPG';
         $config['encrypt_name'] = true;
         $config['max_size']             = 600;
-        $config['max_width']            = 640;
-        $config['max_height']           = 480;
+        $config['max_width']            = 1024;
+        $config['max_height']           = 768 ;
 
         $this->load->library('upload', $config);
-        var_dump($_FILES["img"]);
+        // var_dump($_FILES["img"]);
         // $file = $this->input->post('img');
         // if ( ! $this->upload->do_upload($file))  ERROR ! CUMA GARA GARA SEHARUSNYA LANGSUNG NAME NYA BUKAN MASUKIN POST ANJAYYY GG CI
         $is_upload_succces = $this->upload->do_upload('img');
@@ -153,8 +153,8 @@ class Api_jenis_pariwisata extends \Restserver\Libraries\REST_Controller
         $config['allowed_types'] = 'gif|jpg|png';
         $config['encrypt_name'] = true;
         $config['max_size']             = 600;
-        $config['max_width']            = 640;
-        $config['max_height']           = 480;
+        $config['max_width']            = 1024;
+        $config['max_height']           = 768;
 
         $this->load->library('upload', $config);
 

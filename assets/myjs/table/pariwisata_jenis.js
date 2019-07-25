@@ -3,8 +3,8 @@ var ID;
 // IMAGE CONFIG
 var Blob;
 var img = new Array();
-img["width"] = 640;
-img["height"] = 480;
+img["width"] = 1024 ;
+img["height"] = 768 ;
 
 function buildTbody(tableX) {
     TableX = tableX;
@@ -43,9 +43,9 @@ function buildTbody(tableX) {
 // //error solved
 
 function update_modal(id) {
+    Blob = null;
     $('.edit_jenis').prop('disabled', true);//mencegah error
     ID = id;
-    Blob = null;
     console.log("ID    " + id)
     $("#divmodals").load("./assets/contents/modal/" + TableX + "_update.php", function () {
         // $('#form')[0].reset(); // reset form on modals
@@ -69,7 +69,7 @@ function update_modal(id) {
                     // var file_data = $('#img').prop('files')[0];
                     console.log($('#img').prop('files')[0]);
                     if (Blob!=null) {
-                        mydata.append('img', Blob,"aaaa.png");
+                        mydata.append('img', Blob,"aaaa.jpg");
                     }
                     mydata.append('id_jenis', id);
                     $.ajax({
@@ -144,7 +144,7 @@ function insert_modal() {
                     var mydata = new FormData(document.getElementById("form"));
                     console.log(mydata);
                     if (Blob!=null) {
-                        mydata.append('img', Blob,"aaaa.png");
+                        mydata.append('img', Blob,"aaaa.jpg");
                     }
                     // console.log($('#img').prop('files')[0]);
                     // console.log(Blob);
@@ -300,9 +300,6 @@ function get_placehorder(id) {
 function readURL(input) {
     var avatar = document.getElementById("avatar");
     var image = document.getElementById('image');
-    // var input = document.getElementById('input');
-    // var $progress = $('.progress');
-    // var $progressBar = $('.progress-bar');
     var $alert = $('.alert');
     var $modal = $('#modal_crop');
     console.log($modal);
@@ -358,33 +355,22 @@ function readURL(input) {
             canvas = cropper.getCroppedCanvas({
                 width: img["width"],
                 height: img["height"],
+                // imageSmoothingQuality: 'low',
             });
             initialAvatarURL = avatar.src;
-            console.log(avatar.src);
-            // avatar.src = canvas.toDataURL("image/jpeg", 0.5);
+            // console.log(canvas);
+            avatar.src = canvas.toDataURL("image/jpg", 0.7);
             console.log(avatar.src);
             // $progress.show();
             // $alert.removeClass('alert-success alert-warning');
 
             canvas.toBlob(function (blob) {
-                // console.log(blob);
-                reader.onload = function (e) {
-                    $("#avatar").attr('src', e.target.result);
-                }
                 console.log(blob);
                 Blob = blob;
-                reader.readAsDataURL(blob);
-                // $('.image_view').attr('src', blob);
-            });
+            },'image/jpeg',
+            0.7
+            );
         }
     });
-    // if (input.files && input.files[0]) {
-    //     var reader = new FileReader();
-
-    //     reader.onload = function (e) {
-    //         $(image_view).attr('src', e.target.result);
-    //     }
-
-    //     reader.readAsDataURL(input.files[0]);
-    // }
 }
+
