@@ -4,7 +4,7 @@ var files = new Array();
 var idc = 0, id_alamat_input = 1, is_update = false, id_update;
 var imgArr_update = new Array(), imgArr_deleted = new Array();
 // IMAGE CONFIG
-var Blob;
+var jumlah_maksimal_photo = 3;
 var img = new Array();
 img["width"] = 1024;
 img["height"] = 768;
@@ -649,16 +649,24 @@ function readURL(input) {
 
 function tambah_img() {
 	console.log("add_img_btn");
+	var total_img = files.length + imgArr_update.length;
+	// console.log(files.length+"|"+imgArr_update.length);
 	// if (is_img_valid) {
 	if (boolean_before_set) {
-		console.log("add_img_btn");
-		// files.push.apply(input.files[0]);
-		files.push(tmp_file_0);
-		// readURL_array(files);
-		render_img_All();
-		boolean_before_set = false;
-		$("#add_img").prop('disabled', true);
-		c++;
+		if ((total_img + 1) <= jumlah_maksimal_photo) {
+			console.log("add_img_btn");
+			// files.push.apply(input.files[0]);
+			files.push(tmp_file_0);
+			// readURL_array(files);
+			render_img_All();
+			boolean_before_set = false;
+			$("#add_img").prop('disabled', true);
+			c++;
+		}
+		else {
+			swal("Ups!", "Jumlah Gambar maksimal adalah " + jumlah_maksimal_photo, "error");
+		}
+
 	}
 
 }
