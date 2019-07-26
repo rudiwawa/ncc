@@ -341,8 +341,11 @@ class Api_konten_pariwisata extends \Restserver\Libraries\REST_Controller
             if ($is_upload_succces) {
                 $img_update = $this->post('img_update');
                 $img_update_arr = array();
-                foreach ($img_update as $value) {
-                    array_push($img_update_arr, $value);
+                // var_dump ($img_update);
+                if (!empty($img_update)) {
+                    foreach ($img_update as $value) {
+                        array_push($img_update_arr, $value);
+                    }
                 }
                 $data['img'] = json_encode(array_merge($arr_tmp, $img_update_arr));
                 //  var_dump($data);
@@ -359,13 +362,7 @@ class Api_konten_pariwisata extends \Restserver\Libraries\REST_Controller
                         ]
                     );
                     $imgArr_deleted = !empty($this->post('imgArr_deleted')) ? $this->post('imgArr_deleted') : null;
-                    // var_dump($imgArr_deleted);
-                    if (!empty($imgArr_deleted)) {
-                        foreach ($imgArr_deleted as $key => $value) {
-                            unlink($config['upload_path'] . $value);
-                            // echo("siap ");
-                        }
-                    }
+                    $this->del_img ( $imgArr_deleted );
                 } else {
                     $this->response(
                         ['msg_main' => [
@@ -415,28 +412,36 @@ class Api_konten_pariwisata extends \Restserver\Libraries\REST_Controller
         }
 
     }
+    public function del_img ($data){
+        // $data == ARRAY yg berisi kumpulan img yg siap dihapus
+        $config['upload_path'] = './uploads/';
+        // var_dump($imgArr_tmp);
+        if (!empty($data)) {
+            $is_success = true;
+            foreach ($data as $key => $value) {
+                try {
+                    unlink($config['upload_path'] . $value);
+                } catch (Exception $e) {
+                    $is_success = fasle;
+                }
+            }
+            return $is_success;
+        }else{
+            return false;
+        }
+    }
 
     public function index_delete()
     {
         $id = $this->delete('id');
+        $imgArr_tmp = $this->Pariwisata_konten_model->getImg_byId($id);
+        $imgArr = json_decode($imgArr_tmp[0]["img"]);
         $query = $this->Pariwisata_konten_model->delete_byId($id);
-        if (query==true) {
-            // $config['upload_path'] = './uploads/';
-            // $imgArr_tmp = $this->Pariwisata_konten_model->getImg_byId($id);
-            // if (!empty($imgArr_tmp)) {
-            //     var_dump($imgArr_tmp[0]["img"]);
-            //     $imgArr =  json_decode($imgArr_tmp[0]["img"]);
-            //     echo $id;
-            //     var_dump($imgArr);
-            //     foreach ($imgArr as $key => $value) {
-            //         try {
-            //         unlink($config['upload_path'] . $value);
-            //         }catch(Exception $e) {
+        // var_dump($query);
+        if ($query) {
+            $this->del_img ($imgArr);
 
-            //         }
-            //         // echo("siap ");
-            //     }
-            // }
+            
             $this->response(
                 ['msg_main' => [
                     'status' => true,

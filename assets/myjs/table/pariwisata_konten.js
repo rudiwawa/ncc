@@ -153,10 +153,7 @@ function update_modal(id) {
 	id_update = id;
 	is_update = true;
 	insert_modal();
-	$.when(ket_jenis_get()).then(function (x) {
-		get_placehorder(id);
-
-	});
+	
 }
 
 $('#divmodals').on('hidden.bs.modal', function () {
@@ -188,6 +185,9 @@ function insert_modal() {
 			readURL(this);
 		});
 		$.when(ket_jenis_get()).then(function (x) {
+			if (is_update) {
+					get_placehorder(id_update);
+			}
 			// return true;
 			$(function () {
 				// var tmp_firstIdJen =$("#id_jenis").prop("selectedIndex", 0).val();
@@ -205,14 +205,15 @@ function insert_modal() {
 						imgArr_update.forEach(element => {
 							console.log(element);
 							mydata.append('img_update[]', element);
-							mydata.append('id', id_update);
 							// console.log(imgArr_deleted);
 						});
+						mydata.append('id', id_update);
 						imgArr_deleted.forEach(element => {
 							mydata.append('imgArr_deleted[]', element);
 						});
 						// mydata.append("img_update[]", imgArr_update);
 						url_temp = window.url["pariwisata_konten"] + "/update";
+						
 
 					} else {
 						url_temp = window.url["pariwisata_konten"];

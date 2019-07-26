@@ -6,8 +6,8 @@ var imgArr_update = new Array(), imgArr_deleted = new Array();
 // IMAGE CONFIG
 var Blob;
 var img = new Array();
-img["width"] = 1024 ;
-img["height"] = 768 ;
+img["width"] = 1024;
+img["height"] = 768;
 
 
 var c = 0;
@@ -40,7 +40,7 @@ function buildTbody(tableX) {
 
 			{
 				"render": function (data, type, JsonResultRow, meta) {
-					return '<ol class="custom-counter">'+get_detail(JsonResultRow.detail, "alamat")+'</ol>';
+					return '<ol class="custom-counter">' + get_detail(JsonResultRow.detail, "alamat") + '</ol>';
 				}
 			},
 			{
@@ -126,9 +126,9 @@ function get_detail(data, i) {
 
 		case "official_account":
 			var tmp = ""
-			tmp += '<small class="text-muted">Website </small>'+'<li class="list-group-item border-0 bg-transparent pt-1 pb-1">' + data.website + "</li>";
-			tmp += '<small class="text-muted">Telp </small>'+'<li class="list-group-item border-0 bg-transparent pt-1 pb-1">' + data.tlp + "</li>";
-			tmp += '<small class="text-muted">Email </small>'+'<li class="list-group-item border-0 bg-transparent pt-1 pb-1">' + data.email + "</li>";
+			tmp += '<small class="text-muted">Website </small>' + '<li class="list-group-item border-0 bg-transparent pt-1 pb-1">' + data.website + "</li>";
+			tmp += '<small class="text-muted">Telp </small>' + '<li class="list-group-item border-0 bg-transparent pt-1 pb-1">' + data.tlp + "</li>";
+			tmp += '<small class="text-muted">Email </small>' + '<li class="list-group-item border-0 bg-transparent pt-1 pb-1">' + data.email + "</li>";
 
 			return '<ul class="list-group ">' + tmp + "<ul>";
 
@@ -152,10 +152,6 @@ function update_modal(id) {
 	id_update = id;
 	is_update = true;
 	insert_modal();
-	$.when(ket_jenis_get()).then(function (x) {
-		get_placehorder(id);
-
-	});
 }
 
 $('#divmodals').on('hidden.bs.modal', function () {
@@ -187,6 +183,9 @@ function insert_modal() {
 			readURL(this);
 		});
 		$.when(ket_jenis_get()).then(function (x) {
+			if (is_update) {
+				get_placehorder(id_update);
+			}
 			// return true;
 			$(function () {
 				// var tmp_firstIdJen =$("#id_jenis").prop("selectedIndex", 0).val();
@@ -197,16 +196,16 @@ function insert_modal() {
 					var mydata = new FormData(document.getElementById("form"));
 					console.log(mydata);
 					files.forEach(element => {
-						mydata.append('img[]', element,"aaa.jpg");
+						mydata.append('img[]', element, "aaa.jpg");
 					});
 					var url_temp;
 					if (is_update) {
 						imgArr_update.forEach(element => {
 							console.log(element);
 							mydata.append('img_update[]', element);
-							mydata.append('id', id_update);
 							// console.log(imgArr_deleted);
 						});
+						mydata.append('id', id_update);
 						imgArr_deleted.forEach(element => {
 							mydata.append('imgArr_deleted[]', element);
 						});
@@ -556,94 +555,94 @@ function dell_form_alamat(id) {
 var tmp_file_0;
 var boolean_before_set
 function readURL(input) {
-	
+
 	// var avatar = document.getElementById("avatar");
-    var image = document.getElementById('image');
-    var $alert = $('.alert');
-    var $modal = $('#modal_crop');
-    console.log("READ URL");
-    var cropper;
-    // $modal.modal('toggle');
-    $('[data-toggle="tooltip"]').tooltip();
-    var files = input.files;
-    // console.log(files);
-    var done = function (url) {
-        input.value = '';
-        image.src = url;
-        $alert.hide();
-        $modal.modal('show');
-        console.log("PPP");
-    };
-    var reader;
-    var file;
-    var url;
-    console.log(files);
+	var image = document.getElementById('image');
+	var $alert = $('.alert');
+	var $modal = $('#modal_crop');
+	console.log("READ URL");
+	var cropper;
+	// $modal.modal('toggle');
+	$('[data-toggle="tooltip"]').tooltip();
+	var files = input.files;
+	// console.log(files);
+	var done = function (url) {
+		input.value = '';
+		image.src = url;
+		$alert.hide();
+		$modal.modal('show');
+		console.log("PPP");
+	};
+	var reader;
+	var file;
+	var url;
+	console.log(files);
 
-    if (files) {
-        file = files[0];
-        console.log(file);
+	if (files) {
+		file = files[0];
+		console.log(file);
 
-        if (URL) {
-            done(URL.createObjectURL(file));
-        } else if (FileReader) {
-            reader = new FileReader();
-            reader.onload = function (e) {
-                done(reader.result);
-            };
-            reader.readAsDataURL(file);
-        }
-    }
+		if (URL) {
+			done(URL.createObjectURL(file));
+		} else if (FileReader) {
+			reader = new FileReader();
+			reader.onload = function (e) {
+				done(reader.result);
+			};
+			reader.readAsDataURL(file);
+		}
+	}
 
-    $modal.on('shown.bs.modal', function () {
-        cropper = new Cropper(image, {
-            aspectRatio: 4 / 3,
-            viewMode: 3,
-        });
-    }).on('hidden.bs.modal', function () {
-        console.log("cropper destroy");
-        cropper.destroy();
-        cropper = null;
-    });
+	$modal.on('shown.bs.modal', function () {
+		cropper = new Cropper(image, {
+			aspectRatio: 4 / 3,
+			viewMode: 3,
+		});
+	}).on('hidden.bs.modal', function () {
+		console.log("cropper destroy");
+		cropper.destroy();
+		cropper = null;
+	});
 
-    document.getElementById('crop').addEventListener('click', function () {
-        // var initialAvatarURL;
-        var canvas;
-        // var reader = new FileReader();
+	document.getElementById('crop').addEventListener('click', function () {
+		// var initialAvatarURL;
+		var canvas;
+		// var reader = new FileReader();
 
-        $modal.modal('hide');
-        console.log(cropper.cropped);
-        if (cropper.cropped) {
-             canvas = cropper.getCroppedCanvas({
-                width: img["width"],
-                height: img["height"],
-                // imageSmoothingQuality: 'low',
-            });
-            // initialAvatarURL = avatar.src;
-            // console.log(canvas);
-            console.log(canvas);
-            // console.log(avatar.src);
-            // $progress.show();
-            // $alert.removeClass('alert-success alert-warning');
-            // avatar.src = canvas.toDataURL("image/jpg", 0.7);
+		$modal.modal('hide');
+		console.log(cropper.cropped);
+		if (cropper.cropped) {
+			canvas = cropper.getCroppedCanvas({
+				width: img["width"],
+				height: img["height"],
+				// imageSmoothingQuality: 'low',
+			});
+			// initialAvatarURL = avatar.src;
+			// console.log(canvas);
+			console.log(canvas);
+			// console.log(avatar.src);
+			// $progress.show();
+			// $alert.removeClass('alert-success alert-warning');
+			// avatar.src = canvas.toDataURL("image/jpg", 0.7);
 
-            canvas.toBlob(function (blob) {
-                var reader = new FileReader();
-                reader.onload = function (e) {
-                    $('#avatar').attr('src', e.target.result);
-                }
-                reader.readAsDataURL(blob);
+			canvas.toBlob(function (blob) {
+				var reader = new FileReader();
+				reader.onload = function (e) {
+					$('#avatar').attr('src', e.target.result);
+				}
+				reader.readAsDataURL(blob);
 				// console.log(blob);
 				tmp_file_0 = blob;
 				// is_img_valid = true;
 				$("#add_img").prop('disabled', false);
-	boolean_before_set = true;
-                // Blob = blob;
-            },'image/jpeg',
-            0.7
-            );
-            
-        }
-    });
+				boolean_before_set = true;
+				// Blob = blob;
+			}, 'image/jpeg',
+				0.7
+			);
+
+		}
+	});
 
 }
 
@@ -651,16 +650,16 @@ function readURL(input) {
 function tambah_img() {
 	console.log("add_img_btn");
 	// if (is_img_valid) {
-		if (boolean_before_set) {
-			console.log("add_img_btn");
-			// files.push.apply(input.files[0]);
-			files.push(tmp_file_0);
-			// readURL_array(files);
-			render_img_All();
-			boolean_before_set = false;
-			$("#add_img").prop('disabled', true);
-			c++;
-		}
+	if (boolean_before_set) {
+		console.log("add_img_btn");
+		// files.push.apply(input.files[0]);
+		files.push(tmp_file_0);
+		// readURL_array(files);
+		render_img_All();
+		boolean_before_set = false;
+		$("#add_img").prop('disabled', true);
+		c++;
+	}
 
 }
 

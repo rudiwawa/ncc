@@ -71,7 +71,7 @@ class Fasilitas_konten_model extends CI_Model {
 	}
 	public function delete_byId($id){
 
-		$query = $this->db->query("UPDATE `fasilitas_main` SET `is_delete` = '1' WHERE `fasilitas_main`.`id_fasilitas` = '".$id."';");
+		$query = $this->db->delete('fasilitas_main', array('id_fasilitas' => $id));
 
 		return $query;
 
