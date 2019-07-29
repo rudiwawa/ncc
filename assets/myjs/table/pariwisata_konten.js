@@ -14,7 +14,7 @@ img["height"] = 768 ;
 var c = 0;
 function buildTbody(tableX) {
 	TableX = tableX;
-	console.log("build TBODY " + tableX);
+	//console.log("build TBODY " + tableX);
 	var number = 0;
 	$('#table_' + tableX).DataTable({
 		"processing": true,
@@ -107,16 +107,16 @@ function get_image_collection(data) {
 		}
 		count++;
 		result += result_tmp;
-		console.log(result_tmp);
+		//console.log(result_tmp);
 	});
-	console.log("IMG OPEN 1=" + img_open_1);
-	console.log(result);
+	//console.log("IMG OPEN 1=" + img_open_1);
+	//console.log(result);
 	return img_open + img_open_1 + img_open_2 + result + img_close;
 	//
 }
 function get_detail(data, i) {
 	var data = JSON.parse(data);
-	console.log(data);
+	//console.log(data);
 	switch (i) {
 		case "alamat":
 			var tmp = ""
@@ -143,7 +143,7 @@ function get_detail(data, i) {
 			return data.ket;
 		// case 
 	}
-	console.log(data.alamat[0].alamat);
+	//console.log(data.alamat[0].alamat);
 }
 
 
@@ -157,12 +157,12 @@ function update_modal(id) {
 }
 
 $('#divmodals').on('hidden.bs.modal', function () {
-	console.log("modal hidden");
+	//console.log("modal hidden");
 	is_update = false;
 	$.when(refreshTableX(TableX)).done(function (x) {
 		var body = $("html, body");
 		body.stop().animate({ scrollTop: window.url["scroll"] }, 1000, 'swing', function () {
-			console.log("Finished animating");
+			//console.log("Finished animating");
 		});
 	});
 
@@ -178,7 +178,7 @@ function insert_modal() {
 		// $('#form')[0].reset(); // reset form on modals
 		$('.form-group').removeClass('has-error'); // clear error class
 		$('.help-block').empty(); // clear error string
-		console.log("insert_modal");
+		//console.log("insert_modal");
 		$('#modal_form_update').modal('show');
 		$("#img_temp").change(function () {
 
@@ -191,21 +191,21 @@ function insert_modal() {
 			// return true;
 			$(function () {
 				// var tmp_firstIdJen =$("#id_jenis").prop("selectedIndex", 0).val();
-				console.log("tmp_firstIdSub" + window.url["tmp_firstIdjenis"]);
+				//console.log("tmp_firstIdSub" + window.url["tmp_firstIdjenis"]);
 				ket_sub_get(window.url["tmp_firstIdjenis"]);
 				$('#save').click(function (e) {
 					e.preventDefault();
 					var mydata = new FormData(document.getElementById("form"));
-					console.log(mydata);
+					//console.log(mydata);
 					files.forEach(element => {
 						mydata.append('img[]', element,"aaa.jpg");
 					});
 					var url_temp;
 					if (is_update) {
 						imgArr_update.forEach(element => {
-							console.log(element);
+							//console.log(element);
 							mydata.append('img_update[]', element);
-							// console.log(imgArr_deleted);
+							// //console.log(imgArr_deleted);
 						});
 						mydata.append('id', id_update);
 						imgArr_deleted.forEach(element => {
@@ -224,9 +224,9 @@ function insert_modal() {
 					// mydata.append('c[]', files[1]);
 					// mydata.append('"c[]"', files[1]);
 					// var fileList = files;
-					console.log(files);
-					console.log(mydata);
-					console.log($('#img').prop('files'));
+					//console.log(files);
+					//console.log(mydata);
+					//console.log($('#img').prop('files'));
 					// var file_data = $('#img').prop('files')[0];
 					// mydata.append('id_jenis', id); 
 					$.ajax({
@@ -241,7 +241,7 @@ function insert_modal() {
 						contentType: false,
 						timeout: 1000,
 						beforeSend: function () {
-							console.log("before send");
+							//console.log("before send");
 
 							// $("#content").append('')
 						},
@@ -270,7 +270,7 @@ function insert_modal() {
 								// 	key = key.replace('[', '');
 								// 	key = key.replace(']', '');
 								// 	if (value !== null) {
-								// 		console.log($('.' + 'text-danger.' + key).html(value));
+								// 		//console.log($('.' + 'text-danger.' + key).html(value));
 								// 	}
 								// })
 								// $.each(upload_msg, function (key, value) {
@@ -287,7 +287,7 @@ function insert_modal() {
 							// } else {
 							// alert(textstatus);
 							// }
-							// console.log("complete");
+							// //console.log("complete");
 
 							// $('#modal_form_update').modal('toggle');
 
@@ -297,7 +297,7 @@ function insert_modal() {
 				});
 			});
 
-			console.log("");
+			//console.log("");
 		});
 	});
 }
@@ -334,7 +334,7 @@ function delete_byId(id) {
 		headers: { "X-HTTP-Method-Override": "DELETE" }, // X-HTTP-Method-Override set to PUT
 		data: json,
 		beforeSend: function () {
-			console.log("before send");
+			//console.log("before send");
 		},
 		success: function (dataObject) {
 			if (dataObject.msg_main.status == true) {
@@ -346,7 +346,7 @@ function delete_byId(id) {
 
 		},
 		complete: function () {
-			console.log("loading");
+			//console.log("loading");
 			refreshTableX(TableX, 1);
 
 
@@ -358,19 +358,19 @@ function get_placehorder(id) {
 
 	var json = { id };
 	var data;
-	console.log("get_placehorder" + id)
+	//console.log("get_placehorder" + id)
 	$.ajax({
 		url: window.url["data_byId_konten"],
 		type: "POST",
 		dataType: "JSON",
 		data: json,
 		beforeSend: function () {
-			console.log("before send get_placehorder");
+			//console.log("before send get_placehorder");
 		},
 		success: function (dataObject) {
 			if (dataObject.msg_main.status == true) {
 				data = dataObject.msg_detail.item;
-				console.log("sukses get Placehorder" + data[0].ket_jenis);
+				//console.log("sukses get Placehorder" + data[0].ket_jenis);
 				// $( "#ket_jenis_select :option[value='2']" ).remove();
 				$("select[name='id_jenis']").append("<option value=" + data[0].id_jenis + " selected >" + data[0].ket_jenis + "</option>");
 				ket_sub_get(data[0].id_jenis);
@@ -383,9 +383,9 @@ function get_placehorder(id) {
 				render_alamat_from_db(data[0].detail);
 				imgArr_update = JSON.parse(data[0].img);
 				render_img_from_db();
-				console.log(data[0].id_sub);
+				//console.log(data[0].id_sub);
 
-				// console.log("placehorder");
+				// //console.log("placehorder");
 			}
 			else {
 				alert("get data gagal \n" + dataObject.msg_detail.item);
@@ -393,7 +393,7 @@ function get_placehorder(id) {
 
 		},
 		complete: function () {
-			console.log("loading");
+			//console.log("loading");
 			// $("select[name='id_jenis']").hide().html(data).fadeIn('fast');
 
 		}
@@ -405,7 +405,7 @@ function render_alamat_from_db(data) {
 	var dataArr = JSON.parse(data);
 	var is_first = true, i = 0;
 	dataArr.alamat.forEach(element => {
-		console.log("ALAMAT LOKASI" + element.loc + element.alamat);
+		//console.log("ALAMAT LOKASI" + element.loc + element.alamat);
 		if (is_first) {
 			is_first = false;
 		} else {
@@ -418,11 +418,11 @@ function render_alamat_from_db(data) {
 }
 
 function render_img_from_db() {
-	console.log("render_img_from_db ");
+	//console.log("render_img_from_db ");
 	// $("#image_preview_array img").remove();
 	// $("#image_preview_array button").remove();
 	var id = 0;
-	console.log(imgArr_update);
+	//console.log(imgArr_update);
 	imgArr_update.forEach(element => {
 		$("#image_preview_array").append('<div class="show-image"><img src="' + window.bashUrl + "/uploads/" + element + '" class="rounded image_view p-1" alt="..." style="width:100%;">' +
 			'<button type="button" class="btn btn-danger btn-sm dell "  onclick="dell_img_update(' + id + ')" style="position:absolute;"><i class="ti-minus text"></i></button></div>')
@@ -440,34 +440,34 @@ function dell_img_update(i) {
 function get_placehorder_sub(id) {
 	var json = { id };
 	var data;
-	console.log("get_placehorder_sub" + id)
+	//console.log("get_placehorder_sub" + id)
 	$.ajax({
 		url: window.url["get_sub_byId_jenis"],
 		type: "POST",
 		dataType: "JSON",
 		data: json,
 		beforeSend: function () {
-			console.log("before send get_placehorder");
-			console.log(json);
+			//console.log("before send get_placehorder");
+			//console.log(json);
 		},
 		success: function (dataObject) {
 			if (dataObject.msg_main.status == true) {
 				data = dataObject.msg_detail.item;
-				console.log("sukses get Placehorder SUBBBB" + data[0].ket_jenis);
+				//console.log("sukses get Placehorder SUBBBB" + data[0].ket_jenis);
 				$("#ket_jenis").val(data[0].ket_jenis);
 				// $(".image_view").append('<img src="/app/uploads/'+data[0].img+'" class="rounded" alt="..." style = "width:200px;"></img>');
 				$('.image_view').attr('src', "/app/uploads/" + data[0].img);
-				console.log(data[0].id_sub);
+				//console.log(data[0].id_sub);
 
-				// console.log("placehorder");
+				// //console.log("placehorder");
 			}
 			else {
-				console.log("get data gagal \n" + dataObject.msg_detail.item);
+				//console.log("get data gagal \n" + dataObject.msg_detail.item);
 			}
 
 		},
 		complete: function () {
-			console.log("loading");
+			//console.log("loading");
 			// $("select[name='id_jenis']").hide().html(data).fadeIn('fast');
 
 		}
@@ -477,12 +477,12 @@ function get_placehorder_sub(id) {
 // the Hell make change ga bisa
 $(document.body).delegate('#id_jenis', 'change', function () {
 	ket_sub_get($(this).val());
-	console.log($(this).val());
+	//console.log($(this).val());
 });
 
 function render_img_All() {
 	readURL_array(files);
-	console.log(files);
+	//console.log(files);
 	render_img_from_db();
 }
 
@@ -521,15 +521,15 @@ function add_form_alamat() {
 		'</div>' +
 		'</div>';
 	id_alamat_input++;
-	console.log("add_form_alamat");
+	//console.log("add_form_alamat");
 	$("#form_alamat").append('<div class="col-lg-12 row" id="form_alamat' + id_form_alamat + '">' +
 		html_loc + html_alamat + html_bt_alamat +
 		'</div>').ready(function () {
 			// var selection = $('#form_alamat' + id_form_alamat + '.dell').html();
-			// console.log('#form_alamat'+id_form_alamat+".dell");
-			// console.log($('#form_alamat'+id_form_alamat+" .dell").html());
+			// //console.log('#form_alamat'+id_form_alamat+".dell");
+			// //console.log($('#form_alamat'+id_form_alamat+" .dell").html());
 			$('#form_alamat' + id_form_alamat + " .dell").attr('onClick', "dell_form_alamat(" + id_form_alamat + ")");
-			console.log("#form_alamat" + id_form_alamat + ".btn");
+			//console.log("#form_alamat" + id_form_alamat + ".btn");
 			id_form_alamat++;
 		});
 
@@ -541,14 +541,14 @@ function set_msg_error(data) {
 		key = key.replace('[', '');
 		key = key.replace(']', '');
 		if (value !== null) {
-			console.log($('.' + 'text-danger.' + key).html(value));
+			//console.log($('.' + 'text-danger.' + key).html(value));
 		}
 	})
 }
 
 function dell_form_alamat(id) {
 	$('#form_alamat' + id).remove();
-	console.log("dell_form_alamat");
+	//console.log("dell_form_alamat");
 }
 
 // $("#img_temp").change(function () {
@@ -565,27 +565,27 @@ function readURL(input) {
     var image = document.getElementById('image');
     var $alert = $('.alert');
     var $modal = $('#modal_crop');
-    console.log("READ URL");
+    //console.log("READ URL");
     var cropper;
     // $modal.modal('toggle');
     $('[data-toggle="tooltip"]').tooltip();
     var files = input.files;
-    // console.log(files);
+    // //console.log(files);
     var done = function (url) {
         input.value = '';
         image.src = url;
         $alert.hide();
         $modal.modal('show');
-        console.log("PPP");
+        //console.log("PPP");
     };
     var reader;
     var file;
     var url;
-    console.log(files);
+    //console.log(files);
 
     if (files) {
         file = files[0];
-        console.log(file);
+        //console.log(file);
 
         if (URL) {
             done(URL.createObjectURL(file));
@@ -604,7 +604,7 @@ function readURL(input) {
             viewMode: 3,
         });
     }).on('hidden.bs.modal', function () {
-        console.log("cropper destroy");
+        //console.log("cropper destroy");
         cropper.destroy();
         cropper = null;
     });
@@ -615,7 +615,7 @@ function readURL(input) {
         // var reader = new FileReader();
 
         $modal.modal('hide');
-        console.log(cropper.cropped);
+        //console.log(cropper.cropped);
         if (cropper.cropped) {
              canvas = cropper.getCroppedCanvas({
                 width: img["width"],
@@ -623,9 +623,9 @@ function readURL(input) {
                 // imageSmoothingQuality: 'low',
             });
             // initialAvatarURL = avatar.src;
-            // console.log(canvas);
-            console.log(canvas);
-            // console.log(avatar.src);
+            // //console.log(canvas);
+            //console.log(canvas);
+            // //console.log(avatar.src);
             // $progress.show();
             // $alert.removeClass('alert-success alert-warning');
             // avatar.src = canvas.toDataURL("image/jpg", 0.7);
@@ -636,7 +636,7 @@ function readURL(input) {
                     $('#avatar').attr('src', e.target.result);
                 }
                 reader.readAsDataURL(blob);
-				// console.log(blob);
+				// //console.log(blob);
 				tmp_file_0 = blob;
 				// is_img_valid = true;
 				$("#add_img").prop('disabled', false);
@@ -663,8 +663,8 @@ function readURL(input) {
 
 	// 	reader.onload = function (e) {
 	// 		$("#image_preview").append('<img src="' + e.target.result + '" class="rounded image_view" alt="..." style="width:480px;">')
-	// 		// console.log( "e.target.result" );
-	// 		// console.log( e.target.result );
+	// 		// //console.log( "e.target.result" );
+	// 		// //console.log( e.target.result );
 	// 	}
 	// 	reader.readAsDataURL(input.files[0]);
 	// 	tmp_file_0 = input.files[0];
@@ -697,13 +697,13 @@ function readURL(input) {
 
 
 function tambah_img() {
-	console.log("add_img_btn");
+	//console.log("add_img_btn");
 	var total_img = files.length+imgArr_update.length;
-	// console.log(files.length+"|"+imgArr_update.length);
+	// //console.log(files.length+"|"+imgArr_update.length);
 	// if (is_img_valid) {
 		if (boolean_before_set) {
 			if((total_img+1)<=jumlah_maksimal_photo){
-				console.log("add_img_btn");
+				//console.log("add_img_btn");
 				// files.push.apply(input.files[0]);
 				files.push(tmp_file_0);
 				// readURL_array(files);
@@ -728,28 +728,28 @@ function tambah_img() {
 
 
 function readURL_array(input) {
-	console.log("readURL_array");
+	//console.log("readURL_array");
 	$("#image_preview_array img").remove();
 	$("#image_preview_array button").remove();
 	if (input) {
 		var filesAmount = input.length;
-		console.log("file amount" + filesAmount);
+		//console.log("file amount" + filesAmount);
 		var id_img = 0;
 		for (i = 0; i < filesAmount; i++) {
 			var reader = new FileReader();
-			console.log("file reader run" + i + reader);
-			console.log(input);
+			//console.log("file reader run" + i + reader);
+			//console.log(input);
 
 
 			reader.onload = function (e) {
 				$("#image_preview_array").append('<div class="show-image"><img src="' + e.target.result + '" class="rounded image_view p-1" alt="..." style="width:100%;">' +
 					'<button type="button" class="btn btn-danger btn-sm dell "  onclick="dell_img(' + id_img + ')" style="position:absolute;"><i class="ti-minus text"></i></button></div>')
 				id_img++;//krn ini dijalankan terakhir, klo make i yg dipakai nilai i terakhr
-				// console.log("e.target.result");
-				// console.log(e.target.result );
+				// //console.log("e.target.result");
+				// //console.log(e.target.result );
 			}
 
-			console.log(reader.readAsDataURL(input[i]));
+			//console.log(reader.readAsDataURL(input[i]));
 		}
 	}
 }

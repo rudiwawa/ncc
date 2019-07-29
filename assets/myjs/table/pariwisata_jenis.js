@@ -8,7 +8,7 @@ img["height"] = 768 ;
 
 function buildTbody(tableX) {
     TableX = tableX;
-    console.log("build TBODY " + tableX);
+    //console.log("build TBODY " + tableX);
     var number = 0;
     $('#table_' + tableX).DataTable({
         "processing": true,
@@ -44,18 +44,18 @@ function buildTbody(tableX) {
 $('#divmodals').on('hidden.bs.modal', function () {
     $('#divmodals div').remove(); 
     // refreshTableX(TableX);
-	console.log("modal hidden");
+	//console.log("modal hidden");
     Blob = null;
 })
 function update_modal(id) {
     $('.edit_jenis').prop('disabled', true);//mencegah error
     ID = id;
-    console.log("ID    " + id)
+    //console.log("ID    " + id)
     $("#divmodals").load("./assets/contents/modal/" + TableX + "_update.php", function () {
         // $('#form')[0].reset(); // reset form on modals
         $('.form-group').removeClass('has-error'); // clear error class
         $('.help-block').empty(); // clear error string
-        console.log("insert_modal");
+        //console.log("insert_modal");
         $('#modal_form_update').modal('show');
         //preview image
         Blob = null;
@@ -68,11 +68,11 @@ function update_modal(id) {
                 $('#save').click(function (e) {
                     e.preventDefault();
                     var mydata = new FormData(document.getElementById("form"));
-                    console.log(mydata);
-                    console.log("id " + ID);
-                    console.log($('#img').prop('files')[0]);
+                    //console.log(mydata);
+                    //console.log("id " + ID);
+                    //console.log($('#img').prop('files')[0]);
                     // var file_data = $('#img').prop('files')[0];
-                    console.log($('#img').prop('files')[0]);
+                    //console.log($('#img').prop('files')[0]);
                     if (Blob!=null) {
                         mydata.append('img', Blob,"aaaa.jpg");
                     }
@@ -88,7 +88,7 @@ function update_modal(id) {
                         processData: false,
                         contentType: false,
                         beforeSend: function () {
-                            console.log("before send");
+                            //console.log("before send");
                             // $("#content").append('')
                         },
                         success: function (dataObject) {
@@ -107,8 +107,8 @@ function update_modal(id) {
                                 var data = dataObject.msg_detail.item;
                                 $.each(data, function (key, value) {
                                     if (value !== null) {
-                                        console.log("not null" + key);
-                                        console.log(('"' + '.text-danger.' + key + '"') + value);
+                                        //console.log("not null" + key);
+                                        //console.log(('"' + '.text-danger.' + key + '"') + value);
 
                                         $('.' + 'text-danger.' + key).html(value);
                                     }
@@ -118,14 +118,14 @@ function update_modal(id) {
                         complete: function () {
                             var body = $("html, body");
                             body.stop().animate({ scrollTop: window.url["scroll"] }, 1000, 'swing', function () {
-                                console.log("Finished animating");
+                                //console.log("Finished animating");
                             });
                         }
                     });
                     return false;
                 });
             });
-            console.log("");
+            //console.log("");
             $('.edit_jenis').prop('disabled', false);
         });
     });
@@ -136,7 +136,7 @@ function insert_modal() {
         // $('#form')[0].reset(); // reset form on modals
         $('.form-group').removeClass('has-error'); // clear error class
         $('.help-block').empty(); // clear error string
-        console.log("insert_modal");
+        //console.log("insert_modal");
         $('#modal_form_update').modal('show');
         $("#img").change(function () {
             readURL(this);
@@ -146,12 +146,12 @@ function insert_modal() {
                 $('#save').click(function (e) {
                     e.preventDefault();
                     var mydata = new FormData(document.getElementById("form"));
-                    console.log(mydata);
+                    //console.log(mydata);
                     if (Blob!=null) {
                         mydata.append('img', Blob,"aaaa.jpg");
                     }
-                    // console.log($('#img').prop('files')[0]);
-                    // console.log(Blob);
+                    // //console.log($('#img').prop('files')[0]);
+                    // //console.log(Blob);
                     // var file_data = $('#img').prop('files')[0];
                     // mydata.append('id_jenis', id); 
                     $.ajax({
@@ -165,7 +165,7 @@ function insert_modal() {
                         processData: false,
                         contentType: false,
                         beforeSend: function () {
-                            console.log("before send");
+                            //console.log("before send");
                             // $("#content").append('')
                         },
                         success: function (dataObject) {
@@ -189,7 +189,7 @@ function insert_modal() {
                             }
                         },
                         complete: function () {
-                            console.log("complete");
+                            //console.log("complete");
                             // $('#modal_form_update').modal('toggle');
 
                         }
@@ -197,7 +197,7 @@ function insert_modal() {
                     return false;
                 });
             });
-            console.log("");
+            //console.log("");
         });
     });
 }
@@ -206,7 +206,7 @@ function set_msg_error(data) {
         key = key.replace('[', '');
         key = key.replace(']', '');
         if (value !== null) {
-            console.log($('.' + 'text-danger.' + key).html(value));
+            //console.log($('.' + 'text-danger.' + key).html(value));
         }
     })
 }
@@ -242,7 +242,7 @@ function delete_byId(id) {
         headers: { "X-HTTP-Method-Override": "DELETE" }, // X-HTTP-Method-Override set to PUT
         data: json,
         beforeSend: function () {
-            console.log("before send");
+            //console.log("before send");
         },
         success: function (dataObject) {
             if (dataObject.msg_main.status == true) {
@@ -254,7 +254,7 @@ function delete_byId(id) {
 
         },
         complete: function () {
-            console.log("loading");
+            //console.log("loading");
             refreshTableX(TableX, 1);
 
 
@@ -265,26 +265,26 @@ function delete_byId(id) {
 function get_placehorder(id) {
     var json = { id };
     var data;
-    console.log("get_placehorder" + id)
+    //console.log("get_placehorder" + id)
     $.ajax({
         url: window.url["data_byId_jenis"],
         type: "POST",
         dataType: "JSON",
         data: json,
         beforeSend: function () {
-            console.log("before send get_placehorder");
-            console.log(json);
+            //console.log("before send get_placehorder");
+            //console.log(json);
         },
         success: function (dataObject) {
             if (dataObject.msg_main.status == true) {
                 data = dataObject.msg_detail.item;
-                console.log("sukses get Placehorder" + data[0].ket_jenis);
+                //console.log("sukses get Placehorder" + data[0].ket_jenis);
                 $("#ket_jenis").val(data[0].ket_jenis);
                 // $(".image_view").append('<img src="/app/uploads/'+data[0].img+'" class="rounded" alt="..." style = "width:200px;"></img>');
                 $('.image_view').attr('src', "/app/uploads/" + data[0].img);
-                console.log(data[0].id_sub);
+                //console.log(data[0].id_sub);
 
-                // console.log("placehorder");
+                // //console.log("placehorder");
             }
             else {
                 alert("get data gagal \n" + dataObject.msg_detail.item);
@@ -292,7 +292,7 @@ function get_placehorder(id) {
 
         },
         complete: function () {
-            console.log("loading");
+            //console.log("loading");
             // $("select[name='id_jenis']").hide().html(data).fadeIn('fast');
 
         }
@@ -306,27 +306,27 @@ function readURL(input) {
     var image = document.getElementById('image');
     var $alert = $('.alert');
     var $modal = $('#modal_crop');
-    console.log("READ URL");
+    //console.log("READ URL");
     var cropper;
     // $modal.modal('toggle');
     $('[data-toggle="tooltip"]').tooltip();
     var files = input.files;
-    // console.log(files);
+    // //console.log(files);
     var done = function (url) {
         input.value = '';
         image.src = url;
         $alert.hide();
         $modal.modal('show');
-        console.log("PPP");
+        //console.log("PPP");
     };
     var reader;
     var file;
     var url;
-    console.log(files);
+    //console.log(files);
 
     if (files) {
         file = files[0];
-        console.log(file);
+        //console.log(file);
 
         if (URL) {
             done(URL.createObjectURL(file));
@@ -345,7 +345,7 @@ function readURL(input) {
             viewMode: 3,
         });
     }).on('hidden.bs.modal', function () {
-        console.log("cropper destroy");
+        //console.log("cropper destroy");
         cropper.destroy();
         cropper = null;
     });
@@ -356,7 +356,7 @@ function readURL(input) {
         // var reader = new FileReader();
 
         $modal.modal('hide');
-        console.log(cropper.cropped);
+        //console.log(cropper.cropped);
         if (cropper.cropped) {
              canvas = cropper.getCroppedCanvas({
                 width: img["width"],
@@ -364,9 +364,9 @@ function readURL(input) {
                 // imageSmoothingQuality: 'low',
             });
             // initialAvatarURL = avatar.src;
-            // console.log(canvas);
-            console.log(canvas);
-            // console.log(avatar.src);
+            // //console.log(canvas);
+            //console.log(canvas);
+            // //console.log(avatar.src);
             // $progress.show();
             // $alert.removeClass('alert-success alert-warning');
             // avatar.src = canvas.toDataURL("image/jpg", 0.7);
@@ -377,7 +377,7 @@ function readURL(input) {
                     $('.image_view').attr('src', e.target.result);
                 }
                 reader.readAsDataURL(blob);
-                // console.log(blob);
+                // //console.log(blob);
                 Blob = blob;
             },'image/jpeg',
             0.7
