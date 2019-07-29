@@ -71,20 +71,20 @@ class Api_konten_pariwisata extends \Restserver\Libraries\REST_Controller
         );
     }
 
-    public function ket_jenis_get()
-    {
-        $data = $this->Pariwisata_konten_model->ket_jenis_get();
-        $this->response(
-            ['msg_main' => [
-                'status' => true,
-                'msg' => "get data success!",
-            ],
-                'msg_detail' => [
-                    'item' => $data],
-            ]
-        );
+    // public function ket_jenis_get()
+    // {
+    //     $data = $this->Pariwisata_konten_model->ket_jenis_get();
+    //     $this->response(
+    //         ['msg_main' => [
+    //             'status' => true,
+    //             'msg' => "get data success!",
+    //         ],
+    //             'msg_detail' => [
+    //                 'item' => $data],
+    //         ]
+    //     );
 
-    }
+    // }
     public function get_alamat($alamat, $loc)
     {
         foreach ($alamat as $i => $value) {
