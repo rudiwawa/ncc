@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
 
-	// CONFIG URL API
+	// CONFIG URL AP
 	window.bashUrl = "/app";
 	window.url = new Array();
 	//PARIWISATA
