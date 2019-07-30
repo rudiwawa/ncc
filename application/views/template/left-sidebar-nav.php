@@ -1,7 +1,7 @@
 <!-- ============================================================== -->
 <!-- Left Sidebar - style you can find in sidebar.scss  -->
 <!-- ============================================================== -->
-<aside class="left-sidebar" >
+<aside class="left-sidebar" style="position:fixed;">
     <!-- Sidebar scroll-->
     <div class="scroll-sidebar">
         <!-- User profile -->
