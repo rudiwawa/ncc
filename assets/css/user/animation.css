@@ -1,0 +1,212 @@
+.slide-bottom {
+	-webkit-animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+ @-webkit-keyframes slide-bottom {
+    0% {
+      -webkit-transform: translateY(-100px);
+              transform: translateY(-100px);
+    }
+    100% {
+      -webkit-transform: translateY(0px);
+              transform: translateY(0px);
+    }
+  }
+  @keyframes slide-bottom {
+    0% {
+      -webkit-transform: translateY(-100px);
+              transform: translateY(-100px);
+    }
+    100% {
+      -webkit-transform: translateY(0px);
+              transform: translateY(0px);
+    }
+  }
+
+@-webkit-keyframes slide-right {
+    0% {
+      -webkit-transform: translateX(-100px);
+              transform: translateX(-100px);
+    }
+    100% {
+      -webkit-transform: translateX(0px);
+              transform: translateX(0px);
+    }
+  }
+  @keyframes slide-right {
+    0% {
+      -webkit-transform: translateX(-100px);
+              transform: translateX(-100px);
+    }
+    100% {
+      -webkit-transform: translateX(0px);
+              transform: translateX(0px);
+    }
+  }
+
+.cloudMo {
+    animation-name: cloudMoves;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    transform-origin: 50% 50%;
+}
+
+@keyframes cloudMoves {
+    0% {
+        transform: translate(-100%, 0);
+    }
+
+    100% {
+        transform: translate(100%, 0px);
+    }
+}
+
+.parallax {
+  /* The image used */
+  background-image: url('../assets/index.jpg');
+
+  /* Full height */
+  height: 25%;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.scrollspy-example {
+  position: relative;
+  height: 400px;
+  width: 100%;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+#popover-footer {
+  margin: 0;
+  padding: 8px 14px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  background-color: #F7F7F7;
+  border-bottom: 1px solid #EBEBEB;
+  border-radius: 5px 5px 0 0;
+}
+
+#g-usetag{
+	stroke-width: 6;
+	stroke:#F2385A;
+	animation: gstrokeanim 2s infinite linear;
+}
+@keyframes gstrokeanim {
+	0%{stroke-width: 6;}
+	50%{stroke-width: 0;}
+	100%{stroke-width: 6;}
+	
+}
+
+
+.text {
+	
+  fill: none;
+  stroke-width: 6;
+  stroke-linejoin: round;
+  stroke-dasharray: 70 330;
+  stroke-dashoffset: 0;
+-webkit-animation: stroke 6s infinite linear;
+  animation: stroke 6s infinite linear;
+}
+
+.text:nth-child(5n + 1) {
+  stroke: #F2385A;
+  -webkit-animation-delay: -1.2s;
+  animation-delay: -1.2s;
+}
+
+.text:nth-child(5n + 2) {
+  stroke: #F5A503;
+  -webkit-animation-delay: -2.4s;
+  animation-delay: -2.4s;
+}
+
+.text:nth-child(5n + 3) {
+  stroke: #E9F1DF;
+  -webkit-animation-delay: -3.6s;
+  animation-delay: -3.6s;
+}
+
+.text:nth-child(5n + 4) {
+  stroke: #56D9CD;
+  -webkit-animation-delay: -4.8s;
+  animation-delay: -4.8s;
+}
+
+.text:nth-child(5n + 5) {
+  stroke: #3AA1BF;
+  -webkit-animation-delay: -6s;
+  animation-delay: -6s;
+}
+
+
+@-webkit-keyframes stroke {
+  100% {
+    stroke-dashoffset: -400;
+  }
+}
+
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: -400;
+  }
+}
+
+/*////////////////////v animation//////////////////*/
+
+.text1 {
+	
+  fill: none;
+  
+  stroke-linejoin: round;
+  stroke-dasharray:1160;
+  stroke-dashoffset: 1160;
+	-webkit-animation: vstroke 6s infinite linear;
+  animation: vstroke 6s infinite ease-in-out;
+
+}
+.text1:nth-child(3n+3){
+	stroke-width: 4;
+	stroke: #3AA1BF;
+	-webkit-animation-delay: 0s;
+  animation-delay: 00s;
+}
+.text1:nth-child(3n+1){
+	stroke: yellow;
+	stroke-width: 1;
+	-webkit-animation-delay: .2s;
+  animation-delay: -.2s;
+}
+.text1:nth-child(3n+2){
+	stroke: red;
+	stroke-width: 2;
+	-webkit-animation-delay: -.1s;
+  animation-delay: -.1s;
+}
+
+
+@keyframes vstroke {
+	100%{stroke-dashoffset:0;}
+}
+
+.loader {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: url('images/pageLoader.gif') 50% 50% no-repeat rgb(249,249,249);
+  opacity: .8;
+}
