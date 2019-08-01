@@ -1,26 +1,54 @@
 var TableX;
+var dataAll = new Array();
 var ID, is_img_valid = false;
 var files = new Array();
-var idc = 0, id_alamat_input = 1, is_update = false, id_update;
+var idc = 0, id_alamat_input = 1, is_update = false, id_update, index_update;
 var imgArr_update = new Array(), imgArr_deleted = new Array();
 
 // IMAGE CONFIG
 var jumlah_maksimal_photo = 3;
 var img = new Array();
-img["width"] = 1024 ;
-img["height"] = 768 ;
+img["width"] = 1024;
+img["height"] = 768;
 
 
 var c = 0;
 function buildTbody(tableX) {
 	TableX = tableX;
 	console.log("build TBODY " + tableX);
+	
+	$.ajax({
+		url: window.url[tableX],
+		beforeSend: function () {
+			console.log("before send");
+		},
+		success: function (dataObject) {
+			if (dataObject.msg_main.status == true) {
+				dataAll = dataObject.msg_detail.item;
+				// render_Tbody(dataAll);
+			}
+			else {
+				swal("Error", "Data tidak berhasil di Hapus", "error");
+			}
+
+		},
+		complete: function () {
+			render_Tbody(dataAll);
+			console.log("loading");
+			
+		}
+	});
+	console.log("anjing");
+	
+}
+
+function render_Tbody(params) {
 	var number = 0;
-	$('#table_' + tableX).DataTable({
-		"processing": true,
+	$('#table_' + TableX).DataTable({
+		processing: true,
 		// "ajax": window.url[tableX],
-		"ajax": { url: window.url[tableX], dataSrc: 'msg_detail.item' },//diperbaiki add dataSrc dan lokasi array nya yg ditandai [{}]
-		"columns": [
+		data: params,//diperbaiki add dataSrc dan lokasi array nya yg ditandai [{}]
+		columns: [
 			{
 				"render": function () {
 					number++;
@@ -29,6 +57,7 @@ function buildTbody(tableX) {
 			},
 			{
 				"render": function (data, type, JsonResultRow, meta) {
+					console.log(JsonResultRow);
 					return JsonResultRow.ket_main +
 						'<br>' + '<span class="text-info"> <small>' +
 						JsonResultRow.ket_jenis +
@@ -41,7 +70,7 @@ function buildTbody(tableX) {
 
 			{
 				"render": function (data, type, JsonResultRow, meta) {
-					return '<ol class="custom-counter">'+get_detail(JsonResultRow.detail, "alamat")+'</ol>';
+					return '<ol class="custom-counter">' + get_detail(JsonResultRow.detail, "alamat") + '</ol>';
 				}
 			},
 			{
@@ -51,6 +80,7 @@ function buildTbody(tableX) {
 			},
 			{
 				"render": function (data, type, JsonResultRow, meta) {
+					// console.log(JsonResultRow);
 
 					idc++;
 					return get_image_collection(JsonResultRow.img);
@@ -59,8 +89,8 @@ function buildTbody(tableX) {
 			// { "msg_detail.item": "ket_sub_jenis" } ini salah ,
 			{
 				"render": function (data, type, JsonResultRow, meta) {
-					return '<button class="btn btn-info edit_jenis"  style="width: 40px; margin-right : 5px;" onclick ="update_modal(' + "'" + JsonResultRow.id_pariwisata + "'" + ')"><i class="fa fa-pencil-square-o"></i></button>'
-						+ '<button class="btn btn-danger delete_jenis" style="width: 40px;" onclick ="conf_delete(' + "'" + JsonResultRow.id_pariwisata + "'" + ')"><i class="fa fa-trash-o"></i></a>'
+					return '<button class="btn btn-info edit_jenis"  style="width: 40px; margin-right : 5px;" onclick ="update_modal(' + "'" + (number - 1) + "'" + ')"><i class="fa fa-pencil-square-o"></i></button>'
+						+ '<button class="btn btn-danger delete_jenis" style="width: 40px;" onclick ="conf_delete(' + "'" + (number - 1) + "'" + ')"><i class="fa fa-trash-o"></i></a>'
 						;
 				}
 
@@ -127,9 +157,9 @@ function get_detail(data, i) {
 
 		case "official_account":
 			var tmp = ""
-			tmp += '<small class="text-muted">Website </small>'+'<li class="list-group-item border-0 bg-transparent pt-1 pb-1">' + data.website + "</li>";
-			tmp += '<small class="text-muted">Telp </small>'+'<li class="list-group-item border-0 bg-transparent pt-1 pb-1">' + data.tlp + "</li>";
-			tmp += '<small class="text-muted">Email </small>'+'<li class="list-group-item border-0 bg-transparent pt-1 pb-1">' + data.email + "</li>";
+			tmp += '<small class="text-muted">Website </small>' + '<li class="list-group-item border-0 bg-transparent pt-1 pb-1">' + data.website + "</li>";
+			tmp += '<small class="text-muted">Telp </small>' + '<li class="list-group-item border-0 bg-transparent pt-1 pb-1">' + data.tlp + "</li>";
+			tmp += '<small class="text-muted">Email </small>' + '<li class="list-group-item border-0 bg-transparent pt-1 pb-1">' + data.email + "</li>";
 
 			return '<ul class="list-group ">' + tmp + "<ul>";
 
@@ -150,10 +180,13 @@ function get_detail(data, i) {
 
 
 function update_modal(id) {
-	id_update = id;
+	console.log("dataAll");
+	console.log(dataAll);
+	id_update = dataAll[id].id_pariwisata;
+	index_update = id;
 	is_update = true;
 	insert_modal();
-	
+
 }
 
 $('#divmodals').on('hidden.bs.modal', function () {
@@ -186,7 +219,7 @@ function insert_modal() {
 		});
 		$.when(ket_jenis_get()).then(function (x) {
 			if (is_update) {
-					get_placehorder(id_update);
+				get_placehorder(index_update);
 			}
 			// return true;
 			$(function () {
@@ -198,7 +231,7 @@ function insert_modal() {
 					var mydata = new FormData(document.getElementById("form"));
 					console.log(mydata);
 					files.forEach(element => {
-						mydata.append('img[]', element,"aaa.jpg");
+						mydata.append('img[]', element, "aaa.jpg");
 					});
 					var url_temp;
 					if (is_update) {
@@ -213,7 +246,7 @@ function insert_modal() {
 						});
 						// mydata.append("img_update[]", imgArr_update);
 						url_temp = window.url["pariwisata_konten"] + "/update";
-						
+
 
 					} else {
 						url_temp = window.url["pariwisata_konten"];
@@ -355,49 +388,24 @@ function delete_byId(id) {
 }
 
 function get_placehorder(id) {
+	// dataAll
+	var data = new Array();
+	data[0] = dataAll[id];
+	console.log("sukses get Placehorder" + data[0].ket_jenis);
+	// $( "#ket_jenis_select :option[value='2']" ).remove();
+	$("select[name='id_jenis']").append("<option value=" + data[0].id_jenis + " selected >" + data[0].ket_jenis + "</option>");
+	ket_sub_get(data[0].id_jenis);
+	$("select[name='id_sub']").append("<option value=" + data[0].id_sub + " selected >" + data[0].ket_sub + "</option>");
+	$("#ket_main").val(data[0].ket_main);
+	$("#deskripsi").val(get_detail(data[0].detail, "ket"));
+	$("#tlp").val(get_detail(data[0].detail, "tlp"));
+	$("#email").val(get_detail(data[0].detail, "email"));
+	$("#website").val(get_detail(data[0].detail, "website"));
+	render_alamat_from_db(data[0].detail);
+	imgArr_update = JSON.parse(data[0].img);
+	render_img_from_db();
+	console.log(data[0].id_sub);
 
-	var json = { id };
-	var data;
-	console.log("get_placehorder" + id)
-	$.ajax({
-		url: window.url["data_byId_konten"],
-		type: "POST",
-		dataType: "JSON",
-		data: json,
-		beforeSend: function () {
-			console.log("before send get_placehorder");
-		},
-		success: function (dataObject) {
-			if (dataObject.msg_main.status == true) {
-				data = dataObject.msg_detail.item;
-				console.log("sukses get Placehorder" + data[0].ket_jenis);
-				// $( "#ket_jenis_select :option[value='2']" ).remove();
-				$("select[name='id_jenis']").append("<option value=" + data[0].id_jenis + " selected >" + data[0].ket_jenis + "</option>");
-				ket_sub_get(data[0].id_jenis);
-				$("select[name='id_sub']").append("<option value=" + data[0].id_sub + " selected >" + data[0].ket_sub + "</option>");
-				$("#ket_main").val(data[0].ket_main);
-				$("#deskripsi").val(get_detail(data[0].detail, "ket"));
-				$("#tlp").val(get_detail(data[0].detail, "tlp"));
-				$("#email").val(get_detail(data[0].detail, "email"));
-				$("#website").val(get_detail(data[0].detail, "website"));
-				render_alamat_from_db(data[0].detail);
-				imgArr_update = JSON.parse(data[0].img);
-				render_img_from_db();
-				console.log(data[0].id_sub);
-
-				// console.log("placehorder");
-			}
-			else {
-				alert("get data gagal \n" + dataObject.msg_detail.item);
-			}
-
-		},
-		complete: function () {
-			console.log("loading");
-			// $("select[name='id_jenis']").hide().html(data).fadeIn('fast');
-
-		}
-	});
 
 }
 
@@ -560,94 +568,94 @@ var tmp_file_0;
 var boolean_before_set
 
 function readURL(input) {
-		
+
 	// var avatar = document.getElementById("avatar");
-    var image = document.getElementById('image');
-    var $alert = $('.alert');
-    var $modal = $('#modal_crop');
-    console.log("READ URL");
-    var cropper;
-    // $modal.modal('toggle');
-    $('[data-toggle="tooltip"]').tooltip();
-    var files = input.files;
-    // console.log(files);
-    var done = function (url) {
-        input.value = '';
-        image.src = url;
-        $alert.hide();
-        $modal.modal('show');
-        console.log("PPP");
-    };
-    var reader;
-    var file;
-    var url;
-    console.log(files);
+	var image = document.getElementById('image');
+	var $alert = $('.alert');
+	var $modal = $('#modal_crop');
+	console.log("READ URL");
+	var cropper;
+	// $modal.modal('toggle');
+	$('[data-toggle="tooltip"]').tooltip();
+	var files = input.files;
+	// console.log(files);
+	var done = function (url) {
+		input.value = '';
+		image.src = url;
+		$alert.hide();
+		$modal.modal('show');
+		console.log("PPP");
+	};
+	var reader;
+	var file;
+	var url;
+	console.log(files);
 
-    if (files) {
-        file = files[0];
-        console.log(file);
+	if (files) {
+		file = files[0];
+		console.log(file);
 
-        if (URL) {
-            done(URL.createObjectURL(file));
-        } else if (FileReader) {
-            reader = new FileReader();
-            reader.onload = function (e) {
-                done(reader.result);
-            };
-            reader.readAsDataURL(file);
-        }
-    }
+		if (URL) {
+			done(URL.createObjectURL(file));
+		} else if (FileReader) {
+			reader = new FileReader();
+			reader.onload = function (e) {
+				done(reader.result);
+			};
+			reader.readAsDataURL(file);
+		}
+	}
 
-    $modal.on('shown.bs.modal', function () {
-        cropper = new Cropper(image, {
-            aspectRatio: 4 / 3,
-            viewMode: 3,
-        });
-    }).on('hidden.bs.modal', function () {
-        console.log("cropper destroy");
-        cropper.destroy();
-        cropper = null;
-    });
+	$modal.on('shown.bs.modal', function () {
+		cropper = new Cropper(image, {
+			aspectRatio: 4 / 3,
+			viewMode: 3,
+		});
+	}).on('hidden.bs.modal', function () {
+		console.log("cropper destroy");
+		cropper.destroy();
+		cropper = null;
+	});
 
-    document.getElementById('crop').addEventListener('click', function () {
-        // var initialAvatarURL;
-        var canvas;
-        // var reader = new FileReader();
+	document.getElementById('crop').addEventListener('click', function () {
+		// var initialAvatarURL;
+		var canvas;
+		// var reader = new FileReader();
 
-        $modal.modal('hide');
-        console.log(cropper.cropped);
-        if (cropper.cropped) {
-             canvas = cropper.getCroppedCanvas({
-                width: img["width"],
-                height: img["height"],
-                // imageSmoothingQuality: 'low',
-            });
-            // initialAvatarURL = avatar.src;
-            // console.log(canvas);
-            console.log(canvas);
-            // console.log(avatar.src);
-            // $progress.show();
-            // $alert.removeClass('alert-success alert-warning');
-            // avatar.src = canvas.toDataURL("image/jpg", 0.7);
+		$modal.modal('hide');
+		console.log(cropper.cropped);
+		if (cropper.cropped) {
+			canvas = cropper.getCroppedCanvas({
+				width: img["width"],
+				height: img["height"],
+				// imageSmoothingQuality: 'low',
+			});
+			// initialAvatarURL = avatar.src;
+			// console.log(canvas);
+			console.log(canvas);
+			// console.log(avatar.src);
+			// $progress.show();
+			// $alert.removeClass('alert-success alert-warning');
+			// avatar.src = canvas.toDataURL("image/jpg", 0.7);
 
-            canvas.toBlob(function (blob) {
-                var reader = new FileReader();
-                reader.onload = function (e) {
-                    $('#avatar').attr('src', e.target.result);
-                }
-                reader.readAsDataURL(blob);
+			canvas.toBlob(function (blob) {
+				var reader = new FileReader();
+				reader.onload = function (e) {
+					$('#avatar').attr('src', e.target.result);
+				}
+				reader.readAsDataURL(blob);
 				// console.log(blob);
 				tmp_file_0 = blob;
 				// is_img_valid = true;
 				$("#add_img").prop('disabled', false);
-	boolean_before_set = true;
-                // Blob = blob;
-            },'image/jpeg',
-            0.7
-            );
-            
-        }
-    });
+				boolean_before_set = true;
+				// Blob = blob;
+			}, 'image/jpeg',
+				0.7
+			);
+
+		}
+	});
 
 	// var img = new Image();
 
@@ -698,27 +706,27 @@ function readURL(input) {
 
 function tambah_img() {
 	console.log("add_img_btn");
-	var total_img = files.length+imgArr_update.length;
+	var total_img = files.length + imgArr_update.length;
 	// console.log(files.length+"|"+imgArr_update.length);
 	// if (is_img_valid) {
-		if (boolean_before_set) {
-			if((total_img+1)<=jumlah_maksimal_photo){
-				console.log("add_img_btn");
-				// files.push.apply(input.files[0]);
-				files.push(tmp_file_0);
-				// readURL_array(files);
-				render_img_All();
-				boolean_before_set = false;
-				$("#add_img").prop('disabled', true);
-				c++;
-			}
-			else{
-				swal("Ups!", "Jumlah Gambar maksimal adalah "+jumlah_maksimal_photo, "error");
-			}
-			
+	if (boolean_before_set) {
+		if ((total_img + 1) <= jumlah_maksimal_photo) {
+			console.log("add_img_btn");
+			// files.push.apply(input.files[0]);
+			files.push(tmp_file_0);
+			// readURL_array(files);
+			render_img_All();
+			boolean_before_set = false;
+			$("#add_img").prop('disabled', true);
+			c++;
 		}
+		else {
+			swal("Ups!", "Jumlah Gambar maksimal adalah " + jumlah_maksimal_photo, "error");
+		}
+
+	}
 	// }else{
-		// swal("Ups!", "Gambar ERROR, periksa gambar yang telah anda masukkan", "error");
+	// swal("Ups!", "Gambar ERROR, periksa gambar yang telah anda masukkan", "error");
 	// }
 
 }
