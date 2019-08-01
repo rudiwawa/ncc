@@ -1,4 +1,5 @@
 var TableX;
+// Flag["pariwisata_konten"] = true;
 var dataAll = new Array();
 var ID, is_img_valid = false;
 var files = new Array();
@@ -25,6 +26,7 @@ function buildTbody(tableX) {
 		success: function (dataObject) {
 			if (dataObject.msg_main.status == true) {
 				dataAll = dataObject.msg_detail.item;
+				render_Tbody(dataAll);
 				// render_Tbody(dataAll);
 			}
 			else {
@@ -33,7 +35,6 @@ function buildTbody(tableX) {
 
 		},
 		complete: function () {
-			render_Tbody(dataAll);
 			console.log("loading");
 			
 		}
@@ -43,6 +44,8 @@ function buildTbody(tableX) {
 }
 
 function render_Tbody(params) {
+	console.log("render_Tbody");
+	console.log(params);
 	var number = 0;
 	$('#table_' + TableX).DataTable({
 		processing: true,
@@ -189,16 +192,23 @@ function update_modal(id) {
 
 }
 
-$('#divmodals').on('hidden.bs.modal', function () {
-	console.log("modal hidden");
-	is_update = false;
-	$.when(refreshTableX(TableX)).done(function (x) {
-		var body = $("html, body");
-		body.stop().animate({ scrollTop: window.url["scroll"] }, 1000, 'swing', function () {
-			console.log("Finished animating");
+$('#divmodals').on('hidden.bs.modal', function (e) {
+	if (e.handled !== true) {
+		e.handled = true;
+		//memastikan bahwa event dilakukan sekali saja;
+		$('#divmodals div').remove(); 
+		console.log("modal hidden");
+		is_update = false;
+		// $("#content").empty();
+		// $("#divmodals").empty();
+		$.when(refreshTableX(TableX)).done(function (x) {
+			var body = $("html, body");
+			body.stop().animate({ scrollTop: window.url["scroll"] }, 1000, 'swing', function () {
+				console.log("Finished animating");
+			});
 		});
-	});
-
+        return;
+    }
 })
 
 function insert_modal() {

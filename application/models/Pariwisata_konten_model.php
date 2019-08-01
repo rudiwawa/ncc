@@ -40,15 +40,15 @@ class Pariwisata_konten_model extends CI_Model
         return $query->result_array();
     }
 
-//     public function ket_jenis_get()
-//     {
-//         $query = $this->db->query('SELECT s.id_sub,s.id_jenis,s.ket_sub_jenis,j.ket_jenis
-// from fasilitas_sub_jenis s
-// join fasilitas_jenis j
-// on s.id_jenis = j.id_jenis
-// where s.is_delete = "0"');
-//         return $query->result_array();
-//     }
+    public function ket_jenis_get()
+    {
+        $query = $this->db->query('SELECT s.id_sub,s.id_jenis,s.ket_sub_jenis,j.ket_jenis
+from fasilitas_sub_jenis s
+join fasilitas_jenis j
+on s.id_jenis = j.id_jenis
+where s.is_delete = "0"');
+        return $query->result_array();
+    }
 
     public function update_byId($id, $data)
     {
