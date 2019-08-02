@@ -1,7 +1,7 @@
 var TableX;
 // Flag["pariwisata_konten"] = true;
 var dataAll = new Array();
-var ID, is_img_valid = false;
+var ID, is_img_valid = false, is_data_update = false;
 var files = new Array();
 var idc = 0, id_alamat_input = 1, is_update = false, id_update, index_update;
 var imgArr_update = new Array(), imgArr_deleted = new Array();
@@ -44,6 +44,7 @@ function buildTbody(tableX) {
 }
 
 function render_Tbody(params) {
+	is_data_update = false;
 	console.log("render_Tbody");
 	console.log(params);
 	var number = 0;
@@ -201,12 +202,14 @@ $('#divmodals').on('hidden.bs.modal', function (e) {
 		is_update = false;
 		// $("#content").empty();
 		// $("#divmodals").empty();
-		$.when(refreshTableX(TableX)).done(function (x) {
-			var body = $("html, body");
-			body.stop().animate({ scrollTop: window.url["scroll"] }, 1000, 'swing', function () {
-				console.log("Finished animating");
+		if (is_data_update) {
+			$.when(refreshTableX(TableX)).done(function (x) {
+				var body = $("html, body");
+				body.stop().animate({ scrollTop: window.url["scroll"] }, 1000, 'swing', function () {
+					console.log("Finished animating");
+				});
 			});
-		});
+		}
 		return;
 	}
 })
@@ -298,6 +301,7 @@ function insert_modal() {
 								swal("Insert!", "Insert data berhasil!", "success");
 							}
 							$('#modal_form_update').modal('toggle');
+							is_data_update = true;
 							// refreshTableX(TableX, 1);
 							// $(':input').val('');
 						} else {
@@ -383,6 +387,7 @@ function delete_byId(id) {
 		},
 		success: function (dataObject) {
 			if (dataObject.msg_main.status == true) {
+				is_data_update = true;
 				// swal("Sukses", "Data berhasil di Hapus", "success");
 			}
 			else {
@@ -406,8 +411,8 @@ function get_placehorder(id) {
 	console.log("sukses get Placehorder" + data[0].ket_jenis);
 	// $( "#ket_jenis_select :option[value='2']" ).remove();
 	$.when(ket_sub_byId(data[0].id_jenis)).done(function (x) {
-		$("select[name='id_jenis'] option[value="+data[0].id_jenis+"]").attr("selected","selected");
-		$("select[name='id_sub'] option[value="+data[0].id_sub+"]").attr("selected","selected");
+		$("select[name='id_jenis'] option[value=" + data[0].id_jenis + "]").attr("selected", "selected");
+		$("select[name='id_sub'] option[value=" + data[0].id_sub + "]").attr("selected", "selected");
 		// $("select[name='id_jenis']").append("<option value=" + data[0].id_jenis + " selected >" + data[0].ket_jenis + "</option>");
 		// ket_sub_get(data[0].id_jenis);
 		// $("select[name='id_sub']").append("<option value=" + data[0].id_sub + " selected >" + data[0].ket_sub_jenis + "</option>");
@@ -472,10 +477,10 @@ function ket_sub_byId(id) {
 	console.log(jenis_sub == null)
 	if (jenis_sub == null) {
 		return $.when(ket_jenis_sub_get()).done(function (x) {
-			 render_sub();
+			render_sub();
 		});
 	} else {
-		 return render_sub();
+		return render_sub();
 	}
 	console.log(id);
 
