@@ -17,7 +17,7 @@ var c = 0;
 function buildTbody(tableX) {
 	TableX = tableX;
 	console.log("build TBODY " + tableX);
-	
+
 	$.ajax({
 		url: window.url[tableX],
 		beforeSend: function () {
@@ -36,11 +36,11 @@ function buildTbody(tableX) {
 		},
 		complete: function () {
 			console.log("loading");
-			
+
 		}
 	});
 	console.log("anjing");
-	
+
 }
 
 function render_Tbody(params) {
@@ -189,14 +189,14 @@ function update_modal(id) {
 	index_update = id;
 	is_update = true;
 	insert_modal();
-
 }
 
 $('#divmodals').on('hidden.bs.modal', function (e) {
 	if (e.handled !== true) {
 		e.handled = true;
+		jenis_sub = null;
 		//memastikan bahwa event dilakukan sekali saja;
-		$('#divmodals div').remove(); 
+		$('#divmodals div').remove();
 		console.log("modal hidden");
 		is_update = false;
 		// $("#content").empty();
@@ -207,8 +207,8 @@ $('#divmodals').on('hidden.bs.modal', function (e) {
 				console.log("Finished animating");
 			});
 		});
-        return;
-    }
+		return;
+	}
 })
 
 function insert_modal() {
@@ -227,15 +227,17 @@ function insert_modal() {
 
 			readURL(this);
 		});
-		$.when(ket_jenis_get()).then(function (x) {
+		
 			if (is_update) {
 				get_placehorder(index_update);
+			}else{
+				ket_sub_byId(null);
 			}
 			// return true;
 			$(function () {
 				// var tmp_firstIdJen =$("#id_jenis").prop("selectedIndex", 0).val();
-				console.log("tmp_firstIdSub" + window.url["tmp_firstIdjenis"]);
-				ket_sub_get(window.url["tmp_firstIdjenis"]);
+				// console.log("tmp_firstIdSub" + window.url["tmp_firstIdjenis"]);
+				// ket_sub_get(window.url["tmp_firstIdjenis"]);
 				$('#save').click(function (e) {
 					e.preventDefault();
 					var mydata = new FormData(document.getElementById("form"));
@@ -296,7 +298,7 @@ function insert_modal() {
 									swal("Insert!", "Insert data berhasil!", "success");
 								}
 								$('#modal_form_update').modal('toggle');
-								refreshTableX(TableX, 1);
+								// refreshTableX(TableX, 1);
 								// $(':input').val('');
 							} else {
 								//FORM VALIDATION
@@ -341,7 +343,7 @@ function insert_modal() {
 			});
 
 			console.log("");
-		});
+		
 	});
 }
 
@@ -390,7 +392,7 @@ function delete_byId(id) {
 		},
 		complete: function () {
 			console.log("loading");
-			refreshTableX(TableX, 1);
+			// refreshTableX(TableX, 1);
 
 
 		}
@@ -403,9 +405,10 @@ function get_placehorder(id) {
 	data[0] = dataAll[id];
 	console.log("sukses get Placehorder" + data[0].ket_jenis);
 	// $( "#ket_jenis_select :option[value='2']" ).remove();
+	ket_sub_byId(data[0].id_jenis);
 	$("select[name='id_jenis']").append("<option value=" + data[0].id_jenis + " selected >" + data[0].ket_jenis + "</option>");
-	ket_sub_get(data[0].id_jenis);
-	$("select[name='id_sub']").append("<option value=" + data[0].id_sub + " selected >" + data[0].ket_sub + "</option>");
+	// ket_sub_get(data[0].id_jenis);
+	$("select[name='id_sub']").append("<option value=" + data[0].id_sub + " selected >" + data[0].ket_sub_jenis + "</option>");
 	$("#ket_main").val(data[0].ket_main);
 	$("#deskripsi").val(get_detail(data[0].detail, "ket"));
 	$("#tlp").val(get_detail(data[0].detail, "tlp"));
@@ -455,48 +458,80 @@ function dell_img_update(i) {
 	render_img_All();
 }
 
-function get_placehorder_sub(id) {
-	var json = { id };
-	var data;
-	console.log("get_placehorder_sub" + id)
-	$.ajax({
-		url: window.url["get_sub_byId_jenis"],
-		type: "POST",
-		dataType: "JSON",
-		data: json,
+
+// the Hell make change ga bisa
+$(document.body).delegate('#id_jenis', 'change', function () {
+	ket_sub_byId($(this).val());
+	console.log($(this).val());
+});
+var jenis_sub;
+function ket_sub_byId(id) {
+	console.log(jenis_sub == null)
+	if (jenis_sub == null) {
+		$.when(ket_jenis_sub_get()).done(function (x) {
+			render_sub();
+		});
+	} else {
+		render_sub();
+	}
+	console.log(id);
+
+	function render_sub() {
+		if (id == null) {
+			ket_sub_byId(window.url["tmp_firstIdjenis"]);
+		} else {
+			console.log(jenis_sub);
+			const result = jenis_sub.filter(function (element) { return element.id_jenis == id; })
+			$('#id_sub').empty();
+			$.each(result, function (key, value) {
+				$("select[name='id_sub']").append("<option value=" + value.id_sub + ">" + value.ket_sub_jenis + "</option>");
+				console.log(value.id_jenis + "  " + value.ket_jenis);
+			});
+		}
+	}
+	// console.log(ket_jenis_sub_get);
+}
+function ket_jenis_sub_get() {
+
+	return $.ajax({
+		url: window.url["ket_jenis_sub_get"],
 		beforeSend: function () {
 			console.log("before send get_placehorder");
-			console.log(json);
 		},
 		success: function (dataObject) {
 			if (dataObject.msg_main.status == true) {
-				data = dataObject.msg_detail.item;
-				console.log("sukses get Placehorder SUBBBB" + data[0].ket_jenis);
-				$("#ket_jenis").val(data[0].ket_jenis);
-				// $(".image_view").append('<img src="/app/uploads/'+data[0].img+'" class="rounded" alt="..." style = "width:200px;"></img>');
-				$('.image_view').attr('src', "/app/uploads/" + data[0].img);
-				console.log(data[0].id_sub);
+				$('#ket_jenis_select').empty();
+				jenis_sub = dataObject.msg_detail.item;
+				var is_insert = false;
+				var tmp_value = null;
+				$.each(jenis_sub, function (key, value) {
+					console.log(tmp_value != value);
+					console.log(tmp_value + "|" + value.id_jenis);
 
-				// console.log("placehorder");
+					if (tmp_value != value.id_jenis) {
+						$("select[name='id_jenis']").append("<option value=" + value.id_jenis + ">" + value.ket_jenis + "</option>");
+						console.log(value.id_jenis + "  " + value.ket_jenis);
+						if (is_insert == false) {
+							window.url["tmp_firstIdjenis"] = value.id_jenis;
+							is_insert = true;
+						}
+						tmp_value = value.id_jenis;
+					}
+
+				});
 			}
 			else {
-				console.log("get data gagal \n" + dataObject.msg_detail.item);
+				return false;
+				alert("register gagal \n" + dataObject.msg_detail.item);
 			}
 
 		},
 		complete: function () {
 			console.log("loading");
-			// $("select[name='id_jenis']").hide().html(data).fadeIn('fast');
-
 		}
 	});
 
 }
-// the Hell make change ga bisa
-$(document.body).delegate('#id_jenis', 'change', function () {
-	ket_sub_get($(this).val());
-	console.log($(this).val());
-});
 
 function render_img_All() {
 	readURL_array(files);
