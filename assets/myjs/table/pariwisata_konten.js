@@ -227,123 +227,123 @@ function insert_modal() {
 
 			readURL(this);
 		});
-		
-			if (is_update) {
-				get_placehorder(index_update);
-			}else{
-				ket_sub_byId(null);
-			}
-			// return true;
-			$(function () {
-				// var tmp_firstIdJen =$("#id_jenis").prop("selectedIndex", 0).val();
-				// console.log("tmp_firstIdSub" + window.url["tmp_firstIdjenis"]);
-				// ket_sub_get(window.url["tmp_firstIdjenis"]);
-				$('#save').click(function (e) {
-					e.preventDefault();
-					var mydata = new FormData(document.getElementById("form"));
-					console.log(mydata);
-					files.forEach(element => {
-						mydata.append('img[]', element, "aaa.jpg");
-					});
-					var url_temp;
-					if (is_update) {
-						imgArr_update.forEach(element => {
-							console.log(element);
-							mydata.append('img_update[]', element);
-							// console.log(imgArr_deleted);
-						});
-						mydata.append('id', id_update);
-						imgArr_deleted.forEach(element => {
-							mydata.append('imgArr_deleted[]', element);
-						});
-						// mydata.append("img_update[]", imgArr_update);
-						url_temp = window.url["pariwisata_konten"] + "/update";
 
-
-					} else {
-						url_temp = window.url["pariwisata_konten"];
-					}
-
-
-
-					// mydata.append('c[]', files[1]);
-					// mydata.append('"c[]"', files[1]);
-					// var fileList = files;
-					console.log(files);
-					console.log(mydata);
-					console.log($('#img').prop('files'));
-					// var file_data = $('#img').prop('files')[0];
-					// mydata.append('id_jenis', id); 
-					$.ajax({
-						url: url_temp,
-						type: "POST",
-						dataType: "json",
-						// mimeType:"multipart/form-data",
-						// headers: {"X-HTTP-Method-Override": "PUT"},
-						data: mydata,
-						async: false,
-						processData: false,
-						contentType: false,
-						timeout: 1000,
-						beforeSend: function () {
-							console.log("before send");
-
-							// $("#content").append('')
-						},
-						success: function (dataObject) {
-							if (dataObject.msg_main.status == true) {
-								if (is_update) {
-									swal("Update!", "Update data berhasil!", "success");
-								} else {
-									swal("Insert!", "Insert data berhasil!", "success");
-								}
-								$('#modal_form_update').modal('toggle');
-								// refreshTableX(TableX, 1);
-								// $(':input').val('');
-							} else {
-								//FORM VALIDATION
-								swal("Ups!", "Periksa kembali form anda", "error");
-								$(".text-danger").html("");
-								var is_image_exist = dataObject.msg_detail.item[0];
-								var form_validation_msg = dataObject.msg_detail.item[1];
-								var upload_msg = dataObject.msg_detail.item[1];
-								set_msg_error(is_image_exist);
-								set_msg_error(form_validation_msg);
-								set_msg_error(upload_msg);
-
-								// $.each(form_validation_msg, function (key, value) {
-								// 	key = key.replace('[', '');
-								// 	key = key.replace(']', '');
-								// 	if (value !== null) {
-								// 		console.log($('.' + 'text-danger.' + key).html(value));
-								// 	}
-								// })
-								// $.each(upload_msg, function (key, value) {
-								// 	if (value !== "") {
-								// 		$('.' + 'text-danger.' + key).html(value);
-								// 	}
-								// })
-
-							}
-						},
-						complete: function (xmlhttprequest, textstatus, message) {
-							// if(textstatus==="timeout") {
-							// 	alert(textstatus); //run function here!
-							// } else {
-							// alert(textstatus);
-							// }
-							// console.log("complete");
-
-							// $('#modal_form_update').modal('toggle');
-
-						}, timeout: 3000
-					});
-					// return false;
+		if (is_update) {
+			get_placehorder(index_update);
+		} else {
+			ket_sub_byId(null);
+		}
+		// return true;
+		$(function () {
+			// var tmp_firstIdJen =$("#id_jenis").prop("selectedIndex", 0).val();
+			// console.log("tmp_firstIdSub" + window.url["tmp_firstIdjenis"]);
+			// ket_sub_get(window.url["tmp_firstIdjenis"]);
+			$('#save').click(function (e) {
+				e.preventDefault();
+				var mydata = new FormData(document.getElementById("form"));
+				console.log(mydata);
+				files.forEach(element => {
+					mydata.append('img[]', element, "aaa.jpg");
 				});
-			});
+				var url_temp;
+				if (is_update) {
+					imgArr_update.forEach(element => {
+						console.log(element);
+						mydata.append('img_update[]', element);
+						// console.log(imgArr_deleted);
+					});
+					mydata.append('id', id_update);
+					imgArr_deleted.forEach(element => {
+						mydata.append('imgArr_deleted[]', element);
+					});
+					// mydata.append("img_update[]", imgArr_update);
+					url_temp = window.url["pariwisata_konten"] + "/update";
 
-			console.log("");
-		
+
+				} else {
+					url_temp = window.url["pariwisata_konten"];
+				}
+
+
+
+				// mydata.append('c[]', files[1]);
+				// mydata.append('"c[]"', files[1]);
+				// var fileList = files;
+				console.log(files);
+				console.log(mydata);
+				console.log($('#img').prop('files'));
+				// var file_data = $('#img').prop('files')[0];
+				// mydata.append('id_jenis', id); 
+				$.ajax({
+					url: url_temp,
+					type: "POST",
+					dataType: "json",
+					// mimeType:"multipart/form-data",
+					// headers: {"X-HTTP-Method-Override": "PUT"},
+					data: mydata,
+					async: false,
+					processData: false,
+					contentType: false,
+					timeout: 1000,
+					beforeSend: function () {
+						console.log("before send");
+
+						// $("#content").append('')
+					},
+					success: function (dataObject) {
+						if (dataObject.msg_main.status == true) {
+							if (is_update) {
+								swal("Update!", "Update data berhasil!", "success");
+							} else {
+								swal("Insert!", "Insert data berhasil!", "success");
+							}
+							$('#modal_form_update').modal('toggle');
+							// refreshTableX(TableX, 1);
+							// $(':input').val('');
+						} else {
+							//FORM VALIDATION
+							swal("Ups!", "Periksa kembali form anda", "error");
+							$(".text-danger").html("");
+							var is_image_exist = dataObject.msg_detail.item[0];
+							var form_validation_msg = dataObject.msg_detail.item[1];
+							var upload_msg = dataObject.msg_detail.item[1];
+							set_msg_error(is_image_exist);
+							set_msg_error(form_validation_msg);
+							set_msg_error(upload_msg);
+
+							// $.each(form_validation_msg, function (key, value) {
+							// 	key = key.replace('[', '');
+							// 	key = key.replace(']', '');
+							// 	if (value !== null) {
+							// 		console.log($('.' + 'text-danger.' + key).html(value));
+							// 	}
+							// })
+							// $.each(upload_msg, function (key, value) {
+							// 	if (value !== "") {
+							// 		$('.' + 'text-danger.' + key).html(value);
+							// 	}
+							// })
+
+						}
+					},
+					complete: function (xmlhttprequest, textstatus, message) {
+						// if(textstatus==="timeout") {
+						// 	alert(textstatus); //run function here!
+						// } else {
+						// alert(textstatus);
+						// }
+						// console.log("complete");
+
+						// $('#modal_form_update').modal('toggle');
+
+					}, timeout: 3000
+				});
+				// return false;
+			});
+		});
+
+		console.log("");
+
 	});
 }
 
@@ -405,15 +405,18 @@ function get_placehorder(id) {
 	data[0] = dataAll[id];
 	console.log("sukses get Placehorder" + data[0].ket_jenis);
 	// $( "#ket_jenis_select :option[value='2']" ).remove();
-	ket_sub_byId(data[0].id_jenis);
-	$("select[name='id_jenis']").append("<option value=" + data[0].id_jenis + " selected >" + data[0].ket_jenis + "</option>");
-	// ket_sub_get(data[0].id_jenis);
-	$("select[name='id_sub']").append("<option value=" + data[0].id_sub + " selected >" + data[0].ket_sub_jenis + "</option>");
-	$("#ket_main").val(data[0].ket_main);
-	$("#deskripsi").val(get_detail(data[0].detail, "ket"));
-	$("#tlp").val(get_detail(data[0].detail, "tlp"));
-	$("#email").val(get_detail(data[0].detail, "email"));
-	$("#website").val(get_detail(data[0].detail, "website"));
+	$.when(ket_sub_byId(data[0].id_jenis)).done(function (x) {
+		$("select[name='id_jenis'] option[value="+data[0].id_jenis+"]").attr("selected","selected");
+		$("select[name='id_sub'] option[value="+data[0].id_sub+"]").attr("selected","selected");
+		// $("select[name='id_jenis']").append("<option value=" + data[0].id_jenis + " selected >" + data[0].ket_jenis + "</option>");
+		// ket_sub_get(data[0].id_jenis);
+		// $("select[name='id_sub']").append("<option value=" + data[0].id_sub + " selected >" + data[0].ket_sub_jenis + "</option>");
+		$("#ket_main").val(data[0].ket_main);
+		$("#deskripsi").val(get_detail(data[0].detail, "ket"));
+		$("#tlp").val(get_detail(data[0].detail, "tlp"));
+		$("#email").val(get_detail(data[0].detail, "email"));
+		$("#website").val(get_detail(data[0].detail, "website"));
+	});
 	render_alamat_from_db(data[0].detail);
 	imgArr_update = JSON.parse(data[0].img);
 	render_img_from_db();
@@ -468,11 +471,11 @@ var jenis_sub;
 function ket_sub_byId(id) {
 	console.log(jenis_sub == null)
 	if (jenis_sub == null) {
-		$.when(ket_jenis_sub_get()).done(function (x) {
-			render_sub();
+		return $.when(ket_jenis_sub_get()).done(function (x) {
+			 render_sub();
 		});
 	} else {
-		render_sub();
+		 return render_sub();
 	}
 	console.log(id);
 
