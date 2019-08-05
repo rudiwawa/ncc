@@ -32,13 +32,7 @@ function buildTbody(tableX) {
 }
 // //error solved
 
-$('#divmodals').on('hidden.bs.modal', function (e) {
-    if (e.handled !== true) {
-        e.handled = true;
-        $('#divmodals div').remove();
-        console.log("modal hidden");
-    }
-})
+
 
 function update_modal(id) {
     ID = id;

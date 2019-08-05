@@ -260,11 +260,11 @@ function insert_modal() {
 						mydata.append('imgArr_deleted[]', element);
 					});
 					// mydata.append("img_update[]", imgArr_update);
-					url_temp = window.url["pariwisata_konten"] + "/update";
+					url_temp = window.url[TableX] + "/update";
 
 
 				} else {
-					url_temp = window.url["pariwisata_konten"];
+					url_temp = window.url[TableX];
 				}
 
 
@@ -511,19 +511,19 @@ function ket_jenis_sub_get() {
 				$('#ket_jenis_select').empty();
 				jenis_sub = dataObject.msg_detail.item;
 				var is_insert = false;
-				var tmp_value = null;
+				var tmp_value = new Array();
 				$.each(jenis_sub, function (key, value) {
 					console.log(tmp_value != value);
-					console.log(tmp_value + "|" + value.id_jenis);
+					// console.log(tmp_value + "|" + value.id_jenis);
 
-					if (tmp_value != value.id_jenis) {
+					if (!tmp_value.includes(value.id_jenis)) {
 						$("select[name='id_jenis']").append("<option value=" + value.id_jenis + ">" + value.ket_jenis + "</option>");
 						console.log(value.id_jenis + "  " + value.ket_jenis);
 						if (is_insert == false) {
 							window.url["tmp_firstIdjenis"] = value.id_jenis;
 							is_insert = true;
 						}
-						tmp_value = value.id_jenis;
+						tmp_value.push(value.id_jenis);
 					}
 
 				});

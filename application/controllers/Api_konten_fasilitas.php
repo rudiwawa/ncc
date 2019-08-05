@@ -71,6 +71,20 @@ class Api_konten_fasilitas extends \Restserver\Libraries\REST_Controller
         );
     }
 
+    public function ket_jenis_sub_get()
+    {
+        $data = $this->Fasilitas_konten_model->ket_jenis_sub_get();
+        $this->response(
+            ['msg_main' => [
+                'status' => true,
+                'msg' => "get data success!",
+            ],
+                'msg_detail' => [
+                    'item' => $data],
+            ]
+        );
+
+    }
     public function ket_jenis_get()
     {
         $data = $this->Fasilitas_konten_model->ket_jenis_get();
