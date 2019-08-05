@@ -32,6 +32,8 @@ function buildTbody(tableX) {
 }
 // //error solved
 
+
+
 function update_modal(id) {
     ID = id;
     $('.edit_sub').prop('disabled', true);

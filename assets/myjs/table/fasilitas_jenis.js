@@ -41,9 +41,14 @@ function buildTbody(tableX) {
     });
 }
 // //error solved
-$('#divmodals').on('hidden.bs.modal', function () {
-    console.log("modal hidden");
-    Blob = null;
+$('#divmodals').on('hidden.bs.modal', function (e) {
+    if (e.handled !== true) {
+        e.handled = true;
+        $('#divmodals div').remove();
+        // refreshTableX(TableX);
+        console.log("modal hidden");
+        Blob = null;
+    }
 })
 
 function update_modal(id) {

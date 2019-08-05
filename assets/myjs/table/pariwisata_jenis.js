@@ -3,8 +3,8 @@ var ID;
 // IMAGE CONFIG
 var Blob;
 var img = new Array();
-img["width"] = 1024 ;
-img["height"] = 768 ;
+img["width"] = 1024;
+img["height"] = 768;
 
 function buildTbody(tableX) {
     TableX = tableX;
@@ -41,11 +41,14 @@ function buildTbody(tableX) {
     });
 }
 // //error solved
-$('#divmodals').on('hidden.bs.modal', function () {
-    $('#divmodals div').remove(); 
-    // refreshTableX(TableX);
-	console.log("modal hidden");
-    Blob = null;
+$('#divmodals').on('hidden.bs.modal', function (e) {
+    if (e.handled !== true) {
+        e.handled = true;
+        $('#divmodals div').remove();
+        // refreshTableX(TableX);
+        console.log("modal hidden");
+        Blob = null;
+    }
 })
 function update_modal(id) {
     $('.edit_jenis').prop('disabled', true);//mencegah error
@@ -73,8 +76,8 @@ function update_modal(id) {
                     console.log($('#img').prop('files')[0]);
                     // var file_data = $('#img').prop('files')[0];
                     console.log($('#img').prop('files')[0]);
-                    if (Blob!=null) {
-                        mydata.append('img', Blob,"aaaa.jpg");
+                    if (Blob != null) {
+                        mydata.append('img', Blob, "aaaa.jpg");
                     }
                     mydata.append('id_jenis', id);
                     $.ajax({
@@ -147,8 +150,8 @@ function insert_modal() {
                     e.preventDefault();
                     var mydata = new FormData(document.getElementById("form"));
                     console.log(mydata);
-                    if (Blob!=null) {
-                        mydata.append('img', Blob,"aaaa.jpg");
+                    if (Blob != null) {
+                        mydata.append('img', Blob, "aaaa.jpg");
                     }
                     // console.log($('#img').prop('files')[0]);
                     // console.log(Blob);
@@ -358,7 +361,7 @@ function readURL(input) {
         $modal.modal('hide');
         console.log(cropper.cropped);
         if (cropper.cropped) {
-             canvas = cropper.getCroppedCanvas({
+            canvas = cropper.getCroppedCanvas({
                 width: img["width"],
                 height: img["height"],
                 // imageSmoothingQuality: 'low',
@@ -379,10 +382,10 @@ function readURL(input) {
                 reader.readAsDataURL(blob);
                 // console.log(blob);
                 Blob = blob;
-            },'image/jpeg',
-            0.7
+            }, 'image/jpeg',
+                0.7
             );
-            
+
         }
     });
 }
