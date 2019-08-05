@@ -78,7 +78,7 @@ $this->load->view('template/left-sidebar-nav');
 
             </div>
             <div class="modal fade" id="modal_crop" tabindex="-1" role="dialog" aria-labelledby="modalLabel"
-                aria-hidden="true">
+                aria-hidden="true" data-backdrop="static" data-keyboard="false"  >
                 
                 <div class="modal-dialog modal-lg" >
                     <div class="modal-content">
@@ -90,7 +90,7 @@ $this->load->view('template/left-sidebar-nav');
                         </div>
                         <div class="modal-body">
                             <div class="img-container">
-                                <img id="image" src="">
+                                <img id="image" src="" style = "height: 480px">
                             </div>
                         </div>
                         <div class="modal-footer">
