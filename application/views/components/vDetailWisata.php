@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel="stylesheet" href="<?php echo base_url(); ?>css/index.css">
-    <link rel="stylesheet" href="<?php echo base_url(); ?>css/animation.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/user/index.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/user/animation.css">
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -20,7 +20,7 @@
 
 <body>
     <script>AOS.init();</script>
-    <script type="text/javascript" src="<?php echo base_url(); ?>js/index.js">
+    <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/user/index.js">
     </script>
 
     <!--Header-->
