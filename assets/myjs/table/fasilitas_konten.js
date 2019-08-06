@@ -1,5 +1,5 @@
 var TableX;
-// Flag["pariwisata_konten"] = true;
+// Flag["fasilitas_konten"] = true;
 var dataAll = new Array();
 var ID, is_img_valid = false, is_data_update = false;
 var files = new Array();
@@ -353,6 +353,7 @@ function insert_modal() {
 
 
 function conf_delete(id) {
+	window.url["scroll"] = $(window).scrollTop();
 	swal("apakah anda yakin ingin menghapus data?", {
 		buttons: {
 			cancel: "TIDAK",
@@ -375,7 +376,9 @@ function conf_delete(id) {
 }
 
 function delete_byId(id) {
-	var json = { id };
+	// id_update = dataAll[id].id_fasilitas;
+
+	var json = {"id":dataAll[id].id_fasilitas};
 	$.ajax({
 		url: window.url[TableX],
 		type: "DELETE",
@@ -388,6 +391,12 @@ function delete_byId(id) {
 		success: function (dataObject) {
 			if (dataObject.msg_main.status == true) {
 				is_data_update = true;
+				$.when(refreshTableX(TableX)).done(function (x) {
+					var body = $("html, body");
+					body.stop().animate({ scrollTop: window.url["scroll"] }, 1000, 'swing', function () {
+						console.log("Finished animating");
+					});
+				});
 				// swal("Sukses", "Data berhasil di Hapus", "success");
 			}
 			else {
@@ -397,7 +406,9 @@ function delete_byId(id) {
 		},
 		complete: function () {
 			console.log("loading");
-			// refreshTableX(TableX, 1);
+			// if (is_data_update) {
+				
+			// }
 
 
 		}

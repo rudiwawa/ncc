@@ -434,6 +434,7 @@ class Api_konten_pariwisata extends \Restserver\Libraries\REST_Controller
     public function index_delete()
     {
         $id = $this->delete('id');
+        // echo($id);
         $imgArr_tmp = $this->Pariwisata_konten_model->getImg_byId($id);
         $imgArr = json_decode($imgArr_tmp[0]["img"]);
         $query = $this->Pariwisata_konten_model->delete_byId($id);

@@ -1,5 +1,5 @@
 <?php
-$config = array(
+$config = array( 
         'sub_jenis_insert' => array(
                 array(
                         'field' => 'id_jenis',
@@ -15,12 +15,12 @@ $config = array(
         'jenis_insert' => array(
                 array(
                         'field' => 'ket_jenis',
-                        'label' => 'ket_jenis',
+                        'label' => 'jenis',
                         'rules' => 'required',
                 ),
                 array(
                         'field' => 'img[]',
-                        'label' => 'img[]',
+                        'label' => 'gambar',
                         'rules' => 'required',
                 ),
         ),
@@ -42,8 +42,8 @@ $config = array(
                 // ),
                 array(
                         'field' => 'ket_main',
-                        'label' => 'ket_main',
-                        'rules' => 'required',
+                        'label' => 'Nama Pariwisata',
+                        'rules' => 'required|alpha',
                 ),
                 array(
                         'field' => 'alamat[]',
@@ -52,8 +52,11 @@ $config = array(
                 ),
                 array(
                         'field' => 'loc[]',
-                        'label' => 'loc[]',
+                        'label' => 'Latitude & Longitude',
                         'rules' => 'required',
+                        'errors'=> array(
+                                'regex_match' => '',
+                        ),
                 ),
                 array(
                         'field' => 'deskripsi',
@@ -62,18 +65,21 @@ $config = array(
                 ),
                 array(
                         'field' => 'tlp',
-                        'label' => 'tlp',
-                        'rules' => 'required',
+                        'label' => 'Telepon',
+                        'rules' => 'required|regex_match[/([\[\(])?(?:(\+62)|62|0)\1? ?-? ?8(?!0|4|6)\d(?!0)\d\1? ?-? ?\d{3,4} ?-? ?\d{3,5}(?: ?-? ?\d{3})?\b/]',
+                        'errors'=> array(
+                                'regex_match' => 'cok ngawut koe!',
+                        ),
                 ),
                 array(
                         'field' => 'website',
-                        'label' => 'website',
-                        'rules' => 'required',
+                        'label' => 'Website',
+                        'rules' => 'required|valid_url',
                 ),
                 array(
                         'field' => 'email',
-                        'label' => 'email',
-                        'rules' => 'required',
+                        'label' => 'Email',
+                        'rules' => 'required|valid_email',
                 ),
         ),
         'jenis_update' => array(

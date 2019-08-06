@@ -3,8 +3,8 @@ var ID;
 // IMAGE CONFIG
 var Blob;
 var img = new Array();
-img["width"] = 1024 ;
-img["height"] = 768 ;
+img["width"] = 1024;
+img["height"] = 768;
 
 function buildTbody(tableX) {
     TableX = tableX;
@@ -50,9 +50,7 @@ $('#divmodals').on('hidden.bs.modal', function (e) {
         Blob = null;
     }
 })
-
 function update_modal(id) {
-
     $('.edit_jenis').prop('disabled', true);//mencegah error
     ID = id;
     console.log("ID    " + id)
@@ -63,6 +61,7 @@ function update_modal(id) {
         console.log("insert_modal");
         $('#modal_form_update').modal('show');
         //preview image
+        Blob = null;
         $("#img").change(function () {
             readURL(this);
         });
@@ -75,13 +74,18 @@ function update_modal(id) {
                     console.log(mydata);
                     console.log("id " + ID);
                     console.log($('#img').prop('files')[0]);
-                    if (Blob != null) {
-                        mydata.append('img', Blob, "aaaa.jpg");
-                    }
                     // var file_data = $('#img').prop('files')[0];
+                    console.log($('#img').prop('files')[0]);
+                    // console.log(BLob);
+                    if (Blob != null) {
+                        try {
+                            mydata.append('img', Blob, "aaaa.jpg");
+                        } catch (error) {
+                        }
+                    }
                     mydata.append('id_jenis', id);
                     $.ajax({
-                        url: window.url["fasilitas_jenis"] + "/update",
+                        url: window.url[TableX] + "/update",
                         type: "POST",
                         dataType: "json",
                         // mimeType:"multipart/form-data",
@@ -149,15 +153,19 @@ function insert_modal() {
                 $('#save').click(function (e) {
                     e.preventDefault();
                     var mydata = new FormData(document.getElementById("form"));
-                    console.log(mydata);
+                    // console.log(mydata);
                     if (Blob != null) {
-                        mydata.append('img', Blob, "aaaa.jpg");
+                        try {
+                            mydata.append('img', Blob, "aaaa.jpg");
+                        } catch (error) {
+                        }
                     }
-                    console.log($('#img').prop('files')[0]);
+                    // console.log($('#img').prop('files')[0]);
+                    // console.log(Blob);
                     // var file_data = $('#img').prop('files')[0];
                     // mydata.append('id_jenis', id); 
                     $.ajax({
-                        url: window.url["fasilitas_jenis"],
+                        url:window.url[TableX],
                         type: "POST",
                         dataType: "json",
                         // mimeType:"multipart/form-data",
@@ -360,7 +368,7 @@ function readURL(input) {
         $modal.modal('hide');
         console.log(cropper.cropped);
         if (cropper.cropped) {
-             canvas = cropper.getCroppedCanvas({
+            canvas = cropper.getCroppedCanvas({
                 width: img["width"],
                 height: img["height"],
                 // imageSmoothingQuality: 'low',
@@ -381,10 +389,10 @@ function readURL(input) {
                 reader.readAsDataURL(blob);
                 // console.log(blob);
                 Blob = blob;
-            },'image/jpeg',
-            0.7
+            }, 'image/jpeg',
+                0.7
             );
-            
+
         }
     });
 }
