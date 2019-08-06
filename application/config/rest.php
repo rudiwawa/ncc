@@ -137,7 +137,7 @@ $config['auth_source'] = 'ldap';
 | requests etc), set to TRUE;
 |
 */
-$config['allow_auth_and_keys'] = TRUE;
+$config['allow_auth_and_keys'] = false;
 
 /*
 |--------------------------------------------------------------------------
@@ -265,7 +265,7 @@ $config['rest_ip_whitelist'] = '';
 | 1. Set to TRUE and add any IP address to 'rest_ip_blacklist'
 |
 */
-$config['rest_ip_blacklist_enabled'] = FALSE;
+$config['rest_ip_blacklist_enabled'] = 'FALSE';
 
 /*
 |--------------------------------------------------------------------------
@@ -323,7 +323,7 @@ $config['rest_keys_table'] = 'keys';
 |   ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 |
 */
-$config['rest_enable_keys'] = FALSE;
+$config['rest_enable_keys'] = false;
 
 /*
 |--------------------------------------------------------------------------

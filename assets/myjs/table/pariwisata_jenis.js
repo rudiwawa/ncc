@@ -76,12 +76,16 @@ function update_modal(id) {
                     console.log($('#img').prop('files')[0]);
                     // var file_data = $('#img').prop('files')[0];
                     console.log($('#img').prop('files')[0]);
+                    // console.log(BLob);
                     if (Blob != null) {
-                        mydata.append('img', Blob, "aaaa.jpg");
+                        try {
+                            mydata.append('img', Blob, "aaaa.jpg");
+                        } catch (error) {
+                        }
                     }
                     mydata.append('id_jenis', id);
                     $.ajax({
-                        url: window.url["pariwisata_jenis"] + "/update",
+                        url: window.url[TableX] + "/update",
                         type: "POST",
                         dataType: "json",
                         // mimeType:"multipart/form-data",
@@ -149,16 +153,19 @@ function insert_modal() {
                 $('#save').click(function (e) {
                     e.preventDefault();
                     var mydata = new FormData(document.getElementById("form"));
-                    console.log(mydata);
+                    // console.log(mydata);
                     if (Blob != null) {
-                        mydata.append('img', Blob, "aaaa.jpg");
+                        try {
+                            mydata.append('img', Blob, "aaaa.jpg");
+                        } catch (error) {
+                        }
                     }
                     // console.log($('#img').prop('files')[0]);
                     // console.log(Blob);
                     // var file_data = $('#img').prop('files')[0];
                     // mydata.append('id_jenis', id); 
                     $.ajax({
-                        url: window.url["pariwisata_jenis"],
+                        url:window.url[TableX],
                         type: "POST",
                         dataType: "json",
                         // mimeType:"multipart/form-data",

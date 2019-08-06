@@ -12,7 +12,7 @@
                         <th style="width: 300px;">Nama</th>
                         <th>Alamat</th>
                         <th>Official Account</th>
-                        <th style="width: 300px;">Gambar</th>
+                        <th style="min-width: 240px;">Gambar</th>
                         <th>Action</th>
                     </tr>
                 </thead>

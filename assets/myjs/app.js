@@ -1,5 +1,6 @@
 $(document).ready(function () {
-
+	
+	// $('#modal_crop').modal('hide');
 
 	// CONFIG URL AP
 	window.bashUrl = "/app";
