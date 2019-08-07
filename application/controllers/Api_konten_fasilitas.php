@@ -23,6 +23,16 @@ class Api_konten_fasilitas extends \Restserver\Libraries\REST_Controller
         date_default_timezone_set('Asia/Jakarta');
         $this->now = date('Y-m-d H:i:s');
     }
+    public function validate_phone($str)
+    {
+        $re = '/\+?([ -]?\d+)+|\(\d+\)([ -]\d+)/';
+        $x= preg_match_all($re, $str, $matches, PREG_SET_ORDER, 0);
+        if ($x) {
+            return true;
+        }else{
+            return false;
+        }
+    }
 
     public function index_get()
     {
