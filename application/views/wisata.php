@@ -90,7 +90,7 @@ $this->load->view('template/left-sidebar-nav');
                         </div>
                         <div class="modal-body">
                             <div class="img-container" >
-                                <img id="image" src="" style = "max-width: 70%; max-hight: 240px">
+                                <img id="image" src="" style = "max-width: 100%; max-hight: 240px">
                             </div>
                         </div>
                         <div class="modal-footer">

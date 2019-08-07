@@ -25,6 +25,9 @@ class Api_konten_pariwisata extends \Restserver\Libraries\REST_Controller
     }
     public function validate_phone($str)
     {
+        if(empty($str)){
+            return true;
+        }
         $re = '/\+?([ -]?\d+)+|\(\d+\)([ -]\d+)/';
         $x= preg_match_all($re, $str, $matches, PREG_SET_ORDER, 0);
         if ($x) {

@@ -21,9 +21,6 @@ $config = array(
                         'field' => 'ket_sub_jenis',
                         'label' => 'Sub Jenis',
                         'rules' => 'required|alpha_numeric_spaces',
-                        'errors'=> array(
-                                'regex_match' => 'Hanya boleh karakter A-Z , 0-9, dan "."',
-                        ),
                 ),
         ),
         'jenis_insert' => array(
@@ -68,8 +65,8 @@ $config = array(
                         'field' => 'loc[]',
                         'label' => 'Latitude & Longitude',
                         'rules' => "required|regex_match[/".$re1.$re2.$re3.$re4.$re5.$re6.$re7.$re8.$re9."/]",
-                        'errors'=> array(
-                                'regex_match' => 'format salah -> contoh ["0.989897","0.989897"]',
+                        'errors' =>array (
+                                'regex_match' => 'Input Email tidak valid, mohon input dengan benar. Contoh ["0.989897","0.989897"]'
                         ),
                 ),
                 array(
@@ -81,13 +78,7 @@ $config = array(
                         'field' => 'tlp',
                         'label' => 'Telepon',
                         'rules' => 'required|callback_validate_phone',
-                        'errors'=> array(
-                                'validate_phone' => 'Nomor telp tidak valid. Contoh yang benar: <br>
-                                <mark>+62 888 9999 6656<mark>
-        <mark>(0361) 227337 <br></mark>
-        <mark>088888888888 <br></mark>
-                                ',
-                        ),
+                        
                 ),
                 array(
                         'field' => 'website',
