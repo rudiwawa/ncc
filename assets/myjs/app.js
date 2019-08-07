@@ -1,5 +1,5 @@
 $(document).ready(function () {
-	
+
 	// $('#modal_crop').modal('hide');
 
 	// CONFIG URL AP
@@ -10,8 +10,9 @@ $(document).ready(function () {
 	window.url["pariwisata_sub_jenis"] = window.bashUrl + "/index.php/Api_sub_pariwisata";
 	window.url["pariwisata_konten"] = window.bashUrl + "/index.php/Api_konten_pariwisata";
 
+
 	function set_variable(i) {
-		window.url["ket_jenis_sub_get"] = window.bashUrl + "/index.php/Api_konten_"+i+"/ket_jenis_sub";
+		window.url["ket_jenis_sub_get"] = window.bashUrl + "/index.php/Api_konten_" + i + "/ket_jenis_sub";
 		window.url["ket_jenis"] = window.bashUrl + "/index.php/Api_sub_" + i + "/ket_jenis";
 		window.url["data_byId_sub"] = window.bashUrl + "/index.php/Api_sub_" + i + "/data_byId";
 		window.url["data_byId_jenis"] = window.bashUrl + "/index.php/Api_jenis_" + i + "/data_byId";
@@ -61,6 +62,20 @@ $(document).ready(function () {
 
 
 });
+// var online = false;
+// // $('.user-profile').append('<span id="internet_status"></span>')
+// window.setInterval(function () {
+// 	var online = navigator.onLine;
+// 	// console.log(online);
+// 	if (online == false) {
+// 		// $('#internet_status').html('<p class="text-warning">Tidak Terhubung Internet</p>')
+// 		$(':button').prop('disabled', true); 
+// 	} else {
+// 		// $('#internet_status').html('<p class="text-success">Terhubung Internet</p>')
+// 		$(':button').prop('disabled', false); 
+// 	}
+// 	/// call your function here
+// }, 1000);
 
 //render table
 function buildTableX(tableX) {

@@ -23,6 +23,16 @@ class Api_konten_pariwisata extends \Restserver\Libraries\REST_Controller
         date_default_timezone_set('Asia/Jakarta');
         $this->now = date('Y-m-d H:i:s');
     }
+    public function validate_phone($str)
+    {
+        $re = '/\+?([ -]?\d+)+|\(\d+\)([ -]\d+)/';
+        $x= preg_match_all($re, $str, $matches, PREG_SET_ORDER, 0);
+        if ($x) {
+            return true;
+        }else{
+            return false;
+        }
+    }
 
     public function index_get()
     {
@@ -270,7 +280,7 @@ class Api_konten_pariwisata extends \Restserver\Libraries\REST_Controller
         $config['allowed_types'] = 'gif|jpg|png|JPG';
         $config['encrypt_name'] = true;
         $config['max_size'] = 600;
-        $config['max_width'] =1024;
+        $config['max_width'] = 1024;
         $config['max_height'] = 768;
         $this->load->library('upload', $config);
 
@@ -362,7 +372,7 @@ class Api_konten_pariwisata extends \Restserver\Libraries\REST_Controller
                         ]
                     );
                     $imgArr_deleted = !empty($this->post('imgArr_deleted')) ? $this->post('imgArr_deleted') : null;
-                    $this->del_img ( $imgArr_deleted );
+                    $this->del_img($imgArr_deleted);
                 } else {
                     $this->response(
                         ['msg_main' => [
@@ -412,7 +422,8 @@ class Api_konten_pariwisata extends \Restserver\Libraries\REST_Controller
         }
 
     }
-    public function del_img ($data){
+    public function del_img($data)
+    {
         // $data == ARRAY yg berisi kumpulan img yg siap dihapus
         $config['upload_path'] = './uploads/';
         // var_dump($imgArr_tmp);
@@ -426,7 +437,7 @@ class Api_konten_pariwisata extends \Restserver\Libraries\REST_Controller
                 }
             }
             return $is_success;
-        }else{
+        } else {
             return false;
         }
     }
@@ -440,9 +451,8 @@ class Api_konten_pariwisata extends \Restserver\Libraries\REST_Controller
         $query = $this->Pariwisata_konten_model->delete_byId($id);
         // var_dump($query);
         if ($query) {
-            $this->del_img ($imgArr);
+            $this->del_img($imgArr);
 
-            
             $this->response(
                 ['msg_main' => [
                     'status' => true,
