@@ -191,17 +191,17 @@ function update_modal(id) {
 	is_update = true;
 	insert_modal();
 }
-
-$('#divmodals').on('hidden.bs.modal', function (e) {
+$('#modal_konten').on('hidden.bs.modal', function (e) {
+	// alert($('#modal_form_update').hasClass('show'));
 	if (e.handled !== true) {
 		e.handled = true;
 		jenis_sub = null;
 		//memastikan bahwa event dilakukan sekali saja;
-		$('#divmodals div').remove();
+		$('#modal_konten div').remove();
 		console.log("modal hidden");
 		is_update = false;
 		// $("#content").empty();
-		// $("#divmodals").empty();
+		// $("#modal_konten").empty();
 		if (is_data_update) {
 			$.when(refreshTableX(TableX)).done(function (x) {
 				var body = $("html, body");
@@ -220,7 +220,7 @@ function insert_modal() {
 	files = new Array();
 	imgArr_update = new Array();
 	imgArr_deleted = new Array();
-	$("#divmodals").load("./assets/contents/modal/" + TableX + "_insert.php", function () {
+	$("#modal_konten").load("./assets/contents/modal/" + TableX + "_insert.php", function () {
 		// $('#form')[0].reset(); // reset form on modals
 		$('.form-group').removeClass('has-error'); // clear error class
 		$('.help-block').empty(); // clear error string
@@ -290,6 +290,7 @@ function insert_modal() {
 					timeout: 1000,
 					beforeSend: function () {
 						console.log("before send");
+						// $loading.show();
 
 						// $("#content").append('')
 					},
@@ -331,6 +332,7 @@ function insert_modal() {
 						}
 					},
 					complete: function (xmlhttprequest, textstatus, message) {
+						// $loading.hide();
 						// if(textstatus==="timeout") {
 						// 	alert(textstatus); //run function here!
 						// } else {
@@ -341,6 +343,7 @@ function insert_modal() {
 						// $('#modal_form_update').modal('toggle');
 
 					}, timeout: 3000
+					
 				});
 				// return false;
 			});
@@ -378,7 +381,7 @@ function conf_delete(id) {
 function delete_byId(id) {
 	// id_update = dataAll[id].id_pariwisata;
 
-	var json = {"id":dataAll[id].id_pariwisata};
+	var json = { "id": dataAll[id].id_pariwisata };
 	$.ajax({
 		url: window.url[TableX],
 		type: "DELETE",
@@ -407,7 +410,7 @@ function delete_byId(id) {
 		complete: function () {
 			console.log("loading");
 			// if (is_data_update) {
-				
+
 			// }
 
 
@@ -421,17 +424,18 @@ function get_placehorder(id) {
 	data[0] = dataAll[id];
 	console.log("sukses get Placehorder" + data[0].ket_jenis);
 	// $( "#ket_jenis_select :option[value='2']" ).remove();
+	
+	$("#ket_main").val(data[0].ket_main);
+	$("#deskripsi").val(get_detail(data[0].detail, "ket"));
+	$("#tlp").val(get_detail(data[0].detail, "tlp"));
+	$("#email").val(get_detail(data[0].detail, "email"));
+	$("#website").val(get_detail(data[0].detail, "website"));
 	$.when(ket_sub_byId(data[0].id_jenis)).done(function (x) {
 		$("select[name='id_jenis'] option[value=" + data[0].id_jenis + "]").attr("selected", "selected");
 		$("select[name='id_sub'] option[value=" + data[0].id_sub + "]").attr("selected", "selected");
 		// $("select[name='id_jenis']").append("<option value=" + data[0].id_jenis + " selected >" + data[0].ket_jenis + "</option>");
 		// ket_sub_get(data[0].id_jenis);
 		// $("select[name='id_sub']").append("<option value=" + data[0].id_sub + " selected >" + data[0].ket_sub_jenis + "</option>");
-		$("#ket_main").val(data[0].ket_main);
-		$("#deskripsi").val(get_detail(data[0].detail, "ket"));
-		$("#tlp").val(get_detail(data[0].detail, "tlp"));
-		$("#email").val(get_detail(data[0].detail, "email"));
-		$("#website").val(get_detail(data[0].detail, "website"));
 	});
 	render_alamat_from_db(data[0].detail);
 	imgArr_update = JSON.parse(data[0].img);
@@ -485,10 +489,10 @@ $(document.body).delegate('#id_jenis', 'change', function () {
 });
 var jenis_sub;
 function ket_sub_byId(id) {
-	console.log(jenis_sub == null)
+	// console.log(jenis_sub == null)
 	if (jenis_sub == null) {
-		return $.when(ket_jenis_sub_get()).done(function (x) {
-			render_sub();
+		 $.when(ket_jenis_sub_get()).done(function (x) {
+			return render_sub();
 		});
 	} else {
 		return render_sub();

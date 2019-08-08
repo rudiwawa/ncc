@@ -37,7 +37,7 @@ function buildTbody(tableX) {
 function update_modal(id) {
     ID = id;
     $('.edit_sub').prop('disabled', true);
-    $("#divmodals").load("./assets/contents/modal/" + TableX + "_update.php", function () {
+    $("#modal_sub").load("./assets/contents/modal/" + TableX + "_update.php", function () {
         $('#form')[0].reset(); // reset form on modals
         $('.form-group').removeClass('has-error'); // clear error class
         $('.help-block').empty(); // clear error string
@@ -61,7 +61,7 @@ function update_modal(id) {
 }
 
 function insert_modal() {
-    $("#divmodals").load("./assets/contents/modal/" + TableX + "_insert.php", function () {
+    $("#modal_sub").load("./assets/contents/modal/" + TableX + "_insert.php", function () {
         $.when(ket_jenis_get()).then(function (x) {
             $('#form')[0].reset(); // reset form on modals
             $('.form-group').removeClass('has-error'); // clear error class

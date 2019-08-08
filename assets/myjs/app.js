@@ -62,6 +62,15 @@ $(document).ready(function () {
 
 
 });
+
+var $loading = $('#loading_page').hide();
+$(document)
+	.ajaxStart(function () {
+		$loading.show();
+	})
+	.ajaxStop(function () {
+		$loading.hide();
+	});
 // var online = false;
 // // $('.user-profile').append('<span id="internet_status"></span>')
 // window.setInterval(function () {
@@ -78,6 +87,8 @@ $(document).ready(function () {
 // }, 1000);
 
 //render table
+
+
 function buildTableX(tableX) {
 
 	console.log(tableX + " clicked");

@@ -192,16 +192,16 @@ function update_modal(id) {
 	insert_modal();
 }
 
-$('#divmodals').on('hidden.bs.modal', function (e) {
+$('#modal_konten').on('hidden.bs.modal', function (e) {
 	if (e.handled !== true) {
 		e.handled = true;
 		jenis_sub = null;
 		//memastikan bahwa event dilakukan sekali saja;
-		$('#divmodals div').remove();
+		$('#modal_konten div').remove();
 		console.log("modal hidden");
 		is_update = false;
 		// $("#content").empty();
-		// $("#divmodals").empty();
+		// $("#modal_konten").empty();
 		if (is_data_update) {
 			$.when(refreshTableX(TableX)).done(function (x) {
 				var body = $("html, body");
@@ -220,7 +220,7 @@ function insert_modal() {
 	files = new Array();
 	imgArr_update = new Array();
 	imgArr_deleted = new Array();
-	$("#divmodals").load("./assets/contents/modal/" + TableX + "_insert.php", function () {
+	$("#modal_konten").load("./assets/contents/modal/" + TableX + "_insert.php", function () {
 		// $('#form')[0].reset(); // reset form on modals
 		$('.form-group').removeClass('has-error'); // clear error class
 		$('.help-block').empty(); // clear error string
