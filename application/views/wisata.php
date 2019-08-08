@@ -43,7 +43,7 @@ $this->load->view('template/left-sidebar-nav');
     <!-- ============================================================== -->
     <div class="page-wrapper">
 
-    <div class="loading" id="loading_page" style="display: true; z-index :999999; position: absolute; width : 100%; height : 100%; background-color: rgba(0,0,0)">
+    <div class="loading" id="loading_page" style="display: true; z-index :999999; position: absolute; width : 100%; height : 100%; background-color: rgba(0,0,0 , .0005)">
     <svg class="circular" viewBox="25 25 50 50">
         <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"></circle> </svg>
 </div>
