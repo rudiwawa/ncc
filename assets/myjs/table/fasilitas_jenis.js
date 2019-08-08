@@ -55,6 +55,7 @@ function update_modal(id) {
     ID = id;
     console.log("ID    " + id)
     $("#modal_jenis").load("./assets/contents/modal/" + TableX + "_update.php", function () {
+        $('.modal-title').text("update jenis pariwisata");
         // $('#form')[0].reset(); // reset form on modals
         $('.form-group').removeClass('has-error'); // clear error class
         $('.help-block').empty(); // clear error string
@@ -140,6 +141,7 @@ function update_modal(id) {
 
 function insert_modal() {
     $("#modal_jenis").load("./assets/contents/modal/" + TableX + "_update.php", function () {
+        $('.modal-title').html("insert jenis pariwisata");
         // $('#form')[0].reset(); // reset form on modals
         $('.form-group').removeClass('has-error'); // clear error class
         $('.help-block').empty(); // clear error string
