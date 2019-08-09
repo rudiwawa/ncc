@@ -77,7 +77,7 @@ $config = array(
                 array(
                         'field' => 'tlp',
                         'label' => 'Telepon',
-                        'rules' => 'required|callback_validate_phone|max_length[15]',
+                        'rules' => 'required|callback_validate_phone|max_length[17]',
                         
                 ),
                 array(

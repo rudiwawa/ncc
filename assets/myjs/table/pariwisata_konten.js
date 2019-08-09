@@ -232,10 +232,10 @@ function insert_modal() {
 		});
 
 		if (is_update) {
-			$('.modal-title').text("Update jenis pariwisata");
+			$('.modal-title').text("Update Konten pariwisata");
 			get_placehorder(index_update);
 		} else {
-			$('.modal-title').text("Insert jenis pariwisata");
+			$('.modal-title').text("Insert Konten pariwisata");
 			ket_sub_byId(null);
 		}
 		// return true;

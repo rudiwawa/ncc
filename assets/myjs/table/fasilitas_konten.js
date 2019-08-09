@@ -232,10 +232,10 @@ function insert_modal() {
 		});
 
 		if (is_update) {
-			$('.modal-title').text("Update jenis Fasilitas");
+			$('.modal-title').text("Update Konten Fasilitas");
 			get_placehorder(index_update);
 		} else {
-			$('.modal-title').text("Insert jenis Fasilitas");
+			$('.modal-title').text("Insert Konten Fasilitas");
 			ket_sub_byId(null);
 		}
 		// return true;
