@@ -365,7 +365,7 @@ function readURL(input) {
         cropper = null;
     });
 
-    document.getElementById('crop').addEventListener('click', function () {
+    $( "#crop" ).click(function() {
         // var initialAvatarURL;
         var canvas;
         // var reader = new FileReader();
