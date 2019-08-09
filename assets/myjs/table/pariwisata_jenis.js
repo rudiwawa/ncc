@@ -1,3 +1,5 @@
+
+
 var TableX;
 var ID;
 // IMAGE CONFIG
@@ -54,7 +56,7 @@ $('#modal_jenis').on('hidden.bs.modal', function (e) {
 function update_modal(id) {
     $('.edit_jenis').prop('disabled', true);//mencegah error
     ID = id;
-    console.log("ID    " + id)
+    console.log("ID    " + id);
     $("#modal_jenis").load("./assets/contents/modal/" + TableX + "_update.php", function () {
         $('.modal-title').html("update jenis pariwisata");
         // $('#form')[0].reset(); // reset form on modals
@@ -196,9 +198,9 @@ function insert_modal() {
                                 var is_image_exist = dataObject.msg_detail.item[0];
                                 var form_validation_msg = dataObject.msg_detail.item[1];
                                 var upload_msg = dataObject.msg_detail.item[1];
-                                set_msg_error(is_image_exist)
-                                set_msg_error(form_validation_msg)
-                                set_msg_error(upload_msg)
+                                set_msg_error(is_image_exist);
+                                set_msg_error(form_validation_msg);
+                                set_msg_error(upload_msg);
                             }
                         },
                         complete: function () {

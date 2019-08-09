@@ -90,6 +90,7 @@ $(document)
 
 
 function buildTableX(tableX) {
+	$('#modal_crop').unbind();
 
 	console.log(tableX + " clicked");
 	//load table
