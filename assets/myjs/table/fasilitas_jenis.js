@@ -41,10 +41,10 @@ function buildTbody(tableX) {
     });
 }
 // //error solved
-$('#divmodals').on('hidden.bs.modal', function (e) {
+$('#modal_jenis').on('hidden.bs.modal', function (e) {
     if (e.handled !== true) {
         e.handled = true;
-        $('#divmodals div').remove();
+        $('#modal_jenis div').remove();
         // refreshTableX(TableX);
         console.log("modal hidden");
         Blob = null;
@@ -54,7 +54,8 @@ function update_modal(id) {
     $('.edit_jenis').prop('disabled', true);//mencegah error
     ID = id;
     console.log("ID    " + id)
-    $("#divmodals").load("./assets/contents/modal/" + TableX + "_update.php", function () {
+    $("#modal_jenis").load("./assets/contents/modal/" + TableX + "_update.php", function () {
+        $('.modal-title').text("update jenis pariwisata");
         // $('#form')[0].reset(); // reset form on modals
         $('.form-group').removeClass('has-error'); // clear error class
         $('.help-block').empty(); // clear error string
@@ -139,7 +140,8 @@ function update_modal(id) {
 }
 
 function insert_modal() {
-    $("#divmodals").load("./assets/contents/modal/" + TableX + "_update.php", function () {
+    $("#modal_jenis").load("./assets/contents/modal/" + TableX + "_update.php", function () {
+        $('.modal-title').html("insert jenis pariwisata");
         // $('#form')[0].reset(); // reset form on modals
         $('.form-group').removeClass('has-error'); // clear error class
         $('.help-block').empty(); // clear error string
@@ -360,7 +362,7 @@ function readURL(input) {
         cropper = null;
     });
 
-    document.getElementById('crop').addEventListener('click', function () {
+    $( "#crop" ).click(function() {
         // var initialAvatarURL;
         var canvas;
         // var reader = new FileReader();

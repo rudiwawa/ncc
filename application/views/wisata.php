@@ -42,6 +42,11 @@ $this->load->view('template/left-sidebar-nav');
     <!-- Page wrapper  -->
     <!-- ============================================================== -->
     <div class="page-wrapper">
+
+    <div class="loading" id="loading_page" style="display: true; z-index :999999; position: absolute; width : 100%; height : 100%; background-color: rgba(0,0,0 , .0005)">
+    <svg class="circular" viewBox="25 25 50 50">
+        <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"></circle> </svg>
+</div>
         <!-- ============================================================== -->
         <!-- Bread crumb and right sidebar toggle -->
         <!-- ============================================================== -->
@@ -73,7 +78,9 @@ $this->load->view('template/left-sidebar-nav');
 
             
 
-            <div id="divmodals"></div>
+            <div id="modal_konten"></div>
+            <div id="modal_sub"></div>
+            <div id="modal_jenis"></div>
             <div id="content">
 
             </div>
@@ -90,7 +97,7 @@ $this->load->view('template/left-sidebar-nav');
                         </div>
                         <div class="modal-body">
                             <div class="img-container" >
-                                <img id="image" src="" style = "max-width: 70%; max-hight: 240px">
+                                <img id="image" src="" style = "max-width: 100%; max-hight: 240px">
                             </div>
                         </div>
                         <div class="modal-footer">

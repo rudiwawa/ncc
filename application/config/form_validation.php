@@ -1,4 +1,15 @@
 <?php
+$re1='([)';	# Any Single Character 1
+$re2='(")';	# Any Single Character 2
+$re3='([+-]?\\d*\\.\\d+)(?![-+0-9\\.])';	# Float 1
+$re4='(")';	# Any Single Character 3
+$re5='(,)';	# Any Single Character 4
+$re6='(")';	# Any Single Character 5
+$re7='([+-]?\\d*\\.\\d+)(?![-+0-9\\.])';	# Float 2
+$re8='(")';	# Any Single Character 6
+$re9='(])';	# Any Single Character 7
+
+
 $config = array( 
         'sub_jenis_insert' => array(
                 array(
@@ -9,14 +20,14 @@ $config = array(
                 array(
                         'field' => 'ket_sub_jenis',
                         'label' => 'Sub Jenis',
-                        'rules' => 'required',
+                        'rules' => 'required|alpha_numeric_spaces',
                 ),
         ),
         'jenis_insert' => array(
                 array(
                         'field' => 'ket_jenis',
                         'label' => 'jenis',
-                        'rules' => 'required',
+                        'rules' => 'required|alpha_numeric_spaces',
                 ),
                 array(
                         'field' => 'img[]',
@@ -43,7 +54,7 @@ $config = array(
                 array(
                         'field' => 'ket_main',
                         'label' => 'Nama Pariwisata',
-                        'rules' => 'required|alpha',
+                        'rules' => 'required|alpha_numeric_spaces',
                 ),
                 array(
                         'field' => 'alamat[]',
@@ -53,9 +64,9 @@ $config = array(
                 array(
                         'field' => 'loc[]',
                         'label' => 'Latitude & Longitude',
-                        'rules' => 'required',
-                        'errors'=> array(
-                                'regex_match' => '',
+                        'rules' => "required|regex_match[/".$re1.$re2.$re3.$re4.$re5.$re6.$re7.$re8.$re9."/]",
+                        'errors' =>array (
+                                'regex_match' => 'Input Email tidak valid, mohon input dengan benar. Contoh ["0.989897","0.989897"]'
                         ),
                 ),
                 array(
@@ -66,15 +77,13 @@ $config = array(
                 array(
                         'field' => 'tlp',
                         'label' => 'Telepon',
-                        'rules' => 'required|regex_match[/([\[\(])?(?:(\+62)|62|0)\1? ?-? ?8(?!0|4|6)\d(?!0)\d\1? ?-? ?\d{3,4} ?-? ?\d{3,5}(?: ?-? ?\d{3})?\b/]',
-                        'errors'=> array(
-                                'regex_match' => 'cok ngawut koe!',
-                        ),
+                        'rules' => 'required|callback_validate_phone|max_length[17]',
+                        
                 ),
                 array(
                         'field' => 'website',
                         'label' => 'Website',
-                        'rules' => 'required|valid_url',
+                        'rules' => 'trim|required|regex_match[/[-a-zA-Z0-9@:%_\+.~\#?&\/\/=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~\#?&\/\/=]*)?/]',
                 ),
                 array(
                         'field' => 'email',
@@ -86,7 +95,7 @@ $config = array(
                 array(
                         'field' => 'ket_jenis',
                         'label' => 'ket_jenis',
-                        'rules' => 'required',
+                        'rules' => 'required|alpha_numeric_spaces',
                 ),
         ),
         'sub_jenis_update' => array(
@@ -98,7 +107,7 @@ $config = array(
                 array(
                         'field' => 'ket_sub_jenis',
                         'label' => 'Sub Jenis',
-                        'rules' => 'required',
+                        'rules' => 'required|alpha_numeric_spaces',
                 ),
         )
 );
