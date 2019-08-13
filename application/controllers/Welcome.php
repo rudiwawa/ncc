@@ -1,14 +1,8 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
+
 class Welcome extends CI_Controller {
-	public function __construct()
-    {
-		parent::__construct();
-		if (!isset($this->session->email_admin)) {
-            session_destroy();
-            redirect(site_url('admin/login'));
-        }
-	}
+
 
 	/**
 	 * Index Page for this controller.

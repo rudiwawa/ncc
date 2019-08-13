@@ -9,7 +9,6 @@ class Admin_model extends CI_Model
     public $table = 'admin';
     public $id = 'id_admin';
     public $order = 'DESC';
-    public $email_admin = 'email_admin';
 
     function __construct()
     {
@@ -27,11 +26,6 @@ class Admin_model extends CI_Model
     function get_by_id($id)
     {
         $this->db->where($this->id, $id);
-        return $this->db->get($this->table)->row();
-    }
-    function get_by_email($email)
-    {
-        $this->db->where($this->email_admin, $email);
         return $this->db->get($this->table)->row();
     }
     

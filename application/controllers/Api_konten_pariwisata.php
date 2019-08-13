@@ -1,7 +1,6 @@
 <?php
 // import library dari REST_Controller
 require APPPATH . '/libraries/REST_Controller.php';
-
 // extends class dari REST_Controller
 class Api_konten_pariwisata extends \Restserver\Libraries\REST_Controller
 {
