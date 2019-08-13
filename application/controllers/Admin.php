@@ -90,12 +90,21 @@ class Admin extends CI_Controller
         $row = $this->Admin_model->get_by_id($id);
         if ($row) {
             $data = array(
+<<<<<<< HEAD
                 'id_admin' => $row->id_admin,
                 'nama_admin' => $row->nama_admin,
                 'email_admin' => $row->email_admin,
                 'password_admin' => $row->password_admin,
                 'time_update' => date('Y-m-d h:i:sa'),
             );
+=======
+		'id_admin' => $row->id_admin,
+		'nama_admin' => $row->nama_admin,
+		'email_admin' => $row->email_admin,
+		'password_admin' => $row->password_admin,
+		'time_update' => date('Y-m-d'),
+	    );
+>>>>>>> parent of b56bd5c... Edit from validation, encrypte password
             $this->load->view('admin//admin_read', $data);
         } else {
             $this->session->set_flashdata('message', 'Record Not Found');
@@ -108,12 +117,21 @@ class Admin extends CI_Controller
         $data = array(
             'button' => 'Create',
             'action' => site_url('admin//create_action'),
+<<<<<<< HEAD
             'id_admin' => set_value('id_admin'),
             'nama_admin' => set_value('nama_admin'),
             'email_admin' => set_value('email_admin'),
             'password_admin' => set_value('password_admin'),
             'time_update' => date('Y-m-d h:i:sa'),
         );
+=======
+	    'id_admin' => set_value('id_admin'),
+	    'nama_admin' => set_value('nama_admin'),
+	    'email_admin' => set_value('email_admin'),
+	    'password_admin' => set_value('password_admin'),
+	    'time_update' => date('Y-m-d'),
+	);
+>>>>>>> parent of b56bd5c... Edit from validation, encrypte password
         $this->load->view('admin//admin_form', $data);
     }
 
@@ -125,11 +143,19 @@ class Admin extends CI_Controller
             $this->create();
         } else {
             $data = array(
+<<<<<<< HEAD
                 'nama_admin' => $this->input->post('nama_admin', true),
                 'email_admin' => $this->input->post('email_admin', true),
                 'password_admin' => password_hash($this->input->post('password_admin', true), PASSWORD_DEFAULT),
                 'time_update' => date('Y-m-d h:i:sa'),
             );
+=======
+		'nama_admin' => $this->input->post('nama_admin',TRUE),
+		'email_admin' => $this->input->post('email_admin',TRUE),
+		'password_admin' => $this->input->post('password_admin',TRUE),
+		'time_update' => date('Y-m-d'),
+	    );
+>>>>>>> parent of b56bd5c... Edit from validation, encrypte password
 
             $this->Admin_model->insert($data);
             $this->session->set_flashdata('message', 'Create Record Success');
@@ -170,11 +196,19 @@ class Admin extends CI_Controller
             $this->update($this->input->post('id_admin', true));
         } else {
             $data = array(
+<<<<<<< HEAD
                 'nama_admin' => $this->input->post('nama_admin', true),
                 'email_admin' => $this->input->post('email_admin', true),
                 'password_admin' => password_hash($this->input->post('password_admin', true), PASSWORD_DEFAULT),
                 'time_update' => date('Y-m-d h:i:sa'),
             );
+=======
+		'nama_admin' => $this->input->post('nama_admin',TRUE),
+		'email_admin' => $this->input->post('email_admin',TRUE),
+		'password_admin' => $this->input->post('password_admin',TRUE),
+		'time_update' => date('Y-m-d'),
+	    );
+>>>>>>> parent of b56bd5c... Edit from validation, encrypte password
 
             $this->Admin_model->update($this->input->post('id_admin', true), $data);
             $this->session->set_flashdata('message', 'Update Record Success');
@@ -198,6 +232,7 @@ class Admin extends CI_Controller
 
     public function _rules()
     {
+<<<<<<< HEAD
         $this->form_validation->set_rules('nama_admin', 'nama admin', 'trim|required');
         $this->form_validation->set_rules('email_admin', 'email admin', 'trim|required|valid_email');
         $this->form_validation->set_rules('password_admin', 'password admin', 'trim|required');
@@ -210,6 +245,14 @@ class Admin extends CI_Controller
         $this->form_validation->set_rules('email_admin', 'email admin', 'trim|required|valid_email');
         $this->form_validation->set_rules('password_admin', 'password admin', 'trim|required');
         $this->form_validation->set_error_delimiters('<span class="text-danger">', '</span>');
+=======
+	$this->form_validation->set_rules('nama_admin', 'nama admin', 'trim|required');
+	$this->form_validation->set_rules('email_admin', 'email admin', 'trim|required');
+	$this->form_validation->set_rules('password_admin', 'password admin', 'trim|required');
+
+	$this->form_validation->set_rules('id_admin', 'id_admin', 'trim');
+	$this->form_validation->set_error_delimiters('<span class="text-danger">', '</span>');
+>>>>>>> parent of b56bd5c... Edit from validation, encrypte password
     }
 
 }
