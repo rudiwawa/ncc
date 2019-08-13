@@ -20,9 +20,14 @@
             <label for="varchar">Email Admin <?php echo form_error('email_admin') ?></label>
             <input type="text" class="form-control" name="email_admin" id="email_admin" placeholder="Email Admin" value="<?php echo $email_admin; ?>" />
         </div>
-	    <div class="form-group">
+	    
+        <div class="form-group">
             <label for="varchar">Password Admin <?php echo form_error('password_admin') ?></label>
             <input type="password" class="form-control" name="password_admin" id="password_admin" placeholder="Password Admin" value="<?php echo $password_admin; ?>" />
+        </div>
+        <div class="form-group">
+            <label for="varchar">Password Confirm <?php echo form_error('passconf') ?></label>
+            <input type="password" class="form-control" name="passconf" id="passconf" placeholder="Ulangi password" value="<?php echo $password_admin; ?>" />
         </div>
 	    <input type="hidden" name="id_admin" value="<?php echo $id_admin; ?>" /> 
 	    <button type="submit" class="btn btn-primary"><?php echo $button ?></button> 
