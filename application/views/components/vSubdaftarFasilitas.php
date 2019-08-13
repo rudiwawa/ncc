@@ -13,7 +13,10 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-    <title>Tempat Wisata Lainnya</title>
+    <?php foreach($ket_jenis as $row) { 
+    $judul = $row['ket_jenis'];
+    ?>
+    <title><?php echo $judul; } ?></title>
 </head>
 
 <body>
@@ -27,16 +30,13 @@
             <div class="col-4 text-center">
                 <a class="text-dark" href="<?php echo base_url(); ?>"><b>APELMAS</b> Kota Malang</a>
             </div>
-            <div class="col-4 d-flex justify-content-end align-items-center pr-5">
-                <a class="btn btn-sm btn-outline-secondary" href="<?php echo site_url('cLogin/index'); ?>">Login</a>
-            </div>
     </header>
 
     <!--Tentang APELMAS-->
     <div class="jumbotron jumbotron-fluid parallax">
         <div class="container text-right">
-            <h2 class="display-5"><b>Daftar Tempat Wisata</b></h2>
-            <p>Informasi tempat wisata di Kota Malang.</p>
+            <h2 class="display-5"><b><?php echo $judul; ?></b></h2>
+            <p><b><?php echo $judul; ?></b> di Kota Malang.</p>
         </div>
     </div>
 
@@ -44,29 +44,26 @@
     <div class="wisata m-5">
         <div id="container pl-5">
             <div class="text-left" data-aos="zoom-in">
-                <h4 class="display-5">Pilih Tempat Wisata</h4>
-                <p>Ayo kunjungi daerah-daerah tempat wisata di Kota Malang</p><br />
+                <h4 class="display-5"><?php echo $judul; ?></h4>
             </div>
 
             <div class="bd-example">
                 <div class="row">
                     <div class="col-4">
                         <h4 class="eyebrow mb-3">Pilih Kategori</h4>
-                        <?php foreach($daftarWisata as $row) { ?>
+                        <?php foreach($subdaftarFasilitas as $row) { ?>
                         <div id="list-example" class="list-group">
-                            <a class="list-group-item list-group-item-action" href="<?php echo '#'.preg_replace('/\s+/', '', strtolower($row['ket_jenis'])); ?>"><?php echo $row['ket_jenis']; ?>
-                                &nbsp;&nbsp;&nbsp;<span class="badge badge-pill badge-secondary"><?php echo $row['jumlah']; ?></span></a>
+                            <a class="list-group-item list-group-item-action" href="<?php echo '#'.preg_replace('/\s+/', '', strtolower($row['ket_sub_jenis'])); ?>"><?php echo $row['ket_sub_jenis']; ?></a>
                         </div>
                         <?php } ?>
                     </div>
                     <div class="col-8">
                         <h4 class="eyebrow mb-3">DESKRIPSI</h4>
                         <div data-spy="scroll" data-target="#list-example" data-offset="0" class="scrollspy-example">
-                            <?php foreach($daftarWisata as $row) { ?>
-                            <div id="<?php echo preg_replace('/\s+/', '', strtolower($row['ket_jenis'])); ?>">
+                        <?php foreach($subdaftarFasilitas as $row) { ?>
+                            <div id="<?php echo preg_replace('/\s+/', '', strtolower($row['ket_sub_jenis'])); ?>">
                                 <!--Judul-->
-                                <h4><?php echo $row['ket_jenis']; ?></h4>
-                                <p><b><?php echo $row['ket_jenis']; ?></b> yang ada di Kota Malang.</p>
+                                <h4><?php echo $row['ket_sub_jenis']; ?></h4>
 
                                 <!--Subjenis-->
                                 <div class="card-deck">
@@ -101,8 +98,7 @@
 
                                 <!--Buttons-->
                                 <div class="col text-right m-2">
-                                    <a href="<?php echo site_url('cPariwisata/getSubdaftarPariwisata/'. $row['id_jenis']); ?>" class="btn btn-outline-primary">Cek
-                                        Selanjutnya</a>
+                                    <a href="<?php echo site_url('cFasilitas/getDetailFasilitas/'.$row['id_sub']); ?>" class="btn btn-outline-primary">Detail</a>
                                 </div>
 
                                 <hr>
@@ -114,7 +110,7 @@
             </div>
         </div>
     </div>
-    
+
         <!--Footer-->
         <footer class="bg-dark text-white py-5" data-aos="fade-up">
         <div class="container">

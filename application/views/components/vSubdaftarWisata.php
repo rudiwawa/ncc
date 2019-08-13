@@ -27,14 +27,8 @@
     <!--Header-->
     <header class="py-3 bg-light slide-bottom">
         <div class="row flex-nowrap justify-content-around align-items-center">
-            <div class="col-4 jusitfy-content-start pl-5">
-                <a class="text-muted" href="<?php echo base_url(); ?>">Beranda</a>
-            </div>
             <div class="col-4 text-center">
                 <a class="text-dark" href="<?php echo base_url(); ?>"><b>APELMAS</b> Kota Malang</a>
-            </div>
-            <div class="col-4 d-flex justify-content-end align-items-center pr-5">
-                <a class="btn btn-sm btn-outline-secondary" data-toggle="popover" data-placement="left" href="<?php echo site_url('cLogin/index'); ?>">Login</a>
             </div>
     </header>
 

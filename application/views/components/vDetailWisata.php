@@ -13,8 +13,8 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-    <?php foreach($detailWisata as $row) { $wisata = $row['nama']; ?>
-    <title><?php echo $wisata; } ?></title>
+    <?php foreach($detailFasilitas as $row) { $fasilitas = $row['nama']; ?>
+    <title><?php echo $fasilitas; } ?></title>
 
 </head>
 
@@ -26,21 +26,15 @@
     <!--Header-->
     <header class="py-3 bg-light slide-bottom">
         <div class="row flex-nowrap justify-content-around align-items-center">
-            <div class="col-4 jusitfy-content-start pl-5">
-                <a class="text-muted" href="<?php echo base_url(); ?>">Beranda</a>
-            </div>
             <div class="col-4 text-center">
                 <a class="text-dark" href="<?php echo base_url(); ?>"><b>APELMAS</b> Kota Malang</a>
-            </div>
-            <div class="col-4 d-flex justify-content-end align-items-center pr-5">
-                <a class="btn btn-sm btn-outline-secondary" data-toggle="popover" data-placement="left" href="<?php echo site_url('cLogin/index'); ?>">Login</a>
             </div>
     </header>
 
     <!--Tentang APELMAS-->
     <div class="jumbotron jumbotron-fluid parallax">
         <div class="container text-right">
-            <h2 class="display-5"><b><?php echo $wisata; ?></b></h2>
+            <h2 class="display-5"><b><?php echo $fasilitas; ?></b></h2>
         </div>
     </div>
 
@@ -48,7 +42,7 @@
     <div class="wisata m-5">
         <div id="container pl-5">
             <div class="text-left" data-aos="zoom-in">
-                <h4 class="display-5"><?php echo $wisata; ?></h4>
+                <h4 class="display-5"><?php echo $fasilitas; ?></h4>
                 <p>Alamat: <?php echo $row['lokasi']; ?></p>
                 <hr>
                 <h4 class="display-5">Jam Operasional</h4>
@@ -62,7 +56,7 @@
                 <p><?php echo $row['deskripsi']; ?></p>
                 <hr>
                 <h4 class="display-5">Lihat Lainnya</h4>
-                <?php foreach($wisataLain as $row) { ?>
+                <?php foreach($fasilitasLain as $row) { ?>
                         <div class="card" style="width: 300px; height: 300px;">
                             <img class="card-img-top" src="<?php echo base_url(); ?>assets/index.jpg" alt="Card image cap">
                             <div class="card-body">

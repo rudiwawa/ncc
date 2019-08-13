@@ -13,7 +13,7 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-    <title>Tempat Wisata Lainnya</title>
+    <title>Daftar Fasilitas</title>
 </head>
 
 <body>
@@ -35,8 +35,8 @@
     <!--Tentang APELMAS-->
     <div class="jumbotron jumbotron-fluid parallax">
         <div class="container text-right">
-            <h2 class="display-5"><b>Daftar Tempat Wisata</b></h2>
-            <p>Informasi tempat wisata di Kota Malang.</p>
+            <h2 class="display-5"><b>Daftar Fasilitas</b></h2>
+            <p>Informasi fasilitas yang ada di Kota Malang.</p>
         </div>
     </div>
 
@@ -44,15 +44,15 @@
     <div class="wisata m-5">
         <div id="container pl-5">
             <div class="text-left" data-aos="zoom-in">
-                <h4 class="display-5">Pilih Tempat Wisata</h4>
-                <p>Ayo kunjungi daerah-daerah tempat wisata di Kota Malang</p><br />
+                <h4 class="display-5">Pilih Fasilitas</h4>
+                <p>Fasilitas di Kota Malang</p><br />
             </div>
 
             <div class="bd-example">
                 <div class="row">
                     <div class="col-4">
                         <h4 class="eyebrow mb-3">Pilih Kategori</h4>
-                        <?php foreach($daftarWisata as $row) { ?>
+                        <?php foreach($daftarFasilitas as $row) { ?>
                         <div id="list-example" class="list-group">
                             <a class="list-group-item list-group-item-action" href="<?php echo '#'.preg_replace('/\s+/', '', strtolower($row['ket_jenis'])); ?>"><?php echo $row['ket_jenis']; ?>
                                 &nbsp;&nbsp;&nbsp;<span class="badge badge-pill badge-secondary"><?php echo $row['jumlah']; ?></span></a>
@@ -62,7 +62,7 @@
                     <div class="col-8">
                         <h4 class="eyebrow mb-3">DESKRIPSI</h4>
                         <div data-spy="scroll" data-target="#list-example" data-offset="0" class="scrollspy-example">
-                            <?php foreach($daftarWisata as $row) { ?>
+                            <?php foreach($daftarFasilitas as $row) { ?>
                             <div id="<?php echo preg_replace('/\s+/', '', strtolower($row['ket_jenis'])); ?>">
                                 <!--Judul-->
                                 <h4><?php echo $row['ket_jenis']; ?></h4>
@@ -101,7 +101,7 @@
 
                                 <!--Buttons-->
                                 <div class="col text-right m-2">
-                                    <a href="<?php echo site_url('cPariwisata/getSubdaftarPariwisata/'. $row['id_jenis']); ?>" class="btn btn-outline-primary">Cek
+                                    <a href="<?php echo site_url('cFasilitas/getSubdaftarFasilitas/'. $row['id_jenis']); ?>" class="btn btn-outline-primary">Cek
                                         Selanjutnya</a>
                                 </div>
 
