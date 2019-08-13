@@ -62,7 +62,7 @@ class Admin extends CI_Controller
 		'nama_admin' => $row->nama_admin,
 		'email_admin' => $row->email_admin,
 		'password_admin' => $row->password_admin,
-		'time_update' => date('Y-m-d'),
+		'time_update' => date('Y-m-d h:i:sa'),
 	    );
             $this->load->view('admin//admin_read', $data);
         } else {
@@ -79,8 +79,8 @@ class Admin extends CI_Controller
 	    'id_admin' => set_value('id_admin'),
 	    'nama_admin' => set_value('nama_admin'),
 	    'email_admin' => set_value('email_admin'),
-	    'password_admin' => set_value('password_admin'),
-	    'time_update' => date('Y-m-d'),
+	    'password_admin' =>  set_value('password_admin'),
+	    'time_update' => date('Y-m-d h:i:sa'),
 	);
         $this->load->view('admin//admin_form', $data);
     }
@@ -95,8 +95,8 @@ class Admin extends CI_Controller
             $data = array(
 		'nama_admin' => $this->input->post('nama_admin',TRUE),
 		'email_admin' => $this->input->post('email_admin',TRUE),
-		'password_admin' => $this->input->post('password_admin',TRUE),
-		'time_update' => date('Y-m-d'),
+		'password_admin' =>password_hash($this->input->post('password_admin',TRUE), PASSWORD_DEFAULT) ,
+		'time_update' => date('Y-m-d h:i:sa'),
 	    );
 
             $this->Admin_model->insert($data);
@@ -136,8 +136,8 @@ class Admin extends CI_Controller
             $data = array(
 		'nama_admin' => $this->input->post('nama_admin',TRUE),
 		'email_admin' => $this->input->post('email_admin',TRUE),
-		'password_admin' => $this->input->post('password_admin',TRUE),
-		'time_update' => date('Y-m-d'),
+		'password_admin' => password_hash($this->input->post('password_admin',TRUE), PASSWORD_DEFAULT),
+		'time_update' => date('Y-m-d h:i:sa'),
 	    );
 
             $this->Admin_model->update($this->input->post('id_admin', TRUE), $data);
@@ -163,7 +163,7 @@ class Admin extends CI_Controller
     public function _rules() 
     {
 	$this->form_validation->set_rules('nama_admin', 'nama admin', 'trim|required');
-	$this->form_validation->set_rules('email_admin', 'email admin', 'trim|required');
+	$this->form_validation->set_rules('email_admin', 'email admin', 'trim|required|valid_email');
 	$this->form_validation->set_rules('password_admin', 'password admin', 'trim|required');
 
 	$this->form_validation->set_rules('id_admin', 'id_admin', 'trim');
