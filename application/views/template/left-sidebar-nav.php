@@ -35,9 +35,9 @@
                 <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i
                             class="mdi mdi-book-multiple"></i><span class="hide-menu">Wisata</span></a>
                     <ul aria-expanded="false" class="collapse">
-                        <li><a href="javascript:void(0)" id="pariwisata_jenis">Jenis Pariwisata</a></li>
-                        <li><a href="javascript:void(0)" id="pariwisata_sub_jenis">Sub Jenis Pariwisata</a></li>
-                        <li><a href="javascript:void(0)" id="pariwisata_content">Konten Pariwisata</a></li>
+                        <li><a href="javascript:void(0)" id="pariwisata_jenis">Jenis Wisata</a></li>
+                        <li><a href="javascript:void(0)" id="pariwisata_sub_jenis">Sub Jenis Wisata</a></li>
+                        <li><a href="javascript:void(0)" id="pariwisata_content">Konten Wisata</a></li>
                     </ul>
                 </li>
 

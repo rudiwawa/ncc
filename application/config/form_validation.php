@@ -66,7 +66,7 @@ $config = array(
                         'label' => 'Latitude & Longitude',
                         'rules' => "required|regex_match[/".$re1.$re2.$re3.$re4.$re5.$re6.$re7.$re8.$re9."/]",
                         'errors' =>array (
-                                'regex_match' => "Input Email tidak valid, mohon input dengan benar. Contoh ['0.989897','0.989897']"
+                                'regex_match' => "Input Latitude & Longitude tidak valid, mohon input dengan benar. Contoh ['0.989897','0.989897']"
                         ),
                 ),
                 array(
