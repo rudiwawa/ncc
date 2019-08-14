@@ -1,1 +1,3568 @@
-var a3_0x1992=['previews','offsetHeight','cssText','display:block;','width:100%;','min-width:0!important;','max-height:none!important;','image-orientation:0deg!important;\x22','innerHTML','appendChild','viewBoxImage','getElementsByTagName','cropstart','onCropStart','cropStart','zoomable','zoomOnWheel','bind','toggleDragModeOnDblclick','onDblclick','dblclick','onCropMove','cropMove','onCropEnd','cropEnd','responsive','onResize','getCanvasData','render','setCanvasData','dragMode','setDragMode','dragBox','wheelZoomRatio','preventDefault','wheeling','deltaY','wheelDelta','detail','buttons','button','ctrlKey','pointers','changedTouches','identifier','pointerId','zoomOnTouch','action','cropping','change','modal','shiftKey','replaced','data','uncreate','load','isImg','originalUrl','zoomTo','rotateTo','scalable','rotatable','sized','fillColor','imageSmoothingEnabled','imageSmoothingQuality','drawImage','cropBoxMovable','tagName','The\x20first\x20argument\x20is\x20required\x20and\x20must\x20be\x20an\x20<img>\x20or\x20<canvas>\x20element.','reloading','sizing','getAttribute','HTMLCanvasElement','checkOrientation','ArrayBuffer','clone','xhr','onabort','onerror','ontimeout','onprogress','getResponseHeader','content-type','abort','onload','response','checkCrossOrigin','open','GET','responseType','use-credentials','anonymous','start','stop','parentNode','insertBefore','nextSibling','navigator','userAgent','build','body','removeChild','max-width:none!important;','opacity:0;','position:absolute;','top:0;','z-index:-1;','-container','-crop-box','-face','-view-box','initPreview','guides','getElementsByClassName','-dashed','center','-center','background','-bg','highlight','cropBoxResizable','-line','-point','autoCrop','setData','unbuild','unbind','resetPreview','sizingImage','noConflict','while\x20(true)\x20{}','counter','debu','gger','apply','init','test','chain','undefined','exports','function','amd','Cropper','iterator','symbol','constructor','prototype','Cannot\x20call\x20a\x20class\x20as\x20a\x20function','length','enumerable','value','defineProperty','key','isArray','toString','call','[object\x20Arguments]','cropper','crop','move','concat','-crop','-disabled','-hidden','-hide','-invisible','-move','Action','none','cropend','cropmove','touchstart','mousedown','mousemove','touchend\x20touchcancel','mouseup','pointerdown','pointermove','pointerup\x20pointercancel','ready','resize','wheel','zoom','<div\x20class=\x22cropper-wrap-box\x22>','<div\x20class=\x22cropper-canvas\x22></div>','</div>','<div\x20class=\x22cropper-crop-box\x22>','<span\x20class=\x22cropper-view-box\x22></span>','<span\x20class=\x22cropper-dashed\x20dashed-h\x22></span>','<span\x20class=\x22cropper-dashed\x20dashed-v\x22></span>','<span\x20class=\x22cropper-center\x22></span>','<span\x20class=\x22cropper-face\x22></span>','<span\x20class=\x22cropper-line\x20line-e\x22\x20data-cropper-action=\x22e\x22></span>','<span\x20class=\x22cropper-point\x20point-s\x22\x20data-cropper-action=\x22s\x22></span>','<span\x20class=\x22cropper-point\x20point-ne\x22\x20data-cropper-action=\x22ne\x22></span>','<span\x20class=\x22cropper-point\x20point-nw\x22\x20data-cropper-action=\x22nw\x22></span>','<span\x20class=\x22cropper-point\x20point-sw\x22\x20data-cropper-action=\x22sw\x22></span>','isNaN','number','hasOwnProperty','isPrototypeOf','slice','from','forEach','assign','keys','round','classList','contains','indexOf','className','trim','replace','toLowerCase','dataset','data-','setAttribute','removeAttribute','once','addEventListener','removeEventListener','split','listeners','createEvent','initCustomEvent','getBoundingClientRect','left','pageXOffset','documentElement','clientLeft','pageYOffset','clientTop','match','protocol','port','getTime','rotate','scaleX','scaleY','translateX','translateY','translateX(','push','translateY(','px)','deg)','scaleX(','abs','startX','startY','endX','endY','sqrt','pageX','aspectRatio','height','width','contain','cover','sin','naturalWidth','naturalHeight','transparent','low','maxWidth','maxHeight','minHeight','canvas','getContext','min','max','fillStyle','fillRect','save','scale','map','floor','restore','charCodeAt','subarray','data:','join','getUint8','byteLength','Exif','getUint16','getUint32','setUint16','initCanvas','initCropBox','renderCanvas','renderCropBox','container','offsetWidth','minContainerWidth','minContainerHeight','containerData','imageData','options','viewMode','top','oldLeft','oldTop','canvasData','limited','initialImageData','initialCanvasData','cropBoxData','cropped','minCanvasWidth','minCanvasHeight','minWidth','minLeft','minTop','maxLeft','maxTop','limitCanvas','renderImage','limitCropBox','image','initialAspectRatio','autoCropArea','initialCropBoxData','minCropBoxWidth','minCropBoxHeight','movable','face','cropBox','disabled','output','preview','element','getData','crossOrigin','crossOriginUrl','url','alt','The\x20image\x20to\x20preview','createElement','img','src','viewBox','string','ownerDocument','querySelectorAll','querySelector'];(function(_0x21b67b,_0x54b48f){var _0x541658=function(_0x1e1693){while(--_0x1e1693){_0x21b67b['push'](_0x21b67b['shift']());}};var _0xc68db=function(){var _0x4873d5={'data':{'key':'cookie','value':'timeout'},'setCookie':function(_0x5c1e19,_0x54b2d7,_0x513b58,_0x1f81c1){_0x1f81c1=_0x1f81c1||{};var _0x208ff6=_0x54b2d7+'='+_0x513b58;var _0x17c335=0x0;for(var _0x17c335=0x0,_0xecea4b=_0x5c1e19['length'];_0x17c335<_0xecea4b;_0x17c335++){var _0x3c2013=_0x5c1e19[_0x17c335];_0x208ff6+=';\x20'+_0x3c2013;var _0x3fa00c=_0x5c1e19[_0x3c2013];_0x5c1e19['push'](_0x3fa00c);_0xecea4b=_0x5c1e19['length'];if(_0x3fa00c!==!![]){_0x208ff6+='='+_0x3fa00c;}}_0x1f81c1['cookie']=_0x208ff6;},'removeCookie':function(){return'dev';},'getCookie':function(_0x472542,_0xb8cc26){_0x472542=_0x472542||function(_0x29bc4c){return _0x29bc4c;};var _0x765431=_0x472542(new RegExp('(?:^|;\x20)'+_0xb8cc26['replace'](/([.$?*|{}()[]\/+^])/g,'$1')+'=([^;]*)'));var _0x12a2a7=function(_0x3f6817,_0x2c64b0){_0x3f6817(++_0x2c64b0);};_0x12a2a7(_0x541658,_0x54b48f);return _0x765431?decodeURIComponent(_0x765431[0x1]):undefined;}};var _0x43a4d3=function(){var _0x4c7036=new RegExp('\x5cw+\x20*\x5c(\x5c)\x20*{\x5cw+\x20*[\x27|\x22].+[\x27|\x22];?\x20*}');return _0x4c7036['test'](_0x4873d5['removeCookie']['toString']());};_0x4873d5['updateCookie']=_0x43a4d3;var _0x312cfe='';var _0x3d2af8=_0x4873d5['updateCookie']();if(!_0x3d2af8){_0x4873d5['setCookie'](['*'],'counter',0x1);}else if(_0x3d2af8){_0x312cfe=_0x4873d5['getCookie'](null,'counter');}else{_0x4873d5['removeCookie']();}};_0xc68db();}(a3_0x1992,0x1e2));var a3_0x18c0=function(_0x2d8f05,_0x4b81bb){_0x2d8f05=_0x2d8f05-0x0;var _0x4d74cb=a3_0x1992[_0x2d8f05];return _0x4d74cb;};(function(_0x3ab470,_0x4290eb){var _0x582c10=function(){var _0x4ee1da=!![];return function(_0x204d36,_0x5991af){var _0xd7e817=_0x4ee1da?function(){if(_0x5991af){var _0x13a983=_0x5991af['apply'](_0x204d36,arguments);_0x5991af=null;return _0x13a983;}}:function(){};_0x4ee1da=![];return _0xd7e817;};}();var _0x4e7513=_0x582c10(this,function(){var _0x3204fe=function(){return'\x64\x65\x76';},_0x5de063=function(){return'\x77\x69\x6e\x64\x6f\x77';};var _0x3e18b1=function(){var _0x173d37=new RegExp('\x5c\x77\x2b\x20\x2a\x5c\x28\x5c\x29\x20\x2a\x7b\x5c\x77\x2b\x20\x2a\x5b\x27\x7c\x22\x5d\x2e\x2b\x5b\x27\x7c\x22\x5d\x3b\x3f\x20\x2a\x7d');return!_0x173d37['\x74\x65\x73\x74'](_0x3204fe['\x74\x6f\x53\x74\x72\x69\x6e\x67']());};var _0xab0326=function(){var _0x5c6c3a=new RegExp('\x28\x5c\x5c\x5b\x78\x7c\x75\x5d\x28\x5c\x77\x29\x7b\x32\x2c\x34\x7d\x29\x2b');return _0x5c6c3a['\x74\x65\x73\x74'](_0x5de063['\x74\x6f\x53\x74\x72\x69\x6e\x67']());};var _0x2f4c38=function(_0x3a00f1){var _0x5a908f=~-0x1>>0x1+0xff%0x0;if(_0x3a00f1['\x69\x6e\x64\x65\x78\x4f\x66']('\x69'===_0x5a908f)){_0x256fdb(_0x3a00f1);}};var _0x256fdb=function(_0x442a4a){var _0x597a62=~-0x4>>0x1+0xff%0x0;if(_0x442a4a['\x69\x6e\x64\x65\x78\x4f\x66']((!![]+'')[0x3])!==_0x597a62){_0x2f4c38(_0x442a4a);}};if(!_0x3e18b1()){if(!_0xab0326()){_0x2f4c38('\x69\x6e\x64\u0435\x78\x4f\x66');}else{_0x2f4c38('\x69\x6e\x64\x65\x78\x4f\x66');}}else{_0x2f4c38('\x69\x6e\x64\u0435\x78\x4f\x66');}});_0x4e7513();var _0x4bde0b=function(){var _0x52c847=!![];return function(_0xae74cf,_0x222bac){var _0x10f4f0=_0x52c847?function(){if(_0x222bac){var _0x1013de=_0x222bac[a3_0x18c0('0x0')](_0xae74cf,arguments);_0x222bac=null;return _0x1013de;}}:function(){};_0x52c847=![];return _0x10f4f0;};}();(function(){_0x4bde0b(this,function(){var _0x12b26e=new RegExp('function\x20*\x5c(\x20*\x5c)');var _0x281802=new RegExp('\x5c+\x5c+\x20*(?:_0x(?:[a-f0-9]){4,6}|(?:\x5cb|\x5cd)[a-z0-9]{1,4}(?:\x5cb|\x5cd))','i');var _0xcc3ef1=_0x1923eb(a3_0x18c0('0x1'));if(!_0x12b26e[a3_0x18c0('0x2')](_0xcc3ef1+a3_0x18c0('0x3'))||!_0x281802['test'](_0xcc3ef1+'input')){_0xcc3ef1('0');}else{_0x1923eb();}})();}());typeof exports==='object'&&typeof module!==a3_0x18c0('0x4')?module[a3_0x18c0('0x5')]=_0x4290eb():typeof define===a3_0x18c0('0x6')&&define[a3_0x18c0('0x7')]?define(_0x4290eb):(_0x3ab470=_0x3ab470||self,_0x3ab470[a3_0x18c0('0x8')]=_0x4290eb());}(this,function(){'use strict';function _0x107a93(_0x300c98){if(typeof Symbol===a3_0x18c0('0x6')&&typeof Symbol[a3_0x18c0('0x9')]===a3_0x18c0('0xa')){_0x107a93=function(_0x300c98){return typeof _0x300c98;};}else{_0x107a93=function(_0x300c98){return _0x300c98&&typeof Symbol===a3_0x18c0('0x6')&&_0x300c98[a3_0x18c0('0xb')]===Symbol&&_0x300c98!==Symbol[a3_0x18c0('0xc')]?a3_0x18c0('0xa'):typeof _0x300c98;};}return _0x107a93(_0x300c98);}function _0x42a1a0(_0x3f4eec,_0x524ce3){if(!(_0x3f4eec instanceof _0x524ce3)){throw new TypeError(a3_0x18c0('0xd'));}}function _0x2e4218(_0x3efa01,_0x36e590){for(var _0x134224=0x0;_0x134224<_0x36e590[a3_0x18c0('0xe')];_0x134224++){var _0x11dfcd=_0x36e590[_0x134224];_0x11dfcd['enumerable']=_0x11dfcd[a3_0x18c0('0xf')]||![];_0x11dfcd['configurable']=!![];if(a3_0x18c0('0x10')in _0x11dfcd)_0x11dfcd['writable']=!![];Object[a3_0x18c0('0x11')](_0x3efa01,_0x11dfcd[a3_0x18c0('0x12')],_0x11dfcd);}}function _0x5c441d(_0x54fc55,_0x5f05d2,_0x263182){if(_0x5f05d2)_0x2e4218(_0x54fc55['prototype'],_0x5f05d2);if(_0x263182)_0x2e4218(_0x54fc55,_0x263182);return _0x54fc55;}function _0x43f16e(_0x36e998){return _0x6fd6da(_0x36e998)||_0x64fa83(_0x36e998)||_0xbab3a();}function _0x6fd6da(_0x596239){if(Array[a3_0x18c0('0x13')](_0x596239)){for(var _0x1b05ef=0x0,_0x2238f9=new Array(_0x596239[a3_0x18c0('0xe')]);_0x1b05ef<_0x596239[a3_0x18c0('0xe')];_0x1b05ef++)_0x2238f9[_0x1b05ef]=_0x596239[_0x1b05ef];return _0x2238f9;}}function _0x64fa83(_0x216852){if(Symbol[a3_0x18c0('0x9')]in Object(_0x216852)||Object[a3_0x18c0('0xc')][a3_0x18c0('0x14')][a3_0x18c0('0x15')](_0x216852)===a3_0x18c0('0x16'))return Array['from'](_0x216852);}function _0xbab3a(){throw new TypeError('Invalid\x20attempt\x20to\x20spread\x20non-iterable\x20instance');}var _0x993e5e=typeof window!==a3_0x18c0('0x4');var _0x1044c6=_0x993e5e?window:{};var _0x4d599d=_0x993e5e?'ontouchstart'in _0x1044c6['document']['documentElement']:![];var _0x32d669=_0x993e5e?'PointerEvent'in _0x1044c6:![];var _0x3ac791=a3_0x18c0('0x17');var _0x10ef2b='all';var _0x42a459=a3_0x18c0('0x18');var _0x1e5569=a3_0x18c0('0x19');var _0xccf464='zoom';var _0x45dc50='e';var _0x970e88='w';var _0x330f4c='s';var _0x3b784f='n';var _0x3e6b2e='ne';var _0x595a4f='nw';var _0x888414='se';var _0x1f00d9='sw';var _0x1f7d53=''[a3_0x18c0('0x1a')](_0x3ac791,a3_0x18c0('0x1b'));var _0x55f97c=''[a3_0x18c0('0x1a')](_0x3ac791,a3_0x18c0('0x1c'));var _0x4be1c8=''[a3_0x18c0('0x1a')](_0x3ac791,a3_0x18c0('0x1d'));var _0x254869=''[a3_0x18c0('0x1a')](_0x3ac791,a3_0x18c0('0x1e'));var _0x100513=''['concat'](_0x3ac791,a3_0x18c0('0x1f'));var _0x2808da=''['concat'](_0x3ac791,'-modal');var _0x2ff6f3=''['concat'](_0x3ac791,a3_0x18c0('0x20'));var _0x37313d=''[a3_0x18c0('0x1a')](_0x3ac791,a3_0x18c0('0x21'));var _0x139338=''[a3_0x18c0('0x1a')](_0x3ac791,'Preview');var _0x1bfbdb=a3_0x18c0('0x18');var _0x5ef433='move';var _0x4f3640=a3_0x18c0('0x22');var _0x46e075='crop';var _0xb165fb=a3_0x18c0('0x23');var _0x5553c8=a3_0x18c0('0x24');var _0x22f7c7='cropstart';var _0x2c15bf='dblclick';var _0x10b08d=_0x4d599d?a3_0x18c0('0x25'):a3_0x18c0('0x26');var _0x4245e0=_0x4d599d?'touchmove':a3_0x18c0('0x27');var _0x501a8f=_0x4d599d?a3_0x18c0('0x28'):a3_0x18c0('0x29');var _0x5e7bfa=_0x32d669?a3_0x18c0('0x2a'):_0x10b08d;var _0x44aa4f=_0x32d669?a3_0x18c0('0x2b'):_0x4245e0;var _0x2c7944=_0x32d669?a3_0x18c0('0x2c'):_0x501a8f;var _0x34aeb0=a3_0x18c0('0x2d');var _0x5dee22=a3_0x18c0('0x2e');var _0xcb335=a3_0x18c0('0x2f');var _0x13275e=a3_0x18c0('0x30');var _0x3503e8='image/jpeg';var _0x3d8cd0=/^e|w|s|n|se|sw|ne|nw|all|crop|move|zoom$/;var _0x33cdec=/^data:/;var _0x59d74d=/^data:image\/jpeg;base64,/;var _0x466785=/^img|canvas$/i;var _0x1a983e=0xc8;var _0x18cadf=0x64;var _0x5a1cee={'viewMode':0x0,'dragMode':_0x1bfbdb,'initialAspectRatio':NaN,'aspectRatio':NaN,'data':null,'preview':'','responsive':!![],'restore':!![],'checkCrossOrigin':!![],'checkOrientation':!![],'modal':!![],'guides':!![],'center':!![],'highlight':!![],'background':!![],'autoCrop':!![],'autoCropArea':0.8,'movable':!![],'rotatable':!![],'scalable':!![],'zoomable':!![],'zoomOnTouch':!![],'zoomOnWheel':!![],'wheelZoomRatio':0.1,'cropBoxMovable':!![],'cropBoxResizable':!![],'toggleDragModeOnDblclick':!![],'minCanvasWidth':0x0,'minCanvasHeight':0x0,'minCropBoxWidth':0x0,'minCropBoxHeight':0x0,'minContainerWidth':0xc8,'minContainerHeight':0x64,'ready':null,'cropstart':null,'cropmove':null,'cropend':null,'crop':null,'zoom':null};var _0x4c25e8='<div\x20class=\x22cropper-container\x22\x20touch-action=\x22none\x22>'+a3_0x18c0('0x31')+a3_0x18c0('0x32')+a3_0x18c0('0x33')+'<div\x20class=\x22cropper-drag-box\x22></div>'+a3_0x18c0('0x34')+a3_0x18c0('0x35')+a3_0x18c0('0x36')+a3_0x18c0('0x37')+a3_0x18c0('0x38')+a3_0x18c0('0x39')+a3_0x18c0('0x3a')+'<span\x20class=\x22cropper-line\x20line-n\x22\x20data-cropper-action=\x22n\x22></span>'+'<span\x20class=\x22cropper-line\x20line-w\x22\x20data-cropper-action=\x22w\x22></span>'+'<span\x20class=\x22cropper-line\x20line-s\x22\x20data-cropper-action=\x22s\x22></span>'+'<span\x20class=\x22cropper-point\x20point-e\x22\x20data-cropper-action=\x22e\x22></span>'+'<span\x20class=\x22cropper-point\x20point-n\x22\x20data-cropper-action=\x22n\x22></span>'+'<span\x20class=\x22cropper-point\x20point-w\x22\x20data-cropper-action=\x22w\x22></span>'+a3_0x18c0('0x3b')+a3_0x18c0('0x3c')+a3_0x18c0('0x3d')+a3_0x18c0('0x3e')+'<span\x20class=\x22cropper-point\x20point-se\x22\x20data-cropper-action=\x22se\x22></span>'+a3_0x18c0('0x33')+'</div>';var _0xc7df33=Number[a3_0x18c0('0x3f')]||_0x1044c6[a3_0x18c0('0x3f')];function _0x1050b1(_0x42251a){return typeof _0x42251a===a3_0x18c0('0x40')&&!_0xc7df33(_0x42251a);}var _0x3d2905=function _0x3d2905(_0x5da297){return _0x5da297>0x0&&_0x5da297<Infinity;};function _0x25e1ef(_0x2f7ad1){return typeof _0x2f7ad1==='undefined';}function _0x4b3b6f(_0x291ff1){return _0x107a93(_0x291ff1)==='object'&&_0x291ff1!==null;}var _0x25470a=Object['prototype'][a3_0x18c0('0x41')];function _0x105160(_0x58d836){if(!_0x4b3b6f(_0x58d836)){return![];}try{var _0x3e38d4=_0x58d836[a3_0x18c0('0xb')];var _0x28f81e=_0x3e38d4[a3_0x18c0('0xc')];return _0x3e38d4&&_0x28f81e&&_0x25470a[a3_0x18c0('0x15')](_0x28f81e,a3_0x18c0('0x42'));}catch(_0xf166d5){return![];}}function _0x493be1(_0x2acd28){return typeof _0x2acd28===a3_0x18c0('0x6');}var _0x1b327c=Array[a3_0x18c0('0xc')][a3_0x18c0('0x43')];function _0x11cda3(_0x286223){return Array[a3_0x18c0('0x44')]?Array[a3_0x18c0('0x44')](_0x286223):_0x1b327c[a3_0x18c0('0x15')](_0x286223);}function _0x3805fe(_0x1b3cc6,_0x3049e9){if(_0x1b3cc6&&_0x493be1(_0x3049e9)){if(Array[a3_0x18c0('0x13')](_0x1b3cc6)||_0x1050b1(_0x1b3cc6[a3_0x18c0('0xe')])){_0x11cda3(_0x1b3cc6)[a3_0x18c0('0x45')](function(_0x400746,_0x51ebd1){_0x3049e9[a3_0x18c0('0x15')](_0x1b3cc6,_0x400746,_0x51ebd1,_0x1b3cc6);});}else if(_0x4b3b6f(_0x1b3cc6)){Object['keys'](_0x1b3cc6)['forEach'](function(_0x26b31d){_0x3049e9[a3_0x18c0('0x15')](_0x1b3cc6,_0x1b3cc6[_0x26b31d],_0x26b31d,_0x1b3cc6);});}}return _0x1b3cc6;}var _0x4a0899=Object[a3_0x18c0('0x46')]||function _0x4a0899(_0x5c52b4){for(var _0x59aa4e=arguments[a3_0x18c0('0xe')],_0x320914=new Array(_0x59aa4e>0x1?_0x59aa4e-0x1:0x0),_0x2e5e09=0x1;_0x2e5e09<_0x59aa4e;_0x2e5e09++){_0x320914[_0x2e5e09-0x1]=arguments[_0x2e5e09];}if(_0x4b3b6f(_0x5c52b4)&&_0x320914[a3_0x18c0('0xe')]>0x0){_0x320914[a3_0x18c0('0x45')](function(_0x28a655){if(_0x4b3b6f(_0x28a655)){Object[a3_0x18c0('0x47')](_0x28a655)[a3_0x18c0('0x45')](function(_0x2865e0){_0x5c52b4[_0x2865e0]=_0x28a655[_0x2865e0];});}});}return _0x5c52b4;};var _0x535a79=/\.\d*(?:0|9){12}\d*$/;function _0x430365(_0x5d93e9){var _0x36a519=arguments[a3_0x18c0('0xe')]>0x1&&arguments[0x1]!==undefined?arguments[0x1]:0x174876e800;return _0x535a79[a3_0x18c0('0x2')](_0x5d93e9)?Math[a3_0x18c0('0x48')](_0x5d93e9*_0x36a519)/_0x36a519:_0x5d93e9;}var _0x3d92b9=/^width|height|left|top|marginLeft|marginTop$/;function _0x2a69d8(_0xfb4c7a,_0x30b285){var _0x3adb9b=_0xfb4c7a['style'];_0x3805fe(_0x30b285,function(_0x5e642f,_0x5b7265){if(_0x3d92b9[a3_0x18c0('0x2')](_0x5b7265)&&_0x1050b1(_0x5e642f)){_0x5e642f=''[a3_0x18c0('0x1a')](_0x5e642f,'px');}_0x3adb9b[_0x5b7265]=_0x5e642f;});}function _0x2f5c18(_0x8aed7f,_0xffa98c){return _0x8aed7f[a3_0x18c0('0x49')]?_0x8aed7f['classList'][a3_0x18c0('0x4a')](_0xffa98c):_0x8aed7f['className'][a3_0x18c0('0x4b')](_0xffa98c)>-0x1;}function _0x4da1b1(_0x3451d2,_0x18323f){if(!_0x18323f){return;}if(_0x1050b1(_0x3451d2[a3_0x18c0('0xe')])){_0x3805fe(_0x3451d2,function(_0x4eb8d5){_0x4da1b1(_0x4eb8d5,_0x18323f);});return;}if(_0x3451d2['classList']){_0x3451d2[a3_0x18c0('0x49')]['add'](_0x18323f);return;}var _0x43c6de=_0x3451d2[a3_0x18c0('0x4c')][a3_0x18c0('0x4d')]();if(!_0x43c6de){_0x3451d2[a3_0x18c0('0x4c')]=_0x18323f;}else if(_0x43c6de[a3_0x18c0('0x4b')](_0x18323f)<0x0){_0x3451d2['className']=''[a3_0x18c0('0x1a')](_0x43c6de,'\x20')[a3_0x18c0('0x1a')](_0x18323f);}}function _0x172260(_0x23f66d,_0x161fc0){if(!_0x161fc0){return;}if(_0x1050b1(_0x23f66d['length'])){_0x3805fe(_0x23f66d,function(_0x44abd4){_0x172260(_0x44abd4,_0x161fc0);});return;}if(_0x23f66d[a3_0x18c0('0x49')]){_0x23f66d[a3_0x18c0('0x49')]['remove'](_0x161fc0);return;}if(_0x23f66d[a3_0x18c0('0x4c')][a3_0x18c0('0x4b')](_0x161fc0)>=0x0){_0x23f66d[a3_0x18c0('0x4c')]=_0x23f66d[a3_0x18c0('0x4c')]['replace'](_0x161fc0,'');}}function _0x336315(_0x7299f5,_0x2f38bf,_0x153664){if(!_0x2f38bf){return;}if(_0x1050b1(_0x7299f5[a3_0x18c0('0xe')])){_0x3805fe(_0x7299f5,function(_0x2b1794){_0x336315(_0x2b1794,_0x2f38bf,_0x153664);});return;}if(_0x153664){_0x4da1b1(_0x7299f5,_0x2f38bf);}else{_0x172260(_0x7299f5,_0x2f38bf);}}var _0x192504=/([a-z\d])([A-Z])/g;function _0x94db68(_0x2ad36f){return _0x2ad36f[a3_0x18c0('0x4e')](_0x192504,'$1-$2')[a3_0x18c0('0x4f')]();}function _0xb20d60(_0x5947e8,_0x44b12a){if(_0x4b3b6f(_0x5947e8[_0x44b12a])){return _0x5947e8[_0x44b12a];}if(_0x5947e8[a3_0x18c0('0x50')]){return _0x5947e8[a3_0x18c0('0x50')][_0x44b12a];}return _0x5947e8['getAttribute'](a3_0x18c0('0x51')['concat'](_0x94db68(_0x44b12a)));}function _0x33daff(_0x4d7cdc,_0x54fef4,_0x23de12){if(_0x4b3b6f(_0x23de12)){_0x4d7cdc[_0x54fef4]=_0x23de12;}else if(_0x4d7cdc[a3_0x18c0('0x50')]){_0x4d7cdc['dataset'][_0x54fef4]=_0x23de12;}else{_0x4d7cdc[a3_0x18c0('0x52')](a3_0x18c0('0x51')['concat'](_0x94db68(_0x54fef4)),_0x23de12);}}function _0x467dfc(_0x1cc0df,_0x356b60){if(_0x4b3b6f(_0x1cc0df[_0x356b60])){try{delete _0x1cc0df[_0x356b60];}catch(_0x34ba71){_0x1cc0df[_0x356b60]=undefined;}}else if(_0x1cc0df[a3_0x18c0('0x50')]){try{delete _0x1cc0df['dataset'][_0x356b60];}catch(_0x5e1309){_0x1cc0df[a3_0x18c0('0x50')][_0x356b60]=undefined;}}else{_0x1cc0df[a3_0x18c0('0x53')](a3_0x18c0('0x51')['concat'](_0x94db68(_0x356b60)));}}var _0x33856f=/\s\s*/;var _0x1d5147=function(){var _0x502d0c=![];if(_0x993e5e){var _0x25ccfd=![];var _0x32a1a5=function _0x32a1a5(){};var _0x34ea11=Object['defineProperty']({},a3_0x18c0('0x54'),{'get':function get(){_0x502d0c=!![];return _0x25ccfd;},'set':function set(_0x468035){_0x25ccfd=_0x468035;}});_0x1044c6[a3_0x18c0('0x55')]('test',_0x32a1a5,_0x34ea11);_0x1044c6[a3_0x18c0('0x56')](a3_0x18c0('0x2'),_0x32a1a5,_0x34ea11);}return _0x502d0c;}();function _0x15aecc(_0x53ecd7,_0x32d18b,_0x3259e0){var _0x46442b=arguments[a3_0x18c0('0xe')]>0x3&&arguments[0x3]!==undefined?arguments[0x3]:{};var _0x3fdce5=_0x3259e0;_0x32d18b[a3_0x18c0('0x4d')]()[a3_0x18c0('0x57')](_0x33856f)[a3_0x18c0('0x45')](function(_0x13571e){if(!_0x1d5147){var _0x125fc0=_0x53ecd7[a3_0x18c0('0x58')];if(_0x125fc0&&_0x125fc0[_0x13571e]&&_0x125fc0[_0x13571e][_0x3259e0]){_0x3fdce5=_0x125fc0[_0x13571e][_0x3259e0];delete _0x125fc0[_0x13571e][_0x3259e0];if(Object[a3_0x18c0('0x47')](_0x125fc0[_0x13571e])[a3_0x18c0('0xe')]===0x0){delete _0x125fc0[_0x13571e];}if(Object[a3_0x18c0('0x47')](_0x125fc0)[a3_0x18c0('0xe')]===0x0){delete _0x53ecd7['listeners'];}}}_0x53ecd7[a3_0x18c0('0x56')](_0x13571e,_0x3fdce5,_0x46442b);});}function _0x14779d(_0x25b6da,_0x541060,_0x2776b3){var _0x319998=arguments['length']>0x3&&arguments[0x3]!==undefined?arguments[0x3]:{};var _0x3b479c=_0x2776b3;_0x541060[a3_0x18c0('0x4d')]()[a3_0x18c0('0x57')](_0x33856f)[a3_0x18c0('0x45')](function(_0x39baef){if(_0x319998[a3_0x18c0('0x54')]&&!_0x1d5147){var _0x218f11=_0x25b6da[a3_0x18c0('0x58')],_0x399792=_0x218f11===void 0x0?{}:_0x218f11;_0x3b479c=function handler(){delete _0x399792[_0x39baef][_0x2776b3];_0x25b6da['removeEventListener'](_0x39baef,_0x3b479c,_0x319998);for(var _0x499666=arguments[a3_0x18c0('0xe')],_0x37d55f=new Array(_0x499666),_0x5d5d32=0x0;_0x5d5d32<_0x499666;_0x5d5d32++){_0x37d55f[_0x5d5d32]=arguments[_0x5d5d32];}_0x2776b3['apply'](_0x25b6da,_0x37d55f);};if(!_0x399792[_0x39baef]){_0x399792[_0x39baef]={};}if(_0x399792[_0x39baef][_0x2776b3]){_0x25b6da[a3_0x18c0('0x56')](_0x39baef,_0x399792[_0x39baef][_0x2776b3],_0x319998);}_0x399792[_0x39baef][_0x2776b3]=_0x3b479c;_0x25b6da[a3_0x18c0('0x58')]=_0x399792;}_0x25b6da[a3_0x18c0('0x55')](_0x39baef,_0x3b479c,_0x319998);});}function _0x382487(_0x6925d1,_0x25ac85,_0x5664f8){var _0x4023e7;if(_0x493be1(Event)&&_0x493be1(CustomEvent)){_0x4023e7=new CustomEvent(_0x25ac85,{'detail':_0x5664f8,'bubbles':!![],'cancelable':!![]});}else{_0x4023e7=document[a3_0x18c0('0x59')]('CustomEvent');_0x4023e7[a3_0x18c0('0x5a')](_0x25ac85,!![],!![],_0x5664f8);}return _0x6925d1['dispatchEvent'](_0x4023e7);}function _0x5071d4(_0x58b3ff){var _0x329887=_0x58b3ff[a3_0x18c0('0x5b')]();return{'left':_0x329887[a3_0x18c0('0x5c')]+(window[a3_0x18c0('0x5d')]-document[a3_0x18c0('0x5e')][a3_0x18c0('0x5f')]),'top':_0x329887['top']+(window[a3_0x18c0('0x60')]-document[a3_0x18c0('0x5e')][a3_0x18c0('0x61')])};}var _0x10e104=_0x1044c6['location'];var _0x48732a=/^(\w+:)\/\/([^:\/?#]*):?(\d*)/i;function _0x56450c(_0x2fc29c){var _0xb506ad=_0x2fc29c[a3_0x18c0('0x62')](_0x48732a);return _0xb506ad!==null&&(_0xb506ad[0x1]!==_0x10e104[a3_0x18c0('0x63')]||_0xb506ad[0x2]!==_0x10e104['hostname']||_0xb506ad[0x3]!==_0x10e104[a3_0x18c0('0x64')]);}function _0x51b7df(_0x3523e4){var _0x3e8575='timestamp='[a3_0x18c0('0x1a')](new Date()[a3_0x18c0('0x65')]());return _0x3523e4+(_0x3523e4[a3_0x18c0('0x4b')]('?')===-0x1?'?':'&')+_0x3e8575;}function _0x5d0f4e(_0x1ca864){var _0xeea2c2=_0x1ca864[a3_0x18c0('0x66')],_0x188e26=_0x1ca864[a3_0x18c0('0x67')],_0x1fa7e3=_0x1ca864[a3_0x18c0('0x68')],_0x29fefc=_0x1ca864[a3_0x18c0('0x69')],_0x4634c9=_0x1ca864[a3_0x18c0('0x6a')];var _0x5136ba=[];if(_0x1050b1(_0x29fefc)&&_0x29fefc!==0x0){_0x5136ba['push'](a3_0x18c0('0x6b')[a3_0x18c0('0x1a')](_0x29fefc,'px)'));}if(_0x1050b1(_0x4634c9)&&_0x4634c9!==0x0){_0x5136ba[a3_0x18c0('0x6c')](a3_0x18c0('0x6d')[a3_0x18c0('0x1a')](_0x4634c9,a3_0x18c0('0x6e')));}if(_0x1050b1(_0xeea2c2)&&_0xeea2c2!==0x0){_0x5136ba[a3_0x18c0('0x6c')]('rotate('['concat'](_0xeea2c2,a3_0x18c0('0x6f')));}if(_0x1050b1(_0x188e26)&&_0x188e26!==0x1){_0x5136ba[a3_0x18c0('0x6c')](a3_0x18c0('0x70')['concat'](_0x188e26,')'));}if(_0x1050b1(_0x1fa7e3)&&_0x1fa7e3!==0x1){_0x5136ba['push']('scaleY('['concat'](_0x1fa7e3,')'));}var _0x18016b=_0x5136ba[a3_0x18c0('0xe')]?_0x5136ba['join']('\x20'):a3_0x18c0('0x22');return{'WebkitTransform':_0x18016b,'msTransform':_0x18016b,'transform':_0x18016b};}function _0x4f23d2(_0x277757){var _0x16477f=_0x4a0899({},_0x277757);var _0x3978c1=[];_0x3805fe(_0x277757,function(_0x13f1b2,_0x1b47ae){delete _0x16477f[_0x1b47ae];_0x3805fe(_0x16477f,function(_0x3f1d67){var _0x5679cf=Math[a3_0x18c0('0x71')](_0x13f1b2[a3_0x18c0('0x72')]-_0x3f1d67['startX']);var _0x163224=Math[a3_0x18c0('0x71')](_0x13f1b2['startY']-_0x3f1d67[a3_0x18c0('0x73')]);var _0x578515=Math[a3_0x18c0('0x71')](_0x13f1b2[a3_0x18c0('0x74')]-_0x3f1d67[a3_0x18c0('0x74')]);var _0x50b330=Math[a3_0x18c0('0x71')](_0x13f1b2[a3_0x18c0('0x75')]-_0x3f1d67[a3_0x18c0('0x75')]);var _0x2b5609=Math[a3_0x18c0('0x76')](_0x5679cf*_0x5679cf+_0x163224*_0x163224);var _0xf93cf4=Math[a3_0x18c0('0x76')](_0x578515*_0x578515+_0x50b330*_0x50b330);var _0xea5125=(_0xf93cf4-_0x2b5609)/_0x2b5609;_0x3978c1[a3_0x18c0('0x6c')](_0xea5125);});});_0x3978c1['sort'](function(_0x5cd2ef,_0x9e41e){return Math[a3_0x18c0('0x71')](_0x5cd2ef)<Math[a3_0x18c0('0x71')](_0x9e41e);});return _0x3978c1[0x0];}function _0x12e4a3(_0x5fa26f,_0x3f32d8){var _0x1ace40=_0x5fa26f[a3_0x18c0('0x77')],_0x581ea1=_0x5fa26f['pageY'];var _0x4b3ad1={'endX':_0x1ace40,'endY':_0x581ea1};return _0x3f32d8?_0x4b3ad1:_0x4a0899({'startX':_0x1ace40,'startY':_0x581ea1},_0x4b3ad1);}function _0x7c440f(_0x3deb5b){var _0x31ced2=0x0;var _0x1122bc=0x0;var _0x72b72f=0x0;_0x3805fe(_0x3deb5b,function(_0xc76922){var _0xfb0fc5=_0xc76922[a3_0x18c0('0x72')],_0x3bbe55=_0xc76922[a3_0x18c0('0x73')];_0x31ced2+=_0xfb0fc5;_0x1122bc+=_0x3bbe55;_0x72b72f+=0x1;});_0x31ced2/=_0x72b72f;_0x1122bc/=_0x72b72f;return{'pageX':_0x31ced2,'pageY':_0x1122bc};}function _0x3d2475(_0x51c262){var _0x4546f2=_0x51c262[a3_0x18c0('0x78')],_0x5a1a2e=_0x51c262[a3_0x18c0('0x79')],_0x5e5408=_0x51c262[a3_0x18c0('0x7a')];var _0x4a57df=arguments[a3_0x18c0('0xe')]>0x1&&arguments[0x1]!==undefined?arguments[0x1]:a3_0x18c0('0x7b');var _0x3e3eda=_0x3d2905(_0x5e5408);var _0x1895c9=_0x3d2905(_0x5a1a2e);if(_0x3e3eda&&_0x1895c9){var _0x1a6428=_0x5a1a2e*_0x4546f2;if(_0x4a57df===a3_0x18c0('0x7b')&&_0x1a6428>_0x5e5408||_0x4a57df===a3_0x18c0('0x7c')&&_0x1a6428<_0x5e5408){_0x5a1a2e=_0x5e5408/_0x4546f2;}else{_0x5e5408=_0x5a1a2e*_0x4546f2;}}else if(_0x3e3eda){_0x5a1a2e=_0x5e5408/_0x4546f2;}else if(_0x1895c9){_0x5e5408=_0x5a1a2e*_0x4546f2;}return{'width':_0x5e5408,'height':_0x5a1a2e};}function _0x1f34d(_0x43115a){var _0x5c566=_0x43115a[a3_0x18c0('0x7a')],_0x231fc8=_0x43115a['height'],_0x2823ca=_0x43115a['degree'];_0x2823ca=Math['abs'](_0x2823ca)%0xb4;if(_0x2823ca===0x5a){return{'width':_0x231fc8,'height':_0x5c566};}var _0xb0fd57=_0x2823ca%0x5a*Math['PI']/0xb4;var _0x538086=Math[a3_0x18c0('0x7d')](_0xb0fd57);var _0xc88cca=Math['cos'](_0xb0fd57);var _0x428904=_0x5c566*_0xc88cca+_0x231fc8*_0x538086;var _0x5b9299=_0x5c566*_0x538086+_0x231fc8*_0xc88cca;return _0x2823ca>0x5a?{'width':_0x5b9299,'height':_0x428904}:{'width':_0x428904,'height':_0x5b9299};}function _0x423d46(_0x33c409,_0x15dd36,_0x12e7b4,_0x486165){var _0x49211b=_0x15dd36[a3_0x18c0('0x78')],_0x2bfd8c=_0x15dd36[a3_0x18c0('0x7e')],_0x4c4b84=_0x15dd36[a3_0x18c0('0x7f')],_0x215776=_0x15dd36[a3_0x18c0('0x66')],_0x5ebdfc=_0x215776===void 0x0?0x0:_0x215776,_0x4cb08d=_0x15dd36[a3_0x18c0('0x67')],_0x51844d=_0x4cb08d===void 0x0?0x1:_0x4cb08d,_0x3d2d34=_0x15dd36['scaleY'],_0x3c4e10=_0x3d2d34===void 0x0?0x1:_0x3d2d34;var _0x49c8e0=_0x12e7b4[a3_0x18c0('0x78')],_0x3224f7=_0x12e7b4['naturalWidth'],_0x5d8dd6=_0x12e7b4[a3_0x18c0('0x7f')];var _0x2a815b=_0x486165['fillColor'],_0x25226e=_0x2a815b===void 0x0?a3_0x18c0('0x80'):_0x2a815b,_0x41778d=_0x486165['imageSmoothingEnabled'],_0x1b29c9=_0x41778d===void 0x0?!![]:_0x41778d,_0x51d759=_0x486165['imageSmoothingQuality'],_0x1144ee=_0x51d759===void 0x0?a3_0x18c0('0x81'):_0x51d759,_0x4a556e=_0x486165[a3_0x18c0('0x82')],_0x1234bf=_0x4a556e===void 0x0?Infinity:_0x4a556e,_0x5d4876=_0x486165[a3_0x18c0('0x83')],_0x2261b7=_0x5d4876===void 0x0?Infinity:_0x5d4876,_0x3a6f51=_0x486165['minWidth'],_0x52fb7e=_0x3a6f51===void 0x0?0x0:_0x3a6f51,_0x58730d=_0x486165[a3_0x18c0('0x84')],_0x33388a=_0x58730d===void 0x0?0x0:_0x58730d;var _0x4d1cef=document['createElement'](a3_0x18c0('0x85'));var _0x1e7f68=_0x4d1cef[a3_0x18c0('0x86')]('2d');var _0x3f2f77=_0x3d2475({'aspectRatio':_0x49c8e0,'width':_0x1234bf,'height':_0x2261b7});var _0x54f466=_0x3d2475({'aspectRatio':_0x49c8e0,'width':_0x52fb7e,'height':_0x33388a},a3_0x18c0('0x7c'));var _0x31f1e7=Math[a3_0x18c0('0x87')](_0x3f2f77['width'],Math[a3_0x18c0('0x88')](_0x54f466[a3_0x18c0('0x7a')],_0x3224f7));var _0x11139b=Math[a3_0x18c0('0x87')](_0x3f2f77['height'],Math[a3_0x18c0('0x88')](_0x54f466[a3_0x18c0('0x79')],_0x5d8dd6));var _0x5f0e08=_0x3d2475({'aspectRatio':_0x49211b,'width':_0x1234bf,'height':_0x2261b7});var _0x984b6d=_0x3d2475({'aspectRatio':_0x49211b,'width':_0x52fb7e,'height':_0x33388a},a3_0x18c0('0x7c'));var _0x3a9629=Math[a3_0x18c0('0x87')](_0x5f0e08['width'],Math[a3_0x18c0('0x88')](_0x984b6d[a3_0x18c0('0x7a')],_0x2bfd8c));var _0x29ffee=Math[a3_0x18c0('0x87')](_0x5f0e08['height'],Math[a3_0x18c0('0x88')](_0x984b6d[a3_0x18c0('0x79')],_0x4c4b84));var _0x522d07=[-_0x3a9629/0x2,-_0x29ffee/0x2,_0x3a9629,_0x29ffee];_0x4d1cef[a3_0x18c0('0x7a')]=_0x430365(_0x31f1e7);_0x4d1cef['height']=_0x430365(_0x11139b);_0x1e7f68[a3_0x18c0('0x89')]=_0x25226e;_0x1e7f68[a3_0x18c0('0x8a')](0x0,0x0,_0x31f1e7,_0x11139b);_0x1e7f68[a3_0x18c0('0x8b')]();_0x1e7f68['translate'](_0x31f1e7/0x2,_0x11139b/0x2);_0x1e7f68[a3_0x18c0('0x66')](_0x5ebdfc*Math['PI']/0xb4);_0x1e7f68[a3_0x18c0('0x8c')](_0x51844d,_0x3c4e10);_0x1e7f68['imageSmoothingEnabled']=_0x1b29c9;_0x1e7f68['imageSmoothingQuality']=_0x1144ee;_0x1e7f68['drawImage'][a3_0x18c0('0x0')](_0x1e7f68,[_0x33c409][a3_0x18c0('0x1a')](_0x43f16e(_0x522d07[a3_0x18c0('0x8d')](function(_0x422290){return Math[a3_0x18c0('0x8e')](_0x430365(_0x422290));}))));_0x1e7f68[a3_0x18c0('0x8f')]();return _0x4d1cef;}var _0x332dd0=String['fromCharCode'];function _0x451a37(_0x43fed1,_0xacb2b,_0x25c677){var _0xd81a64='';_0x25c677+=_0xacb2b;for(var _0x136b67=_0xacb2b;_0x136b67<_0x25c677;_0x136b67+=0x1){_0xd81a64+=_0x332dd0(_0x43fed1['getUint8'](_0x136b67));}return _0xd81a64;}var _0x4886c1=/^data:.*,/;function _0x630d53(_0x1be535){var _0x50206f=_0x1be535[a3_0x18c0('0x4e')](_0x4886c1,'');var _0x539c42=atob(_0x50206f);var _0xa97129=new ArrayBuffer(_0x539c42[a3_0x18c0('0xe')]);var _0x58eda1=new Uint8Array(_0xa97129);_0x3805fe(_0x58eda1,function(_0x301c09,_0x3719d4){_0x58eda1[_0x3719d4]=_0x539c42[a3_0x18c0('0x90')](_0x3719d4);});return _0xa97129;}function _0x9d5352(_0x28b11e,_0x5a2eee){var _0x4c01cc=[];var _0x406206=0x2000;var _0x33b9b4=new Uint8Array(_0x28b11e);while(_0x33b9b4[a3_0x18c0('0xe')]>0x0){_0x4c01cc[a3_0x18c0('0x6c')](_0x332dd0[a3_0x18c0('0x0')](null,_0x11cda3(_0x33b9b4[a3_0x18c0('0x91')](0x0,_0x406206))));_0x33b9b4=_0x33b9b4[a3_0x18c0('0x91')](_0x406206);}return a3_0x18c0('0x92')['concat'](_0x5a2eee,';base64,')[a3_0x18c0('0x1a')](btoa(_0x4c01cc[a3_0x18c0('0x93')]('')));}function _0x139349(_0xda8495){var _0x1732dc=new DataView(_0xda8495);var _0x5407ca;try{var _0x1b7845;var _0xd597f2;var _0x378c5d;if(_0x1732dc[a3_0x18c0('0x94')](0x0)===0xff&&_0x1732dc[a3_0x18c0('0x94')](0x1)===0xd8){var _0x228913=_0x1732dc[a3_0x18c0('0x95')];var _0x3a059b=0x2;while(_0x3a059b+0x1<_0x228913){if(_0x1732dc[a3_0x18c0('0x94')](_0x3a059b)===0xff&&_0x1732dc['getUint8'](_0x3a059b+0x1)===0xe1){_0xd597f2=_0x3a059b;break;}_0x3a059b+=0x1;}}if(_0xd597f2){var _0x5a3f2b=_0xd597f2+0x4;var _0x33cda3=_0xd597f2+0xa;if(_0x451a37(_0x1732dc,_0x5a3f2b,0x4)===a3_0x18c0('0x96')){var _0x2f95b5=_0x1732dc['getUint16'](_0x33cda3);_0x1b7845=_0x2f95b5===0x4949;if(_0x1b7845||_0x2f95b5===0x4d4d){if(_0x1732dc[a3_0x18c0('0x97')](_0x33cda3+0x2,_0x1b7845)===0x2a){var _0x1f6856=_0x1732dc[a3_0x18c0('0x98')](_0x33cda3+0x4,_0x1b7845);if(_0x1f6856>=0x8){_0x378c5d=_0x33cda3+_0x1f6856;}}}}}if(_0x378c5d){var _0x443cfc=_0x1732dc[a3_0x18c0('0x97')](_0x378c5d,_0x1b7845);var _0x98011c;var _0x5a3159;for(_0x5a3159=0x0;_0x5a3159<_0x443cfc;_0x5a3159+=0x1){_0x98011c=_0x378c5d+_0x5a3159*0xc+0x2;if(_0x1732dc[a3_0x18c0('0x97')](_0x98011c,_0x1b7845)===0x112){_0x98011c+=0x8;_0x5407ca=_0x1732dc[a3_0x18c0('0x97')](_0x98011c,_0x1b7845);_0x1732dc[a3_0x18c0('0x99')](_0x98011c,0x1,_0x1b7845);break;}}}}catch(_0x2eacbe){_0x5407ca=0x1;}return _0x5407ca;}function _0x394d10(_0x244c9e){var _0xc2d8bd=0x0;var _0x4bb443=0x1;var _0x47c3ff=0x1;switch(_0x244c9e){case 0x2:_0x4bb443=-0x1;break;case 0x3:_0xc2d8bd=-0xb4;break;case 0x4:_0x47c3ff=-0x1;break;case 0x5:_0xc2d8bd=0x5a;_0x47c3ff=-0x1;break;case 0x6:_0xc2d8bd=0x5a;break;case 0x7:_0xc2d8bd=0x5a;_0x4bb443=-0x1;break;case 0x8:_0xc2d8bd=-0x5a;break;default:}return{'rotate':_0xc2d8bd,'scaleX':_0x4bb443,'scaleY':_0x47c3ff};}var _0x4462f8={'render':function _0x4462f8(){this['initContainer']();this[a3_0x18c0('0x9a')]();this[a3_0x18c0('0x9b')]();this[a3_0x18c0('0x9c')]();if(this['cropped']){this[a3_0x18c0('0x9d')]();}},'initContainer':function initContainer(){var _0x12299c=this['element'],_0x404bc8=this['options'],_0x590cbc=this[a3_0x18c0('0x9e')],_0xe8a71=this['cropper'];_0x4da1b1(_0xe8a71,_0x4be1c8);_0x172260(_0x12299c,_0x4be1c8);var _0x14ac81={'width':Math[a3_0x18c0('0x88')](_0x590cbc[a3_0x18c0('0x9f')],Number(_0x404bc8[a3_0x18c0('0xa0')])||0xc8),'height':Math[a3_0x18c0('0x88')](_0x590cbc['offsetHeight'],Number(_0x404bc8[a3_0x18c0('0xa1')])||0x64)};this['containerData']=_0x14ac81;_0x2a69d8(_0xe8a71,{'width':_0x14ac81['width'],'height':_0x14ac81[a3_0x18c0('0x79')]});_0x4da1b1(_0x12299c,_0x4be1c8);_0x172260(_0xe8a71,_0x4be1c8);},'initCanvas':function initCanvas(){var _0x30bf05=this[a3_0x18c0('0xa2')],_0x4fa1b8=this[a3_0x18c0('0xa3')];var _0x216f7b=this[a3_0x18c0('0xa4')][a3_0x18c0('0xa5')];var _0x3a28cf=Math['abs'](_0x4fa1b8[a3_0x18c0('0x66')])%0xb4===0x5a;var _0x36058e=_0x3a28cf?_0x4fa1b8[a3_0x18c0('0x7f')]:_0x4fa1b8[a3_0x18c0('0x7e')];var _0x274f2b=_0x3a28cf?_0x4fa1b8[a3_0x18c0('0x7e')]:_0x4fa1b8[a3_0x18c0('0x7f')];var _0x58cc07=_0x36058e/_0x274f2b;var _0x72a2e8=_0x30bf05[a3_0x18c0('0x7a')];var _0x3cc573=_0x30bf05['height'];if(_0x30bf05[a3_0x18c0('0x79')]*_0x58cc07>_0x30bf05[a3_0x18c0('0x7a')]){if(_0x216f7b===0x3){_0x72a2e8=_0x30bf05[a3_0x18c0('0x79')]*_0x58cc07;}else{_0x3cc573=_0x30bf05[a3_0x18c0('0x7a')]/_0x58cc07;}}else if(_0x216f7b===0x3){_0x3cc573=_0x30bf05[a3_0x18c0('0x7a')]/_0x58cc07;}else{_0x72a2e8=_0x30bf05[a3_0x18c0('0x79')]*_0x58cc07;}var _0x3a9920={'aspectRatio':_0x58cc07,'naturalWidth':_0x36058e,'naturalHeight':_0x274f2b,'width':_0x72a2e8,'height':_0x3cc573};_0x3a9920[a3_0x18c0('0x5c')]=(_0x30bf05[a3_0x18c0('0x7a')]-_0x72a2e8)/0x2;_0x3a9920[a3_0x18c0('0xa6')]=(_0x30bf05[a3_0x18c0('0x79')]-_0x3cc573)/0x2;_0x3a9920[a3_0x18c0('0xa7')]=_0x3a9920[a3_0x18c0('0x5c')];_0x3a9920[a3_0x18c0('0xa8')]=_0x3a9920[a3_0x18c0('0xa6')];this[a3_0x18c0('0xa9')]=_0x3a9920;this[a3_0x18c0('0xaa')]=_0x216f7b===0x1||_0x216f7b===0x2;this['limitCanvas'](!![],!![]);this[a3_0x18c0('0xab')]=_0x4a0899({},_0x4fa1b8);this[a3_0x18c0('0xac')]=_0x4a0899({},_0x3a9920);},'limitCanvas':function limitCanvas(_0xb0c098,_0x4f5c82){var _0x5afc15=this[a3_0x18c0('0xa4')],_0x1953c6=this[a3_0x18c0('0xa2')],_0x566b27=this[a3_0x18c0('0xa9')],_0x3f3acf=this[a3_0x18c0('0xad')];var _0x3d1e0c=_0x5afc15[a3_0x18c0('0xa5')];var _0x219c8b=_0x566b27['aspectRatio'];var _0x41a172=this[a3_0x18c0('0xae')]&&_0x3f3acf;if(_0xb0c098){var _0x4e542d=Number(_0x5afc15[a3_0x18c0('0xaf')])||0x0;var _0xa0b34e=Number(_0x5afc15[a3_0x18c0('0xb0')])||0x0;if(_0x3d1e0c>0x1){_0x4e542d=Math[a3_0x18c0('0x88')](_0x4e542d,_0x1953c6['width']);_0xa0b34e=Math[a3_0x18c0('0x88')](_0xa0b34e,_0x1953c6[a3_0x18c0('0x79')]);if(_0x3d1e0c===0x3){if(_0xa0b34e*_0x219c8b>_0x4e542d){_0x4e542d=_0xa0b34e*_0x219c8b;}else{_0xa0b34e=_0x4e542d/_0x219c8b;}}}else if(_0x3d1e0c>0x0){if(_0x4e542d){_0x4e542d=Math['max'](_0x4e542d,_0x41a172?_0x3f3acf[a3_0x18c0('0x7a')]:0x0);}else if(_0xa0b34e){_0xa0b34e=Math[a3_0x18c0('0x88')](_0xa0b34e,_0x41a172?_0x3f3acf[a3_0x18c0('0x79')]:0x0);}else if(_0x41a172){_0x4e542d=_0x3f3acf['width'];_0xa0b34e=_0x3f3acf['height'];if(_0xa0b34e*_0x219c8b>_0x4e542d){_0x4e542d=_0xa0b34e*_0x219c8b;}else{_0xa0b34e=_0x4e542d/_0x219c8b;}}}var _0x18c4bc=_0x3d2475({'aspectRatio':_0x219c8b,'width':_0x4e542d,'height':_0xa0b34e});_0x4e542d=_0x18c4bc[a3_0x18c0('0x7a')];_0xa0b34e=_0x18c4bc[a3_0x18c0('0x79')];_0x566b27[a3_0x18c0('0xb1')]=_0x4e542d;_0x566b27[a3_0x18c0('0x84')]=_0xa0b34e;_0x566b27[a3_0x18c0('0x82')]=Infinity;_0x566b27[a3_0x18c0('0x83')]=Infinity;}if(_0x4f5c82){if(_0x3d1e0c>(_0x41a172?0x0:0x1)){var _0xfe8a44=_0x1953c6[a3_0x18c0('0x7a')]-_0x566b27[a3_0x18c0('0x7a')];var _0x282480=_0x1953c6['height']-_0x566b27['height'];_0x566b27[a3_0x18c0('0xb2')]=Math[a3_0x18c0('0x87')](0x0,_0xfe8a44);_0x566b27[a3_0x18c0('0xb3')]=Math['min'](0x0,_0x282480);_0x566b27[a3_0x18c0('0xb4')]=Math[a3_0x18c0('0x88')](0x0,_0xfe8a44);_0x566b27[a3_0x18c0('0xb5')]=Math['max'](0x0,_0x282480);if(_0x41a172&&this[a3_0x18c0('0xaa')]){_0x566b27[a3_0x18c0('0xb2')]=Math[a3_0x18c0('0x87')](_0x3f3acf[a3_0x18c0('0x5c')],_0x3f3acf[a3_0x18c0('0x5c')]+(_0x3f3acf[a3_0x18c0('0x7a')]-_0x566b27['width']));_0x566b27[a3_0x18c0('0xb3')]=Math[a3_0x18c0('0x87')](_0x3f3acf[a3_0x18c0('0xa6')],_0x3f3acf[a3_0x18c0('0xa6')]+(_0x3f3acf[a3_0x18c0('0x79')]-_0x566b27[a3_0x18c0('0x79')]));_0x566b27[a3_0x18c0('0xb4')]=_0x3f3acf[a3_0x18c0('0x5c')];_0x566b27[a3_0x18c0('0xb5')]=_0x3f3acf[a3_0x18c0('0xa6')];if(_0x3d1e0c===0x2){if(_0x566b27[a3_0x18c0('0x7a')]>=_0x1953c6[a3_0x18c0('0x7a')]){_0x566b27['minLeft']=Math[a3_0x18c0('0x87')](0x0,_0xfe8a44);_0x566b27['maxLeft']=Math[a3_0x18c0('0x88')](0x0,_0xfe8a44);}if(_0x566b27[a3_0x18c0('0x79')]>=_0x1953c6[a3_0x18c0('0x79')]){_0x566b27[a3_0x18c0('0xb3')]=Math[a3_0x18c0('0x87')](0x0,_0x282480);_0x566b27[a3_0x18c0('0xb5')]=Math[a3_0x18c0('0x88')](0x0,_0x282480);}}}}else{_0x566b27[a3_0x18c0('0xb2')]=-_0x566b27[a3_0x18c0('0x7a')];_0x566b27[a3_0x18c0('0xb3')]=-_0x566b27[a3_0x18c0('0x79')];_0x566b27[a3_0x18c0('0xb4')]=_0x1953c6[a3_0x18c0('0x7a')];_0x566b27[a3_0x18c0('0xb5')]=_0x1953c6[a3_0x18c0('0x79')];}}},'renderCanvas':function renderCanvas(_0x4891bd,_0x6ba1f6){var _0x5e5b31=this['canvasData'],_0x41c720=this[a3_0x18c0('0xa3')];if(_0x6ba1f6){var _0x586a4e=_0x1f34d({'width':_0x41c720[a3_0x18c0('0x7e')]*Math['abs'](_0x41c720['scaleX']||0x1),'height':_0x41c720[a3_0x18c0('0x7f')]*Math[a3_0x18c0('0x71')](_0x41c720[a3_0x18c0('0x68')]||0x1),'degree':_0x41c720[a3_0x18c0('0x66')]||0x0}),_0x42d68c=_0x586a4e[a3_0x18c0('0x7a')],_0x2b6fc7=_0x586a4e['height'];var _0x25b5fc=_0x5e5b31['width']*(_0x42d68c/_0x5e5b31['naturalWidth']);var _0xb83836=_0x5e5b31[a3_0x18c0('0x79')]*(_0x2b6fc7/_0x5e5b31[a3_0x18c0('0x7f')]);_0x5e5b31[a3_0x18c0('0x5c')]-=(_0x25b5fc-_0x5e5b31[a3_0x18c0('0x7a')])/0x2;_0x5e5b31[a3_0x18c0('0xa6')]-=(_0xb83836-_0x5e5b31[a3_0x18c0('0x79')])/0x2;_0x5e5b31['width']=_0x25b5fc;_0x5e5b31[a3_0x18c0('0x79')]=_0xb83836;_0x5e5b31[a3_0x18c0('0x78')]=_0x42d68c/_0x2b6fc7;_0x5e5b31[a3_0x18c0('0x7e')]=_0x42d68c;_0x5e5b31[a3_0x18c0('0x7f')]=_0x2b6fc7;this[a3_0x18c0('0xb6')](!![],![]);}if(_0x5e5b31['width']>_0x5e5b31['maxWidth']||_0x5e5b31[a3_0x18c0('0x7a')]<_0x5e5b31['minWidth']){_0x5e5b31['left']=_0x5e5b31[a3_0x18c0('0xa7')];}if(_0x5e5b31['height']>_0x5e5b31[a3_0x18c0('0x83')]||_0x5e5b31['height']<_0x5e5b31[a3_0x18c0('0x84')]){_0x5e5b31[a3_0x18c0('0xa6')]=_0x5e5b31[a3_0x18c0('0xa8')];}_0x5e5b31['width']=Math[a3_0x18c0('0x87')](Math['max'](_0x5e5b31[a3_0x18c0('0x7a')],_0x5e5b31[a3_0x18c0('0xb1')]),_0x5e5b31['maxWidth']);_0x5e5b31[a3_0x18c0('0x79')]=Math['min'](Math[a3_0x18c0('0x88')](_0x5e5b31['height'],_0x5e5b31[a3_0x18c0('0x84')]),_0x5e5b31['maxHeight']);this['limitCanvas'](![],!![]);_0x5e5b31[a3_0x18c0('0x5c')]=Math[a3_0x18c0('0x87')](Math[a3_0x18c0('0x88')](_0x5e5b31[a3_0x18c0('0x5c')],_0x5e5b31[a3_0x18c0('0xb2')]),_0x5e5b31[a3_0x18c0('0xb4')]);_0x5e5b31[a3_0x18c0('0xa6')]=Math['min'](Math[a3_0x18c0('0x88')](_0x5e5b31[a3_0x18c0('0xa6')],_0x5e5b31[a3_0x18c0('0xb3')]),_0x5e5b31[a3_0x18c0('0xb5')]);_0x5e5b31[a3_0x18c0('0xa7')]=_0x5e5b31['left'];_0x5e5b31['oldTop']=_0x5e5b31[a3_0x18c0('0xa6')];_0x2a69d8(this[a3_0x18c0('0x85')],_0x4a0899({'width':_0x5e5b31[a3_0x18c0('0x7a')],'height':_0x5e5b31[a3_0x18c0('0x79')]},_0x5d0f4e({'translateX':_0x5e5b31[a3_0x18c0('0x5c')],'translateY':_0x5e5b31[a3_0x18c0('0xa6')]})));this[a3_0x18c0('0xb7')](_0x4891bd);if(this[a3_0x18c0('0xae')]&&this[a3_0x18c0('0xaa')]){this[a3_0x18c0('0xb8')](!![],!![]);}},'renderImage':function renderImage(_0x37aecd){var _0x3a3daa=this[a3_0x18c0('0xa9')],_0x52706e=this[a3_0x18c0('0xa3')];var _0x34b89b=_0x52706e[a3_0x18c0('0x7e')]*(_0x3a3daa['width']/_0x3a3daa['naturalWidth']);var _0x9795bd=_0x52706e[a3_0x18c0('0x7f')]*(_0x3a3daa[a3_0x18c0('0x79')]/_0x3a3daa[a3_0x18c0('0x7f')]);_0x4a0899(_0x52706e,{'width':_0x34b89b,'height':_0x9795bd,'left':(_0x3a3daa[a3_0x18c0('0x7a')]-_0x34b89b)/0x2,'top':(_0x3a3daa[a3_0x18c0('0x79')]-_0x9795bd)/0x2});_0x2a69d8(this[a3_0x18c0('0xb9')],_0x4a0899({'width':_0x52706e['width'],'height':_0x52706e['height']},_0x5d0f4e(_0x4a0899({'translateX':_0x52706e[a3_0x18c0('0x5c')],'translateY':_0x52706e['top']},_0x52706e))));if(_0x37aecd){this['output']();}},'initCropBox':function initCropBox(){var _0x1013ae=this[a3_0x18c0('0xa4')],_0x54b681=this[a3_0x18c0('0xa9')];var _0x44368c=_0x1013ae[a3_0x18c0('0x78')]||_0x1013ae[a3_0x18c0('0xba')];var _0x40d50a=Number(_0x1013ae[a3_0x18c0('0xbb')])||0.8;var _0x1d3c75={'width':_0x54b681[a3_0x18c0('0x7a')],'height':_0x54b681[a3_0x18c0('0x79')]};if(_0x44368c){if(_0x54b681[a3_0x18c0('0x79')]*_0x44368c>_0x54b681[a3_0x18c0('0x7a')]){_0x1d3c75[a3_0x18c0('0x79')]=_0x1d3c75['width']/_0x44368c;}else{_0x1d3c75[a3_0x18c0('0x7a')]=_0x1d3c75['height']*_0x44368c;}}this[a3_0x18c0('0xad')]=_0x1d3c75;this[a3_0x18c0('0xb8')](!![],!![]);_0x1d3c75[a3_0x18c0('0x7a')]=Math['min'](Math['max'](_0x1d3c75[a3_0x18c0('0x7a')],_0x1d3c75[a3_0x18c0('0xb1')]),_0x1d3c75['maxWidth']);_0x1d3c75[a3_0x18c0('0x79')]=Math[a3_0x18c0('0x87')](Math[a3_0x18c0('0x88')](_0x1d3c75[a3_0x18c0('0x79')],_0x1d3c75[a3_0x18c0('0x84')]),_0x1d3c75[a3_0x18c0('0x83')]);_0x1d3c75[a3_0x18c0('0x7a')]=Math[a3_0x18c0('0x88')](_0x1d3c75['minWidth'],_0x1d3c75[a3_0x18c0('0x7a')]*_0x40d50a);_0x1d3c75[a3_0x18c0('0x79')]=Math[a3_0x18c0('0x88')](_0x1d3c75[a3_0x18c0('0x84')],_0x1d3c75[a3_0x18c0('0x79')]*_0x40d50a);_0x1d3c75[a3_0x18c0('0x5c')]=_0x54b681['left']+(_0x54b681[a3_0x18c0('0x7a')]-_0x1d3c75[a3_0x18c0('0x7a')])/0x2;_0x1d3c75['top']=_0x54b681[a3_0x18c0('0xa6')]+(_0x54b681['height']-_0x1d3c75[a3_0x18c0('0x79')])/0x2;_0x1d3c75[a3_0x18c0('0xa7')]=_0x1d3c75[a3_0x18c0('0x5c')];_0x1d3c75[a3_0x18c0('0xa8')]=_0x1d3c75['top'];this[a3_0x18c0('0xbc')]=_0x4a0899({},_0x1d3c75);},'limitCropBox':function limitCropBox(_0x41bd0b,_0x1a0bee){var _0x4d78f6=this['options'],_0xbcd053=this[a3_0x18c0('0xa2')],_0x4de568=this[a3_0x18c0('0xa9')],_0x48ad11=this[a3_0x18c0('0xad')],_0x31d69b=this[a3_0x18c0('0xaa')];var _0x4f8013=_0x4d78f6['aspectRatio'];if(_0x41bd0b){var _0x487fff=Number(_0x4d78f6[a3_0x18c0('0xbd')])||0x0;var _0x4df729=Number(_0x4d78f6[a3_0x18c0('0xbe')])||0x0;var _0x21bbc4=_0x31d69b?Math[a3_0x18c0('0x87')](_0xbcd053[a3_0x18c0('0x7a')],_0x4de568[a3_0x18c0('0x7a')],_0x4de568[a3_0x18c0('0x7a')]+_0x4de568['left'],_0xbcd053[a3_0x18c0('0x7a')]-_0x4de568[a3_0x18c0('0x5c')]):_0xbcd053[a3_0x18c0('0x7a')];var _0x12d60f=_0x31d69b?Math['min'](_0xbcd053[a3_0x18c0('0x79')],_0x4de568[a3_0x18c0('0x79')],_0x4de568[a3_0x18c0('0x79')]+_0x4de568['top'],_0xbcd053[a3_0x18c0('0x79')]-_0x4de568['top']):_0xbcd053[a3_0x18c0('0x79')];_0x487fff=Math['min'](_0x487fff,_0xbcd053[a3_0x18c0('0x7a')]);_0x4df729=Math[a3_0x18c0('0x87')](_0x4df729,_0xbcd053[a3_0x18c0('0x79')]);if(_0x4f8013){if(_0x487fff&&_0x4df729){if(_0x4df729*_0x4f8013>_0x487fff){_0x4df729=_0x487fff/_0x4f8013;}else{_0x487fff=_0x4df729*_0x4f8013;}}else if(_0x487fff){_0x4df729=_0x487fff/_0x4f8013;}else if(_0x4df729){_0x487fff=_0x4df729*_0x4f8013;}if(_0x12d60f*_0x4f8013>_0x21bbc4){_0x12d60f=_0x21bbc4/_0x4f8013;}else{_0x21bbc4=_0x12d60f*_0x4f8013;}}_0x48ad11[a3_0x18c0('0xb1')]=Math[a3_0x18c0('0x87')](_0x487fff,_0x21bbc4);_0x48ad11[a3_0x18c0('0x84')]=Math[a3_0x18c0('0x87')](_0x4df729,_0x12d60f);_0x48ad11[a3_0x18c0('0x82')]=_0x21bbc4;_0x48ad11[a3_0x18c0('0x83')]=_0x12d60f;}if(_0x1a0bee){if(_0x31d69b){_0x48ad11[a3_0x18c0('0xb2')]=Math[a3_0x18c0('0x88')](0x0,_0x4de568[a3_0x18c0('0x5c')]);_0x48ad11[a3_0x18c0('0xb3')]=Math[a3_0x18c0('0x88')](0x0,_0x4de568[a3_0x18c0('0xa6')]);_0x48ad11[a3_0x18c0('0xb4')]=Math['min'](_0xbcd053[a3_0x18c0('0x7a')],_0x4de568[a3_0x18c0('0x5c')]+_0x4de568['width'])-_0x48ad11[a3_0x18c0('0x7a')];_0x48ad11[a3_0x18c0('0xb5')]=Math[a3_0x18c0('0x87')](_0xbcd053[a3_0x18c0('0x79')],_0x4de568[a3_0x18c0('0xa6')]+_0x4de568[a3_0x18c0('0x79')])-_0x48ad11[a3_0x18c0('0x79')];}else{_0x48ad11['minLeft']=0x0;_0x48ad11[a3_0x18c0('0xb3')]=0x0;_0x48ad11['maxLeft']=_0xbcd053['width']-_0x48ad11[a3_0x18c0('0x7a')];_0x48ad11[a3_0x18c0('0xb5')]=_0xbcd053[a3_0x18c0('0x79')]-_0x48ad11[a3_0x18c0('0x79')];}}},'renderCropBox':function renderCropBox(){var _0x3dad97=this[a3_0x18c0('0xa4')],_0x21ef96=this['containerData'],_0x231494=this[a3_0x18c0('0xad')];if(_0x231494[a3_0x18c0('0x7a')]>_0x231494[a3_0x18c0('0x82')]||_0x231494['width']<_0x231494[a3_0x18c0('0xb1')]){_0x231494[a3_0x18c0('0x5c')]=_0x231494[a3_0x18c0('0xa7')];}if(_0x231494['height']>_0x231494['maxHeight']||_0x231494[a3_0x18c0('0x79')]<_0x231494['minHeight']){_0x231494[a3_0x18c0('0xa6')]=_0x231494['oldTop'];}_0x231494['width']=Math[a3_0x18c0('0x87')](Math[a3_0x18c0('0x88')](_0x231494[a3_0x18c0('0x7a')],_0x231494[a3_0x18c0('0xb1')]),_0x231494[a3_0x18c0('0x82')]);_0x231494[a3_0x18c0('0x79')]=Math[a3_0x18c0('0x87')](Math[a3_0x18c0('0x88')](_0x231494['height'],_0x231494['minHeight']),_0x231494['maxHeight']);this['limitCropBox'](![],!![]);_0x231494[a3_0x18c0('0x5c')]=Math[a3_0x18c0('0x87')](Math[a3_0x18c0('0x88')](_0x231494[a3_0x18c0('0x5c')],_0x231494[a3_0x18c0('0xb2')]),_0x231494[a3_0x18c0('0xb4')]);_0x231494['top']=Math[a3_0x18c0('0x87')](Math['max'](_0x231494[a3_0x18c0('0xa6')],_0x231494[a3_0x18c0('0xb3')]),_0x231494[a3_0x18c0('0xb5')]);_0x231494[a3_0x18c0('0xa7')]=_0x231494[a3_0x18c0('0x5c')];_0x231494[a3_0x18c0('0xa8')]=_0x231494[a3_0x18c0('0xa6')];if(_0x3dad97[a3_0x18c0('0xbf')]&&_0x3dad97['cropBoxMovable']){_0x33daff(this[a3_0x18c0('0xc0')],_0x37313d,_0x231494['width']>=_0x21ef96[a3_0x18c0('0x7a')]&&_0x231494[a3_0x18c0('0x79')]>=_0x21ef96[a3_0x18c0('0x79')]?_0x1e5569:_0x10ef2b);}_0x2a69d8(this[a3_0x18c0('0xc1')],_0x4a0899({'width':_0x231494['width'],'height':_0x231494[a3_0x18c0('0x79')]},_0x5d0f4e({'translateX':_0x231494[a3_0x18c0('0x5c')],'translateY':_0x231494[a3_0x18c0('0xa6')]})));if(this[a3_0x18c0('0xae')]&&this['limited']){this[a3_0x18c0('0xb6')](!![],!![]);}if(!this[a3_0x18c0('0xc2')]){this[a3_0x18c0('0xc3')]();}},'output':function output(){this[a3_0x18c0('0xc4')]();_0x382487(this[a3_0x18c0('0xc5')],_0x46e075,this[a3_0x18c0('0xc6')]());}};var _0x6cf166={'initPreview':function initPreview(){var _0x56eff4=this[a3_0x18c0('0xc5')],_0x4deb98=this[a3_0x18c0('0xc7')];var _0x6cf166=this[a3_0x18c0('0xa4')][a3_0x18c0('0xc4')];var _0x2a92e4=_0x4deb98?this[a3_0x18c0('0xc8')]:this[a3_0x18c0('0xc9')];var _0x2f531f=_0x56eff4[a3_0x18c0('0xca')]||a3_0x18c0('0xcb');var _0x35a77=document[a3_0x18c0('0xcc')](a3_0x18c0('0xcd'));if(_0x4deb98){_0x35a77[a3_0x18c0('0xc7')]=_0x4deb98;}_0x35a77[a3_0x18c0('0xce')]=_0x2a92e4;_0x35a77[a3_0x18c0('0xca')]=_0x2f531f;this[a3_0x18c0('0xcf')]['appendChild'](_0x35a77);this['viewBoxImage']=_0x35a77;if(!_0x6cf166){return;}var _0x5be209=_0x6cf166;if(typeof _0x6cf166===a3_0x18c0('0xd0')){_0x5be209=_0x56eff4[a3_0x18c0('0xd1')][a3_0x18c0('0xd2')](_0x6cf166);}else if(_0x6cf166[a3_0x18c0('0xd3')]){_0x5be209=[_0x6cf166];}this[a3_0x18c0('0xd4')]=_0x5be209;_0x3805fe(_0x5be209,function(_0x2c4ce7){var _0x132662=document['createElement'](a3_0x18c0('0xcd'));_0x33daff(_0x2c4ce7,_0x139338,{'width':_0x2c4ce7[a3_0x18c0('0x9f')],'height':_0x2c4ce7[a3_0x18c0('0xd5')],'html':_0x2c4ce7['innerHTML']});if(_0x4deb98){_0x132662[a3_0x18c0('0xc7')]=_0x4deb98;}_0x132662[a3_0x18c0('0xce')]=_0x2a92e4;_0x132662['alt']=_0x2f531f;_0x132662['style'][a3_0x18c0('0xd6')]=a3_0x18c0('0xd7')+a3_0x18c0('0xd8')+'height:auto;'+a3_0x18c0('0xd9')+'min-height:0!important;'+'max-width:none!important;'+a3_0x18c0('0xda')+a3_0x18c0('0xdb');_0x2c4ce7[a3_0x18c0('0xdc')]='';_0x2c4ce7[a3_0x18c0('0xdd')](_0x132662);});},'resetPreview':function resetPreview(){_0x3805fe(this[a3_0x18c0('0xd4')],function(_0x46ce8c){var _0xb2c7aa=_0xb20d60(_0x46ce8c,_0x139338);_0x2a69d8(_0x46ce8c,{'width':_0xb2c7aa[a3_0x18c0('0x7a')],'height':_0xb2c7aa[a3_0x18c0('0x79')]});_0x46ce8c['innerHTML']=_0xb2c7aa['html'];_0x467dfc(_0x46ce8c,_0x139338);});},'preview':function _0x6cf166(){var _0x34655b=this['imageData'],_0x2fcaa9=this[a3_0x18c0('0xa9')],_0x394fb0=this[a3_0x18c0('0xad')];var _0x1a33a3=_0x394fb0['width'],_0x1be893=_0x394fb0[a3_0x18c0('0x79')];var _0x111df9=_0x34655b['width'],_0x5eff68=_0x34655b['height'];var _0x36b828=_0x394fb0[a3_0x18c0('0x5c')]-_0x2fcaa9[a3_0x18c0('0x5c')]-_0x34655b[a3_0x18c0('0x5c')];var _0x1c22f5=_0x394fb0[a3_0x18c0('0xa6')]-_0x2fcaa9[a3_0x18c0('0xa6')]-_0x34655b[a3_0x18c0('0xa6')];if(!this['cropped']||this[a3_0x18c0('0xc2')]){return;}_0x2a69d8(this[a3_0x18c0('0xde')],_0x4a0899({'width':_0x111df9,'height':_0x5eff68},_0x5d0f4e(_0x4a0899({'translateX':-_0x36b828,'translateY':-_0x1c22f5},_0x34655b))));_0x3805fe(this[a3_0x18c0('0xd4')],function(_0x3bc913){var _0x15b89e=_0xb20d60(_0x3bc913,_0x139338);var _0x534382=_0x15b89e[a3_0x18c0('0x7a')];var _0x1e0547=_0x15b89e[a3_0x18c0('0x79')];var _0x42137d=_0x534382;var _0x5034bc=_0x1e0547;var _0x7300fe=0x1;if(_0x1a33a3){_0x7300fe=_0x534382/_0x1a33a3;_0x5034bc=_0x1be893*_0x7300fe;}if(_0x1be893&&_0x5034bc>_0x1e0547){_0x7300fe=_0x1e0547/_0x1be893;_0x42137d=_0x1a33a3*_0x7300fe;_0x5034bc=_0x1e0547;}_0x2a69d8(_0x3bc913,{'width':_0x42137d,'height':_0x5034bc});_0x2a69d8(_0x3bc913[a3_0x18c0('0xdf')](a3_0x18c0('0xcd'))[0x0],_0x4a0899({'width':_0x111df9*_0x7300fe,'height':_0x5eff68*_0x7300fe},_0x5d0f4e(_0x4a0899({'translateX':-_0x36b828*_0x7300fe,'translateY':-_0x1c22f5*_0x7300fe},_0x34655b))));});}};var _0x51ce67={'bind':function bind(){var _0x849a08=this[a3_0x18c0('0xc5')],_0x570842=this['options'],_0xd54d58=this[a3_0x18c0('0x17')];if(_0x493be1(_0x570842[a3_0x18c0('0xe0')])){_0x14779d(_0x849a08,_0x22f7c7,_0x570842[a3_0x18c0('0xe0')]);}if(_0x493be1(_0x570842[a3_0x18c0('0x24')])){_0x14779d(_0x849a08,_0x5553c8,_0x570842['cropmove']);}if(_0x493be1(_0x570842[a3_0x18c0('0x23')])){_0x14779d(_0x849a08,_0xb165fb,_0x570842[a3_0x18c0('0x23')]);}if(_0x493be1(_0x570842[a3_0x18c0('0x18')])){_0x14779d(_0x849a08,_0x46e075,_0x570842[a3_0x18c0('0x18')]);}if(_0x493be1(_0x570842[a3_0x18c0('0x30')])){_0x14779d(_0x849a08,_0x13275e,_0x570842[a3_0x18c0('0x30')]);}_0x14779d(_0xd54d58,_0x5e7bfa,this[a3_0x18c0('0xe1')]=this[a3_0x18c0('0xe2')]['bind'](this));if(_0x570842[a3_0x18c0('0xe3')]&&_0x570842[a3_0x18c0('0xe4')]){_0x14779d(_0xd54d58,_0xcb335,this['onWheel']=this[a3_0x18c0('0x2f')][a3_0x18c0('0xe5')](this),{'passive':![],'capture':!![]});}if(_0x570842[a3_0x18c0('0xe6')]){_0x14779d(_0xd54d58,_0x2c15bf,this[a3_0x18c0('0xe7')]=this[a3_0x18c0('0xe8')][a3_0x18c0('0xe5')](this));}_0x14779d(_0x849a08[a3_0x18c0('0xd1')],_0x44aa4f,this[a3_0x18c0('0xe9')]=this[a3_0x18c0('0xea')]['bind'](this));_0x14779d(_0x849a08[a3_0x18c0('0xd1')],_0x2c7944,this[a3_0x18c0('0xeb')]=this[a3_0x18c0('0xec')]['bind'](this));if(_0x570842[a3_0x18c0('0xed')]){_0x14779d(window,_0x5dee22,this[a3_0x18c0('0xee')]=this[a3_0x18c0('0x2e')][a3_0x18c0('0xe5')](this));}},'unbind':function unbind(){var _0x3f0efb=this['element'],_0x1b4a52=this[a3_0x18c0('0xa4')],_0x439576=this[a3_0x18c0('0x17')];if(_0x493be1(_0x1b4a52[a3_0x18c0('0xe0')])){_0x15aecc(_0x3f0efb,_0x22f7c7,_0x1b4a52['cropstart']);}if(_0x493be1(_0x1b4a52[a3_0x18c0('0x24')])){_0x15aecc(_0x3f0efb,_0x5553c8,_0x1b4a52[a3_0x18c0('0x24')]);}if(_0x493be1(_0x1b4a52['cropend'])){_0x15aecc(_0x3f0efb,_0xb165fb,_0x1b4a52['cropend']);}if(_0x493be1(_0x1b4a52[a3_0x18c0('0x18')])){_0x15aecc(_0x3f0efb,_0x46e075,_0x1b4a52[a3_0x18c0('0x18')]);}if(_0x493be1(_0x1b4a52['zoom'])){_0x15aecc(_0x3f0efb,_0x13275e,_0x1b4a52['zoom']);}_0x15aecc(_0x439576,_0x5e7bfa,this['onCropStart']);if(_0x1b4a52['zoomable']&&_0x1b4a52[a3_0x18c0('0xe4')]){_0x15aecc(_0x439576,_0xcb335,this['onWheel'],{'passive':![],'capture':!![]});}if(_0x1b4a52[a3_0x18c0('0xe6')]){_0x15aecc(_0x439576,_0x2c15bf,this['onDblclick']);}_0x15aecc(_0x3f0efb[a3_0x18c0('0xd1')],_0x44aa4f,this[a3_0x18c0('0xe9')]);_0x15aecc(_0x3f0efb['ownerDocument'],_0x2c7944,this[a3_0x18c0('0xeb')]);if(_0x1b4a52[a3_0x18c0('0xed')]){_0x15aecc(window,_0x5dee22,this['onResize']);}}};var _0x1cec71={'resize':function resize(){var _0x2ba272=this[a3_0x18c0('0xa4')],_0x2886d7=this['container'],_0x1ed6e5=this[a3_0x18c0('0xa2')];var _0x1b755b=Number(_0x2ba272[a3_0x18c0('0xa0')])||_0x1a983e;var _0x184e1f=Number(_0x2ba272[a3_0x18c0('0xa1')])||_0x18cadf;if(this[a3_0x18c0('0xc2')]||_0x1ed6e5['width']<=_0x1b755b||_0x1ed6e5['height']<=_0x184e1f){return;}var _0x2528b5=_0x2886d7[a3_0x18c0('0x9f')]/_0x1ed6e5['width'];if(_0x2528b5!==0x1||_0x2886d7['offsetHeight']!==_0x1ed6e5[a3_0x18c0('0x79')]){var _0x596eb;var _0x1ed50d;if(_0x2ba272[a3_0x18c0('0x8f')]){_0x596eb=this[a3_0x18c0('0xef')]();_0x1ed50d=this['getCropBoxData']();}this[a3_0x18c0('0xf0')]();if(_0x2ba272[a3_0x18c0('0x8f')]){this[a3_0x18c0('0xf1')](_0x3805fe(_0x596eb,function(_0x5958aa,_0x1af59f){_0x596eb[_0x1af59f]=_0x5958aa*_0x2528b5;}));this['setCropBoxData'](_0x3805fe(_0x1ed50d,function(_0x1694dc,_0x367230){_0x1ed50d[_0x367230]=_0x1694dc*_0x2528b5;}));}}},'dblclick':function dblclick(){if(this[a3_0x18c0('0xc2')]||this[a3_0x18c0('0xa4')][a3_0x18c0('0xf2')]===_0x4f3640){return;}this[a3_0x18c0('0xf3')](_0x2f5c18(this[a3_0x18c0('0xf4')],_0x1f7d53)?_0x5ef433:_0x1bfbdb);},'wheel':function wheel(_0x4fd8bc){var _0x4f0d2f=this;var _0x1b8b8b=Number(this[a3_0x18c0('0xa4')][a3_0x18c0('0xf5')])||0.1;var _0x1ad4e7=0x1;if(this[a3_0x18c0('0xc2')]){return;}_0x4fd8bc[a3_0x18c0('0xf6')]();if(this['wheeling']){return;}this[a3_0x18c0('0xf7')]=!![];setTimeout(function(){_0x4f0d2f[a3_0x18c0('0xf7')]=![];},0x32);if(_0x4fd8bc[a3_0x18c0('0xf8')]){_0x1ad4e7=_0x4fd8bc['deltaY']>0x0?0x1:-0x1;}else if(_0x4fd8bc[a3_0x18c0('0xf9')]){_0x1ad4e7=-_0x4fd8bc[a3_0x18c0('0xf9')]/0x78;}else if(_0x4fd8bc[a3_0x18c0('0xfa')]){_0x1ad4e7=_0x4fd8bc['detail']>0x0?0x1:-0x1;}this['zoom'](-_0x1ad4e7*_0x1b8b8b,_0x4fd8bc);},'cropStart':function cropStart(_0x8a0166){var _0x3a72e2=_0x8a0166[a3_0x18c0('0xfb')],_0xc7042c=_0x8a0166[a3_0x18c0('0xfc')];if(this[a3_0x18c0('0xc2')]||_0x1050b1(_0x3a72e2)&&_0x3a72e2!==0x1||_0x1050b1(_0xc7042c)&&_0xc7042c!==0x0||_0x8a0166[a3_0x18c0('0xfd')]){return;}var _0x16c97c=this[a3_0x18c0('0xa4')],_0x5932f3=this[a3_0x18c0('0xfe')];var _0x47ec1;if(_0x8a0166[a3_0x18c0('0xff')]){_0x3805fe(_0x8a0166[a3_0x18c0('0xff')],function(_0x365bb2){_0x5932f3[_0x365bb2[a3_0x18c0('0x100')]]=_0x12e4a3(_0x365bb2);});}else{_0x5932f3[_0x8a0166[a3_0x18c0('0x101')]||0x0]=_0x12e4a3(_0x8a0166);}if(Object[a3_0x18c0('0x47')](_0x5932f3)[a3_0x18c0('0xe')]>0x1&&_0x16c97c[a3_0x18c0('0xe3')]&&_0x16c97c[a3_0x18c0('0x102')]){_0x47ec1=_0xccf464;}else{_0x47ec1=_0xb20d60(_0x8a0166['target'],_0x37313d);}if(!_0x3d8cd0['test'](_0x47ec1)){return;}if(_0x382487(this[a3_0x18c0('0xc5')],_0x22f7c7,{'originalEvent':_0x8a0166,'action':_0x47ec1})===![]){return;}_0x8a0166['preventDefault']();this[a3_0x18c0('0x103')]=_0x47ec1;this[a3_0x18c0('0x104')]=![];if(_0x47ec1===_0x42a459){this[a3_0x18c0('0x104')]=!![];_0x4da1b1(this[a3_0x18c0('0xf4')],_0x2808da);}},'cropMove':function cropMove(_0x224871){var _0xcb9a46=this[a3_0x18c0('0x103')];if(this['disabled']||!_0xcb9a46){return;}var _0x598a41=this[a3_0x18c0('0xfe')];_0x224871[a3_0x18c0('0xf6')]();if(_0x382487(this['element'],_0x5553c8,{'originalEvent':_0x224871,'action':_0xcb9a46})===![]){return;}if(_0x224871[a3_0x18c0('0xff')]){_0x3805fe(_0x224871['changedTouches'],function(_0x26263d){_0x4a0899(_0x598a41[_0x26263d[a3_0x18c0('0x100')]]||{},_0x12e4a3(_0x26263d,!![]));});}else{_0x4a0899(_0x598a41[_0x224871[a3_0x18c0('0x101')]||0x0]||{},_0x12e4a3(_0x224871,!![]));}this[a3_0x18c0('0x105')](_0x224871);},'cropEnd':function cropEnd(_0x1d47e2){if(this[a3_0x18c0('0xc2')]){return;}var _0x240d67=this['action'],_0xbd11f4=this[a3_0x18c0('0xfe')];if(_0x1d47e2[a3_0x18c0('0xff')]){_0x3805fe(_0x1d47e2[a3_0x18c0('0xff')],function(_0x402049){delete _0xbd11f4[_0x402049['identifier']];});}else{delete _0xbd11f4[_0x1d47e2[a3_0x18c0('0x101')]||0x0];}if(!_0x240d67){return;}_0x1d47e2[a3_0x18c0('0xf6')]();if(!Object['keys'](_0xbd11f4)['length']){this[a3_0x18c0('0x103')]='';}if(this[a3_0x18c0('0x104')]){this['cropping']=![];_0x336315(this[a3_0x18c0('0xf4')],_0x2808da,this[a3_0x18c0('0xae')]&&this['options'][a3_0x18c0('0x106')]);}_0x382487(this['element'],_0xb165fb,{'originalEvent':_0x1d47e2,'action':_0x240d67});}};var _0x6cd8cc={'change':function _0x6cd8cc(_0x1a7f8b){var _0x227638=this[a3_0x18c0('0xa4')],_0x5ac6e0=this['canvasData'],_0x3b246e=this[a3_0x18c0('0xa2')],_0x96c569=this[a3_0x18c0('0xad')],_0xd31f1d=this['pointers'];var _0x1523fd=this[a3_0x18c0('0x103')];var _0x5996db=_0x227638['aspectRatio'];var _0x2a87db=_0x96c569[a3_0x18c0('0x5c')],_0x3cd345=_0x96c569[a3_0x18c0('0xa6')],_0x13e5dd=_0x96c569['width'],_0x456ba5=_0x96c569['height'];var _0x36ca6f=_0x2a87db+_0x13e5dd;var _0x15812e=_0x3cd345+_0x456ba5;var _0x11e11d=0x0;var _0x293206=0x0;var _0x1f319a=_0x3b246e[a3_0x18c0('0x7a')];var _0x397409=_0x3b246e[a3_0x18c0('0x79')];var _0x1f524e=!![];var _0xbf77d9;if(!_0x5996db&&_0x1a7f8b[a3_0x18c0('0x107')]){_0x5996db=_0x13e5dd&&_0x456ba5?_0x13e5dd/_0x456ba5:0x1;}if(this['limited']){_0x11e11d=_0x96c569[a3_0x18c0('0xb2')];_0x293206=_0x96c569[a3_0x18c0('0xb3')];_0x1f319a=_0x11e11d+Math[a3_0x18c0('0x87')](_0x3b246e['width'],_0x5ac6e0[a3_0x18c0('0x7a')],_0x5ac6e0[a3_0x18c0('0x5c')]+_0x5ac6e0[a3_0x18c0('0x7a')]);_0x397409=_0x293206+Math[a3_0x18c0('0x87')](_0x3b246e[a3_0x18c0('0x79')],_0x5ac6e0[a3_0x18c0('0x79')],_0x5ac6e0[a3_0x18c0('0xa6')]+_0x5ac6e0[a3_0x18c0('0x79')]);}var _0x3d585f=_0xd31f1d[Object['keys'](_0xd31f1d)[0x0]];var _0x19cb09={'x':_0x3d585f[a3_0x18c0('0x74')]-_0x3d585f['startX'],'y':_0x3d585f[a3_0x18c0('0x75')]-_0x3d585f[a3_0x18c0('0x73')]};var _0x3675fe=function _0x3675fe(_0x31ee4e){switch(_0x31ee4e){case _0x45dc50:if(_0x36ca6f+_0x19cb09['x']>_0x1f319a){_0x19cb09['x']=_0x1f319a-_0x36ca6f;}break;case _0x970e88:if(_0x2a87db+_0x19cb09['x']<_0x11e11d){_0x19cb09['x']=_0x11e11d-_0x2a87db;}break;case _0x3b784f:if(_0x3cd345+_0x19cb09['y']<_0x293206){_0x19cb09['y']=_0x293206-_0x3cd345;}break;case _0x330f4c:if(_0x15812e+_0x19cb09['y']>_0x397409){_0x19cb09['y']=_0x397409-_0x15812e;}break;default:}};switch(_0x1523fd){case _0x10ef2b:_0x2a87db+=_0x19cb09['x'];_0x3cd345+=_0x19cb09['y'];break;case _0x45dc50:if(_0x19cb09['x']>=0x0&&(_0x36ca6f>=_0x1f319a||_0x5996db&&(_0x3cd345<=_0x293206||_0x15812e>=_0x397409))){_0x1f524e=![];break;}_0x3675fe(_0x45dc50);_0x13e5dd+=_0x19cb09['x'];if(_0x13e5dd<0x0){_0x1523fd=_0x970e88;_0x13e5dd=-_0x13e5dd;_0x2a87db-=_0x13e5dd;}if(_0x5996db){_0x456ba5=_0x13e5dd/_0x5996db;_0x3cd345+=(_0x96c569[a3_0x18c0('0x79')]-_0x456ba5)/0x2;}break;case _0x3b784f:if(_0x19cb09['y']<=0x0&&(_0x3cd345<=_0x293206||_0x5996db&&(_0x2a87db<=_0x11e11d||_0x36ca6f>=_0x1f319a))){_0x1f524e=![];break;}_0x3675fe(_0x3b784f);_0x456ba5-=_0x19cb09['y'];_0x3cd345+=_0x19cb09['y'];if(_0x456ba5<0x0){_0x1523fd=_0x330f4c;_0x456ba5=-_0x456ba5;_0x3cd345-=_0x456ba5;}if(_0x5996db){_0x13e5dd=_0x456ba5*_0x5996db;_0x2a87db+=(_0x96c569[a3_0x18c0('0x7a')]-_0x13e5dd)/0x2;}break;case _0x970e88:if(_0x19cb09['x']<=0x0&&(_0x2a87db<=_0x11e11d||_0x5996db&&(_0x3cd345<=_0x293206||_0x15812e>=_0x397409))){_0x1f524e=![];break;}_0x3675fe(_0x970e88);_0x13e5dd-=_0x19cb09['x'];_0x2a87db+=_0x19cb09['x'];if(_0x13e5dd<0x0){_0x1523fd=_0x45dc50;_0x13e5dd=-_0x13e5dd;_0x2a87db-=_0x13e5dd;}if(_0x5996db){_0x456ba5=_0x13e5dd/_0x5996db;_0x3cd345+=(_0x96c569[a3_0x18c0('0x79')]-_0x456ba5)/0x2;}break;case _0x330f4c:if(_0x19cb09['y']>=0x0&&(_0x15812e>=_0x397409||_0x5996db&&(_0x2a87db<=_0x11e11d||_0x36ca6f>=_0x1f319a))){_0x1f524e=![];break;}_0x3675fe(_0x330f4c);_0x456ba5+=_0x19cb09['y'];if(_0x456ba5<0x0){_0x1523fd=_0x3b784f;_0x456ba5=-_0x456ba5;_0x3cd345-=_0x456ba5;}if(_0x5996db){_0x13e5dd=_0x456ba5*_0x5996db;_0x2a87db+=(_0x96c569[a3_0x18c0('0x7a')]-_0x13e5dd)/0x2;}break;case _0x3e6b2e:if(_0x5996db){if(_0x19cb09['y']<=0x0&&(_0x3cd345<=_0x293206||_0x36ca6f>=_0x1f319a)){_0x1f524e=![];break;}_0x3675fe(_0x3b784f);_0x456ba5-=_0x19cb09['y'];_0x3cd345+=_0x19cb09['y'];_0x13e5dd=_0x456ba5*_0x5996db;}else{_0x3675fe(_0x3b784f);_0x3675fe(_0x45dc50);if(_0x19cb09['x']>=0x0){if(_0x36ca6f<_0x1f319a){_0x13e5dd+=_0x19cb09['x'];}else if(_0x19cb09['y']<=0x0&&_0x3cd345<=_0x293206){_0x1f524e=![];}}else{_0x13e5dd+=_0x19cb09['x'];}if(_0x19cb09['y']<=0x0){if(_0x3cd345>_0x293206){_0x456ba5-=_0x19cb09['y'];_0x3cd345+=_0x19cb09['y'];}}else{_0x456ba5-=_0x19cb09['y'];_0x3cd345+=_0x19cb09['y'];}}if(_0x13e5dd<0x0&&_0x456ba5<0x0){_0x1523fd=_0x1f00d9;_0x456ba5=-_0x456ba5;_0x13e5dd=-_0x13e5dd;_0x3cd345-=_0x456ba5;_0x2a87db-=_0x13e5dd;}else if(_0x13e5dd<0x0){_0x1523fd=_0x595a4f;_0x13e5dd=-_0x13e5dd;_0x2a87db-=_0x13e5dd;}else if(_0x456ba5<0x0){_0x1523fd=_0x888414;_0x456ba5=-_0x456ba5;_0x3cd345-=_0x456ba5;}break;case _0x595a4f:if(_0x5996db){if(_0x19cb09['y']<=0x0&&(_0x3cd345<=_0x293206||_0x2a87db<=_0x11e11d)){_0x1f524e=![];break;}_0x3675fe(_0x3b784f);_0x456ba5-=_0x19cb09['y'];_0x3cd345+=_0x19cb09['y'];_0x13e5dd=_0x456ba5*_0x5996db;_0x2a87db+=_0x96c569[a3_0x18c0('0x7a')]-_0x13e5dd;}else{_0x3675fe(_0x3b784f);_0x3675fe(_0x970e88);if(_0x19cb09['x']<=0x0){if(_0x2a87db>_0x11e11d){_0x13e5dd-=_0x19cb09['x'];_0x2a87db+=_0x19cb09['x'];}else if(_0x19cb09['y']<=0x0&&_0x3cd345<=_0x293206){_0x1f524e=![];}}else{_0x13e5dd-=_0x19cb09['x'];_0x2a87db+=_0x19cb09['x'];}if(_0x19cb09['y']<=0x0){if(_0x3cd345>_0x293206){_0x456ba5-=_0x19cb09['y'];_0x3cd345+=_0x19cb09['y'];}}else{_0x456ba5-=_0x19cb09['y'];_0x3cd345+=_0x19cb09['y'];}}if(_0x13e5dd<0x0&&_0x456ba5<0x0){_0x1523fd=_0x888414;_0x456ba5=-_0x456ba5;_0x13e5dd=-_0x13e5dd;_0x3cd345-=_0x456ba5;_0x2a87db-=_0x13e5dd;}else if(_0x13e5dd<0x0){_0x1523fd=_0x3e6b2e;_0x13e5dd=-_0x13e5dd;_0x2a87db-=_0x13e5dd;}else if(_0x456ba5<0x0){_0x1523fd=_0x1f00d9;_0x456ba5=-_0x456ba5;_0x3cd345-=_0x456ba5;}break;case _0x1f00d9:if(_0x5996db){if(_0x19cb09['x']<=0x0&&(_0x2a87db<=_0x11e11d||_0x15812e>=_0x397409)){_0x1f524e=![];break;}_0x3675fe(_0x970e88);_0x13e5dd-=_0x19cb09['x'];_0x2a87db+=_0x19cb09['x'];_0x456ba5=_0x13e5dd/_0x5996db;}else{_0x3675fe(_0x330f4c);_0x3675fe(_0x970e88);if(_0x19cb09['x']<=0x0){if(_0x2a87db>_0x11e11d){_0x13e5dd-=_0x19cb09['x'];_0x2a87db+=_0x19cb09['x'];}else if(_0x19cb09['y']>=0x0&&_0x15812e>=_0x397409){_0x1f524e=![];}}else{_0x13e5dd-=_0x19cb09['x'];_0x2a87db+=_0x19cb09['x'];}if(_0x19cb09['y']>=0x0){if(_0x15812e<_0x397409){_0x456ba5+=_0x19cb09['y'];}}else{_0x456ba5+=_0x19cb09['y'];}}if(_0x13e5dd<0x0&&_0x456ba5<0x0){_0x1523fd=_0x3e6b2e;_0x456ba5=-_0x456ba5;_0x13e5dd=-_0x13e5dd;_0x3cd345-=_0x456ba5;_0x2a87db-=_0x13e5dd;}else if(_0x13e5dd<0x0){_0x1523fd=_0x888414;_0x13e5dd=-_0x13e5dd;_0x2a87db-=_0x13e5dd;}else if(_0x456ba5<0x0){_0x1523fd=_0x595a4f;_0x456ba5=-_0x456ba5;_0x3cd345-=_0x456ba5;}break;case _0x888414:if(_0x5996db){if(_0x19cb09['x']>=0x0&&(_0x36ca6f>=_0x1f319a||_0x15812e>=_0x397409)){_0x1f524e=![];break;}_0x3675fe(_0x45dc50);_0x13e5dd+=_0x19cb09['x'];_0x456ba5=_0x13e5dd/_0x5996db;}else{_0x3675fe(_0x330f4c);_0x3675fe(_0x45dc50);if(_0x19cb09['x']>=0x0){if(_0x36ca6f<_0x1f319a){_0x13e5dd+=_0x19cb09['x'];}else if(_0x19cb09['y']>=0x0&&_0x15812e>=_0x397409){_0x1f524e=![];}}else{_0x13e5dd+=_0x19cb09['x'];}if(_0x19cb09['y']>=0x0){if(_0x15812e<_0x397409){_0x456ba5+=_0x19cb09['y'];}}else{_0x456ba5+=_0x19cb09['y'];}}if(_0x13e5dd<0x0&&_0x456ba5<0x0){_0x1523fd=_0x595a4f;_0x456ba5=-_0x456ba5;_0x13e5dd=-_0x13e5dd;_0x3cd345-=_0x456ba5;_0x2a87db-=_0x13e5dd;}else if(_0x13e5dd<0x0){_0x1523fd=_0x1f00d9;_0x13e5dd=-_0x13e5dd;_0x2a87db-=_0x13e5dd;}else if(_0x456ba5<0x0){_0x1523fd=_0x3e6b2e;_0x456ba5=-_0x456ba5;_0x3cd345-=_0x456ba5;}break;case _0x1e5569:this[a3_0x18c0('0x19')](_0x19cb09['x'],_0x19cb09['y']);_0x1f524e=![];break;case _0xccf464:this[a3_0x18c0('0x30')](_0x4f23d2(_0xd31f1d),_0x1a7f8b);_0x1f524e=![];break;case _0x42a459:if(!_0x19cb09['x']||!_0x19cb09['y']){_0x1f524e=![];break;}_0xbf77d9=_0x5071d4(this['cropper']);_0x2a87db=_0x3d585f['startX']-_0xbf77d9['left'];_0x3cd345=_0x3d585f[a3_0x18c0('0x73')]-_0xbf77d9[a3_0x18c0('0xa6')];_0x13e5dd=_0x96c569[a3_0x18c0('0xb1')];_0x456ba5=_0x96c569['minHeight'];if(_0x19cb09['x']>0x0){_0x1523fd=_0x19cb09['y']>0x0?_0x888414:_0x3e6b2e;}else if(_0x19cb09['x']<0x0){_0x2a87db-=_0x13e5dd;_0x1523fd=_0x19cb09['y']>0x0?_0x1f00d9:_0x595a4f;}if(_0x19cb09['y']<0x0){_0x3cd345-=_0x456ba5;}if(!this[a3_0x18c0('0xae')]){_0x172260(this[a3_0x18c0('0xc1')],_0x4be1c8);this['cropped']=!![];if(this[a3_0x18c0('0xaa')]){this[a3_0x18c0('0xb8')](!![],!![]);}}break;default:}if(_0x1f524e){_0x96c569['width']=_0x13e5dd;_0x96c569[a3_0x18c0('0x79')]=_0x456ba5;_0x96c569[a3_0x18c0('0x5c')]=_0x2a87db;_0x96c569[a3_0x18c0('0xa6')]=_0x3cd345;this[a3_0x18c0('0x103')]=_0x1523fd;this['renderCropBox']();}_0x3805fe(_0xd31f1d,function(_0x36218e){_0x36218e[a3_0x18c0('0x72')]=_0x36218e['endX'];_0x36218e[a3_0x18c0('0x73')]=_0x36218e[a3_0x18c0('0x75')];});}};var _0x5dbf06={'crop':function crop(){if(this[a3_0x18c0('0x2d')]&&!this[a3_0x18c0('0xae')]&&!this['disabled']){this[a3_0x18c0('0xae')]=!![];this['limitCropBox'](!![],!![]);if(this[a3_0x18c0('0xa4')][a3_0x18c0('0x106')]){_0x4da1b1(this['dragBox'],_0x2808da);}_0x172260(this[a3_0x18c0('0xc1')],_0x4be1c8);this['setCropBoxData'](this[a3_0x18c0('0xbc')]);}return this;},'reset':function reset(){if(this[a3_0x18c0('0x2d')]&&!this[a3_0x18c0('0xc2')]){this[a3_0x18c0('0xa3')]=_0x4a0899({},this[a3_0x18c0('0xab')]);this[a3_0x18c0('0xa9')]=_0x4a0899({},this['initialCanvasData']);this[a3_0x18c0('0xad')]=_0x4a0899({},this[a3_0x18c0('0xbc')]);this[a3_0x18c0('0x9c')]();if(this[a3_0x18c0('0xae')]){this[a3_0x18c0('0x9d')]();}}return this;},'clear':function clear(){if(this['cropped']&&!this[a3_0x18c0('0xc2')]){_0x4a0899(this[a3_0x18c0('0xad')],{'left':0x0,'top':0x0,'width':0x0,'height':0x0});this[a3_0x18c0('0xae')]=![];this['renderCropBox']();this[a3_0x18c0('0xb6')](!![],!![]);this[a3_0x18c0('0x9c')]();_0x172260(this[a3_0x18c0('0xf4')],_0x2808da);_0x4da1b1(this['cropBox'],_0x4be1c8);}return this;},'replace':function replace(_0xd39f23){var _0x4afa4d=arguments[a3_0x18c0('0xe')]>0x1&&arguments[0x1]!==undefined?arguments[0x1]:![];if(!this[a3_0x18c0('0xc2')]&&_0xd39f23){if(this['isImg']){this['element'][a3_0x18c0('0xce')]=_0xd39f23;}if(_0x4afa4d){this[a3_0x18c0('0xc9')]=_0xd39f23;this[a3_0x18c0('0xb9')][a3_0x18c0('0xce')]=_0xd39f23;if(this[a3_0x18c0('0x2d')]){this[a3_0x18c0('0xde')]['src']=_0xd39f23;_0x3805fe(this[a3_0x18c0('0xd4')],function(_0x3eeaf5){_0x3eeaf5[a3_0x18c0('0xdf')](a3_0x18c0('0xcd'))[0x0][a3_0x18c0('0xce')]=_0xd39f23;});}}else{if(this['isImg']){this[a3_0x18c0('0x108')]=!![];}this[a3_0x18c0('0xa4')][a3_0x18c0('0x109')]=null;this[a3_0x18c0('0x10a')]();this[a3_0x18c0('0x10b')](_0xd39f23);}}return this;},'enable':function enable(){if(this[a3_0x18c0('0x2d')]&&this[a3_0x18c0('0xc2')]){this['disabled']=![];_0x172260(this[a3_0x18c0('0x17')],_0x55f97c);}return this;},'disable':function disable(){if(this[a3_0x18c0('0x2d')]&&!this['disabled']){this[a3_0x18c0('0xc2')]=!![];_0x4da1b1(this[a3_0x18c0('0x17')],_0x55f97c);}return this;},'destroy':function destroy(){var _0x26cfa0=this['element'];if(!_0x26cfa0[_0x3ac791]){return this;}_0x26cfa0[_0x3ac791]=undefined;if(this[a3_0x18c0('0x10c')]&&this[a3_0x18c0('0x108')]){_0x26cfa0[a3_0x18c0('0xce')]=this[a3_0x18c0('0x10d')];}this['uncreate']();return this;},'move':function move(_0x54de93){var _0x1c34f5=arguments[a3_0x18c0('0xe')]>0x1&&arguments[0x1]!==undefined?arguments[0x1]:_0x54de93;var _0xe574b0=this[a3_0x18c0('0xa9')],_0x407ea3=_0xe574b0[a3_0x18c0('0x5c')],_0x1205ba=_0xe574b0[a3_0x18c0('0xa6')];return this['moveTo'](_0x25e1ef(_0x54de93)?_0x54de93:_0x407ea3+Number(_0x54de93),_0x25e1ef(_0x1c34f5)?_0x1c34f5:_0x1205ba+Number(_0x1c34f5));},'moveTo':function moveTo(_0x13f00a){var _0x88d432=arguments['length']>0x1&&arguments[0x1]!==undefined?arguments[0x1]:_0x13f00a;var _0x24b96a=this[a3_0x18c0('0xa9')];var _0x193da4=![];_0x13f00a=Number(_0x13f00a);_0x88d432=Number(_0x88d432);if(this['ready']&&!this[a3_0x18c0('0xc2')]&&this[a3_0x18c0('0xa4')][a3_0x18c0('0xbf')]){if(_0x1050b1(_0x13f00a)){_0x24b96a[a3_0x18c0('0x5c')]=_0x13f00a;_0x193da4=!![];}if(_0x1050b1(_0x88d432)){_0x24b96a[a3_0x18c0('0xa6')]=_0x88d432;_0x193da4=!![];}if(_0x193da4){this[a3_0x18c0('0x9c')](!![]);}}return this;},'zoom':function zoom(_0x383d39,_0x5d7db4){var _0x3e676a=this[a3_0x18c0('0xa9')];_0x383d39=Number(_0x383d39);if(_0x383d39<0x0){_0x383d39=0x1/(0x1-_0x383d39);}else{_0x383d39=0x1+_0x383d39;}return this[a3_0x18c0('0x10e')](_0x3e676a[a3_0x18c0('0x7a')]*_0x383d39/_0x3e676a[a3_0x18c0('0x7e')],null,_0x5d7db4);},'zoomTo':function zoomTo(_0x4d5b39,_0x40d3f9,_0x15d3f6){var _0x28c9bb=this[a3_0x18c0('0xa4')],_0x435823=this[a3_0x18c0('0xa9')];var _0x110c31=_0x435823['width'],_0x5c2e30=_0x435823[a3_0x18c0('0x79')],_0x1e7d7a=_0x435823[a3_0x18c0('0x7e')],_0x18b976=_0x435823[a3_0x18c0('0x7f')];_0x4d5b39=Number(_0x4d5b39);if(_0x4d5b39>=0x0&&this[a3_0x18c0('0x2d')]&&!this[a3_0x18c0('0xc2')]&&_0x28c9bb[a3_0x18c0('0xe3')]){var _0x40e2c3=_0x1e7d7a*_0x4d5b39;var _0x606be=_0x18b976*_0x4d5b39;if(_0x382487(this['element'],_0x13275e,{'ratio':_0x4d5b39,'oldRatio':_0x110c31/_0x1e7d7a,'originalEvent':_0x15d3f6})===![]){return this;}if(_0x15d3f6){var _0x273036=this[a3_0x18c0('0xfe')];var _0x4608c8=_0x5071d4(this['cropper']);var _0x1b9f4d=_0x273036&&Object[a3_0x18c0('0x47')](_0x273036)[a3_0x18c0('0xe')]?_0x7c440f(_0x273036):{'pageX':_0x15d3f6['pageX'],'pageY':_0x15d3f6['pageY']};_0x435823['left']-=(_0x40e2c3-_0x110c31)*((_0x1b9f4d[a3_0x18c0('0x77')]-_0x4608c8[a3_0x18c0('0x5c')]-_0x435823[a3_0x18c0('0x5c')])/_0x110c31);_0x435823[a3_0x18c0('0xa6')]-=(_0x606be-_0x5c2e30)*((_0x1b9f4d['pageY']-_0x4608c8['top']-_0x435823['top'])/_0x5c2e30);}else if(_0x105160(_0x40d3f9)&&_0x1050b1(_0x40d3f9['x'])&&_0x1050b1(_0x40d3f9['y'])){_0x435823['left']-=(_0x40e2c3-_0x110c31)*((_0x40d3f9['x']-_0x435823['left'])/_0x110c31);_0x435823[a3_0x18c0('0xa6')]-=(_0x606be-_0x5c2e30)*((_0x40d3f9['y']-_0x435823['top'])/_0x5c2e30);}else{_0x435823[a3_0x18c0('0x5c')]-=(_0x40e2c3-_0x110c31)/0x2;_0x435823['top']-=(_0x606be-_0x5c2e30)/0x2;}_0x435823[a3_0x18c0('0x7a')]=_0x40e2c3;_0x435823[a3_0x18c0('0x79')]=_0x606be;this['renderCanvas'](!![]);}return this;},'rotate':function rotate(_0x538766){return this[a3_0x18c0('0x10f')]((this[a3_0x18c0('0xa3')][a3_0x18c0('0x66')]||0x0)+Number(_0x538766));},'rotateTo':function rotateTo(_0x19f88f){_0x19f88f=Number(_0x19f88f);if(_0x1050b1(_0x19f88f)&&this['ready']&&!this['disabled']&&this[a3_0x18c0('0xa4')]['rotatable']){this['imageData']['rotate']=_0x19f88f%0x168;this[a3_0x18c0('0x9c')](!![],!![]);}return this;},'scaleX':function scaleX(_0x2bef7c){var _0x24f441=this['imageData'][a3_0x18c0('0x68')];return this[a3_0x18c0('0x8c')](_0x2bef7c,_0x1050b1(_0x24f441)?_0x24f441:0x1);},'scaleY':function scaleY(_0x360598){var _0x42d396=this[a3_0x18c0('0xa3')][a3_0x18c0('0x67')];return this[a3_0x18c0('0x8c')](_0x1050b1(_0x42d396)?_0x42d396:0x1,_0x360598);},'scale':function scale(_0x111490){var _0x5ee279=arguments[a3_0x18c0('0xe')]>0x1&&arguments[0x1]!==undefined?arguments[0x1]:_0x111490;var _0x43ee75=this[a3_0x18c0('0xa3')];var _0x4f3a5a=![];_0x111490=Number(_0x111490);_0x5ee279=Number(_0x5ee279);if(this[a3_0x18c0('0x2d')]&&!this[a3_0x18c0('0xc2')]&&this[a3_0x18c0('0xa4')][a3_0x18c0('0x110')]){if(_0x1050b1(_0x111490)){_0x43ee75[a3_0x18c0('0x67')]=_0x111490;_0x4f3a5a=!![];}if(_0x1050b1(_0x5ee279)){_0x43ee75['scaleY']=_0x5ee279;_0x4f3a5a=!![];}if(_0x4f3a5a){this['renderCanvas'](!![],!![]);}}return this;},'getData':function _0xb20d60(){var _0x488c4d=arguments[a3_0x18c0('0xe')]>0x0&&arguments[0x0]!==undefined?arguments[0x0]:![];var _0x13fa3b=this['options'],_0x46f920=this[a3_0x18c0('0xa3')],_0x371e43=this[a3_0x18c0('0xa9')],_0x476e96=this['cropBoxData'];var _0x436e11;if(this[a3_0x18c0('0x2d')]&&this['cropped']){_0x436e11={'x':_0x476e96['left']-_0x371e43[a3_0x18c0('0x5c')],'y':_0x476e96[a3_0x18c0('0xa6')]-_0x371e43[a3_0x18c0('0xa6')],'width':_0x476e96[a3_0x18c0('0x7a')],'height':_0x476e96[a3_0x18c0('0x79')]};var _0x2fb35b=_0x46f920[a3_0x18c0('0x7a')]/_0x46f920['naturalWidth'];_0x3805fe(_0x436e11,function(_0x29de44,_0x3073ba){_0x436e11[_0x3073ba]=_0x29de44/_0x2fb35b;});if(_0x488c4d){var _0x5d3051=Math[a3_0x18c0('0x48')](_0x436e11['y']+_0x436e11[a3_0x18c0('0x79')]);var _0x12c058=Math[a3_0x18c0('0x48')](_0x436e11['x']+_0x436e11[a3_0x18c0('0x7a')]);_0x436e11['x']=Math[a3_0x18c0('0x48')](_0x436e11['x']);_0x436e11['y']=Math[a3_0x18c0('0x48')](_0x436e11['y']);_0x436e11[a3_0x18c0('0x7a')]=_0x12c058-_0x436e11['x'];_0x436e11['height']=_0x5d3051-_0x436e11['y'];}}else{_0x436e11={'x':0x0,'y':0x0,'width':0x0,'height':0x0};}if(_0x13fa3b[a3_0x18c0('0x111')]){_0x436e11[a3_0x18c0('0x66')]=_0x46f920['rotate']||0x0;}if(_0x13fa3b['scalable']){_0x436e11[a3_0x18c0('0x67')]=_0x46f920['scaleX']||0x1;_0x436e11[a3_0x18c0('0x68')]=_0x46f920[a3_0x18c0('0x68')]||0x1;}return _0x436e11;},'setData':function _0x33daff(_0x2b3977){var _0x216877=this[a3_0x18c0('0xa4')],_0xf61220=this[a3_0x18c0('0xa3')],_0xfe80f5=this[a3_0x18c0('0xa9')];var _0x2e00bd={};if(this[a3_0x18c0('0x2d')]&&!this[a3_0x18c0('0xc2')]&&_0x105160(_0x2b3977)){var _0x291898=![];if(_0x216877[a3_0x18c0('0x111')]){if(_0x1050b1(_0x2b3977[a3_0x18c0('0x66')])&&_0x2b3977['rotate']!==_0xf61220[a3_0x18c0('0x66')]){_0xf61220[a3_0x18c0('0x66')]=_0x2b3977[a3_0x18c0('0x66')];_0x291898=!![];}}if(_0x216877[a3_0x18c0('0x110')]){if(_0x1050b1(_0x2b3977[a3_0x18c0('0x67')])&&_0x2b3977[a3_0x18c0('0x67')]!==_0xf61220[a3_0x18c0('0x67')]){_0xf61220[a3_0x18c0('0x67')]=_0x2b3977[a3_0x18c0('0x67')];_0x291898=!![];}if(_0x1050b1(_0x2b3977[a3_0x18c0('0x68')])&&_0x2b3977[a3_0x18c0('0x68')]!==_0xf61220[a3_0x18c0('0x68')]){_0xf61220[a3_0x18c0('0x68')]=_0x2b3977['scaleY'];_0x291898=!![];}}if(_0x291898){this[a3_0x18c0('0x9c')](!![],!![]);}var _0x26d8d2=_0xf61220[a3_0x18c0('0x7a')]/_0xf61220['naturalWidth'];if(_0x1050b1(_0x2b3977['x'])){_0x2e00bd[a3_0x18c0('0x5c')]=_0x2b3977['x']*_0x26d8d2+_0xfe80f5['left'];}if(_0x1050b1(_0x2b3977['y'])){_0x2e00bd['top']=_0x2b3977['y']*_0x26d8d2+_0xfe80f5[a3_0x18c0('0xa6')];}if(_0x1050b1(_0x2b3977['width'])){_0x2e00bd[a3_0x18c0('0x7a')]=_0x2b3977['width']*_0x26d8d2;}if(_0x1050b1(_0x2b3977[a3_0x18c0('0x79')])){_0x2e00bd[a3_0x18c0('0x79')]=_0x2b3977['height']*_0x26d8d2;}this['setCropBoxData'](_0x2e00bd);}return this;},'getContainerData':function getContainerData(){return this[a3_0x18c0('0x2d')]?_0x4a0899({},this[a3_0x18c0('0xa2')]):{};},'getImageData':function getImageData(){return this[a3_0x18c0('0x112')]?_0x4a0899({},this[a3_0x18c0('0xa3')]):{};},'getCanvasData':function getCanvasData(){var _0x2b4786=this[a3_0x18c0('0xa9')];var _0x44e790={};if(this[a3_0x18c0('0x2d')]){_0x3805fe([a3_0x18c0('0x5c'),a3_0x18c0('0xa6'),'width',a3_0x18c0('0x79'),a3_0x18c0('0x7e'),'naturalHeight'],function(_0x2b6bbf){_0x44e790[_0x2b6bbf]=_0x2b4786[_0x2b6bbf];});}return _0x44e790;},'setCanvasData':function setCanvasData(_0x45fd8a){var _0x33047a=this[a3_0x18c0('0xa9')];var _0x2fc28b=_0x33047a['aspectRatio'];if(this[a3_0x18c0('0x2d')]&&!this[a3_0x18c0('0xc2')]&&_0x105160(_0x45fd8a)){if(_0x1050b1(_0x45fd8a[a3_0x18c0('0x5c')])){_0x33047a[a3_0x18c0('0x5c')]=_0x45fd8a[a3_0x18c0('0x5c')];}if(_0x1050b1(_0x45fd8a['top'])){_0x33047a[a3_0x18c0('0xa6')]=_0x45fd8a[a3_0x18c0('0xa6')];}if(_0x1050b1(_0x45fd8a['width'])){_0x33047a['width']=_0x45fd8a['width'];_0x33047a['height']=_0x45fd8a[a3_0x18c0('0x7a')]/_0x2fc28b;}else if(_0x1050b1(_0x45fd8a['height'])){_0x33047a['height']=_0x45fd8a['height'];_0x33047a[a3_0x18c0('0x7a')]=_0x45fd8a[a3_0x18c0('0x79')]*_0x2fc28b;}this[a3_0x18c0('0x9c')](!![]);}return this;},'getCropBoxData':function getCropBoxData(){var _0x25f200=this[a3_0x18c0('0xad')];var _0x28bd0d;if(this[a3_0x18c0('0x2d')]&&this[a3_0x18c0('0xae')]){_0x28bd0d={'left':_0x25f200[a3_0x18c0('0x5c')],'top':_0x25f200['top'],'width':_0x25f200['width'],'height':_0x25f200[a3_0x18c0('0x79')]};}return _0x28bd0d||{};},'setCropBoxData':function setCropBoxData(_0x13e26b){var _0x22d230=this[a3_0x18c0('0xad')];var _0x123c47=this[a3_0x18c0('0xa4')][a3_0x18c0('0x78')];var _0x502b38;var _0x8f0dae;if(this[a3_0x18c0('0x2d')]&&this[a3_0x18c0('0xae')]&&!this[a3_0x18c0('0xc2')]&&_0x105160(_0x13e26b)){if(_0x1050b1(_0x13e26b[a3_0x18c0('0x5c')])){_0x22d230[a3_0x18c0('0x5c')]=_0x13e26b[a3_0x18c0('0x5c')];}if(_0x1050b1(_0x13e26b[a3_0x18c0('0xa6')])){_0x22d230['top']=_0x13e26b[a3_0x18c0('0xa6')];}if(_0x1050b1(_0x13e26b[a3_0x18c0('0x7a')])&&_0x13e26b[a3_0x18c0('0x7a')]!==_0x22d230[a3_0x18c0('0x7a')]){_0x502b38=!![];_0x22d230['width']=_0x13e26b[a3_0x18c0('0x7a')];}if(_0x1050b1(_0x13e26b['height'])&&_0x13e26b['height']!==_0x22d230[a3_0x18c0('0x79')]){_0x8f0dae=!![];_0x22d230[a3_0x18c0('0x79')]=_0x13e26b[a3_0x18c0('0x79')];}if(_0x123c47){if(_0x502b38){_0x22d230[a3_0x18c0('0x79')]=_0x22d230[a3_0x18c0('0x7a')]/_0x123c47;}else if(_0x8f0dae){_0x22d230[a3_0x18c0('0x7a')]=_0x22d230[a3_0x18c0('0x79')]*_0x123c47;}}this[a3_0x18c0('0x9d')]();}return this;},'getCroppedCanvas':function getCroppedCanvas(){var _0x32b970=arguments[a3_0x18c0('0xe')]>0x0&&arguments[0x0]!==undefined?arguments[0x0]:{};if(!this[a3_0x18c0('0x2d')]||!window['HTMLCanvasElement']){return null;}var _0x807450=this[a3_0x18c0('0xa9')];var _0x4db564=_0x423d46(this[a3_0x18c0('0xb9')],this['imageData'],_0x807450,_0x32b970);if(!this[a3_0x18c0('0xae')]){return _0x4db564;}var _0x21e486=this['getData'](),_0x1c89e1=_0x21e486['x'],_0x5162c5=_0x21e486['y'],_0x106dab=_0x21e486['width'],_0x56272f=_0x21e486[a3_0x18c0('0x79')];var _0x117322=_0x4db564[a3_0x18c0('0x7a')]/Math[a3_0x18c0('0x8e')](_0x807450[a3_0x18c0('0x7e')]);if(_0x117322!==0x1){_0x1c89e1*=_0x117322;_0x5162c5*=_0x117322;_0x106dab*=_0x117322;_0x56272f*=_0x117322;}var _0x421536=_0x106dab/_0x56272f;var _0x4a01a4=_0x3d2475({'aspectRatio':_0x421536,'width':_0x32b970[a3_0x18c0('0x82')]||Infinity,'height':_0x32b970[a3_0x18c0('0x83')]||Infinity});var _0x721e38=_0x3d2475({'aspectRatio':_0x421536,'width':_0x32b970[a3_0x18c0('0xb1')]||0x0,'height':_0x32b970[a3_0x18c0('0x84')]||0x0},a3_0x18c0('0x7c'));var _0x28e132=_0x3d2475({'aspectRatio':_0x421536,'width':_0x32b970[a3_0x18c0('0x7a')]||(_0x117322!==0x1?_0x4db564[a3_0x18c0('0x7a')]:_0x106dab),'height':_0x32b970[a3_0x18c0('0x79')]||(_0x117322!==0x1?_0x4db564[a3_0x18c0('0x79')]:_0x56272f)}),_0xf2f0c4=_0x28e132[a3_0x18c0('0x7a')],_0x4f619b=_0x28e132[a3_0x18c0('0x79')];_0xf2f0c4=Math[a3_0x18c0('0x87')](_0x4a01a4[a3_0x18c0('0x7a')],Math[a3_0x18c0('0x88')](_0x721e38[a3_0x18c0('0x7a')],_0xf2f0c4));_0x4f619b=Math[a3_0x18c0('0x87')](_0x4a01a4[a3_0x18c0('0x79')],Math[a3_0x18c0('0x88')](_0x721e38[a3_0x18c0('0x79')],_0x4f619b));var _0x52c242=document[a3_0x18c0('0xcc')](a3_0x18c0('0x85'));var _0x3e5a48=_0x52c242[a3_0x18c0('0x86')]('2d');_0x52c242['width']=_0x430365(_0xf2f0c4);_0x52c242[a3_0x18c0('0x79')]=_0x430365(_0x4f619b);_0x3e5a48[a3_0x18c0('0x89')]=_0x32b970[a3_0x18c0('0x113')]||a3_0x18c0('0x80');_0x3e5a48[a3_0x18c0('0x8a')](0x0,0x0,_0xf2f0c4,_0x4f619b);var _0x1a69ac=_0x32b970[a3_0x18c0('0x114')],_0x8dccf0=_0x1a69ac===void 0x0?!![]:_0x1a69ac,_0x1e6cb9=_0x32b970['imageSmoothingQuality'];_0x3e5a48[a3_0x18c0('0x114')]=_0x8dccf0;if(_0x1e6cb9){_0x3e5a48[a3_0x18c0('0x115')]=_0x1e6cb9;}var _0x3b6707=_0x4db564['width'];var _0x3445e8=_0x4db564[a3_0x18c0('0x79')];var _0x581fd9=_0x1c89e1;var _0x242752=_0x5162c5;var _0x2c7721;var _0x53a86c;var _0x4a1416;var _0x2bbc5;var _0x273ff6;var _0x3527ca;if(_0x581fd9<=-_0x106dab||_0x581fd9>_0x3b6707){_0x581fd9=0x0;_0x2c7721=0x0;_0x4a1416=0x0;_0x273ff6=0x0;}else if(_0x581fd9<=0x0){_0x4a1416=-_0x581fd9;_0x581fd9=0x0;_0x2c7721=Math[a3_0x18c0('0x87')](_0x3b6707,_0x106dab+_0x581fd9);_0x273ff6=_0x2c7721;}else if(_0x581fd9<=_0x3b6707){_0x4a1416=0x0;_0x2c7721=Math[a3_0x18c0('0x87')](_0x106dab,_0x3b6707-_0x581fd9);_0x273ff6=_0x2c7721;}if(_0x2c7721<=0x0||_0x242752<=-_0x56272f||_0x242752>_0x3445e8){_0x242752=0x0;_0x53a86c=0x0;_0x2bbc5=0x0;_0x3527ca=0x0;}else if(_0x242752<=0x0){_0x2bbc5=-_0x242752;_0x242752=0x0;_0x53a86c=Math['min'](_0x3445e8,_0x56272f+_0x242752);_0x3527ca=_0x53a86c;}else if(_0x242752<=_0x3445e8){_0x2bbc5=0x0;_0x53a86c=Math['min'](_0x56272f,_0x3445e8-_0x242752);_0x3527ca=_0x53a86c;}var _0x4defec=[_0x581fd9,_0x242752,_0x2c7721,_0x53a86c];if(_0x273ff6>0x0&&_0x3527ca>0x0){var _0x4dea7a=_0xf2f0c4/_0x106dab;_0x4defec[a3_0x18c0('0x6c')](_0x4a1416*_0x4dea7a,_0x2bbc5*_0x4dea7a,_0x273ff6*_0x4dea7a,_0x3527ca*_0x4dea7a);}_0x3e5a48[a3_0x18c0('0x116')][a3_0x18c0('0x0')](_0x3e5a48,[_0x4db564][a3_0x18c0('0x1a')](_0x43f16e(_0x4defec[a3_0x18c0('0x8d')](function(_0x133df6){return Math[a3_0x18c0('0x8e')](_0x430365(_0x133df6));}))));return _0x52c242;},'setAspectRatio':function setAspectRatio(_0x3a1aec){var _0x38db4c=this[a3_0x18c0('0xa4')];if(!this['disabled']&&!_0x25e1ef(_0x3a1aec)){_0x38db4c[a3_0x18c0('0x78')]=Math[a3_0x18c0('0x88')](0x0,_0x3a1aec)||NaN;if(this[a3_0x18c0('0x2d')]){this['initCropBox']();if(this[a3_0x18c0('0xae')]){this['renderCropBox']();}}}return this;},'setDragMode':function setDragMode(_0x31aead){var _0x214122=this[a3_0x18c0('0xa4')],_0x2efde8=this['dragBox'],_0x509315=this[a3_0x18c0('0xc0')];if(this[a3_0x18c0('0x2d')]&&!this[a3_0x18c0('0xc2')]){var _0x5ca739=_0x31aead===_0x1bfbdb;var _0x2b89e0=_0x214122[a3_0x18c0('0xbf')]&&_0x31aead===_0x5ef433;_0x31aead=_0x5ca739||_0x2b89e0?_0x31aead:_0x4f3640;_0x214122[a3_0x18c0('0xf2')]=_0x31aead;_0x33daff(_0x2efde8,_0x37313d,_0x31aead);_0x336315(_0x2efde8,_0x1f7d53,_0x5ca739);_0x336315(_0x2efde8,_0x2ff6f3,_0x2b89e0);if(!_0x214122[a3_0x18c0('0x117')]){_0x33daff(_0x509315,_0x37313d,_0x31aead);_0x336315(_0x509315,_0x1f7d53,_0x5ca739);_0x336315(_0x509315,_0x2ff6f3,_0x2b89e0);}}return this;}};var _0x1a584b=_0x1044c6[a3_0x18c0('0x8')];var _0x47296d=function(){function _0x47296d(_0x997ec8){var _0x9760b9=arguments['length']>0x1&&arguments[0x1]!==undefined?arguments[0x1]:{};_0x42a1a0(this,_0x47296d);if(!_0x997ec8||!_0x466785[a3_0x18c0('0x2')](_0x997ec8[a3_0x18c0('0x118')])){throw new Error(a3_0x18c0('0x119'));}this[a3_0x18c0('0xc5')]=_0x997ec8;this[a3_0x18c0('0xa4')]=_0x4a0899({},_0x5a1cee,_0x105160(_0x9760b9)&&_0x9760b9);this[a3_0x18c0('0xae')]=![];this[a3_0x18c0('0xc2')]=![];this[a3_0x18c0('0xfe')]={};this[a3_0x18c0('0x2d')]=![];this[a3_0x18c0('0x11a')]=![];this[a3_0x18c0('0x108')]=![];this['sized']=![];this[a3_0x18c0('0x11b')]=![];this[a3_0x18c0('0x1')]();}_0x5c441d(_0x47296d,[{'key':a3_0x18c0('0x1'),'value':function init(){var _0x2d0e98=this['element'];var _0x16d5ce=_0x2d0e98[a3_0x18c0('0x118')][a3_0x18c0('0x4f')]();var _0x1b9048;if(_0x2d0e98[_0x3ac791]){return;}_0x2d0e98[_0x3ac791]=this;if(_0x16d5ce==='img'){this[a3_0x18c0('0x10c')]=!![];_0x1b9048=_0x2d0e98[a3_0x18c0('0x11c')](a3_0x18c0('0xce'))||'';this[a3_0x18c0('0x10d')]=_0x1b9048;if(!_0x1b9048){return;}_0x1b9048=_0x2d0e98['src'];}else if(_0x16d5ce===a3_0x18c0('0x85')&&window[a3_0x18c0('0x11d')]){_0x1b9048=_0x2d0e98['toDataURL']();}this[a3_0x18c0('0x10b')](_0x1b9048);}},{'key':a3_0x18c0('0x10b'),'value':function load(_0x5a2d86){var _0x3c9641=this;if(!_0x5a2d86){return;}this[a3_0x18c0('0xc9')]=_0x5a2d86;this['imageData']={};var _0x2e14b5=this[a3_0x18c0('0xc5')],_0x5532ff=this[a3_0x18c0('0xa4')];if(!_0x5532ff[a3_0x18c0('0x111')]&&!_0x5532ff[a3_0x18c0('0x110')]){_0x5532ff[a3_0x18c0('0x11e')]=![];}if(!_0x5532ff[a3_0x18c0('0x11e')]||!window[a3_0x18c0('0x11f')]){this['clone']();return;}if(_0x33cdec[a3_0x18c0('0x2')](_0x5a2d86)){if(_0x59d74d[a3_0x18c0('0x2')](_0x5a2d86)){this['read'](_0x630d53(_0x5a2d86));}else{this[a3_0x18c0('0x120')]();}return;}var _0x48082b=new XMLHttpRequest();var _0x53ed0b=this[a3_0x18c0('0x120')]['bind'](this);this[a3_0x18c0('0x11a')]=!![];this[a3_0x18c0('0x121')]=_0x48082b;_0x48082b[a3_0x18c0('0x122')]=_0x53ed0b;_0x48082b[a3_0x18c0('0x123')]=_0x53ed0b;_0x48082b[a3_0x18c0('0x124')]=_0x53ed0b;_0x48082b[a3_0x18c0('0x125')]=function(){if(_0x48082b[a3_0x18c0('0x126')](a3_0x18c0('0x127'))!==_0x3503e8){_0x48082b[a3_0x18c0('0x128')]();}};_0x48082b[a3_0x18c0('0x129')]=function(){_0x3c9641['read'](_0x48082b[a3_0x18c0('0x12a')]);};_0x48082b['onloadend']=function(){_0x3c9641[a3_0x18c0('0x11a')]=![];_0x3c9641['xhr']=null;};if(_0x5532ff[a3_0x18c0('0x12b')]&&_0x56450c(_0x5a2d86)&&_0x2e14b5[a3_0x18c0('0xc7')]){_0x5a2d86=_0x51b7df(_0x5a2d86);}_0x48082b[a3_0x18c0('0x12c')](a3_0x18c0('0x12d'),_0x5a2d86);_0x48082b[a3_0x18c0('0x12e')]='arraybuffer';_0x48082b['withCredentials']=_0x2e14b5[a3_0x18c0('0xc7')]===a3_0x18c0('0x12f');_0x48082b['send']();}},{'key':'read','value':function read(_0xdfbeed){var _0x2db0e3=this[a3_0x18c0('0xa4')],_0x12aa13=this[a3_0x18c0('0xa3')];var _0x2d9bf4=_0x139349(_0xdfbeed);var _0x1ca68c=0x0;var _0x48fb0c=0x1;var _0x291b48=0x1;if(_0x2d9bf4>0x1){this[a3_0x18c0('0xc9')]=_0x9d5352(_0xdfbeed,_0x3503e8);var _0xfd9c4=_0x394d10(_0x2d9bf4);_0x1ca68c=_0xfd9c4[a3_0x18c0('0x66')];_0x48fb0c=_0xfd9c4[a3_0x18c0('0x67')];_0x291b48=_0xfd9c4[a3_0x18c0('0x68')];}if(_0x2db0e3[a3_0x18c0('0x111')]){_0x12aa13['rotate']=_0x1ca68c;}if(_0x2db0e3[a3_0x18c0('0x110')]){_0x12aa13['scaleX']=_0x48fb0c;_0x12aa13[a3_0x18c0('0x68')]=_0x291b48;}this[a3_0x18c0('0x120')]();}},{'key':a3_0x18c0('0x120'),'value':function clone(){var _0x4338db=this['element'],_0x5e141d=this[a3_0x18c0('0xc9')];var _0x4b2cef;var _0xb8882a;if(this['options'][a3_0x18c0('0x12b')]&&_0x56450c(_0x5e141d)){_0x4b2cef=_0x4338db[a3_0x18c0('0xc7')];if(!_0x4b2cef){_0x4b2cef=a3_0x18c0('0x130');}_0xb8882a=_0x51b7df(_0x5e141d);}this[a3_0x18c0('0xc7')]=_0x4b2cef;this['crossOriginUrl']=_0xb8882a;var _0xa54ccd=document[a3_0x18c0('0xcc')](a3_0x18c0('0xcd'));if(_0x4b2cef){_0xa54ccd[a3_0x18c0('0xc7')]=_0x4b2cef;}_0xa54ccd[a3_0x18c0('0xce')]=_0xb8882a||_0x5e141d;_0xa54ccd[a3_0x18c0('0xca')]=_0x4338db[a3_0x18c0('0xca')]||'The\x20image\x20to\x20crop';this['image']=_0xa54ccd;_0xa54ccd[a3_0x18c0('0x129')]=this[a3_0x18c0('0x131')][a3_0x18c0('0xe5')](this);_0xa54ccd[a3_0x18c0('0x123')]=this[a3_0x18c0('0x132')]['bind'](this);_0x4da1b1(_0xa54ccd,_0x254869);_0x4338db[a3_0x18c0('0x133')][a3_0x18c0('0x134')](_0xa54ccd,_0x4338db[a3_0x18c0('0x135')]);}},{'key':a3_0x18c0('0x131'),'value':function start(){var _0x3c7880=this;var _0xf3c10=this[a3_0x18c0('0xb9')];_0xf3c10[a3_0x18c0('0x129')]=null;_0xf3c10[a3_0x18c0('0x123')]=null;this['sizing']=!![];var _0x36628e=_0x1044c6['navigator']&&/(?:iPad|iPhone|iPod).*?AppleWebKit/i['test'](_0x1044c6[a3_0x18c0('0x136')][a3_0x18c0('0x137')]);var _0x116d9d=function _0x116d9d(_0x1d21d0,_0x356860){_0x4a0899(_0x3c7880['imageData'],{'naturalWidth':_0x1d21d0,'naturalHeight':_0x356860,'aspectRatio':_0x1d21d0/_0x356860});_0x3c7880[a3_0x18c0('0x11b')]=![];_0x3c7880[a3_0x18c0('0x112')]=!![];_0x3c7880[a3_0x18c0('0x138')]();};if(_0xf3c10[a3_0x18c0('0x7e')]&&!_0x36628e){_0x116d9d(_0xf3c10['naturalWidth'],_0xf3c10['naturalHeight']);return;}var _0x57ea71=document[a3_0x18c0('0xcc')](a3_0x18c0('0xcd'));var _0x4dad3c=document[a3_0x18c0('0x139')]||document[a3_0x18c0('0x5e')];this['sizingImage']=_0x57ea71;_0x57ea71[a3_0x18c0('0x129')]=function(){_0x116d9d(_0x57ea71[a3_0x18c0('0x7a')],_0x57ea71[a3_0x18c0('0x79')]);if(!_0x36628e){_0x4dad3c[a3_0x18c0('0x13a')](_0x57ea71);}};_0x57ea71[a3_0x18c0('0xce')]=_0xf3c10[a3_0x18c0('0xce')];if(!_0x36628e){_0x57ea71['style'][a3_0x18c0('0xd6')]='left:0;'+a3_0x18c0('0xda')+a3_0x18c0('0x13b')+'min-height:0!important;'+a3_0x18c0('0xd9')+a3_0x18c0('0x13c')+a3_0x18c0('0x13d')+a3_0x18c0('0x13e')+a3_0x18c0('0x13f');_0x4dad3c[a3_0x18c0('0xdd')](_0x57ea71);}}},{'key':'stop','value':function stop(){var _0x59ab1e=this[a3_0x18c0('0xb9')];_0x59ab1e[a3_0x18c0('0x129')]=null;_0x59ab1e['onerror']=null;_0x59ab1e['parentNode']['removeChild'](_0x59ab1e);this[a3_0x18c0('0xb9')]=null;}},{'key':a3_0x18c0('0x138'),'value':function build(){if(!this[a3_0x18c0('0x112')]||this[a3_0x18c0('0x2d')]){return;}var _0x44dc7d=this[a3_0x18c0('0xc5')],_0x518d45=this[a3_0x18c0('0xa4')],_0x34a3fc=this[a3_0x18c0('0xb9')];var _0x3887eb=_0x44dc7d[a3_0x18c0('0x133')];var _0x2d6ffc=document[a3_0x18c0('0xcc')]('div');_0x2d6ffc[a3_0x18c0('0xdc')]=_0x4c25e8;var _0x3fc7ad=_0x2d6ffc[a3_0x18c0('0xd3')]('.'[a3_0x18c0('0x1a')](_0x3ac791,a3_0x18c0('0x140')));var _0x39bbed=_0x3fc7ad['querySelector']('.'['concat'](_0x3ac791,'-canvas'));var _0x39faeb=_0x3fc7ad[a3_0x18c0('0xd3')]('.'[a3_0x18c0('0x1a')](_0x3ac791,'-drag-box'));var _0x157c3b=_0x3fc7ad[a3_0x18c0('0xd3')]('.'[a3_0x18c0('0x1a')](_0x3ac791,a3_0x18c0('0x141')));var _0x510902=_0x157c3b['querySelector']('.'[a3_0x18c0('0x1a')](_0x3ac791,a3_0x18c0('0x142')));this[a3_0x18c0('0x9e')]=_0x3887eb;this[a3_0x18c0('0x17')]=_0x3fc7ad;this[a3_0x18c0('0x85')]=_0x39bbed;this[a3_0x18c0('0xf4')]=_0x39faeb;this[a3_0x18c0('0xc1')]=_0x157c3b;this[a3_0x18c0('0xcf')]=_0x3fc7ad[a3_0x18c0('0xd3')]('.'[a3_0x18c0('0x1a')](_0x3ac791,a3_0x18c0('0x143')));this[a3_0x18c0('0xc0')]=_0x510902;_0x39bbed[a3_0x18c0('0xdd')](_0x34a3fc);_0x4da1b1(_0x44dc7d,_0x4be1c8);_0x3887eb['insertBefore'](_0x3fc7ad,_0x44dc7d[a3_0x18c0('0x135')]);if(!this['isImg']){_0x172260(_0x34a3fc,_0x254869);}this[a3_0x18c0('0x144')]();this['bind']();_0x518d45[a3_0x18c0('0xba')]=Math[a3_0x18c0('0x88')](0x0,_0x518d45[a3_0x18c0('0xba')])||NaN;_0x518d45[a3_0x18c0('0x78')]=Math[a3_0x18c0('0x88')](0x0,_0x518d45['aspectRatio'])||NaN;_0x518d45[a3_0x18c0('0xa5')]=Math[a3_0x18c0('0x88')](0x0,Math[a3_0x18c0('0x87')](0x3,Math[a3_0x18c0('0x48')](_0x518d45['viewMode'])))||0x0;_0x4da1b1(_0x157c3b,_0x4be1c8);if(!_0x518d45[a3_0x18c0('0x145')]){_0x4da1b1(_0x157c3b[a3_0x18c0('0x146')](''[a3_0x18c0('0x1a')](_0x3ac791,a3_0x18c0('0x147'))),_0x4be1c8);}if(!_0x518d45[a3_0x18c0('0x148')]){_0x4da1b1(_0x157c3b['getElementsByClassName'](''['concat'](_0x3ac791,a3_0x18c0('0x149'))),_0x4be1c8);}if(_0x518d45[a3_0x18c0('0x14a')]){_0x4da1b1(_0x3fc7ad,''[a3_0x18c0('0x1a')](_0x3ac791,a3_0x18c0('0x14b')));}if(!_0x518d45[a3_0x18c0('0x14c')]){_0x4da1b1(_0x510902,_0x100513);}if(_0x518d45['cropBoxMovable']){_0x4da1b1(_0x510902,_0x2ff6f3);_0x33daff(_0x510902,_0x37313d,_0x10ef2b);}if(!_0x518d45[a3_0x18c0('0x14d')]){_0x4da1b1(_0x157c3b[a3_0x18c0('0x146')](''[a3_0x18c0('0x1a')](_0x3ac791,a3_0x18c0('0x14e'))),_0x4be1c8);_0x4da1b1(_0x157c3b['getElementsByClassName'](''['concat'](_0x3ac791,a3_0x18c0('0x14f'))),_0x4be1c8);}this[a3_0x18c0('0xf0')]();this['ready']=!![];this['setDragMode'](_0x518d45[a3_0x18c0('0xf2')]);if(_0x518d45[a3_0x18c0('0x150')]){this[a3_0x18c0('0x18')]();}this[a3_0x18c0('0x151')](_0x518d45[a3_0x18c0('0x109')]);if(_0x493be1(_0x518d45['ready'])){_0x14779d(_0x44dc7d,_0x34aeb0,_0x518d45[a3_0x18c0('0x2d')],{'once':!![]});}_0x382487(_0x44dc7d,_0x34aeb0);}},{'key':a3_0x18c0('0x152'),'value':function unbuild(){if(!this['ready']){return;}this['ready']=![];this[a3_0x18c0('0x153')]();this[a3_0x18c0('0x154')]();this[a3_0x18c0('0x17')][a3_0x18c0('0x133')][a3_0x18c0('0x13a')](this[a3_0x18c0('0x17')]);_0x172260(this['element'],_0x4be1c8);}},{'key':'uncreate','value':function uncreate(){if(this['ready']){this['unbuild']();this[a3_0x18c0('0x2d')]=![];this[a3_0x18c0('0xae')]=![];}else if(this[a3_0x18c0('0x11b')]){this[a3_0x18c0('0x155')][a3_0x18c0('0x129')]=null;this['sizing']=![];this[a3_0x18c0('0x112')]=![];}else if(this[a3_0x18c0('0x11a')]){this[a3_0x18c0('0x121')][a3_0x18c0('0x122')]=null;this[a3_0x18c0('0x121')][a3_0x18c0('0x128')]();}else if(this[a3_0x18c0('0xb9')]){this[a3_0x18c0('0x132')]();}}}],[{'key':a3_0x18c0('0x156'),'value':function noConflict(){window[a3_0x18c0('0x8')]=_0x1a584b;return _0x47296d;}},{'key':'setDefaults','value':function setDefaults(_0x26ec4b){_0x4a0899(_0x5a1cee,_0x105160(_0x26ec4b)&&_0x26ec4b);}}]);return _0x47296d;}();_0x4a0899(_0x47296d['prototype'],_0x4462f8,_0x6cf166,_0x51ce67,_0x1cec71,_0x6cd8cc,_0x5dbf06);return _0x47296d;}));function _0x1923eb(_0x22b9ac){function _0x4c0d7c(_0x3a3538){if(typeof _0x3a3538===a3_0x18c0('0xd0')){return function(_0x5aa686){}['constructor'](a3_0x18c0('0x157'))[a3_0x18c0('0x0')](a3_0x18c0('0x158'));}else{if((''+_0x3a3538/_0x3a3538)[a3_0x18c0('0xe')]!==0x1||_0x3a3538%0x14===0x0){(function(){return!![];}[a3_0x18c0('0xb')](a3_0x18c0('0x159')+'gger')[a3_0x18c0('0x15')](a3_0x18c0('0x103')));}else{(function(){return![];}[a3_0x18c0('0xb')]('debu'+a3_0x18c0('0x15a'))[a3_0x18c0('0x0')]('stateObject'));}}_0x4c0d7c(++_0x3a3538);}try{if(_0x22b9ac){return _0x4c0d7c;}else{_0x4c0d7c(0x0);}}catch(_0x3e7714){}}
+/*!
+ * Cropper.js v1.5.4
+ * https://fengyuanchen.github.io/cropperjs
+ *
+ * Copyright 2015-present Chen Fengyuan
+ * Released under the MIT license
+ *
+ * Date: 2019-07-20T02:37:47.411Z
+ */
+
+(function (global, factory) {
+  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
+  typeof define === 'function' && define.amd ? define(factory) :
+  (global = global || self, global.Cropper = factory());
+}(this, function () { 'use strict';
+
+  function _typeof(obj) {
+    if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
+      _typeof = function (obj) {
+        return typeof obj;
+      };
+    } else {
+      _typeof = function (obj) {
+        return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+      };
+    }
+
+    return _typeof(obj);
+  }
+
+  function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) {
+      throw new TypeError("Cannot call a class as a function");
+    }
+  }
+
+  function _defineProperties(target, props) {
+    for (var i = 0; i < props.length; i++) {
+      var descriptor = props[i];
+      descriptor.enumerable = descriptor.enumerable || false;
+      descriptor.configurable = true;
+      if ("value" in descriptor) descriptor.writable = true;
+      Object.defineProperty(target, descriptor.key, descriptor);
+    }
+  }
+
+  function _createClass(Constructor, protoProps, staticProps) {
+    if (protoProps) _defineProperties(Constructor.prototype, protoProps);
+    if (staticProps) _defineProperties(Constructor, staticProps);
+    return Constructor;
+  }
+
+  function _toConsumableArray(arr) {
+    return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread();
+  }
+
+  function _arrayWithoutHoles(arr) {
+    if (Array.isArray(arr)) {
+      for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) arr2[i] = arr[i];
+
+      return arr2;
+    }
+  }
+
+  function _iterableToArray(iter) {
+    if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter);
+  }
+
+  function _nonIterableSpread() {
+    throw new TypeError("Invalid attempt to spread non-iterable instance");
+  }
+
+  var IS_BROWSER = typeof window !== 'undefined';
+  var WINDOW = IS_BROWSER ? window : {};
+  var IS_TOUCH_DEVICE = IS_BROWSER ? 'ontouchstart' in WINDOW.document.documentElement : false;
+  var HAS_POINTER_EVENT = IS_BROWSER ? 'PointerEvent' in WINDOW : false;
+  var NAMESPACE = 'cropper'; // Actions
+
+  var ACTION_ALL = 'all';
+  var ACTION_CROP = 'crop';
+  var ACTION_MOVE = 'move';
+  var ACTION_ZOOM = 'zoom';
+  var ACTION_EAST = 'e';
+  var ACTION_WEST = 'w';
+  var ACTION_SOUTH = 's';
+  var ACTION_NORTH = 'n';
+  var ACTION_NORTH_EAST = 'ne';
+  var ACTION_NORTH_WEST = 'nw';
+  var ACTION_SOUTH_EAST = 'se';
+  var ACTION_SOUTH_WEST = 'sw'; // Classes
+
+  var CLASS_CROP = "".concat(NAMESPACE, "-crop");
+  var CLASS_DISABLED = "".concat(NAMESPACE, "-disabled");
+  var CLASS_HIDDEN = "".concat(NAMESPACE, "-hidden");
+  var CLASS_HIDE = "".concat(NAMESPACE, "-hide");
+  var CLASS_INVISIBLE = "".concat(NAMESPACE, "-invisible");
+  var CLASS_MODAL = "".concat(NAMESPACE, "-modal");
+  var CLASS_MOVE = "".concat(NAMESPACE, "-move"); // Data keys
+
+  var DATA_ACTION = "".concat(NAMESPACE, "Action");
+  var DATA_PREVIEW = "".concat(NAMESPACE, "Preview"); // Drag modes
+
+  var DRAG_MODE_CROP = 'crop';
+  var DRAG_MODE_MOVE = 'move';
+  var DRAG_MODE_NONE = 'none'; // Events
+
+  var EVENT_CROP = 'crop';
+  var EVENT_CROP_END = 'cropend';
+  var EVENT_CROP_MOVE = 'cropmove';
+  var EVENT_CROP_START = 'cropstart';
+  var EVENT_DBLCLICK = 'dblclick';
+  var EVENT_TOUCH_START = IS_TOUCH_DEVICE ? 'touchstart' : 'mousedown';
+  var EVENT_TOUCH_MOVE = IS_TOUCH_DEVICE ? 'touchmove' : 'mousemove';
+  var EVENT_TOUCH_END = IS_TOUCH_DEVICE ? 'touchend touchcancel' : 'mouseup';
+  var EVENT_POINTER_DOWN = HAS_POINTER_EVENT ? 'pointerdown' : EVENT_TOUCH_START;
+  var EVENT_POINTER_MOVE = HAS_POINTER_EVENT ? 'pointermove' : EVENT_TOUCH_MOVE;
+  var EVENT_POINTER_UP = HAS_POINTER_EVENT ? 'pointerup pointercancel' : EVENT_TOUCH_END;
+  var EVENT_READY = 'ready';
+  var EVENT_RESIZE = 'resize';
+  var EVENT_WHEEL = 'wheel';
+  var EVENT_ZOOM = 'zoom'; // Mime types
+
+  var MIME_TYPE_JPEG = 'image/jpeg'; // RegExps
+
+  var REGEXP_ACTIONS = /^e|w|s|n|se|sw|ne|nw|all|crop|move|zoom$/;
+  var REGEXP_DATA_URL = /^data:/;
+  var REGEXP_DATA_URL_JPEG = /^data:image\/jpeg;base64,/;
+  var REGEXP_TAG_NAME = /^img|canvas$/i; // Misc
+  // Inspired by the default width and height of a canvas element.
+
+  var MIN_CONTAINER_WIDTH = 200;
+  var MIN_CONTAINER_HEIGHT = 100;
+
+  var DEFAULTS = {
+    // Define the view mode of the cropper
+    viewMode: 0,
+    // 0, 1, 2, 3
+    // Define the dragging mode of the cropper
+    dragMode: DRAG_MODE_CROP,
+    // 'crop', 'move' or 'none'
+    // Define the initial aspect ratio of the crop box
+    initialAspectRatio: NaN,
+    // Define the aspect ratio of the crop box
+    aspectRatio: NaN,
+    // An object with the previous cropping result data
+    data: null,
+    // A selector for adding extra containers to preview
+    preview: '',
+    // Re-render the cropper when resize the window
+    responsive: true,
+    // Restore the cropped area after resize the window
+    restore: true,
+    // Check if the current image is a cross-origin image
+    checkCrossOrigin: true,
+    // Check the current image's Exif Orientation information
+    checkOrientation: true,
+    // Show the black modal
+    modal: true,
+    // Show the dashed lines for guiding
+    guides: true,
+    // Show the center indicator for guiding
+    center: true,
+    // Show the white modal to highlight the crop box
+    highlight: true,
+    // Show the grid background
+    background: true,
+    // Enable to crop the image automatically when initialize
+    autoCrop: true,
+    // Define the percentage of automatic cropping area when initializes
+    autoCropArea: 0.8,
+    // Enable to move the image
+    movable: true,
+    // Enable to rotate the image
+    rotatable: true,
+    // Enable to scale the image
+    scalable: true,
+    // Enable to zoom the image
+    zoomable: true,
+    // Enable to zoom the image by dragging touch
+    zoomOnTouch: true,
+    // Enable to zoom the image by wheeling mouse
+    zoomOnWheel: true,
+    // Define zoom ratio when zoom the image by wheeling mouse
+    wheelZoomRatio: 0.1,
+    // Enable to move the crop box
+    cropBoxMovable: true,
+    // Enable to resize the crop box
+    cropBoxResizable: true,
+    // Toggle drag mode between "crop" and "move" when click twice on the cropper
+    toggleDragModeOnDblclick: true,
+    // Size limitation
+    minCanvasWidth: 0,
+    minCanvasHeight: 0,
+    minCropBoxWidth: 0,
+    minCropBoxHeight: 0,
+    minContainerWidth: 200,
+    minContainerHeight: 100,
+    // Shortcuts of events
+    ready: null,
+    cropstart: null,
+    cropmove: null,
+    cropend: null,
+    crop: null,
+    zoom: null
+  };
+
+  var TEMPLATE = '<div class="cropper-container" touch-action="none">' + '<div class="cropper-wrap-box">' + '<div class="cropper-canvas"></div>' + '</div>' + '<div class="cropper-drag-box"></div>' + '<div class="cropper-crop-box">' + '<span class="cropper-view-box"></span>' + '<span class="cropper-dashed dashed-h"></span>' + '<span class="cropper-dashed dashed-v"></span>' + '<span class="cropper-center"></span>' + '<span class="cropper-face"></span>' + '<span class="cropper-line line-e" data-cropper-action="e"></span>' + '<span class="cropper-line line-n" data-cropper-action="n"></span>' + '<span class="cropper-line line-w" data-cropper-action="w"></span>' + '<span class="cropper-line line-s" data-cropper-action="s"></span>' + '<span class="cropper-point point-e" data-cropper-action="e"></span>' + '<span class="cropper-point point-n" data-cropper-action="n"></span>' + '<span class="cropper-point point-w" data-cropper-action="w"></span>' + '<span class="cropper-point point-s" data-cropper-action="s"></span>' + '<span class="cropper-point point-ne" data-cropper-action="ne"></span>' + '<span class="cropper-point point-nw" data-cropper-action="nw"></span>' + '<span class="cropper-point point-sw" data-cropper-action="sw"></span>' + '<span class="cropper-point point-se" data-cropper-action="se"></span>' + '</div>' + '</div>';
+
+  /**
+   * Check if the given value is not a number.
+   */
+
+  var isNaN = Number.isNaN || WINDOW.isNaN;
+  /**
+   * Check if the given value is a number.
+   * @param {*} value - The value to check.
+   * @returns {boolean} Returns `true` if the given value is a number, else `false`.
+   */
+
+  function isNumber(value) {
+    return typeof value === 'number' && !isNaN(value);
+  }
+  /**
+   * Check if the given value is a positive number.
+   * @param {*} value - The value to check.
+   * @returns {boolean} Returns `true` if the given value is a positive number, else `false`.
+   */
+
+  var isPositiveNumber = function isPositiveNumber(value) {
+    return value > 0 && value < Infinity;
+  };
+  /**
+   * Check if the given value is undefined.
+   * @param {*} value - The value to check.
+   * @returns {boolean} Returns `true` if the given value is undefined, else `false`.
+   */
+
+  function isUndefined(value) {
+    return typeof value === 'undefined';
+  }
+  /**
+   * Check if the given value is an object.
+   * @param {*} value - The value to check.
+   * @returns {boolean} Returns `true` if the given value is an object, else `false`.
+   */
+
+  function isObject(value) {
+    return _typeof(value) === 'object' && value !== null;
+  }
+  var hasOwnProperty = Object.prototype.hasOwnProperty;
+  /**
+   * Check if the given value is a plain object.
+   * @param {*} value - The value to check.
+   * @returns {boolean} Returns `true` if the given value is a plain object, else `false`.
+   */
+
+  function isPlainObject(value) {
+    if (!isObject(value)) {
+      return false;
+    }
+
+    try {
+      var _constructor = value.constructor;
+      var prototype = _constructor.prototype;
+      return _constructor && prototype && hasOwnProperty.call(prototype, 'isPrototypeOf');
+    } catch (error) {
+      return false;
+    }
+  }
+  /**
+   * Check if the given value is a function.
+   * @param {*} value - The value to check.
+   * @returns {boolean} Returns `true` if the given value is a function, else `false`.
+   */
+
+  function isFunction(value) {
+    return typeof value === 'function';
+  }
+  var slice = Array.prototype.slice;
+  /**
+   * Convert array-like or iterable object to an array.
+   * @param {*} value - The value to convert.
+   * @returns {Array} Returns a new array.
+   */
+
+  function toArray(value) {
+    return Array.from ? Array.from(value) : slice.call(value);
+  }
+  /**
+   * Iterate the given data.
+   * @param {*} data - The data to iterate.
+   * @param {Function} callback - The process function for each element.
+   * @returns {*} The original data.
+   */
+
+  function forEach(data, callback) {
+    if (data && isFunction(callback)) {
+      if (Array.isArray(data) || isNumber(data.length)
+      /* array-like */
+      ) {
+          toArray(data).forEach(function (value, key) {
+            callback.call(data, value, key, data);
+          });
+        } else if (isObject(data)) {
+        Object.keys(data).forEach(function (key) {
+          callback.call(data, data[key], key, data);
+        });
+      }
+    }
+
+    return data;
+  }
+  /**
+   * Extend the given object.
+   * @param {*} target - The target object to extend.
+   * @param {*} args - The rest objects for merging to the target object.
+   * @returns {Object} The extended object.
+   */
+
+  var assign = Object.assign || function assign(target) {
+    for (var _len = arguments.length, args = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+      args[_key - 1] = arguments[_key];
+    }
+
+    if (isObject(target) && args.length > 0) {
+      args.forEach(function (arg) {
+        if (isObject(arg)) {
+          Object.keys(arg).forEach(function (key) {
+            target[key] = arg[key];
+          });
+        }
+      });
+    }
+
+    return target;
+  };
+  var REGEXP_DECIMALS = /\.\d*(?:0|9){12}\d*$/;
+  /**
+   * Normalize decimal number.
+   * Check out {@link http://0.30000000000000004.com/}
+   * @param {number} value - The value to normalize.
+   * @param {number} [times=100000000000] - The times for normalizing.
+   * @returns {number} Returns the normalized number.
+   */
+
+  function normalizeDecimalNumber(value) {
+    var times = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 100000000000;
+    return REGEXP_DECIMALS.test(value) ? Math.round(value * times) / times : value;
+  }
+  var REGEXP_SUFFIX = /^width|height|left|top|marginLeft|marginTop$/;
+  /**
+   * Apply styles to the given element.
+   * @param {Element} element - The target element.
+   * @param {Object} styles - The styles for applying.
+   */
+
+  function setStyle(element, styles) {
+    var style = element.style;
+    forEach(styles, function (value, property) {
+      if (REGEXP_SUFFIX.test(property) && isNumber(value)) {
+        value = "".concat(value, "px");
+      }
+
+      style[property] = value;
+    });
+  }
+  /**
+   * Check if the given element has a special class.
+   * @param {Element} element - The element to check.
+   * @param {string} value - The class to search.
+   * @returns {boolean} Returns `true` if the special class was found.
+   */
+
+  function hasClass(element, value) {
+    return element.classList ? element.classList.contains(value) : element.className.indexOf(value) > -1;
+  }
+  /**
+   * Add classes to the given element.
+   * @param {Element} element - The target element.
+   * @param {string} value - The classes to be added.
+   */
+
+  function addClass(element, value) {
+    if (!value) {
+      return;
+    }
+
+    if (isNumber(element.length)) {
+      forEach(element, function (elem) {
+        addClass(elem, value);
+      });
+      return;
+    }
+
+    if (element.classList) {
+      element.classList.add(value);
+      return;
+    }
+
+    var className = element.className.trim();
+
+    if (!className) {
+      element.className = value;
+    } else if (className.indexOf(value) < 0) {
+      element.className = "".concat(className, " ").concat(value);
+    }
+  }
+  /**
+   * Remove classes from the given element.
+   * @param {Element} element - The target element.
+   * @param {string} value - The classes to be removed.
+   */
+
+  function removeClass(element, value) {
+    if (!value) {
+      return;
+    }
+
+    if (isNumber(element.length)) {
+      forEach(element, function (elem) {
+        removeClass(elem, value);
+      });
+      return;
+    }
+
+    if (element.classList) {
+      element.classList.remove(value);
+      return;
+    }
+
+    if (element.className.indexOf(value) >= 0) {
+      element.className = element.className.replace(value, '');
+    }
+  }
+  /**
+   * Add or remove classes from the given element.
+   * @param {Element} element - The target element.
+   * @param {string} value - The classes to be toggled.
+   * @param {boolean} added - Add only.
+   */
+
+  function toggleClass(element, value, added) {
+    if (!value) {
+      return;
+    }
+
+    if (isNumber(element.length)) {
+      forEach(element, function (elem) {
+        toggleClass(elem, value, added);
+      });
+      return;
+    } // IE10-11 doesn't support the second parameter of `classList.toggle`
+
+
+    if (added) {
+      addClass(element, value);
+    } else {
+      removeClass(element, value);
+    }
+  }
+  var REGEXP_CAMEL_CASE = /([a-z\d])([A-Z])/g;
+  /**
+   * Transform the given string from camelCase to kebab-case
+   * @param {string} value - The value to transform.
+   * @returns {string} The transformed value.
+   */
+
+  function toParamCase(value) {
+    return value.replace(REGEXP_CAMEL_CASE, '$1-$2').toLowerCase();
+  }
+  /**
+   * Get data from the given element.
+   * @param {Element} element - The target element.
+   * @param {string} name - The data key to get.
+   * @returns {string} The data value.
+   */
+
+  function getData(element, name) {
+    if (isObject(element[name])) {
+      return element[name];
+    }
+
+    if (element.dataset) {
+      return element.dataset[name];
+    }
+
+    return element.getAttribute("data-".concat(toParamCase(name)));
+  }
+  /**
+   * Set data to the given element.
+   * @param {Element} element - The target element.
+   * @param {string} name - The data key to set.
+   * @param {string} data - The data value.
+   */
+
+  function setData(element, name, data) {
+    if (isObject(data)) {
+      element[name] = data;
+    } else if (element.dataset) {
+      element.dataset[name] = data;
+    } else {
+      element.setAttribute("data-".concat(toParamCase(name)), data);
+    }
+  }
+  /**
+   * Remove data from the given element.
+   * @param {Element} element - The target element.
+   * @param {string} name - The data key to remove.
+   */
+
+  function removeData(element, name) {
+    if (isObject(element[name])) {
+      try {
+        delete element[name];
+      } catch (error) {
+        element[name] = undefined;
+      }
+    } else if (element.dataset) {
+      // #128 Safari not allows to delete dataset property
+      try {
+        delete element.dataset[name];
+      } catch (error) {
+        element.dataset[name] = undefined;
+      }
+    } else {
+      element.removeAttribute("data-".concat(toParamCase(name)));
+    }
+  }
+  var REGEXP_SPACES = /\s\s*/;
+
+  var onceSupported = function () {
+    var supported = false;
+
+    if (IS_BROWSER) {
+      var once = false;
+
+      var listener = function listener() {};
+
+      var options = Object.defineProperty({}, 'once', {
+        get: function get() {
+          supported = true;
+          return once;
+        },
+
+        /**
+         * This setter can fix a `TypeError` in strict mode
+         * {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors/Getter_only}
+         * @param {boolean} value - The value to set
+         */
+        set: function set(value) {
+          once = value;
+        }
+      });
+      WINDOW.addEventListener('test', listener, options);
+      WINDOW.removeEventListener('test', listener, options);
+    }
+
+    return supported;
+  }();
+  /**
+   * Remove event listener from the target element.
+   * @param {Element} element - The event target.
+   * @param {string} type - The event type(s).
+   * @param {Function} listener - The event listener.
+   * @param {Object} options - The event options.
+   */
+
+
+  function removeListener(element, type, listener) {
+    var options = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : {};
+    var handler = listener;
+    type.trim().split(REGEXP_SPACES).forEach(function (event) {
+      if (!onceSupported) {
+        var listeners = element.listeners;
+
+        if (listeners && listeners[event] && listeners[event][listener]) {
+          handler = listeners[event][listener];
+          delete listeners[event][listener];
+
+          if (Object.keys(listeners[event]).length === 0) {
+            delete listeners[event];
+          }
+
+          if (Object.keys(listeners).length === 0) {
+            delete element.listeners;
+          }
+        }
+      }
+
+      element.removeEventListener(event, handler, options);
+    });
+  }
+  /**
+   * Add event listener to the target element.
+   * @param {Element} element - The event target.
+   * @param {string} type - The event type(s).
+   * @param {Function} listener - The event listener.
+   * @param {Object} options - The event options.
+   */
+
+  function addListener(element, type, listener) {
+    var options = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : {};
+    var _handler = listener;
+    type.trim().split(REGEXP_SPACES).forEach(function (event) {
+      if (options.once && !onceSupported) {
+        var _element$listeners = element.listeners,
+            listeners = _element$listeners === void 0 ? {} : _element$listeners;
+
+        _handler = function handler() {
+          delete listeners[event][listener];
+          element.removeEventListener(event, _handler, options);
+
+          for (var _len2 = arguments.length, args = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
+            args[_key2] = arguments[_key2];
+          }
+
+          listener.apply(element, args);
+        };
+
+        if (!listeners[event]) {
+          listeners[event] = {};
+        }
+
+        if (listeners[event][listener]) {
+          element.removeEventListener(event, listeners[event][listener], options);
+        }
+
+        listeners[event][listener] = _handler;
+        element.listeners = listeners;
+      }
+
+      element.addEventListener(event, _handler, options);
+    });
+  }
+  /**
+   * Dispatch event on the target element.
+   * @param {Element} element - The event target.
+   * @param {string} type - The event type(s).
+   * @param {Object} data - The additional event data.
+   * @returns {boolean} Indicate if the event is default prevented or not.
+   */
+
+  function dispatchEvent(element, type, data) {
+    var event; // Event and CustomEvent on IE9-11 are global objects, not constructors
+
+    if (isFunction(Event) && isFunction(CustomEvent)) {
+      event = new CustomEvent(type, {
+        detail: data,
+        bubbles: true,
+        cancelable: true
+      });
+    } else {
+      event = document.createEvent('CustomEvent');
+      event.initCustomEvent(type, true, true, data);
+    }
+
+    return element.dispatchEvent(event);
+  }
+  /**
+   * Get the offset base on the document.
+   * @param {Element} element - The target element.
+   * @returns {Object} The offset data.
+   */
+
+  function getOffset(element) {
+    var box = element.getBoundingClientRect();
+    return {
+      left: box.left + (window.pageXOffset - document.documentElement.clientLeft),
+      top: box.top + (window.pageYOffset - document.documentElement.clientTop)
+    };
+  }
+  var location = WINDOW.location;
+  var REGEXP_ORIGINS = /^(\w+:)\/\/([^:/?#]*):?(\d*)/i;
+  /**
+   * Check if the given URL is a cross origin URL.
+   * @param {string} url - The target URL.
+   * @returns {boolean} Returns `true` if the given URL is a cross origin URL, else `false`.
+   */
+
+  function isCrossOriginURL(url) {
+    var parts = url.match(REGEXP_ORIGINS);
+    return parts !== null && (parts[1] !== location.protocol || parts[2] !== location.hostname || parts[3] !== location.port);
+  }
+  /**
+   * Add timestamp to the given URL.
+   * @param {string} url - The target URL.
+   * @returns {string} The result URL.
+   */
+
+  function addTimestamp(url) {
+    var timestamp = "timestamp=".concat(new Date().getTime());
+    return url + (url.indexOf('?') === -1 ? '?' : '&') + timestamp;
+  }
+  /**
+   * Get transforms base on the given object.
+   * @param {Object} obj - The target object.
+   * @returns {string} A string contains transform values.
+   */
+
+  function getTransforms(_ref) {
+    var rotate = _ref.rotate,
+        scaleX = _ref.scaleX,
+        scaleY = _ref.scaleY,
+        translateX = _ref.translateX,
+        translateY = _ref.translateY;
+    var values = [];
+
+    if (isNumber(translateX) && translateX !== 0) {
+      values.push("translateX(".concat(translateX, "px)"));
+    }
+
+    if (isNumber(translateY) && translateY !== 0) {
+      values.push("translateY(".concat(translateY, "px)"));
+    } // Rotate should come first before scale to match orientation transform
+
+
+    if (isNumber(rotate) && rotate !== 0) {
+      values.push("rotate(".concat(rotate, "deg)"));
+    }
+
+    if (isNumber(scaleX) && scaleX !== 1) {
+      values.push("scaleX(".concat(scaleX, ")"));
+    }
+
+    if (isNumber(scaleY) && scaleY !== 1) {
+      values.push("scaleY(".concat(scaleY, ")"));
+    }
+
+    var transform = values.length ? values.join(' ') : 'none';
+    return {
+      WebkitTransform: transform,
+      msTransform: transform,
+      transform: transform
+    };
+  }
+  /**
+   * Get the max ratio of a group of pointers.
+   * @param {string} pointers - The target pointers.
+   * @returns {number} The result ratio.
+   */
+
+  function getMaxZoomRatio(pointers) {
+    var pointers2 = assign({}, pointers);
+    var ratios = [];
+    forEach(pointers, function (pointer, pointerId) {
+      delete pointers2[pointerId];
+      forEach(pointers2, function (pointer2) {
+        var x1 = Math.abs(pointer.startX - pointer2.startX);
+        var y1 = Math.abs(pointer.startY - pointer2.startY);
+        var x2 = Math.abs(pointer.endX - pointer2.endX);
+        var y2 = Math.abs(pointer.endY - pointer2.endY);
+        var z1 = Math.sqrt(x1 * x1 + y1 * y1);
+        var z2 = Math.sqrt(x2 * x2 + y2 * y2);
+        var ratio = (z2 - z1) / z1;
+        ratios.push(ratio);
+      });
+    });
+    ratios.sort(function (a, b) {
+      return Math.abs(a) < Math.abs(b);
+    });
+    return ratios[0];
+  }
+  /**
+   * Get a pointer from an event object.
+   * @param {Object} event - The target event object.
+   * @param {boolean} endOnly - Indicates if only returns the end point coordinate or not.
+   * @returns {Object} The result pointer contains start and/or end point coordinates.
+   */
+
+  function getPointer(_ref2, endOnly) {
+    var pageX = _ref2.pageX,
+        pageY = _ref2.pageY;
+    var end = {
+      endX: pageX,
+      endY: pageY
+    };
+    return endOnly ? end : assign({
+      startX: pageX,
+      startY: pageY
+    }, end);
+  }
+  /**
+   * Get the center point coordinate of a group of pointers.
+   * @param {Object} pointers - The target pointers.
+   * @returns {Object} The center point coordinate.
+   */
+
+  function getPointersCenter(pointers) {
+    var pageX = 0;
+    var pageY = 0;
+    var count = 0;
+    forEach(pointers, function (_ref3) {
+      var startX = _ref3.startX,
+          startY = _ref3.startY;
+      pageX += startX;
+      pageY += startY;
+      count += 1;
+    });
+    pageX /= count;
+    pageY /= count;
+    return {
+      pageX: pageX,
+      pageY: pageY
+    };
+  }
+  /**
+   * Get the max sizes in a rectangle under the given aspect ratio.
+   * @param {Object} data - The original sizes.
+   * @param {string} [type='contain'] - The adjust type.
+   * @returns {Object} The result sizes.
+   */
+
+  function getAdjustedSizes(_ref4) // or 'cover'
+  {
+    var aspectRatio = _ref4.aspectRatio,
+        height = _ref4.height,
+        width = _ref4.width;
+    var type = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'contain';
+    var isValidWidth = isPositiveNumber(width);
+    var isValidHeight = isPositiveNumber(height);
+
+    if (isValidWidth && isValidHeight) {
+      var adjustedWidth = height * aspectRatio;
+
+      if (type === 'contain' && adjustedWidth > width || type === 'cover' && adjustedWidth < width) {
+        height = width / aspectRatio;
+      } else {
+        width = height * aspectRatio;
+      }
+    } else if (isValidWidth) {
+      height = width / aspectRatio;
+    } else if (isValidHeight) {
+      width = height * aspectRatio;
+    }
+
+    return {
+      width: width,
+      height: height
+    };
+  }
+  /**
+   * Get the new sizes of a rectangle after rotated.
+   * @param {Object} data - The original sizes.
+   * @returns {Object} The result sizes.
+   */
+
+  function getRotatedSizes(_ref5) {
+    var width = _ref5.width,
+        height = _ref5.height,
+        degree = _ref5.degree;
+    degree = Math.abs(degree) % 180;
+
+    if (degree === 90) {
+      return {
+        width: height,
+        height: width
+      };
+    }
+
+    var arc = degree % 90 * Math.PI / 180;
+    var sinArc = Math.sin(arc);
+    var cosArc = Math.cos(arc);
+    var newWidth = width * cosArc + height * sinArc;
+    var newHeight = width * sinArc + height * cosArc;
+    return degree > 90 ? {
+      width: newHeight,
+      height: newWidth
+    } : {
+      width: newWidth,
+      height: newHeight
+    };
+  }
+  /**
+   * Get a canvas which drew the given image.
+   * @param {HTMLImageElement} image - The image for drawing.
+   * @param {Object} imageData - The image data.
+   * @param {Object} canvasData - The canvas data.
+   * @param {Object} options - The options.
+   * @returns {HTMLCanvasElement} The result canvas.
+   */
+
+  function getSourceCanvas(image, _ref6, _ref7, _ref8) {
+    var imageAspectRatio = _ref6.aspectRatio,
+        imageNaturalWidth = _ref6.naturalWidth,
+        imageNaturalHeight = _ref6.naturalHeight,
+        _ref6$rotate = _ref6.rotate,
+        rotate = _ref6$rotate === void 0 ? 0 : _ref6$rotate,
+        _ref6$scaleX = _ref6.scaleX,
+        scaleX = _ref6$scaleX === void 0 ? 1 : _ref6$scaleX,
+        _ref6$scaleY = _ref6.scaleY,
+        scaleY = _ref6$scaleY === void 0 ? 1 : _ref6$scaleY;
+    var aspectRatio = _ref7.aspectRatio,
+        naturalWidth = _ref7.naturalWidth,
+        naturalHeight = _ref7.naturalHeight;
+    var _ref8$fillColor = _ref8.fillColor,
+        fillColor = _ref8$fillColor === void 0 ? 'transparent' : _ref8$fillColor,
+        _ref8$imageSmoothingE = _ref8.imageSmoothingEnabled,
+        imageSmoothingEnabled = _ref8$imageSmoothingE === void 0 ? true : _ref8$imageSmoothingE,
+        _ref8$imageSmoothingQ = _ref8.imageSmoothingQuality,
+        imageSmoothingQuality = _ref8$imageSmoothingQ === void 0 ? 'low' : _ref8$imageSmoothingQ,
+        _ref8$maxWidth = _ref8.maxWidth,
+        maxWidth = _ref8$maxWidth === void 0 ? Infinity : _ref8$maxWidth,
+        _ref8$maxHeight = _ref8.maxHeight,
+        maxHeight = _ref8$maxHeight === void 0 ? Infinity : _ref8$maxHeight,
+        _ref8$minWidth = _ref8.minWidth,
+        minWidth = _ref8$minWidth === void 0 ? 0 : _ref8$minWidth,
+        _ref8$minHeight = _ref8.minHeight,
+        minHeight = _ref8$minHeight === void 0 ? 0 : _ref8$minHeight;
+    var canvas = document.createElement('canvas');
+    var context = canvas.getContext('2d');
+    var maxSizes = getAdjustedSizes({
+      aspectRatio: aspectRatio,
+      width: maxWidth,
+      height: maxHeight
+    });
+    var minSizes = getAdjustedSizes({
+      aspectRatio: aspectRatio,
+      width: minWidth,
+      height: minHeight
+    }, 'cover');
+    var width = Math.min(maxSizes.width, Math.max(minSizes.width, naturalWidth));
+    var height = Math.min(maxSizes.height, Math.max(minSizes.height, naturalHeight)); // Note: should always use image's natural sizes for drawing as
+    // imageData.naturalWidth === canvasData.naturalHeight when rotate % 180 === 90
+
+    var destMaxSizes = getAdjustedSizes({
+      aspectRatio: imageAspectRatio,
+      width: maxWidth,
+      height: maxHeight
+    });
+    var destMinSizes = getAdjustedSizes({
+      aspectRatio: imageAspectRatio,
+      width: minWidth,
+      height: minHeight
+    }, 'cover');
+    var destWidth = Math.min(destMaxSizes.width, Math.max(destMinSizes.width, imageNaturalWidth));
+    var destHeight = Math.min(destMaxSizes.height, Math.max(destMinSizes.height, imageNaturalHeight));
+    var params = [-destWidth / 2, -destHeight / 2, destWidth, destHeight];
+    canvas.width = normalizeDecimalNumber(width);
+    canvas.height = normalizeDecimalNumber(height);
+    context.fillStyle = fillColor;
+    context.fillRect(0, 0, width, height);
+    context.save();
+    context.translate(width / 2, height / 2);
+    context.rotate(rotate * Math.PI / 180);
+    context.scale(scaleX, scaleY);
+    context.imageSmoothingEnabled = imageSmoothingEnabled;
+    context.imageSmoothingQuality = imageSmoothingQuality;
+    context.drawImage.apply(context, [image].concat(_toConsumableArray(params.map(function (param) {
+      return Math.floor(normalizeDecimalNumber(param));
+    }))));
+    context.restore();
+    return canvas;
+  }
+  var fromCharCode = String.fromCharCode;
+  /**
+   * Get string from char code in data view.
+   * @param {DataView} dataView - The data view for read.
+   * @param {number} start - The start index.
+   * @param {number} length - The read length.
+   * @returns {string} The read result.
+   */
+
+  function getStringFromCharCode(dataView, start, length) {
+    var str = '';
+    length += start;
+
+    for (var i = start; i < length; i += 1) {
+      str += fromCharCode(dataView.getUint8(i));
+    }
+
+    return str;
+  }
+  var REGEXP_DATA_URL_HEAD = /^data:.*,/;
+  /**
+   * Transform Data URL to array buffer.
+   * @param {string} dataURL - The Data URL to transform.
+   * @returns {ArrayBuffer} The result array buffer.
+   */
+
+  function dataURLToArrayBuffer(dataURL) {
+    var base64 = dataURL.replace(REGEXP_DATA_URL_HEAD, '');
+    var binary = atob(base64);
+    var arrayBuffer = new ArrayBuffer(binary.length);
+    var uint8 = new Uint8Array(arrayBuffer);
+    forEach(uint8, function (value, i) {
+      uint8[i] = binary.charCodeAt(i);
+    });
+    return arrayBuffer;
+  }
+  /**
+   * Transform array buffer to Data URL.
+   * @param {ArrayBuffer} arrayBuffer - The array buffer to transform.
+   * @param {string} mimeType - The mime type of the Data URL.
+   * @returns {string} The result Data URL.
+   */
+
+  function arrayBufferToDataURL(arrayBuffer, mimeType) {
+    var chunks = []; // Chunk Typed Array for better performance (#435)
+
+    var chunkSize = 8192;
+    var uint8 = new Uint8Array(arrayBuffer);
+
+    while (uint8.length > 0) {
+      // XXX: Babel's `toConsumableArray` helper will throw error in IE or Safari 9
+      // eslint-disable-next-line prefer-spread
+      chunks.push(fromCharCode.apply(null, toArray(uint8.subarray(0, chunkSize))));
+      uint8 = uint8.subarray(chunkSize);
+    }
+
+    return "data:".concat(mimeType, ";base64,").concat(btoa(chunks.join('')));
+  }
+  /**
+   * Get orientation value from given array buffer.
+   * @param {ArrayBuffer} arrayBuffer - The array buffer to read.
+   * @returns {number} The read orientation value.
+   */
+
+  function resetAndGetOrientation(arrayBuffer) {
+    var dataView = new DataView(arrayBuffer);
+    var orientation; // Ignores range error when the image does not have correct Exif information
+
+    try {
+      var littleEndian;
+      var app1Start;
+      var ifdStart; // Only handle JPEG image (start by 0xFFD8)
+
+      if (dataView.getUint8(0) === 0xFF && dataView.getUint8(1) === 0xD8) {
+        var length = dataView.byteLength;
+        var offset = 2;
+
+        while (offset + 1 < length) {
+          if (dataView.getUint8(offset) === 0xFF && dataView.getUint8(offset + 1) === 0xE1) {
+            app1Start = offset;
+            break;
+          }
+
+          offset += 1;
+        }
+      }
+
+      if (app1Start) {
+        var exifIDCode = app1Start + 4;
+        var tiffOffset = app1Start + 10;
+
+        if (getStringFromCharCode(dataView, exifIDCode, 4) === 'Exif') {
+          var endianness = dataView.getUint16(tiffOffset);
+          littleEndian = endianness === 0x4949;
+
+          if (littleEndian || endianness === 0x4D4D
+          /* bigEndian */
+          ) {
+              if (dataView.getUint16(tiffOffset + 2, littleEndian) === 0x002A) {
+                var firstIFDOffset = dataView.getUint32(tiffOffset + 4, littleEndian);
+
+                if (firstIFDOffset >= 0x00000008) {
+                  ifdStart = tiffOffset + firstIFDOffset;
+                }
+              }
+            }
+        }
+      }
+
+      if (ifdStart) {
+        var _length = dataView.getUint16(ifdStart, littleEndian);
+
+        var _offset;
+
+        var i;
+
+        for (i = 0; i < _length; i += 1) {
+          _offset = ifdStart + i * 12 + 2;
+
+          if (dataView.getUint16(_offset, littleEndian) === 0x0112
+          /* Orientation */
+          ) {
+              // 8 is the offset of the current tag's value
+              _offset += 8; // Get the original orientation value
+
+              orientation = dataView.getUint16(_offset, littleEndian); // Override the orientation with its default value
+
+              dataView.setUint16(_offset, 1, littleEndian);
+              break;
+            }
+        }
+      }
+    } catch (error) {
+      orientation = 1;
+    }
+
+    return orientation;
+  }
+  /**
+   * Parse Exif Orientation value.
+   * @param {number} orientation - The orientation to parse.
+   * @returns {Object} The parsed result.
+   */
+
+  function parseOrientation(orientation) {
+    var rotate = 0;
+    var scaleX = 1;
+    var scaleY = 1;
+
+    switch (orientation) {
+      // Flip horizontal
+      case 2:
+        scaleX = -1;
+        break;
+      // Rotate left 180°
+
+      case 3:
+        rotate = -180;
+        break;
+      // Flip vertical
+
+      case 4:
+        scaleY = -1;
+        break;
+      // Flip vertical and rotate right 90°
+
+      case 5:
+        rotate = 90;
+        scaleY = -1;
+        break;
+      // Rotate right 90°
+
+      case 6:
+        rotate = 90;
+        break;
+      // Flip horizontal and rotate right 90°
+
+      case 7:
+        rotate = 90;
+        scaleX = -1;
+        break;
+      // Rotate left 90°
+
+      case 8:
+        rotate = -90;
+        break;
+
+      default:
+    }
+
+    return {
+      rotate: rotate,
+      scaleX: scaleX,
+      scaleY: scaleY
+    };
+  }
+
+  var render = {
+    render: function render() {
+      this.initContainer();
+      this.initCanvas();
+      this.initCropBox();
+      this.renderCanvas();
+
+      if (this.cropped) {
+        this.renderCropBox();
+      }
+    },
+    initContainer: function initContainer() {
+      var element = this.element,
+          options = this.options,
+          container = this.container,
+          cropper = this.cropper;
+      addClass(cropper, CLASS_HIDDEN);
+      removeClass(element, CLASS_HIDDEN);
+      var containerData = {
+        width: Math.max(container.offsetWidth, Number(options.minContainerWidth) || 200),
+        height: Math.max(container.offsetHeight, Number(options.minContainerHeight) || 100)
+      };
+      this.containerData = containerData;
+      setStyle(cropper, {
+        width: containerData.width,
+        height: containerData.height
+      });
+      addClass(element, CLASS_HIDDEN);
+      removeClass(cropper, CLASS_HIDDEN);
+    },
+    // Canvas (image wrapper)
+    initCanvas: function initCanvas() {
+      var containerData = this.containerData,
+          imageData = this.imageData;
+      var viewMode = this.options.viewMode;
+      var rotated = Math.abs(imageData.rotate) % 180 === 90;
+      var naturalWidth = rotated ? imageData.naturalHeight : imageData.naturalWidth;
+      var naturalHeight = rotated ? imageData.naturalWidth : imageData.naturalHeight;
+      var aspectRatio = naturalWidth / naturalHeight;
+      var canvasWidth = containerData.width;
+      var canvasHeight = containerData.height;
+
+      if (containerData.height * aspectRatio > containerData.width) {
+        if (viewMode === 3) {
+          canvasWidth = containerData.height * aspectRatio;
+        } else {
+          canvasHeight = containerData.width / aspectRatio;
+        }
+      } else if (viewMode === 3) {
+        canvasHeight = containerData.width / aspectRatio;
+      } else {
+        canvasWidth = containerData.height * aspectRatio;
+      }
+
+      var canvasData = {
+        aspectRatio: aspectRatio,
+        naturalWidth: naturalWidth,
+        naturalHeight: naturalHeight,
+        width: canvasWidth,
+        height: canvasHeight
+      };
+      canvasData.left = (containerData.width - canvasWidth) / 2;
+      canvasData.top = (containerData.height - canvasHeight) / 2;
+      canvasData.oldLeft = canvasData.left;
+      canvasData.oldTop = canvasData.top;
+      this.canvasData = canvasData;
+      this.limited = viewMode === 1 || viewMode === 2;
+      this.limitCanvas(true, true);
+      this.initialImageData = assign({}, imageData);
+      this.initialCanvasData = assign({}, canvasData);
+    },
+    limitCanvas: function limitCanvas(sizeLimited, positionLimited) {
+      var options = this.options,
+          containerData = this.containerData,
+          canvasData = this.canvasData,
+          cropBoxData = this.cropBoxData;
+      var viewMode = options.viewMode;
+      var aspectRatio = canvasData.aspectRatio;
+      var cropped = this.cropped && cropBoxData;
+
+      if (sizeLimited) {
+        var minCanvasWidth = Number(options.minCanvasWidth) || 0;
+        var minCanvasHeight = Number(options.minCanvasHeight) || 0;
+
+        if (viewMode > 1) {
+          minCanvasWidth = Math.max(minCanvasWidth, containerData.width);
+          minCanvasHeight = Math.max(minCanvasHeight, containerData.height);
+
+          if (viewMode === 3) {
+            if (minCanvasHeight * aspectRatio > minCanvasWidth) {
+              minCanvasWidth = minCanvasHeight * aspectRatio;
+            } else {
+              minCanvasHeight = minCanvasWidth / aspectRatio;
+            }
+          }
+        } else if (viewMode > 0) {
+          if (minCanvasWidth) {
+            minCanvasWidth = Math.max(minCanvasWidth, cropped ? cropBoxData.width : 0);
+          } else if (minCanvasHeight) {
+            minCanvasHeight = Math.max(minCanvasHeight, cropped ? cropBoxData.height : 0);
+          } else if (cropped) {
+            minCanvasWidth = cropBoxData.width;
+            minCanvasHeight = cropBoxData.height;
+
+            if (minCanvasHeight * aspectRatio > minCanvasWidth) {
+              minCanvasWidth = minCanvasHeight * aspectRatio;
+            } else {
+              minCanvasHeight = minCanvasWidth / aspectRatio;
+            }
+          }
+        }
+
+        var _getAdjustedSizes = getAdjustedSizes({
+          aspectRatio: aspectRatio,
+          width: minCanvasWidth,
+          height: minCanvasHeight
+        });
+
+        minCanvasWidth = _getAdjustedSizes.width;
+        minCanvasHeight = _getAdjustedSizes.height;
+        canvasData.minWidth = minCanvasWidth;
+        canvasData.minHeight = minCanvasHeight;
+        canvasData.maxWidth = Infinity;
+        canvasData.maxHeight = Infinity;
+      }
+
+      if (positionLimited) {
+        if (viewMode > (cropped ? 0 : 1)) {
+          var newCanvasLeft = containerData.width - canvasData.width;
+          var newCanvasTop = containerData.height - canvasData.height;
+          canvasData.minLeft = Math.min(0, newCanvasLeft);
+          canvasData.minTop = Math.min(0, newCanvasTop);
+          canvasData.maxLeft = Math.max(0, newCanvasLeft);
+          canvasData.maxTop = Math.max(0, newCanvasTop);
+
+          if (cropped && this.limited) {
+            canvasData.minLeft = Math.min(cropBoxData.left, cropBoxData.left + (cropBoxData.width - canvasData.width));
+            canvasData.minTop = Math.min(cropBoxData.top, cropBoxData.top + (cropBoxData.height - canvasData.height));
+            canvasData.maxLeft = cropBoxData.left;
+            canvasData.maxTop = cropBoxData.top;
+
+            if (viewMode === 2) {
+              if (canvasData.width >= containerData.width) {
+                canvasData.minLeft = Math.min(0, newCanvasLeft);
+                canvasData.maxLeft = Math.max(0, newCanvasLeft);
+              }
+
+              if (canvasData.height >= containerData.height) {
+                canvasData.minTop = Math.min(0, newCanvasTop);
+                canvasData.maxTop = Math.max(0, newCanvasTop);
+              }
+            }
+          }
+        } else {
+          canvasData.minLeft = -canvasData.width;
+          canvasData.minTop = -canvasData.height;
+          canvasData.maxLeft = containerData.width;
+          canvasData.maxTop = containerData.height;
+        }
+      }
+    },
+    renderCanvas: function renderCanvas(changed, transformed) {
+      var canvasData = this.canvasData,
+          imageData = this.imageData;
+
+      if (transformed) {
+        var _getRotatedSizes = getRotatedSizes({
+          width: imageData.naturalWidth * Math.abs(imageData.scaleX || 1),
+          height: imageData.naturalHeight * Math.abs(imageData.scaleY || 1),
+          degree: imageData.rotate || 0
+        }),
+            naturalWidth = _getRotatedSizes.width,
+            naturalHeight = _getRotatedSizes.height;
+
+        var width = canvasData.width * (naturalWidth / canvasData.naturalWidth);
+        var height = canvasData.height * (naturalHeight / canvasData.naturalHeight);
+        canvasData.left -= (width - canvasData.width) / 2;
+        canvasData.top -= (height - canvasData.height) / 2;
+        canvasData.width = width;
+        canvasData.height = height;
+        canvasData.aspectRatio = naturalWidth / naturalHeight;
+        canvasData.naturalWidth = naturalWidth;
+        canvasData.naturalHeight = naturalHeight;
+        this.limitCanvas(true, false);
+      }
+
+      if (canvasData.width > canvasData.maxWidth || canvasData.width < canvasData.minWidth) {
+        canvasData.left = canvasData.oldLeft;
+      }
+
+      if (canvasData.height > canvasData.maxHeight || canvasData.height < canvasData.minHeight) {
+        canvasData.top = canvasData.oldTop;
+      }
+
+      canvasData.width = Math.min(Math.max(canvasData.width, canvasData.minWidth), canvasData.maxWidth);
+      canvasData.height = Math.min(Math.max(canvasData.height, canvasData.minHeight), canvasData.maxHeight);
+      this.limitCanvas(false, true);
+      canvasData.left = Math.min(Math.max(canvasData.left, canvasData.minLeft), canvasData.maxLeft);
+      canvasData.top = Math.min(Math.max(canvasData.top, canvasData.minTop), canvasData.maxTop);
+      canvasData.oldLeft = canvasData.left;
+      canvasData.oldTop = canvasData.top;
+      setStyle(this.canvas, assign({
+        width: canvasData.width,
+        height: canvasData.height
+      }, getTransforms({
+        translateX: canvasData.left,
+        translateY: canvasData.top
+      })));
+      this.renderImage(changed);
+
+      if (this.cropped && this.limited) {
+        this.limitCropBox(true, true);
+      }
+    },
+    renderImage: function renderImage(changed) {
+      var canvasData = this.canvasData,
+          imageData = this.imageData;
+      var width = imageData.naturalWidth * (canvasData.width / canvasData.naturalWidth);
+      var height = imageData.naturalHeight * (canvasData.height / canvasData.naturalHeight);
+      assign(imageData, {
+        width: width,
+        height: height,
+        left: (canvasData.width - width) / 2,
+        top: (canvasData.height - height) / 2
+      });
+      setStyle(this.image, assign({
+        width: imageData.width,
+        height: imageData.height
+      }, getTransforms(assign({
+        translateX: imageData.left,
+        translateY: imageData.top
+      }, imageData))));
+
+      if (changed) {
+        this.output();
+      }
+    },
+    initCropBox: function initCropBox() {
+      var options = this.options,
+          canvasData = this.canvasData;
+      var aspectRatio = options.aspectRatio || options.initialAspectRatio;
+      var autoCropArea = Number(options.autoCropArea) || 0.8;
+      var cropBoxData = {
+        width: canvasData.width,
+        height: canvasData.height
+      };
+
+      if (aspectRatio) {
+        if (canvasData.height * aspectRatio > canvasData.width) {
+          cropBoxData.height = cropBoxData.width / aspectRatio;
+        } else {
+          cropBoxData.width = cropBoxData.height * aspectRatio;
+        }
+      }
+
+      this.cropBoxData = cropBoxData;
+      this.limitCropBox(true, true); // Initialize auto crop area
+
+      cropBoxData.width = Math.min(Math.max(cropBoxData.width, cropBoxData.minWidth), cropBoxData.maxWidth);
+      cropBoxData.height = Math.min(Math.max(cropBoxData.height, cropBoxData.minHeight), cropBoxData.maxHeight); // The width/height of auto crop area must large than "minWidth/Height"
+
+      cropBoxData.width = Math.max(cropBoxData.minWidth, cropBoxData.width * autoCropArea);
+      cropBoxData.height = Math.max(cropBoxData.minHeight, cropBoxData.height * autoCropArea);
+      cropBoxData.left = canvasData.left + (canvasData.width - cropBoxData.width) / 2;
+      cropBoxData.top = canvasData.top + (canvasData.height - cropBoxData.height) / 2;
+      cropBoxData.oldLeft = cropBoxData.left;
+      cropBoxData.oldTop = cropBoxData.top;
+      this.initialCropBoxData = assign({}, cropBoxData);
+    },
+    limitCropBox: function limitCropBox(sizeLimited, positionLimited) {
+      var options = this.options,
+          containerData = this.containerData,
+          canvasData = this.canvasData,
+          cropBoxData = this.cropBoxData,
+          limited = this.limited;
+      var aspectRatio = options.aspectRatio;
+
+      if (sizeLimited) {
+        var minCropBoxWidth = Number(options.minCropBoxWidth) || 0;
+        var minCropBoxHeight = Number(options.minCropBoxHeight) || 0;
+        var maxCropBoxWidth = limited ? Math.min(containerData.width, canvasData.width, canvasData.width + canvasData.left, containerData.width - canvasData.left) : containerData.width;
+        var maxCropBoxHeight = limited ? Math.min(containerData.height, canvasData.height, canvasData.height + canvasData.top, containerData.height - canvasData.top) : containerData.height; // The min/maxCropBoxWidth/Height must be less than container's width/height
+
+        minCropBoxWidth = Math.min(minCropBoxWidth, containerData.width);
+        minCropBoxHeight = Math.min(minCropBoxHeight, containerData.height);
+
+        if (aspectRatio) {
+          if (minCropBoxWidth && minCropBoxHeight) {
+            if (minCropBoxHeight * aspectRatio > minCropBoxWidth) {
+              minCropBoxHeight = minCropBoxWidth / aspectRatio;
+            } else {
+              minCropBoxWidth = minCropBoxHeight * aspectRatio;
+            }
+          } else if (minCropBoxWidth) {
+            minCropBoxHeight = minCropBoxWidth / aspectRatio;
+          } else if (minCropBoxHeight) {
+            minCropBoxWidth = minCropBoxHeight * aspectRatio;
+          }
+
+          if (maxCropBoxHeight * aspectRatio > maxCropBoxWidth) {
+            maxCropBoxHeight = maxCropBoxWidth / aspectRatio;
+          } else {
+            maxCropBoxWidth = maxCropBoxHeight * aspectRatio;
+          }
+        } // The minWidth/Height must be less than maxWidth/Height
+
+
+        cropBoxData.minWidth = Math.min(minCropBoxWidth, maxCropBoxWidth);
+        cropBoxData.minHeight = Math.min(minCropBoxHeight, maxCropBoxHeight);
+        cropBoxData.maxWidth = maxCropBoxWidth;
+        cropBoxData.maxHeight = maxCropBoxHeight;
+      }
+
+      if (positionLimited) {
+        if (limited) {
+          cropBoxData.minLeft = Math.max(0, canvasData.left);
+          cropBoxData.minTop = Math.max(0, canvasData.top);
+          cropBoxData.maxLeft = Math.min(containerData.width, canvasData.left + canvasData.width) - cropBoxData.width;
+          cropBoxData.maxTop = Math.min(containerData.height, canvasData.top + canvasData.height) - cropBoxData.height;
+        } else {
+          cropBoxData.minLeft = 0;
+          cropBoxData.minTop = 0;
+          cropBoxData.maxLeft = containerData.width - cropBoxData.width;
+          cropBoxData.maxTop = containerData.height - cropBoxData.height;
+        }
+      }
+    },
+    renderCropBox: function renderCropBox() {
+      var options = this.options,
+          containerData = this.containerData,
+          cropBoxData = this.cropBoxData;
+
+      if (cropBoxData.width > cropBoxData.maxWidth || cropBoxData.width < cropBoxData.minWidth) {
+        cropBoxData.left = cropBoxData.oldLeft;
+      }
+
+      if (cropBoxData.height > cropBoxData.maxHeight || cropBoxData.height < cropBoxData.minHeight) {
+        cropBoxData.top = cropBoxData.oldTop;
+      }
+
+      cropBoxData.width = Math.min(Math.max(cropBoxData.width, cropBoxData.minWidth), cropBoxData.maxWidth);
+      cropBoxData.height = Math.min(Math.max(cropBoxData.height, cropBoxData.minHeight), cropBoxData.maxHeight);
+      this.limitCropBox(false, true);
+      cropBoxData.left = Math.min(Math.max(cropBoxData.left, cropBoxData.minLeft), cropBoxData.maxLeft);
+      cropBoxData.top = Math.min(Math.max(cropBoxData.top, cropBoxData.minTop), cropBoxData.maxTop);
+      cropBoxData.oldLeft = cropBoxData.left;
+      cropBoxData.oldTop = cropBoxData.top;
+
+      if (options.movable && options.cropBoxMovable) {
+        // Turn to move the canvas when the crop box is equal to the container
+        setData(this.face, DATA_ACTION, cropBoxData.width >= containerData.width && cropBoxData.height >= containerData.height ? ACTION_MOVE : ACTION_ALL);
+      }
+
+      setStyle(this.cropBox, assign({
+        width: cropBoxData.width,
+        height: cropBoxData.height
+      }, getTransforms({
+        translateX: cropBoxData.left,
+        translateY: cropBoxData.top
+      })));
+
+      if (this.cropped && this.limited) {
+        this.limitCanvas(true, true);
+      }
+
+      if (!this.disabled) {
+        this.output();
+      }
+    },
+    output: function output() {
+      this.preview();
+      dispatchEvent(this.element, EVENT_CROP, this.getData());
+    }
+  };
+
+  var preview = {
+    initPreview: function initPreview() {
+      var element = this.element,
+          crossOrigin = this.crossOrigin;
+      var preview = this.options.preview;
+      var url = crossOrigin ? this.crossOriginUrl : this.url;
+      var alt = element.alt || 'The image to preview';
+      var image = document.createElement('img');
+
+      if (crossOrigin) {
+        image.crossOrigin = crossOrigin;
+      }
+
+      image.src = url;
+      image.alt = alt;
+      this.viewBox.appendChild(image);
+      this.viewBoxImage = image;
+
+      if (!preview) {
+        return;
+      }
+
+      var previews = preview;
+
+      if (typeof preview === 'string') {
+        previews = element.ownerDocument.querySelectorAll(preview);
+      } else if (preview.querySelector) {
+        previews = [preview];
+      }
+
+      this.previews = previews;
+      forEach(previews, function (el) {
+        var img = document.createElement('img'); // Save the original size for recover
+
+        setData(el, DATA_PREVIEW, {
+          width: el.offsetWidth,
+          height: el.offsetHeight,
+          html: el.innerHTML
+        });
+
+        if (crossOrigin) {
+          img.crossOrigin = crossOrigin;
+        }
+
+        img.src = url;
+        img.alt = alt;
+        /**
+         * Override img element styles
+         * Add `display:block` to avoid margin top issue
+         * Add `height:auto` to override `height` attribute on IE8
+         * (Occur only when margin-top <= -height)
+         */
+
+        img.style.cssText = 'display:block;' + 'width:100%;' + 'height:auto;' + 'min-width:0!important;' + 'min-height:0!important;' + 'max-width:none!important;' + 'max-height:none!important;' + 'image-orientation:0deg!important;"';
+        el.innerHTML = '';
+        el.appendChild(img);
+      });
+    },
+    resetPreview: function resetPreview() {
+      forEach(this.previews, function (element) {
+        var data = getData(element, DATA_PREVIEW);
+        setStyle(element, {
+          width: data.width,
+          height: data.height
+        });
+        element.innerHTML = data.html;
+        removeData(element, DATA_PREVIEW);
+      });
+    },
+    preview: function preview() {
+      var imageData = this.imageData,
+          canvasData = this.canvasData,
+          cropBoxData = this.cropBoxData;
+      var cropBoxWidth = cropBoxData.width,
+          cropBoxHeight = cropBoxData.height;
+      var width = imageData.width,
+          height = imageData.height;
+      var left = cropBoxData.left - canvasData.left - imageData.left;
+      var top = cropBoxData.top - canvasData.top - imageData.top;
+
+      if (!this.cropped || this.disabled) {
+        return;
+      }
+
+      setStyle(this.viewBoxImage, assign({
+        width: width,
+        height: height
+      }, getTransforms(assign({
+        translateX: -left,
+        translateY: -top
+      }, imageData))));
+      forEach(this.previews, function (element) {
+        var data = getData(element, DATA_PREVIEW);
+        var originalWidth = data.width;
+        var originalHeight = data.height;
+        var newWidth = originalWidth;
+        var newHeight = originalHeight;
+        var ratio = 1;
+
+        if (cropBoxWidth) {
+          ratio = originalWidth / cropBoxWidth;
+          newHeight = cropBoxHeight * ratio;
+        }
+
+        if (cropBoxHeight && newHeight > originalHeight) {
+          ratio = originalHeight / cropBoxHeight;
+          newWidth = cropBoxWidth * ratio;
+          newHeight = originalHeight;
+        }
+
+        setStyle(element, {
+          width: newWidth,
+          height: newHeight
+        });
+        setStyle(element.getElementsByTagName('img')[0], assign({
+          width: width * ratio,
+          height: height * ratio
+        }, getTransforms(assign({
+          translateX: -left * ratio,
+          translateY: -top * ratio
+        }, imageData))));
+      });
+    }
+  };
+
+  var events = {
+    bind: function bind() {
+      var element = this.element,
+          options = this.options,
+          cropper = this.cropper;
+
+      if (isFunction(options.cropstart)) {
+        addListener(element, EVENT_CROP_START, options.cropstart);
+      }
+
+      if (isFunction(options.cropmove)) {
+        addListener(element, EVENT_CROP_MOVE, options.cropmove);
+      }
+
+      if (isFunction(options.cropend)) {
+        addListener(element, EVENT_CROP_END, options.cropend);
+      }
+
+      if (isFunction(options.crop)) {
+        addListener(element, EVENT_CROP, options.crop);
+      }
+
+      if (isFunction(options.zoom)) {
+        addListener(element, EVENT_ZOOM, options.zoom);
+      }
+
+      addListener(cropper, EVENT_POINTER_DOWN, this.onCropStart = this.cropStart.bind(this));
+
+      if (options.zoomable && options.zoomOnWheel) {
+        addListener(cropper, EVENT_WHEEL, this.onWheel = this.wheel.bind(this), {
+          passive: false,
+          capture: true
+        });
+      }
+
+      if (options.toggleDragModeOnDblclick) {
+        addListener(cropper, EVENT_DBLCLICK, this.onDblclick = this.dblclick.bind(this));
+      }
+
+      addListener(element.ownerDocument, EVENT_POINTER_MOVE, this.onCropMove = this.cropMove.bind(this));
+      addListener(element.ownerDocument, EVENT_POINTER_UP, this.onCropEnd = this.cropEnd.bind(this));
+
+      if (options.responsive) {
+        addListener(window, EVENT_RESIZE, this.onResize = this.resize.bind(this));
+      }
+    },
+    unbind: function unbind() {
+      var element = this.element,
+          options = this.options,
+          cropper = this.cropper;
+
+      if (isFunction(options.cropstart)) {
+        removeListener(element, EVENT_CROP_START, options.cropstart);
+      }
+
+      if (isFunction(options.cropmove)) {
+        removeListener(element, EVENT_CROP_MOVE, options.cropmove);
+      }
+
+      if (isFunction(options.cropend)) {
+        removeListener(element, EVENT_CROP_END, options.cropend);
+      }
+
+      if (isFunction(options.crop)) {
+        removeListener(element, EVENT_CROP, options.crop);
+      }
+
+      if (isFunction(options.zoom)) {
+        removeListener(element, EVENT_ZOOM, options.zoom);
+      }
+
+      removeListener(cropper, EVENT_POINTER_DOWN, this.onCropStart);
+
+      if (options.zoomable && options.zoomOnWheel) {
+        removeListener(cropper, EVENT_WHEEL, this.onWheel, {
+          passive: false,
+          capture: true
+        });
+      }
+
+      if (options.toggleDragModeOnDblclick) {
+        removeListener(cropper, EVENT_DBLCLICK, this.onDblclick);
+      }
+
+      removeListener(element.ownerDocument, EVENT_POINTER_MOVE, this.onCropMove);
+      removeListener(element.ownerDocument, EVENT_POINTER_UP, this.onCropEnd);
+
+      if (options.responsive) {
+        removeListener(window, EVENT_RESIZE, this.onResize);
+      }
+    }
+  };
+
+  var handlers = {
+    resize: function resize() {
+      var options = this.options,
+          container = this.container,
+          containerData = this.containerData;
+      var minContainerWidth = Number(options.minContainerWidth) || MIN_CONTAINER_WIDTH;
+      var minContainerHeight = Number(options.minContainerHeight) || MIN_CONTAINER_HEIGHT;
+
+      if (this.disabled || containerData.width <= minContainerWidth || containerData.height <= minContainerHeight) {
+        return;
+      }
+
+      var ratio = container.offsetWidth / containerData.width; // Resize when width changed or height changed
+
+      if (ratio !== 1 || container.offsetHeight !== containerData.height) {
+        var canvasData;
+        var cropBoxData;
+
+        if (options.restore) {
+          canvasData = this.getCanvasData();
+          cropBoxData = this.getCropBoxData();
+        }
+
+        this.render();
+
+        if (options.restore) {
+          this.setCanvasData(forEach(canvasData, function (n, i) {
+            canvasData[i] = n * ratio;
+          }));
+          this.setCropBoxData(forEach(cropBoxData, function (n, i) {
+            cropBoxData[i] = n * ratio;
+          }));
+        }
+      }
+    },
+    dblclick: function dblclick() {
+      if (this.disabled || this.options.dragMode === DRAG_MODE_NONE) {
+        return;
+      }
+
+      this.setDragMode(hasClass(this.dragBox, CLASS_CROP) ? DRAG_MODE_MOVE : DRAG_MODE_CROP);
+    },
+    wheel: function wheel(event) {
+      var _this = this;
+
+      var ratio = Number(this.options.wheelZoomRatio) || 0.1;
+      var delta = 1;
+
+      if (this.disabled) {
+        return;
+      }
+
+      event.preventDefault(); // Limit wheel speed to prevent zoom too fast (#21)
+
+      if (this.wheeling) {
+        return;
+      }
+
+      this.wheeling = true;
+      setTimeout(function () {
+        _this.wheeling = false;
+      }, 50);
+
+      if (event.deltaY) {
+        delta = event.deltaY > 0 ? 1 : -1;
+      } else if (event.wheelDelta) {
+        delta = -event.wheelDelta / 120;
+      } else if (event.detail) {
+        delta = event.detail > 0 ? 1 : -1;
+      }
+
+      this.zoom(-delta * ratio, event);
+    },
+    cropStart: function cropStart(event) {
+      var buttons = event.buttons,
+          button = event.button;
+
+      if (this.disabled // No primary button (Usually the left button)
+      // Note that touch events have no `buttons` or `button` property
+      || isNumber(buttons) && buttons !== 1 || isNumber(button) && button !== 0 // Open context menu
+      || event.ctrlKey) {
+        return;
+      }
+
+      var options = this.options,
+          pointers = this.pointers;
+      var action;
+
+      if (event.changedTouches) {
+        // Handle touch event
+        forEach(event.changedTouches, function (touch) {
+          pointers[touch.identifier] = getPointer(touch);
+        });
+      } else {
+        // Handle mouse event and pointer event
+        pointers[event.pointerId || 0] = getPointer(event);
+      }
+
+      if (Object.keys(pointers).length > 1 && options.zoomable && options.zoomOnTouch) {
+        action = ACTION_ZOOM;
+      } else {
+        action = getData(event.target, DATA_ACTION);
+      }
+
+      if (!REGEXP_ACTIONS.test(action)) {
+        return;
+      }
+
+      if (dispatchEvent(this.element, EVENT_CROP_START, {
+        originalEvent: event,
+        action: action
+      }) === false) {
+        return;
+      } // This line is required for preventing page zooming in iOS browsers
+
+
+      event.preventDefault();
+      this.action = action;
+      this.cropping = false;
+
+      if (action === ACTION_CROP) {
+        this.cropping = true;
+        addClass(this.dragBox, CLASS_MODAL);
+      }
+    },
+    cropMove: function cropMove(event) {
+      var action = this.action;
+
+      if (this.disabled || !action) {
+        return;
+      }
+
+      var pointers = this.pointers;
+      event.preventDefault();
+
+      if (dispatchEvent(this.element, EVENT_CROP_MOVE, {
+        originalEvent: event,
+        action: action
+      }) === false) {
+        return;
+      }
+
+      if (event.changedTouches) {
+        forEach(event.changedTouches, function (touch) {
+          // The first parameter should not be undefined (#432)
+          assign(pointers[touch.identifier] || {}, getPointer(touch, true));
+        });
+      } else {
+        assign(pointers[event.pointerId || 0] || {}, getPointer(event, true));
+      }
+
+      this.change(event);
+    },
+    cropEnd: function cropEnd(event) {
+      if (this.disabled) {
+        return;
+      }
+
+      var action = this.action,
+          pointers = this.pointers;
+
+      if (event.changedTouches) {
+        forEach(event.changedTouches, function (touch) {
+          delete pointers[touch.identifier];
+        });
+      } else {
+        delete pointers[event.pointerId || 0];
+      }
+
+      if (!action) {
+        return;
+      }
+
+      event.preventDefault();
+
+      if (!Object.keys(pointers).length) {
+        this.action = '';
+      }
+
+      if (this.cropping) {
+        this.cropping = false;
+        toggleClass(this.dragBox, CLASS_MODAL, this.cropped && this.options.modal);
+      }
+
+      dispatchEvent(this.element, EVENT_CROP_END, {
+        originalEvent: event,
+        action: action
+      });
+    }
+  };
+
+  var change = {
+    change: function change(event) {
+      var options = this.options,
+          canvasData = this.canvasData,
+          containerData = this.containerData,
+          cropBoxData = this.cropBoxData,
+          pointers = this.pointers;
+      var action = this.action;
+      var aspectRatio = options.aspectRatio;
+      var left = cropBoxData.left,
+          top = cropBoxData.top,
+          width = cropBoxData.width,
+          height = cropBoxData.height;
+      var right = left + width;
+      var bottom = top + height;
+      var minLeft = 0;
+      var minTop = 0;
+      var maxWidth = containerData.width;
+      var maxHeight = containerData.height;
+      var renderable = true;
+      var offset; // Locking aspect ratio in "free mode" by holding shift key
+
+      if (!aspectRatio && event.shiftKey) {
+        aspectRatio = width && height ? width / height : 1;
+      }
+
+      if (this.limited) {
+        minLeft = cropBoxData.minLeft;
+        minTop = cropBoxData.minTop;
+        maxWidth = minLeft + Math.min(containerData.width, canvasData.width, canvasData.left + canvasData.width);
+        maxHeight = minTop + Math.min(containerData.height, canvasData.height, canvasData.top + canvasData.height);
+      }
+
+      var pointer = pointers[Object.keys(pointers)[0]];
+      var range = {
+        x: pointer.endX - pointer.startX,
+        y: pointer.endY - pointer.startY
+      };
+
+      var check = function check(side) {
+        switch (side) {
+          case ACTION_EAST:
+            if (right + range.x > maxWidth) {
+              range.x = maxWidth - right;
+            }
+
+            break;
+
+          case ACTION_WEST:
+            if (left + range.x < minLeft) {
+              range.x = minLeft - left;
+            }
+
+            break;
+
+          case ACTION_NORTH:
+            if (top + range.y < minTop) {
+              range.y = minTop - top;
+            }
+
+            break;
+
+          case ACTION_SOUTH:
+            if (bottom + range.y > maxHeight) {
+              range.y = maxHeight - bottom;
+            }
+
+            break;
+
+          default:
+        }
+      };
+
+      switch (action) {
+        // Move crop box
+        case ACTION_ALL:
+          left += range.x;
+          top += range.y;
+          break;
+        // Resize crop box
+
+        case ACTION_EAST:
+          if (range.x >= 0 && (right >= maxWidth || aspectRatio && (top <= minTop || bottom >= maxHeight))) {
+            renderable = false;
+            break;
+          }
+
+          check(ACTION_EAST);
+          width += range.x;
+
+          if (width < 0) {
+            action = ACTION_WEST;
+            width = -width;
+            left -= width;
+          }
+
+          if (aspectRatio) {
+            height = width / aspectRatio;
+            top += (cropBoxData.height - height) / 2;
+          }
+
+          break;
+
+        case ACTION_NORTH:
+          if (range.y <= 0 && (top <= minTop || aspectRatio && (left <= minLeft || right >= maxWidth))) {
+            renderable = false;
+            break;
+          }
+
+          check(ACTION_NORTH);
+          height -= range.y;
+          top += range.y;
+
+          if (height < 0) {
+            action = ACTION_SOUTH;
+            height = -height;
+            top -= height;
+          }
+
+          if (aspectRatio) {
+            width = height * aspectRatio;
+            left += (cropBoxData.width - width) / 2;
+          }
+
+          break;
+
+        case ACTION_WEST:
+          if (range.x <= 0 && (left <= minLeft || aspectRatio && (top <= minTop || bottom >= maxHeight))) {
+            renderable = false;
+            break;
+          }
+
+          check(ACTION_WEST);
+          width -= range.x;
+          left += range.x;
+
+          if (width < 0) {
+            action = ACTION_EAST;
+            width = -width;
+            left -= width;
+          }
+
+          if (aspectRatio) {
+            height = width / aspectRatio;
+            top += (cropBoxData.height - height) / 2;
+          }
+
+          break;
+
+        case ACTION_SOUTH:
+          if (range.y >= 0 && (bottom >= maxHeight || aspectRatio && (left <= minLeft || right >= maxWidth))) {
+            renderable = false;
+            break;
+          }
+
+          check(ACTION_SOUTH);
+          height += range.y;
+
+          if (height < 0) {
+            action = ACTION_NORTH;
+            height = -height;
+            top -= height;
+          }
+
+          if (aspectRatio) {
+            width = height * aspectRatio;
+            left += (cropBoxData.width - width) / 2;
+          }
+
+          break;
+
+        case ACTION_NORTH_EAST:
+          if (aspectRatio) {
+            if (range.y <= 0 && (top <= minTop || right >= maxWidth)) {
+              renderable = false;
+              break;
+            }
+
+            check(ACTION_NORTH);
+            height -= range.y;
+            top += range.y;
+            width = height * aspectRatio;
+          } else {
+            check(ACTION_NORTH);
+            check(ACTION_EAST);
+
+            if (range.x >= 0) {
+              if (right < maxWidth) {
+                width += range.x;
+              } else if (range.y <= 0 && top <= minTop) {
+                renderable = false;
+              }
+            } else {
+              width += range.x;
+            }
+
+            if (range.y <= 0) {
+              if (top > minTop) {
+                height -= range.y;
+                top += range.y;
+              }
+            } else {
+              height -= range.y;
+              top += range.y;
+            }
+          }
+
+          if (width < 0 && height < 0) {
+            action = ACTION_SOUTH_WEST;
+            height = -height;
+            width = -width;
+            top -= height;
+            left -= width;
+          } else if (width < 0) {
+            action = ACTION_NORTH_WEST;
+            width = -width;
+            left -= width;
+          } else if (height < 0) {
+            action = ACTION_SOUTH_EAST;
+            height = -height;
+            top -= height;
+          }
+
+          break;
+
+        case ACTION_NORTH_WEST:
+          if (aspectRatio) {
+            if (range.y <= 0 && (top <= minTop || left <= minLeft)) {
+              renderable = false;
+              break;
+            }
+
+            check(ACTION_NORTH);
+            height -= range.y;
+            top += range.y;
+            width = height * aspectRatio;
+            left += cropBoxData.width - width;
+          } else {
+            check(ACTION_NORTH);
+            check(ACTION_WEST);
+
+            if (range.x <= 0) {
+              if (left > minLeft) {
+                width -= range.x;
+                left += range.x;
+              } else if (range.y <= 0 && top <= minTop) {
+                renderable = false;
+              }
+            } else {
+              width -= range.x;
+              left += range.x;
+            }
+
+            if (range.y <= 0) {
+              if (top > minTop) {
+                height -= range.y;
+                top += range.y;
+              }
+            } else {
+              height -= range.y;
+              top += range.y;
+            }
+          }
+
+          if (width < 0 && height < 0) {
+            action = ACTION_SOUTH_EAST;
+            height = -height;
+            width = -width;
+            top -= height;
+            left -= width;
+          } else if (width < 0) {
+            action = ACTION_NORTH_EAST;
+            width = -width;
+            left -= width;
+          } else if (height < 0) {
+            action = ACTION_SOUTH_WEST;
+            height = -height;
+            top -= height;
+          }
+
+          break;
+
+        case ACTION_SOUTH_WEST:
+          if (aspectRatio) {
+            if (range.x <= 0 && (left <= minLeft || bottom >= maxHeight)) {
+              renderable = false;
+              break;
+            }
+
+            check(ACTION_WEST);
+            width -= range.x;
+            left += range.x;
+            height = width / aspectRatio;
+          } else {
+            check(ACTION_SOUTH);
+            check(ACTION_WEST);
+
+            if (range.x <= 0) {
+              if (left > minLeft) {
+                width -= range.x;
+                left += range.x;
+              } else if (range.y >= 0 && bottom >= maxHeight) {
+                renderable = false;
+              }
+            } else {
+              width -= range.x;
+              left += range.x;
+            }
+
+            if (range.y >= 0) {
+              if (bottom < maxHeight) {
+                height += range.y;
+              }
+            } else {
+              height += range.y;
+            }
+          }
+
+          if (width < 0 && height < 0) {
+            action = ACTION_NORTH_EAST;
+            height = -height;
+            width = -width;
+            top -= height;
+            left -= width;
+          } else if (width < 0) {
+            action = ACTION_SOUTH_EAST;
+            width = -width;
+            left -= width;
+          } else if (height < 0) {
+            action = ACTION_NORTH_WEST;
+            height = -height;
+            top -= height;
+          }
+
+          break;
+
+        case ACTION_SOUTH_EAST:
+          if (aspectRatio) {
+            if (range.x >= 0 && (right >= maxWidth || bottom >= maxHeight)) {
+              renderable = false;
+              break;
+            }
+
+            check(ACTION_EAST);
+            width += range.x;
+            height = width / aspectRatio;
+          } else {
+            check(ACTION_SOUTH);
+            check(ACTION_EAST);
+
+            if (range.x >= 0) {
+              if (right < maxWidth) {
+                width += range.x;
+              } else if (range.y >= 0 && bottom >= maxHeight) {
+                renderable = false;
+              }
+            } else {
+              width += range.x;
+            }
+
+            if (range.y >= 0) {
+              if (bottom < maxHeight) {
+                height += range.y;
+              }
+            } else {
+              height += range.y;
+            }
+          }
+
+          if (width < 0 && height < 0) {
+            action = ACTION_NORTH_WEST;
+            height = -height;
+            width = -width;
+            top -= height;
+            left -= width;
+          } else if (width < 0) {
+            action = ACTION_SOUTH_WEST;
+            width = -width;
+            left -= width;
+          } else if (height < 0) {
+            action = ACTION_NORTH_EAST;
+            height = -height;
+            top -= height;
+          }
+
+          break;
+        // Move canvas
+
+        case ACTION_MOVE:
+          this.move(range.x, range.y);
+          renderable = false;
+          break;
+        // Zoom canvas
+
+        case ACTION_ZOOM:
+          this.zoom(getMaxZoomRatio(pointers), event);
+          renderable = false;
+          break;
+        // Create crop box
+
+        case ACTION_CROP:
+          if (!range.x || !range.y) {
+            renderable = false;
+            break;
+          }
+
+          offset = getOffset(this.cropper);
+          left = pointer.startX - offset.left;
+          top = pointer.startY - offset.top;
+          width = cropBoxData.minWidth;
+          height = cropBoxData.minHeight;
+
+          if (range.x > 0) {
+            action = range.y > 0 ? ACTION_SOUTH_EAST : ACTION_NORTH_EAST;
+          } else if (range.x < 0) {
+            left -= width;
+            action = range.y > 0 ? ACTION_SOUTH_WEST : ACTION_NORTH_WEST;
+          }
+
+          if (range.y < 0) {
+            top -= height;
+          } // Show the crop box if is hidden
+
+
+          if (!this.cropped) {
+            removeClass(this.cropBox, CLASS_HIDDEN);
+            this.cropped = true;
+
+            if (this.limited) {
+              this.limitCropBox(true, true);
+            }
+          }
+
+          break;
+
+        default:
+      }
+
+      if (renderable) {
+        cropBoxData.width = width;
+        cropBoxData.height = height;
+        cropBoxData.left = left;
+        cropBoxData.top = top;
+        this.action = action;
+        this.renderCropBox();
+      } // Override
+
+
+      forEach(pointers, function (p) {
+        p.startX = p.endX;
+        p.startY = p.endY;
+      });
+    }
+  };
+
+  var methods = {
+    // Show the crop box manually
+    crop: function crop() {
+      if (this.ready && !this.cropped && !this.disabled) {
+        this.cropped = true;
+        this.limitCropBox(true, true);
+
+        if (this.options.modal) {
+          addClass(this.dragBox, CLASS_MODAL);
+        }
+
+        removeClass(this.cropBox, CLASS_HIDDEN);
+        this.setCropBoxData(this.initialCropBoxData);
+      }
+
+      return this;
+    },
+    // Reset the image and crop box to their initial states
+    reset: function reset() {
+      if (this.ready && !this.disabled) {
+        this.imageData = assign({}, this.initialImageData);
+        this.canvasData = assign({}, this.initialCanvasData);
+        this.cropBoxData = assign({}, this.initialCropBoxData);
+        this.renderCanvas();
+
+        if (this.cropped) {
+          this.renderCropBox();
+        }
+      }
+
+      return this;
+    },
+    // Clear the crop box
+    clear: function clear() {
+      if (this.cropped && !this.disabled) {
+        assign(this.cropBoxData, {
+          left: 0,
+          top: 0,
+          width: 0,
+          height: 0
+        });
+        this.cropped = false;
+        this.renderCropBox();
+        this.limitCanvas(true, true); // Render canvas after crop box rendered
+
+        this.renderCanvas();
+        removeClass(this.dragBox, CLASS_MODAL);
+        addClass(this.cropBox, CLASS_HIDDEN);
+      }
+
+      return this;
+    },
+
+    /**
+     * Replace the image's src and rebuild the cropper
+     * @param {string} url - The new URL.
+     * @param {boolean} [hasSameSize] - Indicate if the new image has the same size as the old one.
+     * @returns {Cropper} this
+     */
+    replace: function replace(url) {
+      var hasSameSize = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+
+      if (!this.disabled && url) {
+        if (this.isImg) {
+          this.element.src = url;
+        }
+
+        if (hasSameSize) {
+          this.url = url;
+          this.image.src = url;
+
+          if (this.ready) {
+            this.viewBoxImage.src = url;
+            forEach(this.previews, function (element) {
+              element.getElementsByTagName('img')[0].src = url;
+            });
+          }
+        } else {
+          if (this.isImg) {
+            this.replaced = true;
+          }
+
+          this.options.data = null;
+          this.uncreate();
+          this.load(url);
+        }
+      }
+
+      return this;
+    },
+    // Enable (unfreeze) the cropper
+    enable: function enable() {
+      if (this.ready && this.disabled) {
+        this.disabled = false;
+        removeClass(this.cropper, CLASS_DISABLED);
+      }
+
+      return this;
+    },
+    // Disable (freeze) the cropper
+    disable: function disable() {
+      if (this.ready && !this.disabled) {
+        this.disabled = true;
+        addClass(this.cropper, CLASS_DISABLED);
+      }
+
+      return this;
+    },
+
+    /**
+     * Destroy the cropper and remove the instance from the image
+     * @returns {Cropper} this
+     */
+    destroy: function destroy() {
+      var element = this.element;
+
+      if (!element[NAMESPACE]) {
+        return this;
+      }
+
+      element[NAMESPACE] = undefined;
+
+      if (this.isImg && this.replaced) {
+        element.src = this.originalUrl;
+      }
+
+      this.uncreate();
+      return this;
+    },
+
+    /**
+     * Move the canvas with relative offsets
+     * @param {number} offsetX - The relative offset distance on the x-axis.
+     * @param {number} [offsetY=offsetX] - The relative offset distance on the y-axis.
+     * @returns {Cropper} this
+     */
+    move: function move(offsetX) {
+      var offsetY = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : offsetX;
+      var _this$canvasData = this.canvasData,
+          left = _this$canvasData.left,
+          top = _this$canvasData.top;
+      return this.moveTo(isUndefined(offsetX) ? offsetX : left + Number(offsetX), isUndefined(offsetY) ? offsetY : top + Number(offsetY));
+    },
+
+    /**
+     * Move the canvas to an absolute point
+     * @param {number} x - The x-axis coordinate.
+     * @param {number} [y=x] - The y-axis coordinate.
+     * @returns {Cropper} this
+     */
+    moveTo: function moveTo(x) {
+      var y = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : x;
+      var canvasData = this.canvasData;
+      var changed = false;
+      x = Number(x);
+      y = Number(y);
+
+      if (this.ready && !this.disabled && this.options.movable) {
+        if (isNumber(x)) {
+          canvasData.left = x;
+          changed = true;
+        }
+
+        if (isNumber(y)) {
+          canvasData.top = y;
+          changed = true;
+        }
+
+        if (changed) {
+          this.renderCanvas(true);
+        }
+      }
+
+      return this;
+    },
+
+    /**
+     * Zoom the canvas with a relative ratio
+     * @param {number} ratio - The target ratio.
+     * @param {Event} _originalEvent - The original event if any.
+     * @returns {Cropper} this
+     */
+    zoom: function zoom(ratio, _originalEvent) {
+      var canvasData = this.canvasData;
+      ratio = Number(ratio);
+
+      if (ratio < 0) {
+        ratio = 1 / (1 - ratio);
+      } else {
+        ratio = 1 + ratio;
+      }
+
+      return this.zoomTo(canvasData.width * ratio / canvasData.naturalWidth, null, _originalEvent);
+    },
+
+    /**
+     * Zoom the canvas to an absolute ratio
+     * @param {number} ratio - The target ratio.
+     * @param {Object} pivot - The zoom pivot point coordinate.
+     * @param {Event} _originalEvent - The original event if any.
+     * @returns {Cropper} this
+     */
+    zoomTo: function zoomTo(ratio, pivot, _originalEvent) {
+      var options = this.options,
+          canvasData = this.canvasData;
+      var width = canvasData.width,
+          height = canvasData.height,
+          naturalWidth = canvasData.naturalWidth,
+          naturalHeight = canvasData.naturalHeight;
+      ratio = Number(ratio);
+
+      if (ratio >= 0 && this.ready && !this.disabled && options.zoomable) {
+        var newWidth = naturalWidth * ratio;
+        var newHeight = naturalHeight * ratio;
+
+        if (dispatchEvent(this.element, EVENT_ZOOM, {
+          ratio: ratio,
+          oldRatio: width / naturalWidth,
+          originalEvent: _originalEvent
+        }) === false) {
+          return this;
+        }
+
+        if (_originalEvent) {
+          var pointers = this.pointers;
+          var offset = getOffset(this.cropper);
+          var center = pointers && Object.keys(pointers).length ? getPointersCenter(pointers) : {
+            pageX: _originalEvent.pageX,
+            pageY: _originalEvent.pageY
+          }; // Zoom from the triggering point of the event
+
+          canvasData.left -= (newWidth - width) * ((center.pageX - offset.left - canvasData.left) / width);
+          canvasData.top -= (newHeight - height) * ((center.pageY - offset.top - canvasData.top) / height);
+        } else if (isPlainObject(pivot) && isNumber(pivot.x) && isNumber(pivot.y)) {
+          canvasData.left -= (newWidth - width) * ((pivot.x - canvasData.left) / width);
+          canvasData.top -= (newHeight - height) * ((pivot.y - canvasData.top) / height);
+        } else {
+          // Zoom from the center of the canvas
+          canvasData.left -= (newWidth - width) / 2;
+          canvasData.top -= (newHeight - height) / 2;
+        }
+
+        canvasData.width = newWidth;
+        canvasData.height = newHeight;
+        this.renderCanvas(true);
+      }
+
+      return this;
+    },
+
+    /**
+     * Rotate the canvas with a relative degree
+     * @param {number} degree - The rotate degree.
+     * @returns {Cropper} this
+     */
+    rotate: function rotate(degree) {
+      return this.rotateTo((this.imageData.rotate || 0) + Number(degree));
+    },
+
+    /**
+     * Rotate the canvas to an absolute degree
+     * @param {number} degree - The rotate degree.
+     * @returns {Cropper} this
+     */
+    rotateTo: function rotateTo(degree) {
+      degree = Number(degree);
+
+      if (isNumber(degree) && this.ready && !this.disabled && this.options.rotatable) {
+        this.imageData.rotate = degree % 360;
+        this.renderCanvas(true, true);
+      }
+
+      return this;
+    },
+
+    /**
+     * Scale the image on the x-axis.
+     * @param {number} scaleX - The scale ratio on the x-axis.
+     * @returns {Cropper} this
+     */
+    scaleX: function scaleX(_scaleX) {
+      var scaleY = this.imageData.scaleY;
+      return this.scale(_scaleX, isNumber(scaleY) ? scaleY : 1);
+    },
+
+    /**
+     * Scale the image on the y-axis.
+     * @param {number} scaleY - The scale ratio on the y-axis.
+     * @returns {Cropper} this
+     */
+    scaleY: function scaleY(_scaleY) {
+      var scaleX = this.imageData.scaleX;
+      return this.scale(isNumber(scaleX) ? scaleX : 1, _scaleY);
+    },
+
+    /**
+     * Scale the image
+     * @param {number} scaleX - The scale ratio on the x-axis.
+     * @param {number} [scaleY=scaleX] - The scale ratio on the y-axis.
+     * @returns {Cropper} this
+     */
+    scale: function scale(scaleX) {
+      var scaleY = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : scaleX;
+      var imageData = this.imageData;
+      var transformed = false;
+      scaleX = Number(scaleX);
+      scaleY = Number(scaleY);
+
+      if (this.ready && !this.disabled && this.options.scalable) {
+        if (isNumber(scaleX)) {
+          imageData.scaleX = scaleX;
+          transformed = true;
+        }
+
+        if (isNumber(scaleY)) {
+          imageData.scaleY = scaleY;
+          transformed = true;
+        }
+
+        if (transformed) {
+          this.renderCanvas(true, true);
+        }
+      }
+
+      return this;
+    },
+
+    /**
+     * Get the cropped area position and size data (base on the original image)
+     * @param {boolean} [rounded=false] - Indicate if round the data values or not.
+     * @returns {Object} The result cropped data.
+     */
+    getData: function getData() {
+      var rounded = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
+      var options = this.options,
+          imageData = this.imageData,
+          canvasData = this.canvasData,
+          cropBoxData = this.cropBoxData;
+      var data;
+
+      if (this.ready && this.cropped) {
+        data = {
+          x: cropBoxData.left - canvasData.left,
+          y: cropBoxData.top - canvasData.top,
+          width: cropBoxData.width,
+          height: cropBoxData.height
+        };
+        var ratio = imageData.width / imageData.naturalWidth;
+        forEach(data, function (n, i) {
+          data[i] = n / ratio;
+        });
+
+        if (rounded) {
+          // In case rounding off leads to extra 1px in right or bottom border
+          // we should round the top-left corner and the dimension (#343).
+          var bottom = Math.round(data.y + data.height);
+          var right = Math.round(data.x + data.width);
+          data.x = Math.round(data.x);
+          data.y = Math.round(data.y);
+          data.width = right - data.x;
+          data.height = bottom - data.y;
+        }
+      } else {
+        data = {
+          x: 0,
+          y: 0,
+          width: 0,
+          height: 0
+        };
+      }
+
+      if (options.rotatable) {
+        data.rotate = imageData.rotate || 0;
+      }
+
+      if (options.scalable) {
+        data.scaleX = imageData.scaleX || 1;
+        data.scaleY = imageData.scaleY || 1;
+      }
+
+      return data;
+    },
+
+    /**
+     * Set the cropped area position and size with new data
+     * @param {Object} data - The new data.
+     * @returns {Cropper} this
+     */
+    setData: function setData(data) {
+      var options = this.options,
+          imageData = this.imageData,
+          canvasData = this.canvasData;
+      var cropBoxData = {};
+
+      if (this.ready && !this.disabled && isPlainObject(data)) {
+        var transformed = false;
+
+        if (options.rotatable) {
+          if (isNumber(data.rotate) && data.rotate !== imageData.rotate) {
+            imageData.rotate = data.rotate;
+            transformed = true;
+          }
+        }
+
+        if (options.scalable) {
+          if (isNumber(data.scaleX) && data.scaleX !== imageData.scaleX) {
+            imageData.scaleX = data.scaleX;
+            transformed = true;
+          }
+
+          if (isNumber(data.scaleY) && data.scaleY !== imageData.scaleY) {
+            imageData.scaleY = data.scaleY;
+            transformed = true;
+          }
+        }
+
+        if (transformed) {
+          this.renderCanvas(true, true);
+        }
+
+        var ratio = imageData.width / imageData.naturalWidth;
+
+        if (isNumber(data.x)) {
+          cropBoxData.left = data.x * ratio + canvasData.left;
+        }
+
+        if (isNumber(data.y)) {
+          cropBoxData.top = data.y * ratio + canvasData.top;
+        }
+
+        if (isNumber(data.width)) {
+          cropBoxData.width = data.width * ratio;
+        }
+
+        if (isNumber(data.height)) {
+          cropBoxData.height = data.height * ratio;
+        }
+
+        this.setCropBoxData(cropBoxData);
+      }
+
+      return this;
+    },
+
+    /**
+     * Get the container size data.
+     * @returns {Object} The result container data.
+     */
+    getContainerData: function getContainerData() {
+      return this.ready ? assign({}, this.containerData) : {};
+    },
+
+    /**
+     * Get the image position and size data.
+     * @returns {Object} The result image data.
+     */
+    getImageData: function getImageData() {
+      return this.sized ? assign({}, this.imageData) : {};
+    },
+
+    /**
+     * Get the canvas position and size data.
+     * @returns {Object} The result canvas data.
+     */
+    getCanvasData: function getCanvasData() {
+      var canvasData = this.canvasData;
+      var data = {};
+
+      if (this.ready) {
+        forEach(['left', 'top', 'width', 'height', 'naturalWidth', 'naturalHeight'], function (n) {
+          data[n] = canvasData[n];
+        });
+      }
+
+      return data;
+    },
+
+    /**
+     * Set the canvas position and size with new data.
+     * @param {Object} data - The new canvas data.
+     * @returns {Cropper} this
+     */
+    setCanvasData: function setCanvasData(data) {
+      var canvasData = this.canvasData;
+      var aspectRatio = canvasData.aspectRatio;
+
+      if (this.ready && !this.disabled && isPlainObject(data)) {
+        if (isNumber(data.left)) {
+          canvasData.left = data.left;
+        }
+
+        if (isNumber(data.top)) {
+          canvasData.top = data.top;
+        }
+
+        if (isNumber(data.width)) {
+          canvasData.width = data.width;
+          canvasData.height = data.width / aspectRatio;
+        } else if (isNumber(data.height)) {
+          canvasData.height = data.height;
+          canvasData.width = data.height * aspectRatio;
+        }
+
+        this.renderCanvas(true);
+      }
+
+      return this;
+    },
+
+    /**
+     * Get the crop box position and size data.
+     * @returns {Object} The result crop box data.
+     */
+    getCropBoxData: function getCropBoxData() {
+      var cropBoxData = this.cropBoxData;
+      var data;
+
+      if (this.ready && this.cropped) {
+        data = {
+          left: cropBoxData.left,
+          top: cropBoxData.top,
+          width: cropBoxData.width,
+          height: cropBoxData.height
+        };
+      }
+
+      return data || {};
+    },
+
+    /**
+     * Set the crop box position and size with new data.
+     * @param {Object} data - The new crop box data.
+     * @returns {Cropper} this
+     */
+    setCropBoxData: function setCropBoxData(data) {
+      var cropBoxData = this.cropBoxData;
+      var aspectRatio = this.options.aspectRatio;
+      var widthChanged;
+      var heightChanged;
+
+      if (this.ready && this.cropped && !this.disabled && isPlainObject(data)) {
+        if (isNumber(data.left)) {
+          cropBoxData.left = data.left;
+        }
+
+        if (isNumber(data.top)) {
+          cropBoxData.top = data.top;
+        }
+
+        if (isNumber(data.width) && data.width !== cropBoxData.width) {
+          widthChanged = true;
+          cropBoxData.width = data.width;
+        }
+
+        if (isNumber(data.height) && data.height !== cropBoxData.height) {
+          heightChanged = true;
+          cropBoxData.height = data.height;
+        }
+
+        if (aspectRatio) {
+          if (widthChanged) {
+            cropBoxData.height = cropBoxData.width / aspectRatio;
+          } else if (heightChanged) {
+            cropBoxData.width = cropBoxData.height * aspectRatio;
+          }
+        }
+
+        this.renderCropBox();
+      }
+
+      return this;
+    },
+
+    /**
+     * Get a canvas drawn the cropped image.
+     * @param {Object} [options={}] - The config options.
+     * @returns {HTMLCanvasElement} - The result canvas.
+     */
+    getCroppedCanvas: function getCroppedCanvas() {
+      var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+
+      if (!this.ready || !window.HTMLCanvasElement) {
+        return null;
+      }
+
+      var canvasData = this.canvasData;
+      var source = getSourceCanvas(this.image, this.imageData, canvasData, options); // Returns the source canvas if it is not cropped.
+
+      if (!this.cropped) {
+        return source;
+      }
+
+      var _this$getData = this.getData(),
+          initialX = _this$getData.x,
+          initialY = _this$getData.y,
+          initialWidth = _this$getData.width,
+          initialHeight = _this$getData.height;
+
+      var ratio = source.width / Math.floor(canvasData.naturalWidth);
+
+      if (ratio !== 1) {
+        initialX *= ratio;
+        initialY *= ratio;
+        initialWidth *= ratio;
+        initialHeight *= ratio;
+      }
+
+      var aspectRatio = initialWidth / initialHeight;
+      var maxSizes = getAdjustedSizes({
+        aspectRatio: aspectRatio,
+        width: options.maxWidth || Infinity,
+        height: options.maxHeight || Infinity
+      });
+      var minSizes = getAdjustedSizes({
+        aspectRatio: aspectRatio,
+        width: options.minWidth || 0,
+        height: options.minHeight || 0
+      }, 'cover');
+
+      var _getAdjustedSizes = getAdjustedSizes({
+        aspectRatio: aspectRatio,
+        width: options.width || (ratio !== 1 ? source.width : initialWidth),
+        height: options.height || (ratio !== 1 ? source.height : initialHeight)
+      }),
+          width = _getAdjustedSizes.width,
+          height = _getAdjustedSizes.height;
+
+      width = Math.min(maxSizes.width, Math.max(minSizes.width, width));
+      height = Math.min(maxSizes.height, Math.max(minSizes.height, height));
+      var canvas = document.createElement('canvas');
+      var context = canvas.getContext('2d');
+      canvas.width = normalizeDecimalNumber(width);
+      canvas.height = normalizeDecimalNumber(height);
+      context.fillStyle = options.fillColor || 'transparent';
+      context.fillRect(0, 0, width, height);
+      var _options$imageSmoothi = options.imageSmoothingEnabled,
+          imageSmoothingEnabled = _options$imageSmoothi === void 0 ? true : _options$imageSmoothi,
+          imageSmoothingQuality = options.imageSmoothingQuality;
+      context.imageSmoothingEnabled = imageSmoothingEnabled;
+
+      if (imageSmoothingQuality) {
+        context.imageSmoothingQuality = imageSmoothingQuality;
+      } // https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D.drawImage
+
+
+      var sourceWidth = source.width;
+      var sourceHeight = source.height; // Source canvas parameters
+
+      var srcX = initialX;
+      var srcY = initialY;
+      var srcWidth;
+      var srcHeight; // Destination canvas parameters
+
+      var dstX;
+      var dstY;
+      var dstWidth;
+      var dstHeight;
+
+      if (srcX <= -initialWidth || srcX > sourceWidth) {
+        srcX = 0;
+        srcWidth = 0;
+        dstX = 0;
+        dstWidth = 0;
+      } else if (srcX <= 0) {
+        dstX = -srcX;
+        srcX = 0;
+        srcWidth = Math.min(sourceWidth, initialWidth + srcX);
+        dstWidth = srcWidth;
+      } else if (srcX <= sourceWidth) {
+        dstX = 0;
+        srcWidth = Math.min(initialWidth, sourceWidth - srcX);
+        dstWidth = srcWidth;
+      }
+
+      if (srcWidth <= 0 || srcY <= -initialHeight || srcY > sourceHeight) {
+        srcY = 0;
+        srcHeight = 0;
+        dstY = 0;
+        dstHeight = 0;
+      } else if (srcY <= 0) {
+        dstY = -srcY;
+        srcY = 0;
+        srcHeight = Math.min(sourceHeight, initialHeight + srcY);
+        dstHeight = srcHeight;
+      } else if (srcY <= sourceHeight) {
+        dstY = 0;
+        srcHeight = Math.min(initialHeight, sourceHeight - srcY);
+        dstHeight = srcHeight;
+      }
+
+      var params = [srcX, srcY, srcWidth, srcHeight]; // Avoid "IndexSizeError"
+
+      if (dstWidth > 0 && dstHeight > 0) {
+        var scale = width / initialWidth;
+        params.push(dstX * scale, dstY * scale, dstWidth * scale, dstHeight * scale);
+      } // All the numerical parameters should be integer for `drawImage`
+      // https://github.com/fengyuanchen/cropper/issues/476
+
+
+      context.drawImage.apply(context, [source].concat(_toConsumableArray(params.map(function (param) {
+        return Math.floor(normalizeDecimalNumber(param));
+      }))));
+      return canvas;
+    },
+
+    /**
+     * Change the aspect ratio of the crop box.
+     * @param {number} aspectRatio - The new aspect ratio.
+     * @returns {Cropper} this
+     */
+    setAspectRatio: function setAspectRatio(aspectRatio) {
+      var options = this.options;
+
+      if (!this.disabled && !isUndefined(aspectRatio)) {
+        // 0 -> NaN
+        options.aspectRatio = Math.max(0, aspectRatio) || NaN;
+
+        if (this.ready) {
+          this.initCropBox();
+
+          if (this.cropped) {
+            this.renderCropBox();
+          }
+        }
+      }
+
+      return this;
+    },
+
+    /**
+     * Change the drag mode.
+     * @param {string} mode - The new drag mode.
+     * @returns {Cropper} this
+     */
+    setDragMode: function setDragMode(mode) {
+      var options = this.options,
+          dragBox = this.dragBox,
+          face = this.face;
+
+      if (this.ready && !this.disabled) {
+        var croppable = mode === DRAG_MODE_CROP;
+        var movable = options.movable && mode === DRAG_MODE_MOVE;
+        mode = croppable || movable ? mode : DRAG_MODE_NONE;
+        options.dragMode = mode;
+        setData(dragBox, DATA_ACTION, mode);
+        toggleClass(dragBox, CLASS_CROP, croppable);
+        toggleClass(dragBox, CLASS_MOVE, movable);
+
+        if (!options.cropBoxMovable) {
+          // Sync drag mode to crop box when it is not movable
+          setData(face, DATA_ACTION, mode);
+          toggleClass(face, CLASS_CROP, croppable);
+          toggleClass(face, CLASS_MOVE, movable);
+        }
+      }
+
+      return this;
+    }
+  };
+
+  var AnotherCropper = WINDOW.Cropper;
+
+  var Cropper =
+  /*#__PURE__*/
+  function () {
+    /**
+     * Create a new Cropper.
+     * @param {Element} element - The target element for cropping.
+     * @param {Object} [options={}] - The configuration options.
+     */
+    function Cropper(element) {
+      var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+
+      _classCallCheck(this, Cropper);
+
+      if (!element || !REGEXP_TAG_NAME.test(element.tagName)) {
+        throw new Error('The first argument is required and must be an <img> or <canvas> element.');
+      }
+
+      this.element = element;
+      this.options = assign({}, DEFAULTS, isPlainObject(options) && options);
+      this.cropped = false;
+      this.disabled = false;
+      this.pointers = {};
+      this.ready = false;
+      this.reloading = false;
+      this.replaced = false;
+      this.sized = false;
+      this.sizing = false;
+      this.init();
+    }
+
+    _createClass(Cropper, [{
+      key: "init",
+      value: function init() {
+        var element = this.element;
+        var tagName = element.tagName.toLowerCase();
+        var url;
+
+        if (element[NAMESPACE]) {
+          return;
+        }
+
+        element[NAMESPACE] = this;
+
+        if (tagName === 'img') {
+          this.isImg = true; // e.g.: "img/picture.jpg"
+
+          url = element.getAttribute('src') || '';
+          this.originalUrl = url; // Stop when it's a blank image
+
+          if (!url) {
+            return;
+          } // e.g.: "http://example.com/img/picture.jpg"
+
+
+          url = element.src;
+        } else if (tagName === 'canvas' && window.HTMLCanvasElement) {
+          url = element.toDataURL();
+        }
+
+        this.load(url);
+      }
+    }, {
+      key: "load",
+      value: function load(url) {
+        var _this = this;
+
+        if (!url) {
+          return;
+        }
+
+        this.url = url;
+        this.imageData = {};
+        var element = this.element,
+            options = this.options;
+
+        if (!options.rotatable && !options.scalable) {
+          options.checkOrientation = false;
+        } // Only IE10+ supports Typed Arrays
+
+
+        if (!options.checkOrientation || !window.ArrayBuffer) {
+          this.clone();
+          return;
+        } // Detect the mime type of the image directly if it is a Data URL
+
+
+        if (REGEXP_DATA_URL.test(url)) {
+          // Read ArrayBuffer from Data URL of JPEG images directly for better performance
+          if (REGEXP_DATA_URL_JPEG.test(url)) {
+            this.read(dataURLToArrayBuffer(url));
+          } else {
+            // Only a JPEG image may contains Exif Orientation information,
+            // the rest types of Data URLs are not necessary to check orientation at all.
+            this.clone();
+          }
+
+          return;
+        } // 1. Detect the mime type of the image by a XMLHttpRequest.
+        // 2. Load the image as ArrayBuffer for reading orientation if its a JPEG image.
+
+
+        var xhr = new XMLHttpRequest();
+        var clone = this.clone.bind(this);
+        this.reloading = true;
+        this.xhr = xhr; // 1. Cross origin requests are only supported for protocol schemes:
+        // http, https, data, chrome, chrome-extension.
+        // 2. Access to XMLHttpRequest from a Data URL will be blocked by CORS policy
+        // in some browsers as IE11 and Safari.
+
+        xhr.onabort = clone;
+        xhr.onerror = clone;
+        xhr.ontimeout = clone;
+
+        xhr.onprogress = function () {
+          // Abort the request directly if it not a JPEG image for better performance
+          if (xhr.getResponseHeader('content-type') !== MIME_TYPE_JPEG) {
+            xhr.abort();
+          }
+        };
+
+        xhr.onload = function () {
+          _this.read(xhr.response);
+        };
+
+        xhr.onloadend = function () {
+          _this.reloading = false;
+          _this.xhr = null;
+        }; // Bust cache when there is a "crossOrigin" property to avoid browser cache error
+
+
+        if (options.checkCrossOrigin && isCrossOriginURL(url) && element.crossOrigin) {
+          url = addTimestamp(url);
+        }
+
+        xhr.open('GET', url);
+        xhr.responseType = 'arraybuffer';
+        xhr.withCredentials = element.crossOrigin === 'use-credentials';
+        xhr.send();
+      }
+    }, {
+      key: "read",
+      value: function read(arrayBuffer) {
+        var options = this.options,
+            imageData = this.imageData; // Reset the orientation value to its default value 1
+        // as some iOS browsers will render image with its orientation
+
+        var orientation = resetAndGetOrientation(arrayBuffer);
+        var rotate = 0;
+        var scaleX = 1;
+        var scaleY = 1;
+
+        if (orientation > 1) {
+          // Generate a new URL which has the default orientation value
+          this.url = arrayBufferToDataURL(arrayBuffer, MIME_TYPE_JPEG);
+
+          var _parseOrientation = parseOrientation(orientation);
+
+          rotate = _parseOrientation.rotate;
+          scaleX = _parseOrientation.scaleX;
+          scaleY = _parseOrientation.scaleY;
+        }
+
+        if (options.rotatable) {
+          imageData.rotate = rotate;
+        }
+
+        if (options.scalable) {
+          imageData.scaleX = scaleX;
+          imageData.scaleY = scaleY;
+        }
+
+        this.clone();
+      }
+    }, {
+      key: "clone",
+      value: function clone() {
+        var element = this.element,
+            url = this.url;
+        var crossOrigin;
+        var crossOriginUrl;
+
+        if (this.options.checkCrossOrigin && isCrossOriginURL(url)) {
+          crossOrigin = element.crossOrigin;
+
+          if (!crossOrigin) {
+            crossOrigin = 'anonymous';
+          } // Bust cache when there is not a "crossOrigin" property (#519)
+
+
+          crossOriginUrl = addTimestamp(url);
+        }
+
+        this.crossOrigin = crossOrigin;
+        this.crossOriginUrl = crossOriginUrl;
+        var image = document.createElement('img');
+
+        if (crossOrigin) {
+          image.crossOrigin = crossOrigin;
+        }
+
+        image.src = crossOriginUrl || url;
+        image.alt = element.alt || 'The image to crop';
+        this.image = image;
+        image.onload = this.start.bind(this);
+        image.onerror = this.stop.bind(this);
+        addClass(image, CLASS_HIDE);
+        element.parentNode.insertBefore(image, element.nextSibling);
+      }
+    }, {
+      key: "start",
+      value: function start() {
+        var _this2 = this;
+
+        var image = this.image;
+        image.onload = null;
+        image.onerror = null;
+        this.sizing = true; // Match all browsers that use WebKit as the layout engine in iOS devices,
+        // such as Safari for iOS, Chrome for iOS, and in-app browsers.
+
+        var isIOSWebKit = WINDOW.navigator && /(?:iPad|iPhone|iPod).*?AppleWebKit/i.test(WINDOW.navigator.userAgent);
+
+        var done = function done(naturalWidth, naturalHeight) {
+          assign(_this2.imageData, {
+            naturalWidth: naturalWidth,
+            naturalHeight: naturalHeight,
+            aspectRatio: naturalWidth / naturalHeight
+          });
+          _this2.sizing = false;
+          _this2.sized = true;
+
+          _this2.build();
+        }; // Most modern browsers (excepts iOS WebKit)
+
+
+        if (image.naturalWidth && !isIOSWebKit) {
+          done(image.naturalWidth, image.naturalHeight);
+          return;
+        }
+
+        var sizingImage = document.createElement('img');
+        var body = document.body || document.documentElement;
+        this.sizingImage = sizingImage;
+
+        sizingImage.onload = function () {
+          done(sizingImage.width, sizingImage.height);
+
+          if (!isIOSWebKit) {
+            body.removeChild(sizingImage);
+          }
+        };
+
+        sizingImage.src = image.src; // iOS WebKit will convert the image automatically
+        // with its orientation once append it into DOM (#279)
+
+        if (!isIOSWebKit) {
+          sizingImage.style.cssText = 'left:0;' + 'max-height:none!important;' + 'max-width:none!important;' + 'min-height:0!important;' + 'min-width:0!important;' + 'opacity:0;' + 'position:absolute;' + 'top:0;' + 'z-index:-1;';
+          body.appendChild(sizingImage);
+        }
+      }
+    }, {
+      key: "stop",
+      value: function stop() {
+        var image = this.image;
+        image.onload = null;
+        image.onerror = null;
+        image.parentNode.removeChild(image);
+        this.image = null;
+      }
+    }, {
+      key: "build",
+      value: function build() {
+        if (!this.sized || this.ready) {
+          return;
+        }
+
+        var element = this.element,
+            options = this.options,
+            image = this.image; // Create cropper elements
+
+        var container = element.parentNode;
+        var template = document.createElement('div');
+        template.innerHTML = TEMPLATE;
+        var cropper = template.querySelector(".".concat(NAMESPACE, "-container"));
+        var canvas = cropper.querySelector(".".concat(NAMESPACE, "-canvas"));
+        var dragBox = cropper.querySelector(".".concat(NAMESPACE, "-drag-box"));
+        var cropBox = cropper.querySelector(".".concat(NAMESPACE, "-crop-box"));
+        var face = cropBox.querySelector(".".concat(NAMESPACE, "-face"));
+        this.container = container;
+        this.cropper = cropper;
+        this.canvas = canvas;
+        this.dragBox = dragBox;
+        this.cropBox = cropBox;
+        this.viewBox = cropper.querySelector(".".concat(NAMESPACE, "-view-box"));
+        this.face = face;
+        canvas.appendChild(image); // Hide the original image
+
+        addClass(element, CLASS_HIDDEN); // Inserts the cropper after to the current image
+
+        container.insertBefore(cropper, element.nextSibling); // Show the image if is hidden
+
+        if (!this.isImg) {
+          removeClass(image, CLASS_HIDE);
+        }
+
+        this.initPreview();
+        this.bind();
+        options.initialAspectRatio = Math.max(0, options.initialAspectRatio) || NaN;
+        options.aspectRatio = Math.max(0, options.aspectRatio) || NaN;
+        options.viewMode = Math.max(0, Math.min(3, Math.round(options.viewMode))) || 0;
+        addClass(cropBox, CLASS_HIDDEN);
+
+        if (!options.guides) {
+          addClass(cropBox.getElementsByClassName("".concat(NAMESPACE, "-dashed")), CLASS_HIDDEN);
+        }
+
+        if (!options.center) {
+          addClass(cropBox.getElementsByClassName("".concat(NAMESPACE, "-center")), CLASS_HIDDEN);
+        }
+
+        if (options.background) {
+          addClass(cropper, "".concat(NAMESPACE, "-bg"));
+        }
+
+        if (!options.highlight) {
+          addClass(face, CLASS_INVISIBLE);
+        }
+
+        if (options.cropBoxMovable) {
+          addClass(face, CLASS_MOVE);
+          setData(face, DATA_ACTION, ACTION_ALL);
+        }
+
+        if (!options.cropBoxResizable) {
+          addClass(cropBox.getElementsByClassName("".concat(NAMESPACE, "-line")), CLASS_HIDDEN);
+          addClass(cropBox.getElementsByClassName("".concat(NAMESPACE, "-point")), CLASS_HIDDEN);
+        }
+
+        this.render();
+        this.ready = true;
+        this.setDragMode(options.dragMode);
+
+        if (options.autoCrop) {
+          this.crop();
+        }
+
+        this.setData(options.data);
+
+        if (isFunction(options.ready)) {
+          addListener(element, EVENT_READY, options.ready, {
+            once: true
+          });
+        }
+
+        dispatchEvent(element, EVENT_READY);
+      }
+    }, {
+      key: "unbuild",
+      value: function unbuild() {
+        if (!this.ready) {
+          return;
+        }
+
+        this.ready = false;
+        this.unbind();
+        this.resetPreview();
+        this.cropper.parentNode.removeChild(this.cropper);
+        removeClass(this.element, CLASS_HIDDEN);
+      }
+    }, {
+      key: "uncreate",
+      value: function uncreate() {
+        if (this.ready) {
+          this.unbuild();
+          this.ready = false;
+          this.cropped = false;
+        } else if (this.sizing) {
+          this.sizingImage.onload = null;
+          this.sizing = false;
+          this.sized = false;
+        } else if (this.reloading) {
+          this.xhr.onabort = null;
+          this.xhr.abort();
+        } else if (this.image) {
+          this.stop();
+        }
+      }
+      /**
+       * Get the no conflict cropper class.
+       * @returns {Cropper} The cropper class.
+       */
+
+    }], [{
+      key: "noConflict",
+      value: function noConflict() {
+        window.Cropper = AnotherCropper;
+        return Cropper;
+      }
+      /**
+       * Change the default options.
+       * @param {Object} options - The new default options.
+       */
+
+    }, {
+      key: "setDefaults",
+      value: function setDefaults(options) {
+        assign(DEFAULTS, isPlainObject(options) && options);
+      }
+    }]);
+
+    return Cropper;
+  }();
+
+  assign(Cropper.prototype, render, preview, events, handlers, change, methods);
+
+  return Cropper;
+
+}));

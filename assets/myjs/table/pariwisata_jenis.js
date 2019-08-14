@@ -1,1 +1,404 @@
-var a7_0x4582=['width','height','log','build\x20TBODY\x20','#table_','DataTable','msg_detail.item','<img\x20src=\x22','bashUrl','/uploads/','img','<button\x20class=\x22btn\x20btn-info\x20edit_jenis\x22\x20\x20style=\x22width:\x2040px;\x20margin-right\x20:\x205px;\x22\x20onclick\x20=\x22update_modal(','id_jenis','<button\x20class=\x22btn\x20btn-danger\x20delete_jenis\x22\x20style=\x22width:\x2040px;\x22\x20onclick\x20=\x22conf_delete(',')\x22><i\x20class=\x22fa\x20fa-trash-o\x22></i></a>','#modal_jenis','hidden.bs.modal','handled','#modal_jenis\x20div','modal\x20hidden','.edit_jenis','disabled','load','./assets/contents/modal/','_update.php','update\x20jenis\x20wisata','.form-group','has-error','.help-block','empty','insert_modal','#modal_form_update','#img','change','#save','click','preventDefault','form','id\x20','files','prop','append','aaaa.jpg','ajax','url','/update','json','msg_main','status','Berhasil!','toggle','scroll','scrollTop','Silahkan\x20cek\x20kembali\x20form!','error','.text-danger','html','msg_detail','item','each','not\x20null','html,\x20body','animate','swing','Finished\x20animating','.modal-title','insert\x20jenis\x20wisata','removeClass','modal','show','when','success','replace','text-danger.','apakah\x20anda\x20yakin\x20ingin\x20menghapus\x20data?','Hapus','delete','JSON','DELETE','before\x20send','Data\x20berhasil\x20di\x20Hapus','Error','loading','data_byId_jenis','POST','before\x20send\x20get_placehorder','ket_jenis','#ket_jenis','.image_view','attr','src','/app/uploads/','id_sub','get\x20data\x20gagal\x20\x0a','image','#modal_crop','READ\x20URL','[data-toggle=\x22tooltip\x22]','tooltip','value','hide','PPP','createObjectURL','onload','result','readAsDataURL','shown.bs.modal','cropper\x20destroy','#crop','cropped','getCroppedCanvas','toBlob','string','constructor','while\x20(true)\x20{}','apply','counter','length','debu','gger','call','action','stateObject','function\x20*\x5c(\x20*\x5c)','\x5c+\x5c+\x20*(?:_0x(?:[a-f0-9]){4,6}|(?:\x5cb|\x5cd)[a-z0-9]{1,4}(?:\x5cb|\x5cd))','init','chain','input'];(function(_0x3750ae,_0x6a4c4d){var _0x4da8e9=function(_0x2763f6){while(--_0x2763f6){_0x3750ae['push'](_0x3750ae['shift']());}};var _0x2a3899=function(){var _0x3f0ec8={'data':{'key':'cookie','value':'timeout'},'setCookie':function(_0x43871f,_0x378b0a,_0x3cf610,_0x1d0dea){_0x1d0dea=_0x1d0dea||{};var _0x23f246=_0x378b0a+'='+_0x3cf610;var _0x1f93e4=0x0;for(var _0x1f93e4=0x0,_0xd2b2a3=_0x43871f['length'];_0x1f93e4<_0xd2b2a3;_0x1f93e4++){var _0x427018=_0x43871f[_0x1f93e4];_0x23f246+=';\x20'+_0x427018;var _0x3c4a70=_0x43871f[_0x427018];_0x43871f['push'](_0x3c4a70);_0xd2b2a3=_0x43871f['length'];if(_0x3c4a70!==!![]){_0x23f246+='='+_0x3c4a70;}}_0x1d0dea['cookie']=_0x23f246;},'removeCookie':function(){return'dev';},'getCookie':function(_0x4013f7,_0x3de5fb){_0x4013f7=_0x4013f7||function(_0x33ca91){return _0x33ca91;};var _0x9e0b68=_0x4013f7(new RegExp('(?:^|;\x20)'+_0x3de5fb['replace'](/([.$?*|{}()[]\/+^])/g,'$1')+'=([^;]*)'));var _0xdf81d7=function(_0x4f3764,_0x2309a3){_0x4f3764(++_0x2309a3);};_0xdf81d7(_0x4da8e9,_0x6a4c4d);return _0x9e0b68?decodeURIComponent(_0x9e0b68[0x1]):undefined;}};var _0x157131=function(){var _0x52e0a6=new RegExp('\x5cw+\x20*\x5c(\x5c)\x20*{\x5cw+\x20*[\x27|\x22].+[\x27|\x22];?\x20*}');return _0x52e0a6['test'](_0x3f0ec8['removeCookie']['toString']());};_0x3f0ec8['updateCookie']=_0x157131;var _0x4174e6='';var _0x312656=_0x3f0ec8['updateCookie']();if(!_0x312656){_0x3f0ec8['setCookie'](['*'],'counter',0x1);}else if(_0x312656){_0x4174e6=_0x3f0ec8['getCookie'](null,'counter');}else{_0x3f0ec8['removeCookie']();}};_0x2a3899();}(a7_0x4582,0x17b));var a7_0x219a=function(_0x295914,_0x79d8b9){_0x295914=_0x295914-0x0;var _0x3711b7=a7_0x4582[_0x295914];return _0x3711b7;};var _0x546d4c=function(){var _0x186113=!![];return function(_0x10ad1d,_0x10094c){var _0x1fabe3=_0x186113?function(){if(_0x10094c){var _0x119461=_0x10094c['apply'](_0x10ad1d,arguments);_0x10094c=null;return _0x119461;}}:function(){};_0x186113=![];return _0x1fabe3;};}();var _0xe7a8f7=_0x546d4c(this,function(){var _0x3340d5=function(){return'\x64\x65\x76';},_0x474b6b=function(){return'\x77\x69\x6e\x64\x6f\x77';};var _0x4dcd73=function(){var _0x516168=new RegExp('\x5c\x77\x2b\x20\x2a\x5c\x28\x5c\x29\x20\x2a\x7b\x5c\x77\x2b\x20\x2a\x5b\x27\x7c\x22\x5d\x2e\x2b\x5b\x27\x7c\x22\x5d\x3b\x3f\x20\x2a\x7d');return!_0x516168['\x74\x65\x73\x74'](_0x3340d5['\x74\x6f\x53\x74\x72\x69\x6e\x67']());};var _0x379cb8=function(){var _0x3db2c4=new RegExp('\x28\x5c\x5c\x5b\x78\x7c\x75\x5d\x28\x5c\x77\x29\x7b\x32\x2c\x34\x7d\x29\x2b');return _0x3db2c4['\x74\x65\x73\x74'](_0x474b6b['\x74\x6f\x53\x74\x72\x69\x6e\x67']());};var _0x4355ca=function(_0x389a99){var _0xad3332=~-0x1>>0x1+0xff%0x0;if(_0x389a99['\x69\x6e\x64\x65\x78\x4f\x66']('\x69'===_0xad3332)){_0x365244(_0x389a99);}};var _0x365244=function(_0x187b50){var _0xef33d2=~-0x4>>0x1+0xff%0x0;if(_0x187b50['\x69\x6e\x64\x65\x78\x4f\x66']((!![]+'')[0x3])!==_0xef33d2){_0x4355ca(_0x187b50);}};if(!_0x4dcd73()){if(!_0x379cb8()){_0x4355ca('\x69\x6e\x64\u0435\x78\x4f\x66');}else{_0x4355ca('\x69\x6e\x64\x65\x78\x4f\x66');}}else{_0x4355ca('\x69\x6e\x64\u0435\x78\x4f\x66');}});_0xe7a8f7();var _0x4cab60=function(){var _0x4d4891=!![];return function(_0x3ade66,_0x1bcd80){var _0x408705=_0x4d4891?function(){if(_0x1bcd80){var _0x32959d=_0x1bcd80['apply'](_0x3ade66,arguments);_0x1bcd80=null;return _0x32959d;}}:function(){};_0x4d4891=![];return _0x408705;};}();(function(){_0x4cab60(this,function(){var _0x5f3294=new RegExp(a7_0x219a('0x0'));var _0x4a22bb=new RegExp(a7_0x219a('0x1'),'i');var _0xc5474b=_0x3ad311(a7_0x219a('0x2'));if(!_0x5f3294['test'](_0xc5474b+a7_0x219a('0x3'))||!_0x4a22bb['test'](_0xc5474b+a7_0x219a('0x4'))){_0xc5474b('0');}else{_0x3ad311();}})();}());var TableX;var ID;var Blob;var img=new Array();img[a7_0x219a('0x5')]=0x400;img[a7_0x219a('0x6')]=0x300;function buildTbody(_0x3426ce){TableX=_0x3426ce;console[a7_0x219a('0x7')](a7_0x219a('0x8')+_0x3426ce);var _0x48d7be=0x0;$(a7_0x219a('0x9')+_0x3426ce)[a7_0x219a('0xa')]({'processing':!![],'ajax':{'url':window['url'][_0x3426ce],'dataSrc':a7_0x219a('0xb')},'columns':[{'render':function(){_0x48d7be++;return _0x48d7be;}},{'data':'ket_jenis'},{'render':function(_0x3f723e,_0x592662,_0x5a3de6,_0x150b65){return a7_0x219a('0xc')+window[a7_0x219a('0xd')]+a7_0x219a('0xe')+_0x5a3de6[a7_0x219a('0xf')]+'\x22\x20alt=\x22...\x22\x20class=\x22img-thumbnail\x20style=\x22width:200px;\x22>';}},{'render':function(_0x12db88,_0x57ebb1,_0x3dd776,_0x429383){return a7_0x219a('0x10')+'\x27'+_0x3dd776[a7_0x219a('0x11')]+'\x27'+')\x22><i\x20class=\x22fa\x20fa-pencil-square-o\x22></i></button>'+a7_0x219a('0x12')+'\x27'+_0x3dd776['id_jenis']+'\x27'+a7_0x219a('0x13');}}]});}$(a7_0x219a('0x14'))['on'](a7_0x219a('0x15'),function(_0x1af5dc){if(_0x1af5dc[a7_0x219a('0x16')]!==!![]){_0x1af5dc[a7_0x219a('0x16')]=!![];$(a7_0x219a('0x17'))['remove']();console['log'](a7_0x219a('0x18'));Blob=null;}});function update_modal(_0x196901){$(a7_0x219a('0x19'))['prop'](a7_0x219a('0x1a'),!![]);ID=_0x196901;console[a7_0x219a('0x7')]('ID\x20\x20\x20\x20'+_0x196901);$(a7_0x219a('0x14'))[a7_0x219a('0x1b')](a7_0x219a('0x1c')+TableX+a7_0x219a('0x1d'),function(){$('.modal-title')['html'](a7_0x219a('0x1e'));$(a7_0x219a('0x1f'))['removeClass'](a7_0x219a('0x20'));$(a7_0x219a('0x21'))[a7_0x219a('0x22')]();console[a7_0x219a('0x7')](a7_0x219a('0x23'));$(a7_0x219a('0x24'))['modal']('show');Blob=null;$(a7_0x219a('0x25'))[a7_0x219a('0x26')](function(){readURL(this);});$['when'](get_placehorder(_0x196901))['then'](function(_0x3bacfb){$(function(){$(a7_0x219a('0x27'))[a7_0x219a('0x28')](function(_0x4f974b){_0x4f974b[a7_0x219a('0x29')]();var _0x54e87a=new FormData(document['getElementById'](a7_0x219a('0x2a')));console[a7_0x219a('0x7')](_0x54e87a);console['log'](a7_0x219a('0x2b')+ID);console[a7_0x219a('0x7')]($(a7_0x219a('0x25'))['prop'](a7_0x219a('0x2c'))[0x0]);console[a7_0x219a('0x7')]($(a7_0x219a('0x25'))[a7_0x219a('0x2d')](a7_0x219a('0x2c'))[0x0]);if(Blob!=null){try{_0x54e87a[a7_0x219a('0x2e')](a7_0x219a('0xf'),Blob,a7_0x219a('0x2f'));}catch(_0x3a57b9){}}_0x54e87a['append']('id_jenis',_0x196901);$[a7_0x219a('0x30')]({'url':window[a7_0x219a('0x31')][TableX]+a7_0x219a('0x32'),'type':'POST','dataType':a7_0x219a('0x33'),'data':_0x54e87a,'async':![],'processData':![],'contentType':![],'beforeSend':function(){console[a7_0x219a('0x7')]('before\x20send');},'success':function(_0x3f0db5){if(_0x3f0db5[a7_0x219a('0x34')][a7_0x219a('0x35')]==!![]){swal(a7_0x219a('0x36'),'Update\x20data\x20berhasil!','success');$(a7_0x219a('0x24'))['modal'](a7_0x219a('0x37'));window[a7_0x219a('0x31')][a7_0x219a('0x38')]=$(window)[a7_0x219a('0x39')]();refreshTableX(TableX);}else{swal('Kesalahan!',a7_0x219a('0x3a'),a7_0x219a('0x3b'));$(a7_0x219a('0x3c'))[a7_0x219a('0x3d')]('');var _0x5e500d=_0x3f0db5[a7_0x219a('0x3e')][a7_0x219a('0x3f')];$[a7_0x219a('0x40')](_0x5e500d,function(_0x10ab3b,_0xfb330a){if(_0xfb330a!==null){console[a7_0x219a('0x7')](a7_0x219a('0x41')+_0x10ab3b);console['log']('\x22'+'.text-danger.'+_0x10ab3b+'\x22'+_0xfb330a);$('.'+'text-danger.'+_0x10ab3b)[a7_0x219a('0x3d')](_0xfb330a);}});}},'complete':function(){var _0x2ad694=$(a7_0x219a('0x42'));_0x2ad694['stop']()[a7_0x219a('0x43')]({'scrollTop':window['url'][a7_0x219a('0x38')]},0x3e8,a7_0x219a('0x44'),function(){console['log'](a7_0x219a('0x45'));});}});return![];});});console[a7_0x219a('0x7')]('');$(a7_0x219a('0x19'))[a7_0x219a('0x2d')](a7_0x219a('0x1a'),![]);});});}function insert_modal(){$(a7_0x219a('0x14'))['load'](a7_0x219a('0x1c')+TableX+'_update.php',function(){$(a7_0x219a('0x46'))[a7_0x219a('0x3d')](a7_0x219a('0x47'));$(a7_0x219a('0x1f'))[a7_0x219a('0x48')](a7_0x219a('0x20'));$(a7_0x219a('0x21'))[a7_0x219a('0x22')]();console['log'](a7_0x219a('0x23'));$('#modal_form_update')[a7_0x219a('0x49')](a7_0x219a('0x4a'));$(a7_0x219a('0x25'))[a7_0x219a('0x26')](function(){readURL(this);});$[a7_0x219a('0x4b')](ket_jenis_get())['then'](function(_0x518445){$(function(){$(a7_0x219a('0x27'))[a7_0x219a('0x28')](function(_0x24712c){_0x24712c[a7_0x219a('0x29')]();var _0x84d2ca=new FormData(document['getElementById'](a7_0x219a('0x2a')));if(Blob!=null){try{_0x84d2ca['append'](a7_0x219a('0xf'),Blob,'aaaa.jpg');}catch(_0x2c8489){}}$[a7_0x219a('0x30')]({'url':window[a7_0x219a('0x31')][TableX],'type':'POST','dataType':a7_0x219a('0x33'),'data':_0x84d2ca,'async':![],'processData':![],'contentType':![],'beforeSend':function(){console[a7_0x219a('0x7')]('before\x20send');},'success':function(_0x53a314){if(_0x53a314[a7_0x219a('0x34')][a7_0x219a('0x35')]==!![]){swal('Berhasil!','Insert\x20data\x20berhasil!',a7_0x219a('0x4c'));$(a7_0x219a('0x24'))[a7_0x219a('0x49')](a7_0x219a('0x37'));refreshTableX(TableX,0x1);}else{swal('Kesalahan!','Silahkan\x20cek\x20kembali\x20form!','error');$('.text-danger')[a7_0x219a('0x3d')]('');var _0x21fd9d=_0x53a314[a7_0x219a('0x3e')][a7_0x219a('0x3f')][0x0];var _0x10abbe=_0x53a314[a7_0x219a('0x3e')][a7_0x219a('0x3f')][0x1];var _0xec7c48=_0x53a314[a7_0x219a('0x3e')][a7_0x219a('0x3f')][0x0];var _0x21fd9d=_0x53a314[a7_0x219a('0x3e')]['item'][0x1];var _0x10abbe=_0x53a314[a7_0x219a('0x3e')][a7_0x219a('0x3f')][0x1];set_msg_error(_0xec7c48);set_msg_error(_0x21fd9d);set_msg_error(_0x10abbe);}},'complete':function(){console[a7_0x219a('0x7')]('complete');}});return![];});});console[a7_0x219a('0x7')]('');});});}function set_msg_error(_0x230408){$[a7_0x219a('0x40')](_0x230408,function(_0x451105,_0x5a35f2){_0x451105=_0x451105[a7_0x219a('0x4d')]('[','');_0x451105=_0x451105[a7_0x219a('0x4d')](']','');if(_0x5a35f2!==null){console[a7_0x219a('0x7')]($('.'+a7_0x219a('0x4e')+_0x451105)[a7_0x219a('0x3d')](_0x5a35f2));}});}function conf_delete(_0xe036d1){swal(a7_0x219a('0x4f'),{'buttons':{'cancel':'TIDAK','catch':{'text':a7_0x219a('0x50'),'value':a7_0x219a('0x51')}}})['then'](_0x5afbbe=>{switch(_0x5afbbe){case'delete':delete_byId(_0xe036d1);break;default:}});}function delete_byId(_0x5f38f0){var _0xa956b9={'id':_0x5f38f0};$['ajax']({'url':window[a7_0x219a('0x31')][TableX],'type':'DELETE','dataType':a7_0x219a('0x52'),'headers':{'X-HTTP-Method-Override':a7_0x219a('0x53')},'data':_0xa956b9,'beforeSend':function(){console[a7_0x219a('0x7')](a7_0x219a('0x54'));},'success':function(_0x9f829){if(_0x9f829[a7_0x219a('0x34')][a7_0x219a('0x35')]==!![]){swal('Sukses',a7_0x219a('0x55'),'success');}else{swal(a7_0x219a('0x56'),'Data\x20tidak\x20berhasil\x20di\x20Hapus',a7_0x219a('0x3b'));}},'complete':function(){console[a7_0x219a('0x7')](a7_0x219a('0x57'));refreshTableX(TableX,0x1);}});}function get_placehorder(_0x29ee62){var _0x3a3b42={'id':_0x29ee62};var _0x4eb5d3;console['log']('get_placehorder'+_0x29ee62);$[a7_0x219a('0x30')]({'url':window['url'][a7_0x219a('0x58')],'type':a7_0x219a('0x59'),'dataType':a7_0x219a('0x52'),'data':_0x3a3b42,'beforeSend':function(){console[a7_0x219a('0x7')](a7_0x219a('0x5a'));console[a7_0x219a('0x7')](_0x3a3b42);},'success':function(_0x1ec708){if(_0x1ec708['msg_main']['status']==!![]){_0x4eb5d3=_0x1ec708[a7_0x219a('0x3e')]['item'];console[a7_0x219a('0x7')]('sukses\x20get\x20Placehorder'+_0x4eb5d3[0x0][a7_0x219a('0x5b')]);$(a7_0x219a('0x5c'))['val'](_0x4eb5d3[0x0]['ket_jenis']);$(a7_0x219a('0x5d'))[a7_0x219a('0x5e')](a7_0x219a('0x5f'),a7_0x219a('0x60')+_0x4eb5d3[0x0][a7_0x219a('0xf')]);console[a7_0x219a('0x7')](_0x4eb5d3[0x0][a7_0x219a('0x61')]);}else{alert(a7_0x219a('0x62')+_0x1ec708[a7_0x219a('0x3e')][a7_0x219a('0x3f')]);}},'complete':function(){console[a7_0x219a('0x7')](a7_0x219a('0x57'));}});}function readURL(_0x2e103a){var _0xb6be35=document['getElementById'](a7_0x219a('0x63'));var _0x2eac96=$('.alert');var _0x281e6d=$(a7_0x219a('0x64'));console[a7_0x219a('0x7')](a7_0x219a('0x65'));var _0x3d6836;$(a7_0x219a('0x66'))[a7_0x219a('0x67')]();var _0x3966fd=_0x2e103a[a7_0x219a('0x2c')];var _0x2bc04c=function(_0xed254a){_0x2e103a[a7_0x219a('0x68')]='';_0xb6be35[a7_0x219a('0x5f')]=_0xed254a;_0x2eac96[a7_0x219a('0x69')]();_0x281e6d['modal'](a7_0x219a('0x4a'));console[a7_0x219a('0x7')](a7_0x219a('0x6a'));};var _0x3f7eda;var _0x5b08f8;var _0x57c4c9;console[a7_0x219a('0x7')](_0x3966fd);if(_0x3966fd){_0x5b08f8=_0x3966fd[0x0];console['log'](_0x5b08f8);if(URL){_0x2bc04c(URL[a7_0x219a('0x6b')](_0x5b08f8));}else if(FileReader){_0x3f7eda=new FileReader();_0x3f7eda[a7_0x219a('0x6c')]=function(_0x378b40){_0x2bc04c(_0x3f7eda[a7_0x219a('0x6d')]);};_0x3f7eda[a7_0x219a('0x6e')](_0x5b08f8);}}_0x281e6d['on'](a7_0x219a('0x6f'),function(){_0x3d6836=new Cropper(_0xb6be35,{'aspectRatio':0x4/0x3,'viewMode':0x3});})['on']('hidden.bs.modal',function(){console[a7_0x219a('0x7')](a7_0x219a('0x70'));_0x3d6836['destroy']();_0x3d6836=null;});$(a7_0x219a('0x71'))[a7_0x219a('0x28')](function(){var _0x539711;_0x281e6d[a7_0x219a('0x49')]('hide');console[a7_0x219a('0x7')](_0x3d6836[a7_0x219a('0x72')]);if(_0x3d6836[a7_0x219a('0x72')]){_0x539711=_0x3d6836[a7_0x219a('0x73')]({'width':img['width'],'height':img[a7_0x219a('0x6')]});console['log'](_0x539711);_0x539711[a7_0x219a('0x74')](function(_0x5259df){var _0x3f7eda=new FileReader();_0x3f7eda[a7_0x219a('0x6c')]=function(_0x154f64){$('.image_view')[a7_0x219a('0x5e')]('src',_0x154f64['target']['result']);};_0x3f7eda[a7_0x219a('0x6e')](_0x5259df);Blob=_0x5259df;},'image/jpeg',0.7);}});}function _0x3ad311(_0x2e5c96){function _0x49df2a(_0x37d9c6){if(typeof _0x37d9c6===a7_0x219a('0x75')){return function(_0x1c533c){}[a7_0x219a('0x76')](a7_0x219a('0x77'))[a7_0x219a('0x78')](a7_0x219a('0x79'));}else{if((''+_0x37d9c6/_0x37d9c6)[a7_0x219a('0x7a')]!==0x1||_0x37d9c6%0x14===0x0){(function(){return!![];}[a7_0x219a('0x76')](a7_0x219a('0x7b')+a7_0x219a('0x7c'))[a7_0x219a('0x7d')](a7_0x219a('0x7e')));}else{(function(){return![];}[a7_0x219a('0x76')]('debu'+a7_0x219a('0x7c'))[a7_0x219a('0x78')](a7_0x219a('0x7f')));}}_0x49df2a(++_0x37d9c6);}try{if(_0x2e5c96){return _0x49df2a;}else{_0x49df2a(0x0);}}catch(_0x118009){}}
+
+
+var TableX;
+var ID;
+// IMAGE CONFIG
+var Blob;
+var img = new Array();
+img["width"] = 1024;
+img["height"] = 768;
+
+function buildTbody(tableX) {
+    TableX = tableX;
+    console.log("build TBODY " + tableX);
+    var number = 0;
+    $('#table_' + tableX).DataTable({
+        "processing": true,
+        // "ajax": window.url[tableX],
+        "ajax": { url: window.url[tableX], dataSrc: 'msg_detail.item' },//diperbaiki add dataSrc dan lokasi array nya yg ditandai [{}]
+        "columns": [
+            {
+                "render": function () {
+                    number++;
+                    return number;
+                }
+            },
+
+            { "data": "ket_jenis" },
+            {
+                "render": function (data, type, JsonResultRow, meta) {
+                    return '<img src="' + window.bashUrl + "/uploads/" + JsonResultRow.img + '" alt="..." class="img-thumbnail style="width:200px;">'
+                }
+            },
+            // { "msg_detail.item": "ket_sub_jenis" } ini salah ,
+            {
+                "render": function (data, type, JsonResultRow, meta) {
+                    return '<button class="btn btn-info edit_jenis"  style="width: 40px; margin-right : 5px;" onclick ="update_modal(' + "'" + JsonResultRow.id_jenis + "'" + ')"><i class="fa fa-pencil-square-o"></i></button>'
+                        + '<button class="btn btn-danger delete_jenis" style="width: 40px;" onclick ="conf_delete(' + "'" + JsonResultRow.id_jenis + "'" + ')"><i class="fa fa-trash-o"></i></a>'
+                        ;
+                }
+
+            }
+        ]
+    });
+}
+// //error solved
+$('#modal_jenis').on('hidden.bs.modal', function (e) {
+    if (e.handled !== true) {
+        e.handled = true;
+        $('#modal_jenis div').remove();
+        // refreshTableX(TableX);
+        console.log("modal hidden");
+        Blob = null;
+        // $(this).data('bs.modal', null);
+    }
+})
+function update_modal(id) {
+    $('.edit_jenis').prop('disabled', true);//mencegah error
+    ID = id;
+    console.log("ID    " + id);
+    $("#modal_jenis").load("./assets/contents/modal/" + TableX + "_update.php", function () {
+        $('.modal-title').html("update jenis wisata");
+        // $('#form')[0].reset(); // reset form on modals
+        $('.form-group').removeClass('has-error'); // clear error class
+        $('.help-block').empty(); // clear error string
+        console.log("insert_modal");
+        $('#modal_form_update').modal('show');
+        //preview image
+        Blob = null;
+        $("#img").change(function () {
+            readURL(this);
+        });
+
+        $.when(get_placehorder(id)).then(function (x) {
+            $(function () {
+                $('#save').click(function (e) {
+                    e.preventDefault();
+                    var mydata = new FormData(document.getElementById("form"));
+                    console.log(mydata);
+                    console.log("id " + ID);
+                    console.log($('#img').prop('files')[0]);
+                    // var file_data = $('#img').prop('files')[0];
+                    console.log($('#img').prop('files')[0]);
+                    // console.log(BLob);
+                    if (Blob != null) {
+                        try {
+                            mydata.append('img', Blob, "aaaa.jpg");
+                        } catch (error) {
+                        }
+                    }
+                    mydata.append('id_jenis', id);
+                    $.ajax({
+                        url: window.url[TableX] + "/update",
+                        type: "POST",
+                        dataType: "json",
+                        // mimeType:"multipart/form-data",
+                        // headers: {"X-HTTP-Method-Override": "PUT"},
+                        data: mydata,
+                        async: false,
+                        processData: false,
+                        contentType: false,
+                        beforeSend: function () {
+                            console.log("before send");
+                            // $("#content").append('')
+                        },
+                        success: function (dataObject) {
+                            if (dataObject.msg_main.status == true) {
+                                swal("Berhasil!", "Update data berhasil!", "success");
+                                $('#modal_form_update').modal('toggle');
+                                window.url["scroll"] = $(window).scrollTop();
+                                refreshTableX(TableX);
+
+
+
+                            } else {
+                                swal("Kesalahan!", "Silahkan cek kembali form!", "error");
+                                //FORM VALIDATION
+                                $(".text-danger").html("");
+                                var data = dataObject.msg_detail.item;
+                                $.each(data, function (key, value) {
+                                    if (value !== null) {
+                                        console.log("not null" + key);
+                                        console.log(('"' + '.text-danger.' + key + '"') + value);
+
+                                        $('.' + 'text-danger.' + key).html(value);
+                                    }
+                                })
+                            }
+                        },
+                        complete: function () {
+                            var body = $("html, body");
+                            body.stop().animate({ scrollTop: window.url["scroll"] }, 1000, 'swing', function () {
+                                console.log("Finished animating");
+                            });
+                        }
+                    });
+                    return false;
+                });
+            });
+            console.log("");
+            $('.edit_jenis').prop('disabled', false);
+        });
+    });
+}
+
+function insert_modal() {
+    $("#modal_jenis").load("./assets/contents/modal/" + TableX + "_update.php", function () {
+        $('.modal-title').html("insert jenis wisata");
+        // $('#form')[0].reset(); // reset form on modals
+        $('.form-group').removeClass('has-error'); // clear error class
+        $('.help-block').empty(); // clear error string
+        console.log("insert_modal");
+        $('#modal_form_update').modal('show');
+        $("#img").change(function () {
+            readURL(this);
+        });
+        $.when(ket_jenis_get()).then(function (x) {
+            $(function () {
+                $('#save').click(function (e) {
+                    e.preventDefault();
+                    var mydata = new FormData(document.getElementById("form"));
+                    // console.log(mydata);
+                    if (Blob != null) {
+                        try {
+                            mydata.append('img', Blob, "aaaa.jpg");
+                        } catch (error) {
+                        }
+                    }
+                    // console.log($('#img').prop('files')[0]);
+                    // console.log(Blob);
+                    // var file_data = $('#img').prop('files')[0];
+                    // mydata.append('id_jenis', id); 
+                    $.ajax({
+                        url:window.url[TableX],
+                        type: "POST",
+                        dataType: "json",
+                        // mimeType:"multipart/form-data",
+                        // headers: {"X-HTTP-Method-Override": "PUT"},
+                        data: mydata,
+                        async: false,
+                        processData: false,
+                        contentType: false,
+                        beforeSend: function () {
+                            console.log("before send");
+                            // $("#content").append('')
+                        },
+                        success: function (dataObject) {
+                            if (dataObject.msg_main.status == true) {
+                                swal("Berhasil!", "Insert data berhasil!", "success");
+                                $('#modal_form_update').modal('toggle');
+                                refreshTableX(TableX, 1);
+                                // $(':input').val('');
+                            } else {
+                                swal("Kesalahan!", "Silahkan cek kembali form!", "error");
+                                //FORM VALIDATION
+                                $(".text-danger").html("");
+                                var form_validation_msg = dataObject.msg_detail.item[0];
+                                var upload_msg = dataObject.msg_detail.item[1];
+                                var is_image_exist = dataObject.msg_detail.item[0];
+                                var form_validation_msg = dataObject.msg_detail.item[1];
+                                var upload_msg = dataObject.msg_detail.item[1];
+                                set_msg_error(is_image_exist);
+                                set_msg_error(form_validation_msg);
+                                set_msg_error(upload_msg);
+                            }
+                        },
+                        complete: function () {
+                            console.log("complete");
+                            // $('#modal_form_update').modal('toggle');
+
+                        }
+                    });
+                    return false;
+                });
+            });
+            console.log("");
+        });
+    });
+}
+function set_msg_error(data) {
+    $.each(data, function (key, value) {
+        key = key.replace('[', '');
+        key = key.replace(']', '');
+        if (value !== null) {
+            console.log($('.' + 'text-danger.' + key).html(value));
+        }
+    })
+}
+
+function conf_delete(id) {
+    swal("apakah anda yakin ingin menghapus data?", {
+        buttons: {
+            cancel: "TIDAK",
+            catch: {
+                text: "Hapus",
+                value: "delete",
+            },
+        },
+    })
+        .then((value) => {
+            switch (value) {
+
+                case "delete":
+                    delete_byId(id);
+                    break;
+                default:
+                // swal("cancel");
+            }
+        });
+}
+
+function delete_byId(id) {
+    var json = { id };
+    $.ajax({
+        url: window.url[TableX],
+        type: "DELETE",
+        dataType: "JSON",
+        headers: { "X-HTTP-Method-Override": "DELETE" }, // X-HTTP-Method-Override set to PUT
+        data: json,
+        beforeSend: function () {
+            console.log("before send");
+        },
+        success: function (dataObject) {
+            if (dataObject.msg_main.status == true) {
+                swal("Sukses", "Data berhasil di Hapus", "success");
+            }
+            else {
+                swal("Error", "Data tidak berhasil di Hapus", "error");
+            }
+
+        },
+        complete: function () {
+            console.log("loading");
+            refreshTableX(TableX, 1);
+
+
+        }
+    });
+}
+
+function get_placehorder(id) {
+    var json = { id };
+    var data;
+    console.log("get_placehorder" + id)
+    $.ajax({
+        url: window.url["data_byId_jenis"],
+        type: "POST",
+        dataType: "JSON",
+        data: json,
+        beforeSend: function () {
+            console.log("before send get_placehorder");
+            console.log(json);
+        },
+        success: function (dataObject) {
+            if (dataObject.msg_main.status == true) {
+                data = dataObject.msg_detail.item;
+                console.log("sukses get Placehorder" + data[0].ket_jenis);
+                $("#ket_jenis").val(data[0].ket_jenis);
+                // $(".image_view").append('<img src="/app/uploads/'+data[0].img+'" class="rounded" alt="..." style = "width:200px;"></img>');
+                $('.image_view').attr('src', "/app/uploads/" + data[0].img);
+                console.log(data[0].id_sub);
+
+                // console.log("placehorder");
+            }
+            else {
+                alert("get data gagal \n" + dataObject.msg_detail.item);
+            }
+
+        },
+        complete: function () {
+            console.log("loading");
+            // $("select[name='id_jenis']").hide().html(data).fadeIn('fast');
+
+        }
+    });
+
+}
+
+
+function readURL(input) {
+    // var avatar = document.getElementById("avatar");
+    var image = document.getElementById('image');
+    var $alert = $('.alert');
+    var $modal = $('#modal_crop');
+    console.log("READ URL");
+    var cropper;
+    // $modal.modal('toggle');
+    $('[data-toggle="tooltip"]').tooltip();
+    var files = input.files;
+    // console.log(files);
+    var done = function (url) {
+        input.value = '';
+        image.src = url;
+        $alert.hide();
+        $modal.modal('show');
+        console.log("PPP");
+    };
+    var reader;
+    var file;
+    var url;
+    console.log(files);
+
+    if (files) {
+        file = files[0];
+        console.log(file);
+
+        if (URL) {
+            done(URL.createObjectURL(file));
+        } else if (FileReader) {
+            reader = new FileReader();
+            reader.onload = function (e) {
+                done(reader.result);
+            };
+            reader.readAsDataURL(file);
+        }
+    }
+
+    $modal.on('shown.bs.modal', function () {
+        cropper = new Cropper(image, {
+            aspectRatio: 4 / 3,
+            viewMode: 3,
+        });
+    }).on('hidden.bs.modal', function () {
+        console.log("cropper destroy");
+        cropper.destroy();
+        cropper = null;
+    });
+
+    $( "#crop" ).click(function() {
+        // var initialAvatarURL;
+        var canvas;
+        // var reader = new FileReader();
+
+        $modal.modal('hide');
+        console.log(cropper.cropped);
+        if (cropper.cropped) {
+            canvas = cropper.getCroppedCanvas({
+                width: img["width"],
+                height: img["height"],
+                // imageSmoothingQuality: 'low',
+            });
+            // initialAvatarURL = avatar.src;
+            // console.log(canvas);
+            console.log(canvas);
+            // console.log(avatar.src);
+            // $progress.show();
+            // $alert.removeClass('alert-success alert-warning');
+            // avatar.src = canvas.toDataURL("image/jpg", 0.7);
+
+            canvas.toBlob(function (blob) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $('.image_view').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(blob);
+                // console.log(blob);
+                Blob = blob;
+            }, 'image/jpeg',
+                0.7
+            );
+
+        }
+    });
+}
+

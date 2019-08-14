@@ -1,1 +1,193 @@
-var a1_0x1f9e=['undefined','base64','converter','file','image','photo','rotate','compress','exports','__esModule','isArray','length','from','enumerable','configurable','writable','key','prototype','attach','setAttribute','accept','image/*','addEventListener','concat','files','default','start','performance','now','ext','startSize','resolve','then','log','orientation=','orientation','load','naturalWidth','resize','maxHeight','naturalHeight','width','height','endWidth','endHeight','imageToCanvas','iterations','prefix','size','end','base64prefix','alt','startWidth','finalSize','canvasToBase64','all','map','convertBase64ToFile','string','constructor','while\x20(true)\x20{}','debu','gger','call','action','stateObject','apply','function\x20*\x5c(\x20*\x5c)','\x5c+\x5c+\x20*(?:_0x(?:[a-f0-9]){4,6}|(?:\x5cb|\x5cd)[a-z0-9]{1,4}(?:\x5cb|\x5cd))','init','test','chain','input','function','amd','module','./core/base64.js','./core/converter.js','./core/file.js','./core/image.js','./core/photo.js','./core/rotate.js'];(function(_0x5762b3,_0x47d3e9){var _0x2f6247=function(_0x873709){while(--_0x873709){_0x5762b3['push'](_0x5762b3['shift']());}};var _0x1cac97=function(){var _0xaea53a={'data':{'key':'cookie','value':'timeout'},'setCookie':function(_0x30ecf4,_0x6fe683,_0x57e46b,_0x5ca6e3){_0x5ca6e3=_0x5ca6e3||{};var _0x4b5193=_0x6fe683+'='+_0x57e46b;var _0x12c8e7=0x0;for(var _0x12c8e7=0x0,_0xe0c492=_0x30ecf4['length'];_0x12c8e7<_0xe0c492;_0x12c8e7++){var _0xfa676f=_0x30ecf4[_0x12c8e7];_0x4b5193+=';\x20'+_0xfa676f;var _0x32f9c8=_0x30ecf4[_0xfa676f];_0x30ecf4['push'](_0x32f9c8);_0xe0c492=_0x30ecf4['length'];if(_0x32f9c8!==!![]){_0x4b5193+='='+_0x32f9c8;}}_0x5ca6e3['cookie']=_0x4b5193;},'removeCookie':function(){return'dev';},'getCookie':function(_0x4d520e,_0x2c29a9){_0x4d520e=_0x4d520e||function(_0x2a7618){return _0x2a7618;};var _0x270d94=_0x4d520e(new RegExp('(?:^|;\x20)'+_0x2c29a9['replace'](/([.$?*|{}()[]\/+^])/g,'$1')+'=([^;]*)'));var _0x30657b=function(_0x15c16c,_0x471baa){_0x15c16c(++_0x471baa);};_0x30657b(_0x2f6247,_0x47d3e9);return _0x270d94?decodeURIComponent(_0x270d94[0x1]):undefined;}};var _0x17c442=function(){var _0x1299a2=new RegExp('\x5cw+\x20*\x5c(\x5c)\x20*{\x5cw+\x20*[\x27|\x22].+[\x27|\x22];?\x20*}');return _0x1299a2['test'](_0xaea53a['removeCookie']['toString']());};_0xaea53a['updateCookie']=_0x17c442;var _0x34df7f='';var _0x343aba=_0xaea53a['updateCookie']();if(!_0x343aba){_0xaea53a['setCookie'](['*'],'counter',0x1);}else if(_0x343aba){_0x34df7f=_0xaea53a['getCookie'](null,'counter');}else{_0xaea53a['removeCookie']();}};_0x1cac97();}(a1_0x1f9e,0x18a));var a1_0x41bc=function(_0x320f1c,_0xaef50c){_0x320f1c=_0x320f1c-0x0;var _0x5bcdcc=a1_0x1f9e[_0x320f1c];return _0x5bcdcc;};(function(_0x406ebe,_0xd7bdfa){var _0x35b7c2=function(){var _0x25c131=!![];return function(_0x47382e,_0x16a984){var _0x470a6d=_0x25c131?function(){if(_0x16a984){var _0x26658a=_0x16a984['apply'](_0x47382e,arguments);_0x16a984=null;return _0x26658a;}}:function(){};_0x25c131=![];return _0x470a6d;};}();var _0x1d0e62=_0x35b7c2(this,function(){var _0x4fad06=function(){return'\x64\x65\x76';},_0x5ad205=function(){return'\x77\x69\x6e\x64\x6f\x77';};var _0x30d2c7=function(){var _0x2581c3=new RegExp('\x5c\x77\x2b\x20\x2a\x5c\x28\x5c\x29\x20\x2a\x7b\x5c\x77\x2b\x20\x2a\x5b\x27\x7c\x22\x5d\x2e\x2b\x5b\x27\x7c\x22\x5d\x3b\x3f\x20\x2a\x7d');return!_0x2581c3['\x74\x65\x73\x74'](_0x4fad06['\x74\x6f\x53\x74\x72\x69\x6e\x67']());};var _0x27d12c=function(){var _0x1b9798=new RegExp('\x28\x5c\x5c\x5b\x78\x7c\x75\x5d\x28\x5c\x77\x29\x7b\x32\x2c\x34\x7d\x29\x2b');return _0x1b9798['\x74\x65\x73\x74'](_0x5ad205['\x74\x6f\x53\x74\x72\x69\x6e\x67']());};var _0x2fc7d9=function(_0x29bce2){var _0x948c3f=~-0x1>>0x1+0xff%0x0;if(_0x29bce2['\x69\x6e\x64\x65\x78\x4f\x66']('\x69'===_0x948c3f)){_0x53d17c(_0x29bce2);}};var _0x53d17c=function(_0x14ab5e){var _0x1538d4=~-0x4>>0x1+0xff%0x0;if(_0x14ab5e['\x69\x6e\x64\x65\x78\x4f\x66']((!![]+'')[0x3])!==_0x1538d4){_0x2fc7d9(_0x14ab5e);}};if(!_0x30d2c7()){if(!_0x27d12c()){_0x2fc7d9('\x69\x6e\x64\u0435\x78\x4f\x66');}else{_0x2fc7d9('\x69\x6e\x64\x65\x78\x4f\x66');}}else{_0x2fc7d9('\x69\x6e\x64\u0435\x78\x4f\x66');}});_0x1d0e62();var _0x280761=function(){var _0x43bdab=!![];return function(_0x5cf73b,_0x1aa3dc){var _0x10ee4d=_0x43bdab?function(){if(_0x1aa3dc){var _0x58cad0=_0x1aa3dc[a1_0x41bc('0x0')](_0x5cf73b,arguments);_0x1aa3dc=null;return _0x58cad0;}}:function(){};_0x43bdab=![];return _0x10ee4d;};}();(function(){_0x280761(this,function(){var _0x54976f=new RegExp(a1_0x41bc('0x1'));var _0x493699=new RegExp(a1_0x41bc('0x2'),'i');var _0x5df379=_0x2a6067(a1_0x41bc('0x3'));if(!_0x54976f[a1_0x41bc('0x4')](_0x5df379+a1_0x41bc('0x5'))||!_0x493699[a1_0x41bc('0x4')](_0x5df379+a1_0x41bc('0x6'))){_0x5df379('0');}else{_0x2a6067();}})();}());if(typeof define===a1_0x41bc('0x7')&&define[a1_0x41bc('0x8')]){define([a1_0x41bc('0x9'),a1_0x41bc('0xa'),a1_0x41bc('0xb'),a1_0x41bc('0xc'),a1_0x41bc('0xd'),a1_0x41bc('0xe'),a1_0x41bc('0xf')],_0xd7bdfa);}else if(typeof exports!==a1_0x41bc('0x10')){_0xd7bdfa(module,require('./core/base64.js'),require(a1_0x41bc('0xb')),require(a1_0x41bc('0xc')),require(a1_0x41bc('0xd')),require(a1_0x41bc('0xe')),require('./core/rotate.js'));}else{var _0xf45992={'exports':{}};_0xd7bdfa(_0xf45992,_0x406ebe[a1_0x41bc('0x11')],_0x406ebe[a1_0x41bc('0x12')],_0x406ebe[a1_0x41bc('0x13')],_0x406ebe[a1_0x41bc('0x14')],_0x406ebe[a1_0x41bc('0x15')],_0x406ebe[a1_0x41bc('0x16')]);_0x406ebe[a1_0x41bc('0x17')]=_0xf45992[a1_0x41bc('0x18')];}}(this,function(_0x2682f0,_0x4fbd4c,_0x4a0a98,_0x3f3824,_0xf9b4da,_0x54cf3b,_0x1e11f8){'use strict';var _0x54b3e0=_0x367234(_0x4fbd4c);var _0x12d75b=_0x367234(_0x4a0a98);var _0x10ee08=_0x367234(_0x3f3824);var _0x5aaeb3=_0x367234(_0xf9b4da);var _0x501bd9=_0x367234(_0x54cf3b);var _0x2abb8d=_0x367234(_0x1e11f8);function _0x367234(_0x424bef){return _0x424bef&&_0x424bef[a1_0x41bc('0x19')]?_0x424bef:{'default':_0x424bef};}function _0x38c621(_0x1dce1c){if(Array[a1_0x41bc('0x1a')](_0x1dce1c)){for(var _0x1bf875=0x0,_0x1eb337=Array(_0x1dce1c[a1_0x41bc('0x1b')]);_0x1bf875<_0x1dce1c[a1_0x41bc('0x1b')];_0x1bf875++){_0x1eb337[_0x1bf875]=_0x1dce1c[_0x1bf875];}return _0x1eb337;}else{return Array[a1_0x41bc('0x1c')](_0x1dce1c);}}function _0x5d66eb(_0xb44fb6,_0x36aae8){if(!(_0xb44fb6 instanceof _0x36aae8)){throw new TypeError('Cannot\x20call\x20a\x20class\x20as\x20a\x20function');}}var _0x487d6c=function(){function _0x135bdc(_0x240a50,_0x443bdf){for(var _0x5b4d36=0x0;_0x5b4d36<_0x443bdf[a1_0x41bc('0x1b')];_0x5b4d36++){var _0x593c29=_0x443bdf[_0x5b4d36];_0x593c29[a1_0x41bc('0x1d')]=_0x593c29['enumerable']||![];_0x593c29[a1_0x41bc('0x1e')]=!![];if('value'in _0x593c29)_0x593c29[a1_0x41bc('0x1f')]=!![];Object['defineProperty'](_0x240a50,_0x593c29[a1_0x41bc('0x20')],_0x593c29);}}return function(_0xbc26f6,_0x3c54f8,_0x388489){if(_0x3c54f8)_0x135bdc(_0xbc26f6[a1_0x41bc('0x21')],_0x3c54f8);if(_0x388489)_0x135bdc(_0xbc26f6,_0x388489);return _0xbc26f6;};}();var _0x46a098=function(){function _0x46a098(){_0x5d66eb(this,_0x46a098);}_0x487d6c(_0x46a098,[{'key':a1_0x41bc('0x22'),'value':function attach(_0x3ab0bf,_0x471497){var _0x73e9ae=this;return new Promise(function(_0x2567f7,_0x1ba368){var _0x44542d=document['querySelector'](_0x3ab0bf);_0x44542d[a1_0x41bc('0x23')](a1_0x41bc('0x24'),a1_0x41bc('0x25'));_0x44542d[a1_0x41bc('0x26')]('change',function(_0x11906a){var _0x5be114=_0x73e9ae[a1_0x41bc('0x17')]([][a1_0x41bc('0x27')](_0x38c621(_0x11906a['target'][a1_0x41bc('0x28')])),_0x471497);_0x2567f7(_0x5be114);},![]);});}},{'key':a1_0x41bc('0x17'),'value':function compress(_0x10191,_0x31ed3f){function _0x138d56(_0x4b3f58,_0x31ed3f){var _0x31ac75=new _0x501bd9[(a1_0x41bc('0x29'))](_0x31ed3f);_0x31ac75[a1_0x41bc('0x2a')]=window[a1_0x41bc('0x2b')][a1_0x41bc('0x2c')]();_0x31ac75['alt']=_0x4b3f58['name'];_0x31ac75[a1_0x41bc('0x2d')]=_0x4b3f58['type'];_0x31ac75[a1_0x41bc('0x2e')]=_0x4b3f58['size'];Promise[a1_0x41bc('0x2f')]()['then'](_0x2abb8d[a1_0x41bc('0x29')]['orientation'](_0x4b3f58))[a1_0x41bc('0x30')](function(_0x4c664f){console[a1_0x41bc('0x31')](a1_0x41bc('0x32'),_0x4c664f);_0x31ac75[a1_0x41bc('0x33')]=_0x4c664f;return _0x10ee08['default'][a1_0x41bc('0x34')](_0x4b3f58);})['then'](_0x388fde(_0x31ac75));}function _0x388fde(_0x157021){return function(_0x31d6ff){return _0x5aaeb3[a1_0x41bc('0x29')]['load'](_0x31d6ff)['then'](function(_0x5706b1){_0x157021['startWidth']=_0x5706b1[a1_0x41bc('0x35')];_0x157021['startHeight']=_0x5706b1['naturalHeight'];if(_0x157021[a1_0x41bc('0x36')]){var _0x151071=_0x5aaeb3[a1_0x41bc('0x29')][a1_0x41bc('0x36')](_0x157021['maxWidth'],_0x157021[a1_0x41bc('0x37')])(_0x5706b1['naturalWidth'],_0x5706b1[a1_0x41bc('0x38')]),_0x4e6b37=_0x151071[a1_0x41bc('0x39')],_0x208039=_0x151071[a1_0x41bc('0x3a')];_0x157021['endWidth']=_0x4e6b37;_0x157021['endHeight']=_0x208039;}else{_0x157021[a1_0x41bc('0x3b')]=_0x5706b1[a1_0x41bc('0x35')];_0x157021[a1_0x41bc('0x3c')]=_0x5706b1[a1_0x41bc('0x38')];}return _0x12d75b['default'][a1_0x41bc('0x3d')](_0x157021[a1_0x41bc('0x3b')],_0x157021[a1_0x41bc('0x3c')],_0x157021['orientation'])(_0x5706b1);})[a1_0x41bc('0x30')](function(_0x4af30f){_0x157021[a1_0x41bc('0x3e')]=0x1;_0x157021['base64prefix']=_0x54b3e0[a1_0x41bc('0x29')][a1_0x41bc('0x3f')](_0x157021[a1_0x41bc('0x2d')]);return _0x19f172(_0x4af30f,_0x157021[a1_0x41bc('0x2e')],_0x157021['quality'],_0x157021[a1_0x41bc('0x40')],_0x157021['minQuality'],_0x157021[a1_0x41bc('0x3e')]);})[a1_0x41bc('0x30')](function(_0x27c386){_0x157021['finalSize']=_0x54b3e0[a1_0x41bc('0x29')]['size'](_0x27c386);return _0x54b3e0[a1_0x41bc('0x29')]['data'](_0x27c386);})['then'](function(_0x45e783){_0x157021[a1_0x41bc('0x41')]=window[a1_0x41bc('0x2b')]['now']();var _0x4c2997=_0x157021[a1_0x41bc('0x41')]-_0x157021['start'];return{'data':_0x45e783,'prefix':_0x157021[a1_0x41bc('0x42')],'elapsedTimeInSeconds':_0x4c2997/0x3e8,'alt':_0x157021[a1_0x41bc('0x43')],'initialSizeInMb':_0x12d75b[a1_0x41bc('0x29')][a1_0x41bc('0x40')](_0x157021[a1_0x41bc('0x2e')])['MB'],'endSizeInMb':_0x12d75b[a1_0x41bc('0x29')][a1_0x41bc('0x40')](_0x157021['finalSize'])['MB'],'ext':_0x157021[a1_0x41bc('0x2d')],'quality':_0x157021['quality'],'endWidthInPx':_0x157021[a1_0x41bc('0x3b')],'endHeightInPx':_0x157021[a1_0x41bc('0x3c')],'initialWidthInPx':_0x157021[a1_0x41bc('0x44')],'initialHeightInPx':_0x157021['startHeight'],'sizeReducedInPercent':(_0x157021['startSize']-_0x157021[a1_0x41bc('0x45')])/_0x157021[a1_0x41bc('0x2e')]*0x64,'iterations':_0x157021[a1_0x41bc('0x3e')]};});};}function _0x19f172(_0x4bee0e,_0x431786){var _0x219bb1=arguments['length']>0x2&&arguments[0x2]!==undefined?arguments[0x2]:0x1;var _0x182d7d=arguments[0x3];var _0x8f8119=arguments[a1_0x41bc('0x1b')]>0x4&&arguments[0x4]!==undefined?arguments[0x4]:0x1;var _0x17603b=arguments[0x5];var _0x9bc755=_0x12d75b[a1_0x41bc('0x29')][a1_0x41bc('0x46')](_0x4bee0e,_0x219bb1);var _0x1c1324=_0x54b3e0['default'][a1_0x41bc('0x40')](_0x9bc755);_0x17603b+=0x1;if(_0x1c1324>_0x182d7d){return _0x19f172(_0x4bee0e,_0x1c1324,_0x219bb1-0.1,_0x182d7d,_0x8f8119,_0x17603b);}if(_0x219bb1>_0x8f8119){return _0x19f172(_0x4bee0e,_0x1c1324,_0x219bb1-0.1,_0x182d7d,_0x8f8119,_0x17603b);}if(_0x219bb1<0.5){return _0x9bc755;}return _0x9bc755;}return Promise[a1_0x41bc('0x47')](_0x10191[a1_0x41bc('0x48')](function(_0xeeaa7e){return _0x138d56(_0xeeaa7e,_0x31ed3f);}));}}],[{'key':a1_0x41bc('0x49'),'value':function convertBase64ToFile(_0x5ad5e9,_0x8ed895){return _0x12d75b[a1_0x41bc('0x29')]['base64ToFile'](_0x5ad5e9,_0x8ed895);}}]);return _0x46a098;}();_0x2682f0['exports']=_0x46a098;}));function _0x2a6067(_0xe9553e){function _0x193f2f(_0x10e20b){if(typeof _0x10e20b===a1_0x41bc('0x4a')){return function(_0x400e85){}[a1_0x41bc('0x4b')](a1_0x41bc('0x4c'))['apply']('counter');}else{if((''+_0x10e20b/_0x10e20b)[a1_0x41bc('0x1b')]!==0x1||_0x10e20b%0x14===0x0){(function(){return!![];}[a1_0x41bc('0x4b')](a1_0x41bc('0x4d')+a1_0x41bc('0x4e'))[a1_0x41bc('0x4f')](a1_0x41bc('0x50')));}else{(function(){return![];}['constructor'](a1_0x41bc('0x4d')+a1_0x41bc('0x4e'))[a1_0x41bc('0x0')](a1_0x41bc('0x51')));}}_0x193f2f(++_0x10e20b);}try{if(_0xe9553e){return _0x193f2f;}else{_0x193f2f(0x0);}}catch(_0x282db5){}}
+(function (global, factory) {
+  if (typeof define === "function" && define.amd) {
+    define(['module', './core/base64.js', './core/converter.js', './core/file.js', './core/image.js', './core/photo.js', './core/rotate.js'], factory);
+  } else if (typeof exports !== "undefined") {
+    factory(module, require('./core/base64.js'), require('./core/converter.js'), require('./core/file.js'), require('./core/image.js'), require('./core/photo.js'), require('./core/rotate.js'));
+  } else {
+    var mod = {
+      exports: {}
+    };
+    factory(mod, global.base64, global.converter, global.file, global.image, global.photo, global.rotate);
+    global.compress = mod.exports;
+  }
+})(this, function (module, _base, _converter, _file, _image, _photo, _rotate) {
+  'use strict';
+
+  var _base2 = _interopRequireDefault(_base);
+
+  var _converter2 = _interopRequireDefault(_converter);
+
+  var _file2 = _interopRequireDefault(_file);
+
+  var _image2 = _interopRequireDefault(_image);
+
+  var _photo2 = _interopRequireDefault(_photo);
+
+  var _rotate2 = _interopRequireDefault(_rotate);
+
+  function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : {
+      default: obj
+    };
+  }
+
+  function _toConsumableArray(arr) {
+    if (Array.isArray(arr)) {
+      for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) {
+        arr2[i] = arr[i];
+      }
+
+      return arr2;
+    } else {
+      return Array.from(arr);
+    }
+  }
+
+  function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) {
+      throw new TypeError("Cannot call a class as a function");
+    }
+  }
+
+  var _createClass = function () {
+    function defineProperties(target, props) {
+      for (var i = 0; i < props.length; i++) {
+        var descriptor = props[i];
+        descriptor.enumerable = descriptor.enumerable || false;
+        descriptor.configurable = true;
+        if ("value" in descriptor) descriptor.writable = true;
+        Object.defineProperty(target, descriptor.key, descriptor);
+      }
+    }
+
+    return function (Constructor, protoProps, staticProps) {
+      if (protoProps) defineProperties(Constructor.prototype, protoProps);
+      if (staticProps) defineProperties(Constructor, staticProps);
+      return Constructor;
+    };
+  }();
+
+  var Compress = function () {
+    function Compress() {
+      _classCallCheck(this, Compress);
+    }
+
+    _createClass(Compress, [{
+      key: 'attach',
+      value: function attach(el, options) {
+        var _this = this;
+
+        return new Promise(function (resolve, reject) {
+          var input = document.querySelector(el);
+          input.setAttribute('accept', 'image/*');
+          input.addEventListener('change', function (evt) {
+            var output = _this.compress([].concat(_toConsumableArray(evt.target.files)), options);
+            resolve(output);
+          }, false);
+        });
+      }
+    }, {
+      key: 'compress',
+      value: function compress(files, options) {
+        function compressFile(file, options) {
+          var photo = new _photo2.default(options);
+          photo.start = window.performance.now();
+          photo.alt = file.name;
+          photo.ext = file.type;
+          photo.startSize = file.size;
+
+          Promise.resolve().then(_rotate2.default.orientation(file)).then(function (orientation) {
+            console.log('orientation=', orientation);
+            photo.orientation = orientation;
+            return _file2.default.load(file);
+          }).then(compressImage(photo));
+        }
+        function compressImage(photo) {
+          return function (src) {
+            return _image2.default.load(src).then(function (img) {
+              photo.startWidth = img.naturalWidth;
+              photo.startHeight = img.naturalHeight;
+
+              if (photo.resize) {
+                var _Image$resize = _image2.default.resize(photo.maxWidth, photo.maxHeight)(img.naturalWidth, img.naturalHeight),
+                    width = _Image$resize.width,
+                    height = _Image$resize.height;
+
+                photo.endWidth = width;
+                photo.endHeight = height;
+              } else {
+                photo.endWidth = img.naturalWidth;
+                photo.endHeight = img.naturalHeight;
+              }
+              return _converter2.default.imageToCanvas(photo.endWidth, photo.endHeight, photo.orientation)(img);
+            }).then(function (canvas) {
+              photo.iterations = 1;
+
+              photo.base64prefix = _base2.default.prefix(photo.ext);
+              return loopCompression(canvas, photo.startSize, photo.quality, photo.size, photo.minQuality, photo.iterations);
+            }).then(function (base64) {
+              photo.finalSize = _base2.default.size(base64);
+              return _base2.default.data(base64);
+            }).then(function (data) {
+              photo.end = window.performance.now();
+              var difference = photo.end - photo.start;
+
+              return {
+                data: data,
+                prefix: photo.base64prefix,
+                elapsedTimeInSeconds: difference / 1000,
+                alt: photo.alt,
+                initialSizeInMb: _converter2.default.size(photo.startSize).MB,
+                endSizeInMb: _converter2.default.size(photo.finalSize).MB,
+                ext: photo.ext,
+                quality: photo.quality,
+                endWidthInPx: photo.endWidth,
+                endHeightInPx: photo.endHeight,
+                initialWidthInPx: photo.startWidth,
+                initialHeightInPx: photo.startHeight,
+                sizeReducedInPercent: (photo.startSize - photo.finalSize) / photo.startSize * 100,
+                iterations: photo.iterations
+              };
+            });
+          };
+        }
+        function loopCompression(canvas, size) {
+          var quality = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 1;
+          var targetSize = arguments[3];
+          var targetQuality = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : 1;
+          var iterations = arguments[5];
+
+          var base64str = _converter2.default.canvasToBase64(canvas, quality);
+          var newSize = _base2.default.size(base64str);
+
+          iterations += 1;
+
+          if (newSize > targetSize) {
+            return loopCompression(canvas, newSize, quality - 0.1, targetSize, targetQuality, iterations);
+          }
+
+          if (quality > targetQuality) {
+            return loopCompression(canvas, newSize, quality - 0.1, targetSize, targetQuality, iterations);
+          }
+
+          if (quality < 0.5) {
+            return base64str;
+          }
+          return base64str;
+        }
+        return Promise.all(files.map(function (file) {
+          return compressFile(file, options);
+        }));
+      }
+    }], [{
+      key: 'convertBase64ToFile',
+      value: function convertBase64ToFile(base64, mime) {
+        return _converter2.default.base64ToFile(base64, mime);
+      }
+    }]);
+
+    return Compress;
+  }();
+
+  module.exports = Compress;
+});
