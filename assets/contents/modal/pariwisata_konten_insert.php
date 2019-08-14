@@ -7,7 +7,7 @@
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h3 class="modal-title">Insert Konten Pariwisata</h3>
+                <h3 class="modal-title">Insert Konten Wisata</h3>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                         aria-hidden="true">&times;</span></button>
             </div>
@@ -37,7 +37,7 @@
                             </div>
 
                             <div class="form-group col-lg-12    ">
-                                <label>Nama Pariwisata</label>
+                                <label>Nama Konten Wisata</label>
                                 <input name="ket_main" id="ket_main" class="form-control form-control-line" required>
                                 <div class="text-danger ket_main"></div>
                             </div>
