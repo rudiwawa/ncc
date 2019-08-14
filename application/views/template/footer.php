@@ -57,6 +57,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <script src="<?=base_url()?>assets/assets/plugins/datatables/jquery.dataTables.min.js"></script>
     <script src="<?=base_url()?>assets/myjs/compress.js"></script>
     <?php if($app): ?>
+    <script src="<?=base_url()?>assets/myjs/config.js"></script>
     <script src="<?=base_url()?>assets/myjs/app.js"></script>
 <?php endif; ?>
 <script src="<?=base_url()?>assets/myjs/tableStyle.js"></script>

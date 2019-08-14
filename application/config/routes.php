@@ -50,6 +50,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 $route['admin'] = 'admin/crud';
+$route['xxio'] = 'assets';
 $route['admin/post'] = 'admin/post/berita';
 $route['twibbon'] = 'twibbon/twibbon';
 $route['twibbon/upload'] = 'twibbon/twibbon/upload';
