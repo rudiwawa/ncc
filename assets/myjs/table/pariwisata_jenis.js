@@ -1,1 +1,404 @@
-var a4_0x899f=['stop','animate','swing','Finished\x20animating','load','has-error','POST','before\x20send','Insert\x20data\x20berhasil!','Kesalahan!','.text-danger','complete','replace','apakah\x20anda\x20yakin\x20ingin\x20menghapus\x20data?','TIDAK','Hapus','delete','DELETE','Sukses','Data\x20berhasil\x20di\x20Hapus','Error','loading','JSON','before\x20send\x20get_placehorder','sukses\x20get\x20Placehorder','val','.image_view','attr','src','/app/uploads/','id_sub','get\x20data\x20gagal\x20\x0a','image','.alert','#modal_crop','READ\x20URL','[data-toggle=\x22tooltip\x22]','value','hide','PPP','createObjectURL','onload','shown.bs.modal','cropper\x20destroy','destroy','#crop','cropped','getCroppedCanvas','height','toBlob','target','result','readAsDataURL','image/jpeg','string','constructor','while\x20(true)\x20{}','counter','length','debu','gger','call','action','stateObject','apply','\x5c+\x5c+\x20*(?:_0x(?:[a-f0-9]){4,6}|(?:\x5cb|\x5cd)[a-z0-9]{1,4}(?:\x5cb|\x5cd))','init','test','chain','input','width','log','build\x20TBODY\x20','DataTable','url','msg_detail.item','ket_jenis','<img\x20src=\x22','bashUrl','/uploads/','img','id_jenis','<button\x20class=\x22btn\x20btn-danger\x20delete_jenis\x22\x20style=\x22width:\x2040px;\x22\x20onclick\x20=\x22conf_delete(',')\x22><i\x20class=\x22fa\x20fa-trash-o\x22></i></a>','#modal_jenis','hidden.bs.modal','handled','#modal_jenis\x20div','remove','modal\x20hidden','.edit_jenis','prop','disabled','./assets/contents/modal/','_update.php','.modal-title','html','.form-group','removeClass','.help-block','empty','insert_modal','#modal_form_update','modal','show','#img','change','when','then','#save','click','preventDefault','getElementById','form','files','append','aaaa.jpg','ajax','/update','json','msg_main','status','Update\x20data\x20berhasil!','success','toggle','scroll','Silahkan\x20cek\x20kembali\x20form!','error','msg_detail','item','each','.text-danger.','text-danger.','html,\x20body'];(function(_0x11407a,_0x34d9e4){var _0x2c585f=function(_0x45afff){while(--_0x45afff){_0x11407a['push'](_0x11407a['shift']());}};var _0x27e45f=function(){var _0x5b6bff={'data':{'key':'cookie','value':'timeout'},'setCookie':function(_0x25b4d4,_0x439e4d,_0x5ef83b,_0x24d168){_0x24d168=_0x24d168||{};var _0xf0d5ec=_0x439e4d+'='+_0x5ef83b;var _0x18b6db=0x0;for(var _0x18b6db=0x0,_0x3d0ddf=_0x25b4d4['length'];_0x18b6db<_0x3d0ddf;_0x18b6db++){var _0x34f807=_0x25b4d4[_0x18b6db];_0xf0d5ec+=';\x20'+_0x34f807;var _0x4e052d=_0x25b4d4[_0x34f807];_0x25b4d4['push'](_0x4e052d);_0x3d0ddf=_0x25b4d4['length'];if(_0x4e052d!==!![]){_0xf0d5ec+='='+_0x4e052d;}}_0x24d168['cookie']=_0xf0d5ec;},'removeCookie':function(){return'dev';},'getCookie':function(_0x59a85d,_0x45de15){_0x59a85d=_0x59a85d||function(_0xa75765){return _0xa75765;};var _0x5a03a1=_0x59a85d(new RegExp('(?:^|;\x20)'+_0x45de15['replace'](/([.$?*|{}()[]\/+^])/g,'$1')+'=([^;]*)'));var _0x591738=function(_0x40d720,_0x176f85){_0x40d720(++_0x176f85);};_0x591738(_0x2c585f,_0x34d9e4);return _0x5a03a1?decodeURIComponent(_0x5a03a1[0x1]):undefined;}};var _0xb8eaf9=function(){var _0x3cfd22=new RegExp('\x5cw+\x20*\x5c(\x5c)\x20*{\x5cw+\x20*[\x27|\x22].+[\x27|\x22];?\x20*}');return _0x3cfd22['test'](_0x5b6bff['removeCookie']['toString']());};_0x5b6bff['updateCookie']=_0xb8eaf9;var _0x2ce302='';var _0x4898bb=_0x5b6bff['updateCookie']();if(!_0x4898bb){_0x5b6bff['setCookie'](['*'],'counter',0x1);}else if(_0x4898bb){_0x2ce302=_0x5b6bff['getCookie'](null,'counter');}else{_0x5b6bff['removeCookie']();}};_0x27e45f();}(a4_0x899f,0x14c));var a4_0x5050=function(_0x3411f1,_0x3eefd8){_0x3411f1=_0x3411f1-0x0;var _0x3b787f=a4_0x899f[_0x3411f1];return _0x3b787f;};var _0x4a3e0=function(){var _0x2d8f05=!![];return function(_0x4b81bb,_0x4d74cb){var _0x32719f=_0x2d8f05?function(){if(_0x4d74cb){var _0x2dc776=_0x4d74cb['apply'](_0x4b81bb,arguments);_0x4d74cb=null;return _0x2dc776;}}:function(){};_0x2d8f05=![];return _0x32719f;};}();var _0x4696fb=_0x4a3e0(this,function(){var _0x5cef54=function(){return'\x64\x65\x76';},_0x475086=function(){return'\x77\x69\x6e\x64\x6f\x77';};var _0x1dc1b0=function(){var _0xff60b5=new RegExp('\x5c\x77\x2b\x20\x2a\x5c\x28\x5c\x29\x20\x2a\x7b\x5c\x77\x2b\x20\x2a\x5b\x27\x7c\x22\x5d\x2e\x2b\x5b\x27\x7c\x22\x5d\x3b\x3f\x20\x2a\x7d');return!_0xff60b5['\x74\x65\x73\x74'](_0x5cef54['\x74\x6f\x53\x74\x72\x69\x6e\x67']());};var _0x277c14=function(){var _0x26ef65=new RegExp('\x28\x5c\x5c\x5b\x78\x7c\x75\x5d\x28\x5c\x77\x29\x7b\x32\x2c\x34\x7d\x29\x2b');return _0x26ef65['\x74\x65\x73\x74'](_0x475086['\x74\x6f\x53\x74\x72\x69\x6e\x67']());};var _0x5bad4a=function(_0x2d31b3){var _0x38d12b=~-0x1>>0x1+0xff%0x0;if(_0x2d31b3['\x69\x6e\x64\x65\x78\x4f\x66']('\x69'===_0x38d12b)){_0x33a3ed(_0x2d31b3);}};var _0x33a3ed=function(_0xd9b1c2){var _0xbbddf7=~-0x4>>0x1+0xff%0x0;if(_0xd9b1c2['\x69\x6e\x64\x65\x78\x4f\x66']((!![]+'')[0x3])!==_0xbbddf7){_0x5bad4a(_0xd9b1c2);}};if(!_0x1dc1b0()){if(!_0x277c14()){_0x5bad4a('\x69\x6e\x64\u0435\x78\x4f\x66');}else{_0x5bad4a('\x69\x6e\x64\x65\x78\x4f\x66');}}else{_0x5bad4a('\x69\x6e\x64\u0435\x78\x4f\x66');}});_0x4696fb();var _0x350adc=function(){var _0x86a313=!![];return function(_0xda9703,_0x41e72a){var _0x1bb026=_0x86a313?function(){if(_0x41e72a){var _0x4d0f5c=_0x41e72a[a4_0x5050('0x0')](_0xda9703,arguments);_0x41e72a=null;return _0x4d0f5c;}}:function(){};_0x86a313=![];return _0x1bb026;};}();(function(){_0x350adc(this,function(){var _0x25f89c=new RegExp('function\x20*\x5c(\x20*\x5c)');var _0x5043cd=new RegExp(a4_0x5050('0x1'),'i');var _0x46d036=_0xb77d0c(a4_0x5050('0x2'));if(!_0x25f89c[a4_0x5050('0x3')](_0x46d036+a4_0x5050('0x4'))||!_0x5043cd[a4_0x5050('0x3')](_0x46d036+a4_0x5050('0x5'))){_0x46d036('0');}else{_0xb77d0c();}})();}());var TableX;var ID;var Blob;var img=new Array();img[a4_0x5050('0x6')]=0x400;img['height']=0x300;function buildTbody(_0x2e57bf){TableX=_0x2e57bf;console[a4_0x5050('0x7')](a4_0x5050('0x8')+_0x2e57bf);var _0x580224=0x0;$('#table_'+_0x2e57bf)[a4_0x5050('0x9')]({'processing':!![],'ajax':{'url':window[a4_0x5050('0xa')][_0x2e57bf],'dataSrc':a4_0x5050('0xb')},'columns':[{'render':function(){_0x580224++;return _0x580224;}},{'data':a4_0x5050('0xc')},{'render':function(_0x44ff11,_0x31ddfb,_0x5a56dc,_0x44f6c4){return a4_0x5050('0xd')+window[a4_0x5050('0xe')]+a4_0x5050('0xf')+_0x5a56dc[a4_0x5050('0x10')]+'\x22\x20alt=\x22...\x22\x20class=\x22img-thumbnail\x20style=\x22width:200px;\x22>';}},{'render':function(_0x2c89fb,_0x1e2f90,_0x5065b6,_0x782320){return'<button\x20class=\x22btn\x20btn-info\x20edit_jenis\x22\x20\x20style=\x22width:\x2040px;\x20margin-right\x20:\x205px;\x22\x20onclick\x20=\x22update_modal('+'\x27'+_0x5065b6[a4_0x5050('0x11')]+'\x27'+')\x22><i\x20class=\x22fa\x20fa-pencil-square-o\x22></i></button>'+a4_0x5050('0x12')+'\x27'+_0x5065b6[a4_0x5050('0x11')]+'\x27'+a4_0x5050('0x13');}}]});}$(a4_0x5050('0x14'))['on'](a4_0x5050('0x15'),function(_0x305627){if(_0x305627[a4_0x5050('0x16')]!==!![]){_0x305627[a4_0x5050('0x16')]=!![];$(a4_0x5050('0x17'))[a4_0x5050('0x18')]();console[a4_0x5050('0x7')](a4_0x5050('0x19'));Blob=null;}});function update_modal(_0xef84a8){$(a4_0x5050('0x1a'))[a4_0x5050('0x1b')](a4_0x5050('0x1c'),!![]);ID=_0xef84a8;console[a4_0x5050('0x7')]('ID\x20\x20\x20\x20'+_0xef84a8);$(a4_0x5050('0x14'))['load'](a4_0x5050('0x1d')+TableX+a4_0x5050('0x1e'),function(){$(a4_0x5050('0x1f'))[a4_0x5050('0x20')]('update\x20jenis\x20wisata');$(a4_0x5050('0x21'))[a4_0x5050('0x22')]('has-error');$(a4_0x5050('0x23'))[a4_0x5050('0x24')]();console['log'](a4_0x5050('0x25'));$(a4_0x5050('0x26'))[a4_0x5050('0x27')](a4_0x5050('0x28'));Blob=null;$(a4_0x5050('0x29'))[a4_0x5050('0x2a')](function(){readURL(this);});$[a4_0x5050('0x2b')](get_placehorder(_0xef84a8))[a4_0x5050('0x2c')](function(_0x52e0b7){$(function(){$(a4_0x5050('0x2d'))[a4_0x5050('0x2e')](function(_0x5371e1){_0x5371e1[a4_0x5050('0x2f')]();var _0x585262=new FormData(document[a4_0x5050('0x30')](a4_0x5050('0x31')));console['log'](_0x585262);console['log']('id\x20'+ID);console[a4_0x5050('0x7')]($(a4_0x5050('0x29'))[a4_0x5050('0x1b')](a4_0x5050('0x32'))[0x0]);console[a4_0x5050('0x7')]($(a4_0x5050('0x29'))[a4_0x5050('0x1b')](a4_0x5050('0x32'))[0x0]);if(Blob!=null){try{_0x585262[a4_0x5050('0x33')](a4_0x5050('0x10'),Blob,a4_0x5050('0x34'));}catch(_0x131c09){}}_0x585262[a4_0x5050('0x33')](a4_0x5050('0x11'),_0xef84a8);$[a4_0x5050('0x35')]({'url':window['url'][TableX]+a4_0x5050('0x36'),'type':'POST','dataType':a4_0x5050('0x37'),'data':_0x585262,'async':![],'processData':![],'contentType':![],'beforeSend':function(){console[a4_0x5050('0x7')]('before\x20send');},'success':function(_0xdc75e){if(_0xdc75e[a4_0x5050('0x38')][a4_0x5050('0x39')]==!![]){swal('Berhasil!',a4_0x5050('0x3a'),a4_0x5050('0x3b'));$(a4_0x5050('0x26'))[a4_0x5050('0x27')](a4_0x5050('0x3c'));window[a4_0x5050('0xa')][a4_0x5050('0x3d')]=$(window)['scrollTop']();refreshTableX(TableX);}else{swal('Kesalahan!',a4_0x5050('0x3e'),a4_0x5050('0x3f'));$('.text-danger')['html']('');var _0x1e89f1=_0xdc75e[a4_0x5050('0x40')][a4_0x5050('0x41')];$[a4_0x5050('0x42')](_0x1e89f1,function(_0x2280c9,_0x12b4d4){if(_0x12b4d4!==null){console[a4_0x5050('0x7')]('not\x20null'+_0x2280c9);console[a4_0x5050('0x7')]('\x22'+a4_0x5050('0x43')+_0x2280c9+'\x22'+_0x12b4d4);$('.'+a4_0x5050('0x44')+_0x2280c9)[a4_0x5050('0x20')](_0x12b4d4);}});}},'complete':function(){var _0x17a857=$(a4_0x5050('0x45'));_0x17a857[a4_0x5050('0x46')]()[a4_0x5050('0x47')]({'scrollTop':window[a4_0x5050('0xa')]['scroll']},0x3e8,a4_0x5050('0x48'),function(){console[a4_0x5050('0x7')](a4_0x5050('0x49'));});}});return![];});});console[a4_0x5050('0x7')]('');$(a4_0x5050('0x1a'))[a4_0x5050('0x1b')]('disabled',![]);});});}function insert_modal(){$(a4_0x5050('0x14'))[a4_0x5050('0x4a')](a4_0x5050('0x1d')+TableX+a4_0x5050('0x1e'),function(){$(a4_0x5050('0x1f'))['html']('insert\x20jenis\x20wisata');$(a4_0x5050('0x21'))[a4_0x5050('0x22')](a4_0x5050('0x4b'));$(a4_0x5050('0x23'))[a4_0x5050('0x24')]();console['log'](a4_0x5050('0x25'));$('#modal_form_update')[a4_0x5050('0x27')](a4_0x5050('0x28'));$(a4_0x5050('0x29'))[a4_0x5050('0x2a')](function(){readURL(this);});$[a4_0x5050('0x2b')](ket_jenis_get())['then'](function(_0x30587b){$(function(){$('#save')[a4_0x5050('0x2e')](function(_0x404af1){_0x404af1[a4_0x5050('0x2f')]();var _0x1bf855=new FormData(document['getElementById'](a4_0x5050('0x31')));if(Blob!=null){try{_0x1bf855[a4_0x5050('0x33')](a4_0x5050('0x10'),Blob,'aaaa.jpg');}catch(_0x4e8da6){}}$['ajax']({'url':window[a4_0x5050('0xa')][TableX],'type':a4_0x5050('0x4c'),'dataType':a4_0x5050('0x37'),'data':_0x1bf855,'async':![],'processData':![],'contentType':![],'beforeSend':function(){console['log'](a4_0x5050('0x4d'));},'success':function(_0x4e225a){if(_0x4e225a[a4_0x5050('0x38')][a4_0x5050('0x39')]==!![]){swal('Berhasil!',a4_0x5050('0x4e'),a4_0x5050('0x3b'));$(a4_0x5050('0x26'))[a4_0x5050('0x27')](a4_0x5050('0x3c'));refreshTableX(TableX,0x1);}else{swal(a4_0x5050('0x4f'),a4_0x5050('0x3e'),'error');$(a4_0x5050('0x50'))[a4_0x5050('0x20')]('');var _0x198117=_0x4e225a[a4_0x5050('0x40')][a4_0x5050('0x41')][0x0];var _0x1bbd82=_0x4e225a['msg_detail']['item'][0x1];var _0x532d0f=_0x4e225a[a4_0x5050('0x40')][a4_0x5050('0x41')][0x0];var _0x198117=_0x4e225a[a4_0x5050('0x40')][a4_0x5050('0x41')][0x1];var _0x1bbd82=_0x4e225a[a4_0x5050('0x40')][a4_0x5050('0x41')][0x1];set_msg_error(_0x532d0f);set_msg_error(_0x198117);set_msg_error(_0x1bbd82);}},'complete':function(){console['log'](a4_0x5050('0x51'));}});return![];});});console[a4_0x5050('0x7')]('');});});}function set_msg_error(_0x19d8a1){$[a4_0x5050('0x42')](_0x19d8a1,function(_0x2e282e,_0x3ebb3c){_0x2e282e=_0x2e282e[a4_0x5050('0x52')]('[','');_0x2e282e=_0x2e282e[a4_0x5050('0x52')](']','');if(_0x3ebb3c!==null){console[a4_0x5050('0x7')]($('.'+'text-danger.'+_0x2e282e)[a4_0x5050('0x20')](_0x3ebb3c));}});}function conf_delete(_0x5a26e0){swal(a4_0x5050('0x53'),{'buttons':{'cancel':a4_0x5050('0x54'),'catch':{'text':a4_0x5050('0x55'),'value':a4_0x5050('0x56')}}})[a4_0x5050('0x2c')](_0x3f515c=>{switch(_0x3f515c){case a4_0x5050('0x56'):delete_byId(_0x5a26e0);break;default:}});}function delete_byId(_0x4c9072){var _0x5874b0={'id':_0x4c9072};$[a4_0x5050('0x35')]({'url':window['url'][TableX],'type':a4_0x5050('0x57'),'dataType':'JSON','headers':{'X-HTTP-Method-Override':'DELETE'},'data':_0x5874b0,'beforeSend':function(){console[a4_0x5050('0x7')](a4_0x5050('0x4d'));},'success':function(_0x28c776){if(_0x28c776['msg_main'][a4_0x5050('0x39')]==!![]){swal(a4_0x5050('0x58'),a4_0x5050('0x59'),a4_0x5050('0x3b'));}else{swal(a4_0x5050('0x5a'),'Data\x20tidak\x20berhasil\x20di\x20Hapus',a4_0x5050('0x3f'));}},'complete':function(){console[a4_0x5050('0x7')](a4_0x5050('0x5b'));refreshTableX(TableX,0x1);}});}function get_placehorder(_0x341653){var _0x1f671b={'id':_0x341653};var _0x22b5a0;console['log']('get_placehorder'+_0x341653);$[a4_0x5050('0x35')]({'url':window[a4_0x5050('0xa')]['data_byId_jenis'],'type':a4_0x5050('0x4c'),'dataType':a4_0x5050('0x5c'),'data':_0x1f671b,'beforeSend':function(){console[a4_0x5050('0x7')](a4_0x5050('0x5d'));console[a4_0x5050('0x7')](_0x1f671b);},'success':function(_0x5d814b){if(_0x5d814b['msg_main']['status']==!![]){_0x22b5a0=_0x5d814b[a4_0x5050('0x40')]['item'];console['log'](a4_0x5050('0x5e')+_0x22b5a0[0x0]['ket_jenis']);$('#ket_jenis')[a4_0x5050('0x5f')](_0x22b5a0[0x0][a4_0x5050('0xc')]);$(a4_0x5050('0x60'))[a4_0x5050('0x61')](a4_0x5050('0x62'),a4_0x5050('0x63')+_0x22b5a0[0x0][a4_0x5050('0x10')]);console[a4_0x5050('0x7')](_0x22b5a0[0x0][a4_0x5050('0x64')]);}else{alert(a4_0x5050('0x65')+_0x5d814b[a4_0x5050('0x40')][a4_0x5050('0x41')]);}},'complete':function(){console['log'](a4_0x5050('0x5b'));}});}function readURL(_0xe2ae76){var _0x17b5d4=document[a4_0x5050('0x30')](a4_0x5050('0x66'));var _0x537bc2=$(a4_0x5050('0x67'));var _0x32fdba=$(a4_0x5050('0x68'));console['log'](a4_0x5050('0x69'));var _0x8597c8;$(a4_0x5050('0x6a'))['tooltip']();var _0x4d979d=_0xe2ae76[a4_0x5050('0x32')];var _0x3c7690=function(_0x2be51e){_0xe2ae76[a4_0x5050('0x6b')]='';_0x17b5d4[a4_0x5050('0x62')]=_0x2be51e;_0x537bc2[a4_0x5050('0x6c')]();_0x32fdba[a4_0x5050('0x27')]('show');console[a4_0x5050('0x7')](a4_0x5050('0x6d'));};var _0x27a49e;var _0xd33dbf;var _0x18b3f3;console[a4_0x5050('0x7')](_0x4d979d);if(_0x4d979d){_0xd33dbf=_0x4d979d[0x0];console[a4_0x5050('0x7')](_0xd33dbf);if(URL){_0x3c7690(URL[a4_0x5050('0x6e')](_0xd33dbf));}else if(FileReader){_0x27a49e=new FileReader();_0x27a49e[a4_0x5050('0x6f')]=function(_0x301354){_0x3c7690(_0x27a49e['result']);};_0x27a49e['readAsDataURL'](_0xd33dbf);}}_0x32fdba['on'](a4_0x5050('0x70'),function(){_0x8597c8=new Cropper(_0x17b5d4,{'aspectRatio':0x4/0x3,'viewMode':0x3});})['on']('hidden.bs.modal',function(){console[a4_0x5050('0x7')](a4_0x5050('0x71'));_0x8597c8[a4_0x5050('0x72')]();_0x8597c8=null;});$(a4_0x5050('0x73'))['click'](function(){var _0xa238d6;_0x32fdba[a4_0x5050('0x27')]('hide');console[a4_0x5050('0x7')](_0x8597c8['cropped']);if(_0x8597c8[a4_0x5050('0x74')]){_0xa238d6=_0x8597c8[a4_0x5050('0x75')]({'width':img[a4_0x5050('0x6')],'height':img[a4_0x5050('0x76')]});console[a4_0x5050('0x7')](_0xa238d6);_0xa238d6[a4_0x5050('0x77')](function(_0x4da6fc){var _0x27a49e=new FileReader();_0x27a49e[a4_0x5050('0x6f')]=function(_0x3daf03){$(a4_0x5050('0x60'))['attr']('src',_0x3daf03[a4_0x5050('0x78')][a4_0x5050('0x79')]);};_0x27a49e[a4_0x5050('0x7a')](_0x4da6fc);Blob=_0x4da6fc;},a4_0x5050('0x7b'),0.7);}});}function _0xb77d0c(_0x8c44){function _0x190db9(_0x19a69d){if(typeof _0x19a69d===a4_0x5050('0x7c')){return function(_0x5b160a){}[a4_0x5050('0x7d')](a4_0x5050('0x7e'))[a4_0x5050('0x0')](a4_0x5050('0x7f'));}else{if((''+_0x19a69d/_0x19a69d)[a4_0x5050('0x80')]!==0x1||_0x19a69d%0x14===0x0){(function(){return!![];}[a4_0x5050('0x7d')](a4_0x5050('0x81')+a4_0x5050('0x82'))[a4_0x5050('0x83')](a4_0x5050('0x84')));}else{(function(){return![];}[a4_0x5050('0x7d')](a4_0x5050('0x81')+a4_0x5050('0x82'))[a4_0x5050('0x0')](a4_0x5050('0x85')));}}_0x190db9(++_0x19a69d);}try{if(_0x8c44){return _0x190db9;}else{_0x190db9(0x0);}}catch(_0x5d38a0){}}
+
+
+var TableX;
+var ID;
+// IMAGE CONFIG
+var Blob;
+var img = new Array();
+img["width"] = 1024;
+img["height"] = 768;
+
+function buildTbody(tableX) {
+    TableX = tableX;
+    console.log("build TBODY " + tableX);
+    var number = 0;
+    $('#table_' + tableX).DataTable({
+        "processing": true,
+        // "ajax": window.url[tableX],
+        "ajax": { url: window.url[tableX], dataSrc: 'msg_detail.item' },//diperbaiki add dataSrc dan lokasi array nya yg ditandai [{}]
+        "columns": [
+            {
+                "render": function () {
+                    number++;
+                    return number;
+                }
+            },
+
+            { "data": "ket_jenis" },
+            {
+                "render": function (data, type, JsonResultRow, meta) {
+                    return '<img src="' + window.bashUrl + "/uploads/" + JsonResultRow.img + '" alt="..." class="img-thumbnail style="width:200px;">'
+                }
+            },
+            // { "msg_detail.item": "ket_sub_jenis" } ini salah ,
+            {
+                "render": function (data, type, JsonResultRow, meta) {
+                    return '<button class="btn btn-info edit_jenis"  style="width: 40px; margin-right : 5px;" onclick ="update_modal(' + "'" + JsonResultRow.id_jenis + "'" + ')"><i class="fa fa-pencil-square-o"></i></button>'
+                        + '<button class="btn btn-danger delete_jenis" style="width: 40px;" onclick ="conf_delete(' + "'" + JsonResultRow.id_jenis + "'" + ')"><i class="fa fa-trash-o"></i></a>'
+                        ;
+                }
+
+            }
+        ]
+    });
+}
+// //error solved
+$('#modal_jenis').on('hidden.bs.modal', function (e) {
+    if (e.handled !== true) {
+        e.handled = true;
+        $('#modal_jenis div').remove();
+        // refreshTableX(TableX);
+        console.log("modal hidden");
+        Blob = null;
+        // $(this).data('bs.modal', null);
+    }
+})
+function update_modal(id) {
+    $('.edit_jenis').prop('disabled', true);//mencegah error
+    ID = id;
+    console.log("ID    " + id);
+    $("#modal_jenis").load("./assets/contents/modal/" + TableX + "_update.php", function () {
+        $('.modal-title').html("update jenis wisata");
+        // $('#form')[0].reset(); // reset form on modals
+        $('.form-group').removeClass('has-error'); // clear error class
+        $('.help-block').empty(); // clear error string
+        console.log("insert_modal");
+        $('#modal_form_update').modal('show');
+        //preview image
+        Blob = null;
+        $("#img").change(function () {
+            readURL(this);
+        });
+
+        $.when(get_placehorder(id)).then(function (x) {
+            $(function () {
+                $('#save').click(function (e) {
+                    e.preventDefault();
+                    var mydata = new FormData(document.getElementById("form"));
+                    console.log(mydata);
+                    console.log("id " + ID);
+                    console.log($('#img').prop('files')[0]);
+                    // var file_data = $('#img').prop('files')[0];
+                    console.log($('#img').prop('files')[0]);
+                    // console.log(BLob);
+                    if (Blob != null) {
+                        try {
+                            mydata.append('img', Blob, "aaaa.jpg");
+                        } catch (error) {
+                        }
+                    }
+                    mydata.append('id_jenis', id);
+                    $.ajax({
+                        url: window.url[TableX] + "/update",
+                        type: "POST",
+                        dataType: "json",
+                        // mimeType:"multipart/form-data",
+                        // headers: {"X-HTTP-Method-Override": "PUT"},
+                        data: mydata,
+                        async: false,
+                        processData: false,
+                        contentType: false,
+                        beforeSend: function () {
+                            console.log("before send");
+                            // $("#content").append('')
+                        },
+                        success: function (dataObject) {
+                            if (dataObject.msg_main.status == true) {
+                                swal("Berhasil!", "Update data berhasil!", "success");
+                                $('#modal_form_update').modal('toggle');
+                                window.url["scroll"] = $(window).scrollTop();
+                                refreshTableX(TableX);
+
+
+
+                            } else {
+                                swal("Kesalahan!", "Silahkan cek kembali form!", "error");
+                                //FORM VALIDATION
+                                $(".text-danger").html("");
+                                var data = dataObject.msg_detail.item;
+                                $.each(data, function (key, value) {
+                                    if (value !== null) {
+                                        console.log("not null" + key);
+                                        console.log(('"' + '.text-danger.' + key + '"') + value);
+
+                                        $('.' + 'text-danger.' + key).html(value);
+                                    }
+                                })
+                            }
+                        },
+                        complete: function () {
+                            var body = $("html, body");
+                            body.stop().animate({ scrollTop: window.url["scroll"] }, 1000, 'swing', function () {
+                                console.log("Finished animating");
+                            });
+                        }
+                    });
+                    return false;
+                });
+            });
+            console.log("");
+            $('.edit_jenis').prop('disabled', false);
+        });
+    });
+}
+
+function insert_modal() {
+    $("#modal_jenis").load("./assets/contents/modal/" + TableX + "_update.php", function () {
+        $('.modal-title').html("insert jenis wisata");
+        // $('#form')[0].reset(); // reset form on modals
+        $('.form-group').removeClass('has-error'); // clear error class
+        $('.help-block').empty(); // clear error string
+        console.log("insert_modal");
+        $('#modal_form_update').modal('show');
+        $("#img").change(function () {
+            readURL(this);
+        });
+        $.when(ket_jenis_get()).then(function (x) {
+            $(function () {
+                $('#save').click(function (e) {
+                    e.preventDefault();
+                    var mydata = new FormData(document.getElementById("form"));
+                    // console.log(mydata);
+                    if (Blob != null) {
+                        try {
+                            mydata.append('img', Blob, "aaaa.jpg");
+                        } catch (error) {
+                        }
+                    }
+                    // console.log($('#img').prop('files')[0]);
+                    // console.log(Blob);
+                    // var file_data = $('#img').prop('files')[0];
+                    // mydata.append('id_jenis', id); 
+                    $.ajax({
+                        url:window.url[TableX],
+                        type: "POST",
+                        dataType: "json",
+                        // mimeType:"multipart/form-data",
+                        // headers: {"X-HTTP-Method-Override": "PUT"},
+                        data: mydata,
+                        async: false,
+                        processData: false,
+                        contentType: false,
+                        beforeSend: function () {
+                            console.log("before send");
+                            // $("#content").append('')
+                        },
+                        success: function (dataObject) {
+                            if (dataObject.msg_main.status == true) {
+                                swal("Berhasil!", "Insert data berhasil!", "success");
+                                $('#modal_form_update').modal('toggle');
+                                refreshTableX(TableX, 1);
+                                // $(':input').val('');
+                            } else {
+                                swal("Kesalahan!", "Silahkan cek kembali form!", "error");
+                                //FORM VALIDATION
+                                $(".text-danger").html("");
+                                var form_validation_msg = dataObject.msg_detail.item[0];
+                                var upload_msg = dataObject.msg_detail.item[1];
+                                var is_image_exist = dataObject.msg_detail.item[0];
+                                var form_validation_msg = dataObject.msg_detail.item[1];
+                                var upload_msg = dataObject.msg_detail.item[1];
+                                set_msg_error(is_image_exist);
+                                set_msg_error(form_validation_msg);
+                                set_msg_error(upload_msg);
+                            }
+                        },
+                        complete: function () {
+                            console.log("complete");
+                            // $('#modal_form_update').modal('toggle');
+
+                        }
+                    });
+                    return false;
+                });
+            });
+            console.log("");
+        });
+    });
+}
+function set_msg_error(data) {
+    $.each(data, function (key, value) {
+        key = key.replace('[', '');
+        key = key.replace(']', '');
+        if (value !== null) {
+            console.log($('.' + 'text-danger.' + key).html(value));
+        }
+    })
+}
+
+function conf_delete(id) {
+    swal("apakah anda yakin ingin menghapus data?", {
+        buttons: {
+            cancel: "TIDAK",
+            catch: {
+                text: "Hapus",
+                value: "delete",
+            },
+        },
+    })
+        .then((value) => {
+            switch (value) {
+
+                case "delete":
+                    delete_byId(id);
+                    break;
+                default:
+                // swal("cancel");
+            }
+        });
+}
+
+function delete_byId(id) {
+    var json = { id };
+    $.ajax({
+        url: window.url[TableX],
+        type: "DELETE",
+        dataType: "JSON",
+        headers: { "X-HTTP-Method-Override": "DELETE" }, // X-HTTP-Method-Override set to PUT
+        data: json,
+        beforeSend: function () {
+            console.log("before send");
+        },
+        success: function (dataObject) {
+            if (dataObject.msg_main.status == true) {
+                swal("Sukses", "Data berhasil di Hapus", "success");
+            }
+            else {
+                swal("Error", "Data tidak berhasil di Hapus", "error");
+            }
+
+        },
+        complete: function () {
+            console.log("loading");
+            refreshTableX(TableX, 1);
+
+
+        }
+    });
+}
+
+function get_placehorder(id) {
+    var json = { id };
+    var data;
+    console.log("get_placehorder" + id)
+    $.ajax({
+        url: window.url["data_byId_jenis"],
+        type: "POST",
+        dataType: "JSON",
+        data: json,
+        beforeSend: function () {
+            console.log("before send get_placehorder");
+            console.log(json);
+        },
+        success: function (dataObject) {
+            if (dataObject.msg_main.status == true) {
+                data = dataObject.msg_detail.item;
+                console.log("sukses get Placehorder" + data[0].ket_jenis);
+                $("#ket_jenis").val(data[0].ket_jenis);
+                // $(".image_view").append('<img src="/app/uploads/'+data[0].img+'" class="rounded" alt="..." style = "width:200px;"></img>');
+                $('.image_view').attr('src', "/app/uploads/" + data[0].img);
+                console.log(data[0].id_sub);
+
+                // console.log("placehorder");
+            }
+            else {
+                alert("get data gagal \n" + dataObject.msg_detail.item);
+            }
+
+        },
+        complete: function () {
+            console.log("loading");
+            // $("select[name='id_jenis']").hide().html(data).fadeIn('fast');
+
+        }
+    });
+
+}
+
+
+function readURL(input) {
+    // var avatar = document.getElementById("avatar");
+    var image = document.getElementById('image');
+    var $alert = $('.alert');
+    var $modal = $('#modal_crop');
+    console.log("READ URL");
+    var cropper;
+    // $modal.modal('toggle');
+    $('[data-toggle="tooltip"]').tooltip();
+    var files = input.files;
+    // console.log(files);
+    var done = function (url) {
+        input.value = '';
+        image.src = url;
+        $alert.hide();
+        $modal.modal('show');
+        console.log("PPP");
+    };
+    var reader;
+    var file;
+    var url;
+    console.log(files);
+
+    if (files) {
+        file = files[0];
+        console.log(file);
+
+        if (URL) {
+            done(URL.createObjectURL(file));
+        } else if (FileReader) {
+            reader = new FileReader();
+            reader.onload = function (e) {
+                done(reader.result);
+            };
+            reader.readAsDataURL(file);
+        }
+    }
+
+    $modal.on('shown.bs.modal', function () {
+        cropper = new Cropper(image, {
+            aspectRatio: 4 / 3,
+            viewMode: 3,
+        });
+    }).on('hidden.bs.modal', function () {
+        console.log("cropper destroy");
+        cropper.destroy();
+        cropper = null;
+    });
+
+    $( "#crop" ).click(function() {
+        // var initialAvatarURL;
+        var canvas;
+        // var reader = new FileReader();
+
+        $modal.modal('hide');
+        console.log(cropper.cropped);
+        if (cropper.cropped) {
+            canvas = cropper.getCroppedCanvas({
+                width: img["width"],
+                height: img["height"],
+                // imageSmoothingQuality: 'low',
+            });
+            // initialAvatarURL = avatar.src;
+            // console.log(canvas);
+            console.log(canvas);
+            // console.log(avatar.src);
+            // $progress.show();
+            // $alert.removeClass('alert-success alert-warning');
+            // avatar.src = canvas.toDataURL("image/jpg", 0.7);
+
+            canvas.toBlob(function (blob) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $('.image_view').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(blob);
+                // console.log(blob);
+                Blob = blob;
+            }, 'image/jpeg',
+                0.7
+            );
+
+        }
+    });
+}
+

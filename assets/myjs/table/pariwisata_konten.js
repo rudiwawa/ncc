@@ -1,1 +1,839 @@
-var a5_0x3032=['Jumlah\x20Gambar\x20maksimal\x20adalah\x20','readURL_array','#image_preview_array\x20img','#image_preview_array\x20button','file\x20reader\x20run','#image_preview_array','<button\x20type=\x22button\x22\x20class=\x22btn\x20btn-danger\x20btn-sm\x20dell\x20\x22\x20\x20onclick=\x22dell_img(','readAsDataURL','while\x20(true)\x20{}','counter','debu','gger','call','action','constructor','stateObject','apply','\x5c+\x5c+\x20*(?:_0x(?:[a-f0-9]){4,6}|(?:\x5cb|\x5cd)[a-z0-9]{1,4}(?:\x5cb|\x5cd))','init','test','input','width','height','log','ajax','url','before\x20send','msg_main','status','item','Error','Data\x20tidak\x20berhasil\x20di\x20Hapus','anjing','render_Tbody','#table_','DataTable','ket_main','<br>','<span\x20class=\x22text-info\x22>\x20<small>','ket_jenis','</small></span>','\x20|\x20','<span\x20class=\x22text-muted\x22><small>','ket_sub_jenis','detail','alamat','</ol>','official_account','img','<button\x20class=\x22btn\x20btn-info\x20edit_jenis\x22\x20\x20style=\x22width:\x2040px;\x20margin-right\x20:\x205px;\x22\x20onclick\x20=\x22update_modal(',')\x22><i\x20class=\x22fa\x20fa-pencil-square-o\x22></i></button>','<button\x20class=\x22btn\x20btn-danger\x20delete_jenis\x22\x20style=\x22width:\x2040px;\x22\x20onclick\x20=\x22conf_delete(',')\x22><i\x20class=\x22fa\x20fa-trash-o\x22></i></a>','\x22\x20class=\x22carousel\x20slide\x22\x20data-ride=\x22carousel\x22>','<ol\x20class=\x22carousel-indicators\x22>','<li\x20data-target=\x22#carousel','\x22\x20data-slide-to=\x220\x22\x20class=\x22active\x22></li>','<div\x20class=\x22carousel-inner\x22\x20role=\x22listbox\x22>','<a\x20class=\x22carousel-control-prev\x22\x20href=\x22#carousel','\x22\x20role=\x22button\x22\x20data-slide=\x22prev\x22>','\x20\x20<span\x20class=\x22carousel-control-prev-icon\x22\x20aria-hidden=\x22true\x22></span>','\x20\x20<span\x20class=\x22sr-only\x22>Previous</span>','<a\x20class=\x22carousel-control-next\x22\x20href=\x22#carousel','\x22\x20role=\x22button\x22\x20data-slide=\x22next\x22>','</a>','parse','<div\x20class=\x22carousel-item\x22>','<div\x20class=\x22carousel-item\x20active\x22>','</div>','forEach','<img\x20src=\x22','bashUrl','\x22\x20data-slide-to=\x22','\x22></li>','IMG\x20OPEN\x201=','each','<li\x20class=\x22list-group-item\x20border-0\x20bg-transparent\x20pt-1\x20pb-1\x22>','loc','</li>','<ll>','website','<small\x20class=\x22text-muted\x22>Telp\x20</small>','tlp','<small\x20class=\x22text-muted\x22>Email\x20</small>','email','<ul\x20class=\x22list-group\x20\x22>','<ul>','ket','dataAll','#modal_konten','hidden.bs.modal','handled','remove','when','done','html,\x20body','animate','scroll','swing','Finished\x20animating','scrollTop','_insert.php','.form-group','removeClass','has-error','.help-block','#modal_form_update','modal','show','change','.modal-title','text','Update\x20Konten\x20Wisata','Insert\x20Konten\x20Wisata','getElementById','form','append','img[]','aaa.jpg','img_update[]','imgArr_deleted[]','/update','#img','prop','files','POST','json','Update!','Update\x20data\x20berhasil!','success','Insert!','toggle','Periksa\x20kembali\x20form\x20anda','error','.text-danger','html','msg_detail','TIDAK','delete','then','id_pariwisata','DELETE','sukses\x20get\x20Placehorder','#ket_main','val','#deskripsi','#tlp','#email','#website','id_jenis','select[name=\x27id_jenis\x27]\x20option[value=','attr','selected','select[name=\x27id_sub\x27]\x20option[value=','id_sub','#alamat_input_','render_img_from_db\x20','<div\x20class=\x22show-image\x22><img\x20src=\x22','/uploads/','\x22\x20class=\x22rounded\x20image_view\x20p-1\x22\x20alt=\x22...\x22\x20style=\x22width:100%;\x22>','<button\x20type=\x22button\x22\x20class=\x22btn\x20btn-danger\x20btn-sm\x20dell\x20\x22\x20\x20onclick=\x22dell_img_update(',')\x22\x20style=\x22position:absolute;\x22><i\x20class=\x22ti-minus\x20text\x22></i></button></div>','splice','delegate','#id_jenis','filter','#id_sub','select[name=\x27id_sub\x27]','<option\x20value=','</option>','#ket_jenis_select','includes','tmp_firstIdjenis','register\x20gagal\x20\x0a','loading','<label>(Latitude\x20&amp;\x20Longitude)</label>','<input\x20type=\x22text\x22\x20name=\x22loc[]\x22\x20id=\x22loc_input_','<a\x20id=\x22msg_loc_faskes\x22\x20style=\x22color:\x20red;\x22></a>','<label>Alamat\x20Lengkap</label>','<input\x20name=\x22alamat[]\x22\x20id=\x22alamat_input_','class=\x22form-control\x20form-control-line\x22></>','<a\x20id=\x22msg_alamat_faskes\x22\x20style=\x22color:\x20red;\x22></a>','<div\x20style=\x22margin-top:\x202em;\x22>','<button\x20type=\x22button\x22\x20\x20class=\x22btn\x20btn-danger\x20btn-sm\x20dell\x22\x20style=\x22\x22>','<i\x20class=\x22ti-minus\x20text\x22></i>','</button>','add_form_alamat','#form_alamat','<div\x20class=\x22col-lg-12\x20row\x22\x20id=\x22form_alamat','\x20.dell','onClick','dell_form_alamat(','.btn','replace','dell_form_alamat','image','.alert','#modal_crop','[data-toggle=\x22tooltip\x22]','tooltip','value','PPP','result','cropper\x20destroy','destroy','#crop','toBlob','onload','#avatar','src','target','#add_img','image/jpeg','add_img_btn','length','push','Ups!'];(function(_0x341531,_0x4fd9fe){var _0x287ddd=function(_0x24a0c3){while(--_0x24a0c3){_0x341531['push'](_0x341531['shift']());}};var _0x57c1bd=function(){var _0x7b2383={'data':{'key':'cookie','value':'timeout'},'setCookie':function(_0x3c2970,_0x110777,_0x3ae4be,_0x17654d){_0x17654d=_0x17654d||{};var _0x165b1d=_0x110777+'='+_0x3ae4be;var _0x35bab2=0x0;for(var _0x35bab2=0x0,_0x4afb3d=_0x3c2970['length'];_0x35bab2<_0x4afb3d;_0x35bab2++){var _0x380d3c=_0x3c2970[_0x35bab2];_0x165b1d+=';\x20'+_0x380d3c;var _0x47f1fa=_0x3c2970[_0x380d3c];_0x3c2970['push'](_0x47f1fa);_0x4afb3d=_0x3c2970['length'];if(_0x47f1fa!==!![]){_0x165b1d+='='+_0x47f1fa;}}_0x17654d['cookie']=_0x165b1d;},'removeCookie':function(){return'dev';},'getCookie':function(_0x126c10,_0x3a5902){_0x126c10=_0x126c10||function(_0x556ad3){return _0x556ad3;};var _0x3931f4=_0x126c10(new RegExp('(?:^|;\x20)'+_0x3a5902['replace'](/([.$?*|{}()[]\/+^])/g,'$1')+'=([^;]*)'));var _0x25d911=function(_0x14073f,_0x2c9136){_0x14073f(++_0x2c9136);};_0x25d911(_0x287ddd,_0x4fd9fe);return _0x3931f4?decodeURIComponent(_0x3931f4[0x1]):undefined;}};var _0x4521f4=function(){var _0x468231=new RegExp('\x5cw+\x20*\x5c(\x5c)\x20*{\x5cw+\x20*[\x27|\x22].+[\x27|\x22];?\x20*}');return _0x468231['test'](_0x7b2383['removeCookie']['toString']());};_0x7b2383['updateCookie']=_0x4521f4;var _0x24c7c4='';var _0x250ca5=_0x7b2383['updateCookie']();if(!_0x250ca5){_0x7b2383['setCookie'](['*'],'counter',0x1);}else if(_0x250ca5){_0x24c7c4=_0x7b2383['getCookie'](null,'counter');}else{_0x7b2383['removeCookie']();}};_0x57c1bd();}(a5_0x3032,0x1c2));var a5_0x1bce=function(_0x1bedd3,_0x119bb3){_0x1bedd3=_0x1bedd3-0x0;var _0x23f794=a5_0x3032[_0x1bedd3];return _0x23f794;};var _0x4b841f=function(){var _0x286e38=!![];return function(_0x4eb1c1,_0x16eed9){var _0x124bdb=_0x286e38?function(){if(_0x16eed9){var _0x3890ea=_0x16eed9['apply'](_0x4eb1c1,arguments);_0x16eed9=null;return _0x3890ea;}}:function(){};_0x286e38=![];return _0x124bdb;};}();var _0x3a1e9d=_0x4b841f(this,function(){var _0x1f769e=function(){return'\x64\x65\x76';},_0x3cb765=function(){return'\x77\x69\x6e\x64\x6f\x77';};var _0x25fc19=function(){var _0x351f1d=new RegExp('\x5c\x77\x2b\x20\x2a\x5c\x28\x5c\x29\x20\x2a\x7b\x5c\x77\x2b\x20\x2a\x5b\x27\x7c\x22\x5d\x2e\x2b\x5b\x27\x7c\x22\x5d\x3b\x3f\x20\x2a\x7d');return!_0x351f1d['\x74\x65\x73\x74'](_0x1f769e['\x74\x6f\x53\x74\x72\x69\x6e\x67']());};var _0x1d90ba=function(){var _0x3a72d0=new RegExp('\x28\x5c\x5c\x5b\x78\x7c\x75\x5d\x28\x5c\x77\x29\x7b\x32\x2c\x34\x7d\x29\x2b');return _0x3a72d0['\x74\x65\x73\x74'](_0x3cb765['\x74\x6f\x53\x74\x72\x69\x6e\x67']());};var _0x24f737=function(_0x13549b){var _0x20073a=~-0x1>>0x1+0xff%0x0;if(_0x13549b['\x69\x6e\x64\x65\x78\x4f\x66']('\x69'===_0x20073a)){_0x30f350(_0x13549b);}};var _0x30f350=function(_0x409dc0){var _0x98feee=~-0x4>>0x1+0xff%0x0;if(_0x409dc0['\x69\x6e\x64\x65\x78\x4f\x66']((!![]+'')[0x3])!==_0x98feee){_0x24f737(_0x409dc0);}};if(!_0x25fc19()){if(!_0x1d90ba()){_0x24f737('\x69\x6e\x64\u0435\x78\x4f\x66');}else{_0x24f737('\x69\x6e\x64\x65\x78\x4f\x66');}}else{_0x24f737('\x69\x6e\x64\u0435\x78\x4f\x66');}});_0x3a1e9d();var _0x106b62=function(){var _0x19fd43=!![];return function(_0x46f944,_0x403629){var _0x28e24a=_0x19fd43?function(){if(_0x403629){var _0x48974f=_0x403629[a5_0x1bce('0x0')](_0x46f944,arguments);_0x403629=null;return _0x48974f;}}:function(){};_0x19fd43=![];return _0x28e24a;};}();(function(){_0x106b62(this,function(){var _0x496e5d=new RegExp('function\x20*\x5c(\x20*\x5c)');var _0x12a1ba=new RegExp(a5_0x1bce('0x1'),'i');var _0x3b88be=_0x1c45a7(a5_0x1bce('0x2'));if(!_0x496e5d[a5_0x1bce('0x3')](_0x3b88be+'chain')||!_0x12a1ba[a5_0x1bce('0x3')](_0x3b88be+a5_0x1bce('0x4'))){_0x3b88be('0');}else{_0x1c45a7();}})();}());var TableX;var dataAll=new Array();var ID,is_img_valid=![],is_data_update=![];var files=new Array();var idc=0x0,id_alamat_input=0x1,is_update=![],id_update,index_update;var imgArr_update=new Array(),imgArr_deleted=new Array();var jumlah_maksimal_photo=0x3;var img=new Array();img[a5_0x1bce('0x5')]=0x400;img[a5_0x1bce('0x6')]=0x300;var c=0x0;function buildTbody(_0x3e7b6b){TableX=_0x3e7b6b;console[a5_0x1bce('0x7')]('build\x20TBODY\x20'+_0x3e7b6b);$[a5_0x1bce('0x8')]({'url':window[a5_0x1bce('0x9')][_0x3e7b6b],'beforeSend':function(){console['log'](a5_0x1bce('0xa'));},'success':function(_0x1c810e){if(_0x1c810e[a5_0x1bce('0xb')][a5_0x1bce('0xc')]==!![]){dataAll=_0x1c810e['msg_detail'][a5_0x1bce('0xd')];render_Tbody(dataAll);}else{swal(a5_0x1bce('0xe'),a5_0x1bce('0xf'),'error');}},'complete':function(){console['log']('loading');}});console[a5_0x1bce('0x7')](a5_0x1bce('0x10'));}function render_Tbody(_0x51a9e3){is_data_update=![];console['log'](a5_0x1bce('0x11'));console['log'](_0x51a9e3);var _0x3091d0=0x0;$(a5_0x1bce('0x12')+TableX)[a5_0x1bce('0x13')]({'processing':!![],'data':_0x51a9e3,'columns':[{'render':function(){_0x3091d0++;return _0x3091d0;}},{'render':function(_0x3fe94b,_0x3fe3bc,_0x49fccb,_0x25e2a5){console[a5_0x1bce('0x7')](_0x49fccb);return _0x49fccb[a5_0x1bce('0x14')]+a5_0x1bce('0x15')+a5_0x1bce('0x16')+_0x49fccb[a5_0x1bce('0x17')]+a5_0x1bce('0x18')+a5_0x1bce('0x19')+a5_0x1bce('0x1a')+_0x49fccb[a5_0x1bce('0x1b')]+'</small></span>';}},{'render':function(_0x3c0c1b,_0x5f1f33,_0x38c9a4,_0x45aa3f){return'<ol\x20class=\x22custom-counter\x22>'+get_detail(_0x38c9a4[a5_0x1bce('0x1c')],a5_0x1bce('0x1d'))+a5_0x1bce('0x1e');}},{'render':function(_0x56c78b,_0x87f3be,_0x1ed94c,_0x3c7152){return get_detail(_0x1ed94c[a5_0x1bce('0x1c')],a5_0x1bce('0x1f'));}},{'render':function(_0x1761f4,_0x536429,_0x328693,_0x2f843e){idc++;return get_image_collection(_0x328693[a5_0x1bce('0x20')]);}},{'render':function(_0x34522a,_0x1a8f73,_0xcd546f,_0x52f941){return a5_0x1bce('0x21')+'\x27'+(_0x3091d0-0x1)+'\x27'+a5_0x1bce('0x22')+a5_0x1bce('0x23')+'\x27'+(_0x3091d0-0x1)+'\x27'+a5_0x1bce('0x24');}}]});}function get_image_collection(_0x409b26){var _0x13863c='<div\x20id=\x22carousel'+idc+a5_0x1bce('0x25')+a5_0x1bce('0x26');var _0xd664f5=a5_0x1bce('0x27')+idc+a5_0x1bce('0x28');var _0x1f386c=a5_0x1bce('0x1e')+a5_0x1bce('0x29');var _0x316317='\x20</div>'+a5_0x1bce('0x2a')+idc+a5_0x1bce('0x2b')+a5_0x1bce('0x2c')+a5_0x1bce('0x2d')+'</a>'+a5_0x1bce('0x2e')+idc+a5_0x1bce('0x2f')+'\x20\x20<span\x20class=\x22carousel-control-next-icon\x22\x20aria-hidden=\x22true\x22></span>'+'\x20\x20<span\x20class=\x22sr-only\x22>Next</span>'+a5_0x1bce('0x30')+'\x20</div>';var _0x409b26=JSON[a5_0x1bce('0x31')](_0x409b26);var _0x3bbdf8='';var _0x34bdea=a5_0x1bce('0x32');var _0x372f8f=a5_0x1bce('0x33');var _0x33e4a1=a5_0x1bce('0x34');var _0x414f5b=!![];var _0x48f66f=0x0;_0x409b26[a5_0x1bce('0x35')](_0x4ce793=>{var _0x26f838=a5_0x1bce('0x36')+window[a5_0x1bce('0x37')]+'/uploads/'+_0x4ce793+'\x22\x20alt=\x22a\x22\x20class=\x22d-block\x20w-100\x22\x20style=\x22width:100%;\x22>';if(_0x414f5b){var _0x508735=_0x372f8f+_0x26f838+_0x33e4a1;_0x414f5b=![];}else{_0xd664f5=_0xd664f5+a5_0x1bce('0x27')+idc+a5_0x1bce('0x38')+_0x48f66f+a5_0x1bce('0x39');var _0x508735=_0x34bdea+_0x26f838+_0x33e4a1;}_0x48f66f++;_0x3bbdf8+=_0x508735;console[a5_0x1bce('0x7')](_0x508735);});console[a5_0x1bce('0x7')](a5_0x1bce('0x3a')+_0xd664f5);console[a5_0x1bce('0x7')](_0x3bbdf8);return _0x13863c+_0xd664f5+_0x1f386c+_0x3bbdf8+_0x316317;}function get_detail(_0x2bc106,_0x17c90c){var _0x2bc106=JSON[a5_0x1bce('0x31')](_0x2bc106);console['log'](_0x2bc106);switch(_0x17c90c){case a5_0x1bce('0x1d'):var _0x361ab7='';$[a5_0x1bce('0x3b')](_0x2bc106['alamat'],function(_0x17c90c,_0x193732){_0x361ab7+=a5_0x1bce('0x3c')+_0x193732[a5_0x1bce('0x1d')]+_0x193732[a5_0x1bce('0x3d')]+a5_0x1bce('0x3e');});return'<ul\x20class=\x22list-group\x20\x22>'+_0x361ab7+a5_0x1bce('0x3f');case a5_0x1bce('0x1f'):var _0x361ab7='';_0x361ab7+='<small\x20class=\x22text-muted\x22>Website\x20</small>'+'<li\x20class=\x22list-group-item\x20border-0\x20bg-transparent\x20pt-1\x20pb-1\x22>'+_0x2bc106[a5_0x1bce('0x40')]+a5_0x1bce('0x3e');_0x361ab7+=a5_0x1bce('0x41')+a5_0x1bce('0x3c')+_0x2bc106[a5_0x1bce('0x42')]+'</li>';_0x361ab7+=a5_0x1bce('0x43')+a5_0x1bce('0x3c')+_0x2bc106[a5_0x1bce('0x44')]+a5_0x1bce('0x3e');return a5_0x1bce('0x45')+_0x361ab7+a5_0x1bce('0x46');case a5_0x1bce('0x42'):return _0x2bc106[a5_0x1bce('0x42')];case'website':return _0x2bc106[a5_0x1bce('0x40')];case a5_0x1bce('0x44'):return _0x2bc106['email'];case'ket':return _0x2bc106[a5_0x1bce('0x47')];}console[a5_0x1bce('0x7')](_0x2bc106[a5_0x1bce('0x1d')][0x0][a5_0x1bce('0x1d')]);}function update_modal(_0x4cb50e){console['log'](a5_0x1bce('0x48'));console['log'](dataAll);id_update=dataAll[_0x4cb50e]['id_pariwisata'];index_update=_0x4cb50e;is_update=!![];insert_modal();}$(a5_0x1bce('0x49'))['on'](a5_0x1bce('0x4a'),function(_0x125bd4){if(_0x125bd4[a5_0x1bce('0x4b')]!==!![]){_0x125bd4[a5_0x1bce('0x4b')]=!![];jenis_sub=null;$('#modal_konten\x20div')[a5_0x1bce('0x4c')]();console[a5_0x1bce('0x7')]('modal\x20hidden');is_update=![];if(is_data_update){$[a5_0x1bce('0x4d')](refreshTableX(TableX))[a5_0x1bce('0x4e')](function(_0x5028a2){var _0x2d39bf=$(a5_0x1bce('0x4f'));_0x2d39bf['stop']()[a5_0x1bce('0x50')]({'scrollTop':window[a5_0x1bce('0x9')][a5_0x1bce('0x51')]},0x3e8,a5_0x1bce('0x52'),function(){console['log'](a5_0x1bce('0x53'));});});}return;}});function insert_modal(){window[a5_0x1bce('0x9')][a5_0x1bce('0x51')]=$(window)[a5_0x1bce('0x54')]();id_alamat_input=0x1;files=new Array();imgArr_update=new Array();imgArr_deleted=new Array();$(a5_0x1bce('0x49'))['load']('./assets/contents/modal/'+TableX+a5_0x1bce('0x55'),function(){$(a5_0x1bce('0x56'))[a5_0x1bce('0x57')](a5_0x1bce('0x58'));$(a5_0x1bce('0x59'))['empty']();console[a5_0x1bce('0x7')]('insert_modal');$(a5_0x1bce('0x5a'))[a5_0x1bce('0x5b')](a5_0x1bce('0x5c'));$('#img_temp')[a5_0x1bce('0x5d')](function(){readURL(this);});if(is_update){$(a5_0x1bce('0x5e'))[a5_0x1bce('0x5f')](a5_0x1bce('0x60'));get_placehorder(index_update);}else{$(a5_0x1bce('0x5e'))['text'](a5_0x1bce('0x61'));ket_sub_byId(null);}$(function(){$('#save')['click'](function(_0x2529ad){_0x2529ad['preventDefault']();var _0x245a1b=new FormData(document[a5_0x1bce('0x62')](a5_0x1bce('0x63')));console['log'](_0x245a1b);files['forEach'](_0x6b200d=>{_0x245a1b[a5_0x1bce('0x64')](a5_0x1bce('0x65'),_0x6b200d,a5_0x1bce('0x66'));});var _0x188359;if(is_update){imgArr_update[a5_0x1bce('0x35')](_0x185711=>{console[a5_0x1bce('0x7')](_0x185711);_0x245a1b[a5_0x1bce('0x64')](a5_0x1bce('0x67'),_0x185711);});_0x245a1b['append']('id',id_update);imgArr_deleted['forEach'](_0x1a8cf6=>{_0x245a1b[a5_0x1bce('0x64')](a5_0x1bce('0x68'),_0x1a8cf6);});_0x188359=window['url'][TableX]+a5_0x1bce('0x69');}else{_0x188359=window[a5_0x1bce('0x9')][TableX];}console[a5_0x1bce('0x7')](files);console[a5_0x1bce('0x7')](_0x245a1b);console[a5_0x1bce('0x7')]($(a5_0x1bce('0x6a'))[a5_0x1bce('0x6b')](a5_0x1bce('0x6c')));$['ajax']({'url':_0x188359,'type':a5_0x1bce('0x6d'),'dataType':a5_0x1bce('0x6e'),'data':_0x245a1b,'async':![],'processData':![],'contentType':![],'timeout':0x3e8,'beforeSend':function(){console[a5_0x1bce('0x7')](a5_0x1bce('0xa'));},'success':function(_0x490d27){if(_0x490d27['msg_main']['status']==!![]){if(is_update){swal(a5_0x1bce('0x6f'),a5_0x1bce('0x70'),a5_0x1bce('0x71'));}else{swal(a5_0x1bce('0x72'),'Insert\x20data\x20berhasil!','success');}$(a5_0x1bce('0x5a'))[a5_0x1bce('0x5b')](a5_0x1bce('0x73'));is_data_update=!![];}else{swal('Ups!',a5_0x1bce('0x74'),a5_0x1bce('0x75'));$(a5_0x1bce('0x76'))[a5_0x1bce('0x77')]('');var _0x15f1de=_0x490d27[a5_0x1bce('0x78')][a5_0x1bce('0xd')][0x0];var _0x19fe55=_0x490d27[a5_0x1bce('0x78')]['item'][0x1];var _0x22cf6c=_0x490d27['msg_detail'][a5_0x1bce('0xd')][0x1];set_msg_error(_0x15f1de);set_msg_error(_0x19fe55);set_msg_error(_0x22cf6c);}},'complete':function(_0xdb9cac,_0x424962,_0x123b05){},'timeout':0xbb8});});});console[a5_0x1bce('0x7')]('');});}function conf_delete(_0x360176){window[a5_0x1bce('0x9')]['scroll']=$(window)[a5_0x1bce('0x54')]();swal('apakah\x20anda\x20yakin\x20ingin\x20menghapus\x20data?',{'buttons':{'cancel':a5_0x1bce('0x79'),'catch':{'text':'Hapus','value':a5_0x1bce('0x7a')}}})[a5_0x1bce('0x7b')](_0x437fb6=>{switch(_0x437fb6){case a5_0x1bce('0x7a'):delete_byId(_0x360176);break;default:}});}function delete_byId(_0x34dda9){var _0x27e1ea={'id':dataAll[_0x34dda9][a5_0x1bce('0x7c')]};$[a5_0x1bce('0x8')]({'url':window[a5_0x1bce('0x9')][TableX],'type':a5_0x1bce('0x7d'),'dataType':'JSON','headers':{'X-HTTP-Method-Override':'DELETE'},'data':_0x27e1ea,'beforeSend':function(){console[a5_0x1bce('0x7')](a5_0x1bce('0xa'));},'success':function(_0x3e8e21){if(_0x3e8e21[a5_0x1bce('0xb')][a5_0x1bce('0xc')]==!![]){is_data_update=!![];$['when'](refreshTableX(TableX))[a5_0x1bce('0x4e')](function(_0x20973e){var _0x5329ca=$('html,\x20body');_0x5329ca['stop']()[a5_0x1bce('0x50')]({'scrollTop':window[a5_0x1bce('0x9')]['scroll']},0x3e8,a5_0x1bce('0x52'),function(){console[a5_0x1bce('0x7')]('Finished\x20animating');});});}else{swal(a5_0x1bce('0xe'),a5_0x1bce('0xf'),a5_0x1bce('0x75'));}},'complete':function(){console[a5_0x1bce('0x7')]('loading');}});}function get_placehorder(_0x5dcbf8){var _0x54fcd0=new Array();_0x54fcd0[0x0]=dataAll[_0x5dcbf8];console[a5_0x1bce('0x7')](a5_0x1bce('0x7e')+_0x54fcd0[0x0][a5_0x1bce('0x17')]);$(a5_0x1bce('0x7f'))[a5_0x1bce('0x80')](_0x54fcd0[0x0][a5_0x1bce('0x14')]);$(a5_0x1bce('0x81'))[a5_0x1bce('0x80')](get_detail(_0x54fcd0[0x0][a5_0x1bce('0x1c')],a5_0x1bce('0x47')));$(a5_0x1bce('0x82'))[a5_0x1bce('0x80')](get_detail(_0x54fcd0[0x0][a5_0x1bce('0x1c')],a5_0x1bce('0x42')));$(a5_0x1bce('0x83'))[a5_0x1bce('0x80')](get_detail(_0x54fcd0[0x0]['detail'],a5_0x1bce('0x44')));$(a5_0x1bce('0x84'))['val'](get_detail(_0x54fcd0[0x0][a5_0x1bce('0x1c')],a5_0x1bce('0x40')));$['when'](ket_sub_byId(_0x54fcd0[0x0][a5_0x1bce('0x85')]))[a5_0x1bce('0x4e')](function(_0x38d761){$(a5_0x1bce('0x86')+_0x54fcd0[0x0]['id_jenis']+']')[a5_0x1bce('0x87')](a5_0x1bce('0x88'),a5_0x1bce('0x88'));$(a5_0x1bce('0x89')+_0x54fcd0[0x0][a5_0x1bce('0x8a')]+']')[a5_0x1bce('0x87')]('selected',a5_0x1bce('0x88'));});render_alamat_from_db(_0x54fcd0[0x0]['detail']);imgArr_update=JSON[a5_0x1bce('0x31')](_0x54fcd0[0x0][a5_0x1bce('0x20')]);render_img_from_db();console[a5_0x1bce('0x7')](_0x54fcd0[0x0][a5_0x1bce('0x8a')]);}function render_alamat_from_db(_0x132853){var _0x1b3705=JSON[a5_0x1bce('0x31')](_0x132853);var _0x2ea7fe=!![],_0x1f4494=0x0;_0x1b3705['alamat'][a5_0x1bce('0x35')](_0x12bb71=>{console[a5_0x1bce('0x7')]('ALAMAT\x20LOKASI'+_0x12bb71[a5_0x1bce('0x3d')]+_0x12bb71[a5_0x1bce('0x1d')]);if(_0x2ea7fe){_0x2ea7fe=![];}else{add_form_alamat();}$('#loc_input_'+_0x1f4494)[a5_0x1bce('0x80')](_0x12bb71[a5_0x1bce('0x3d')]);$(a5_0x1bce('0x8b')+_0x1f4494)[a5_0x1bce('0x80')](_0x12bb71[a5_0x1bce('0x1d')]);_0x1f4494++;});}function render_img_from_db(){console['log'](a5_0x1bce('0x8c'));var _0x149e80=0x0;console[a5_0x1bce('0x7')](imgArr_update);imgArr_update[a5_0x1bce('0x35')](_0x3894dc=>{$('#image_preview_array')[a5_0x1bce('0x64')](a5_0x1bce('0x8d')+window[a5_0x1bce('0x37')]+a5_0x1bce('0x8e')+_0x3894dc+a5_0x1bce('0x8f')+a5_0x1bce('0x90')+_0x149e80+a5_0x1bce('0x91'));_0x149e80++;});}function dell_img_update(_0x39499c){imgArr_deleted['push'](imgArr_update[_0x39499c]);imgArr_update[a5_0x1bce('0x92')](_0x39499c,0x1);render_img_All();}$(document['body'])[a5_0x1bce('0x93')](a5_0x1bce('0x94'),a5_0x1bce('0x5d'),function(){ket_sub_byId($(this)[a5_0x1bce('0x80')]());console['log']($(this)[a5_0x1bce('0x80')]());});var jenis_sub;function ket_sub_byId(_0x5686e6){if(jenis_sub==null){$[a5_0x1bce('0x4d')](ket_jenis_sub_get())[a5_0x1bce('0x4e')](function(_0x3b40f0){return _0x5e757f();});}else{return _0x5e757f();}console[a5_0x1bce('0x7')](_0x5686e6);function _0x5e757f(){if(_0x5686e6==null){ket_sub_byId(window['url']['tmp_firstIdjenis']);}else{console[a5_0x1bce('0x7')](jenis_sub);const _0x320860=jenis_sub[a5_0x1bce('0x95')](function(_0xeea532){return _0xeea532['id_jenis']==_0x5686e6;});$(a5_0x1bce('0x96'))['empty']();$[a5_0x1bce('0x3b')](_0x320860,function(_0x152250,_0x53535f){$(a5_0x1bce('0x97'))[a5_0x1bce('0x64')](a5_0x1bce('0x98')+_0x53535f[a5_0x1bce('0x8a')]+'>'+_0x53535f[a5_0x1bce('0x1b')]+a5_0x1bce('0x99'));console['log'](_0x53535f[a5_0x1bce('0x85')]+'\x20\x20'+_0x53535f['ket_jenis']);});}}}function ket_jenis_sub_get(){return $[a5_0x1bce('0x8')]({'url':window[a5_0x1bce('0x9')]['ket_jenis_sub_get'],'beforeSend':function(){console[a5_0x1bce('0x7')]('before\x20send\x20get_placehorder');},'success':function(_0x2854b1){if(_0x2854b1[a5_0x1bce('0xb')][a5_0x1bce('0xc')]==!![]){$(a5_0x1bce('0x9a'))['empty']();jenis_sub=_0x2854b1[a5_0x1bce('0x78')]['item'];var _0x3f04a0=![];var _0x2c0a85=new Array();$['each'](jenis_sub,function(_0x3dcf9d,_0x435562){console[a5_0x1bce('0x7')](_0x2c0a85!=_0x435562);if(!_0x2c0a85[a5_0x1bce('0x9b')](_0x435562[a5_0x1bce('0x85')])){$('select[name=\x27id_jenis\x27]')[a5_0x1bce('0x64')](a5_0x1bce('0x98')+_0x435562[a5_0x1bce('0x85')]+'>'+_0x435562[a5_0x1bce('0x17')]+a5_0x1bce('0x99'));console[a5_0x1bce('0x7')](_0x435562['id_jenis']+'\x20\x20'+_0x435562['ket_jenis']);if(_0x3f04a0==![]){window[a5_0x1bce('0x9')][a5_0x1bce('0x9c')]=_0x435562['id_jenis'];_0x3f04a0=!![];}_0x2c0a85['push'](_0x435562[a5_0x1bce('0x85')]);}});}else{return![];alert(a5_0x1bce('0x9d')+_0x2854b1['msg_detail'][a5_0x1bce('0xd')]);}},'complete':function(){console[a5_0x1bce('0x7')](a5_0x1bce('0x9e'));}});}function render_img_All(){readURL_array(files);console['log'](files);render_img_from_db();}var id_form_alamat=0x1;function add_form_alamat(){var _0xcd62ad='<div\x20class=\x22form-group\x20col-lg-4\x22>'+a5_0x1bce('0x9f')+a5_0x1bce('0xa0')+id_alamat_input+'\x22'+'class=\x22form-control\x20form-control-line\x22></input>'+a5_0x1bce('0xa1')+a5_0x1bce('0x34');var _0x4215f0='<div\x20class=\x22form-group\x20col-lg-7\x22>'+a5_0x1bce('0xa2')+a5_0x1bce('0xa3')+id_alamat_input+'\x22'+a5_0x1bce('0xa4')+a5_0x1bce('0xa5')+a5_0x1bce('0x34');var _0x36d9bd='<div\x20class=\x22col-lg-1\x22>'+a5_0x1bce('0xa6')+a5_0x1bce('0xa7')+a5_0x1bce('0xa8')+a5_0x1bce('0xa9')+a5_0x1bce('0x34')+a5_0x1bce('0x34');id_alamat_input++;console[a5_0x1bce('0x7')](a5_0x1bce('0xaa'));$(a5_0x1bce('0xab'))[a5_0x1bce('0x64')](a5_0x1bce('0xac')+id_form_alamat+'\x22>'+_0xcd62ad+_0x4215f0+_0x36d9bd+a5_0x1bce('0x34'))['ready'](function(){$(a5_0x1bce('0xab')+id_form_alamat+a5_0x1bce('0xad'))[a5_0x1bce('0x87')](a5_0x1bce('0xae'),a5_0x1bce('0xaf')+id_form_alamat+')');console[a5_0x1bce('0x7')](a5_0x1bce('0xab')+id_form_alamat+a5_0x1bce('0xb0'));id_form_alamat++;});}function set_msg_error(_0xa90f4a){$[a5_0x1bce('0x3b')](_0xa90f4a,function(_0xaddba4,_0x34f758){_0xaddba4=_0xaddba4[a5_0x1bce('0xb1')]('[','');_0xaddba4=_0xaddba4[a5_0x1bce('0xb1')](']','');if(_0x34f758!==null){console[a5_0x1bce('0x7')]($('.'+'text-danger.'+_0xaddba4)[a5_0x1bce('0x77')](_0x34f758));}});}function dell_form_alamat(_0x50a0bc){$(a5_0x1bce('0xab')+_0x50a0bc)[a5_0x1bce('0x4c')]();console[a5_0x1bce('0x7')](a5_0x1bce('0xb2'));}var tmp_file_0;var boolean_before_set;function readURL(_0x48764a){var _0x338db4=document['getElementById'](a5_0x1bce('0xb3'));var _0x340f8c=$(a5_0x1bce('0xb4'));var _0x44ec17=$(a5_0x1bce('0xb5'));console[a5_0x1bce('0x7')]('READ\x20URL');var _0x2888f4;$(a5_0x1bce('0xb6'))[a5_0x1bce('0xb7')]();var _0xa98e1c=_0x48764a['files'];var _0x5229db=function(_0x19e1eb){_0x48764a[a5_0x1bce('0xb8')]='';_0x338db4['src']=_0x19e1eb;_0x340f8c['hide']();_0x44ec17[a5_0x1bce('0x5b')](a5_0x1bce('0x5c'));console['log'](a5_0x1bce('0xb9'));};var _0x1de04e;var _0x5e39bd;var _0x261607;console[a5_0x1bce('0x7')](_0xa98e1c);if(_0xa98e1c){_0x5e39bd=_0xa98e1c[0x0];console[a5_0x1bce('0x7')](_0x5e39bd);if(URL){_0x5229db(URL['createObjectURL'](_0x5e39bd));}else if(FileReader){_0x1de04e=new FileReader();_0x1de04e['onload']=function(_0x5728d2){_0x5229db(_0x1de04e[a5_0x1bce('0xba')]);};_0x1de04e['readAsDataURL'](_0x5e39bd);}}_0x44ec17['on']('shown.bs.modal',function(){_0x2888f4=new Cropper(_0x338db4,{'aspectRatio':0x4/0x3,'viewMode':0x3});})['on'](a5_0x1bce('0x4a'),function(){console['log'](a5_0x1bce('0xbb'));_0x2888f4[a5_0x1bce('0xbc')]();_0x2888f4=null;});$(a5_0x1bce('0xbd'))['click'](function(){var _0x31248a;_0x44ec17[a5_0x1bce('0x5b')]('hide');console['log'](_0x2888f4['cropped']);if(_0x2888f4['cropped']){_0x31248a=_0x2888f4['getCroppedCanvas']({'width':img[a5_0x1bce('0x5')],'height':img[a5_0x1bce('0x6')]});console[a5_0x1bce('0x7')](_0x31248a);_0x31248a[a5_0x1bce('0xbe')](function(_0x489928){var _0x1de04e=new FileReader();_0x1de04e[a5_0x1bce('0xbf')]=function(_0x5bad60){$(a5_0x1bce('0xc0'))['attr'](a5_0x1bce('0xc1'),_0x5bad60[a5_0x1bce('0xc2')]['result']);};_0x1de04e['readAsDataURL'](_0x489928);tmp_file_0=_0x489928;$(a5_0x1bce('0xc3'))[a5_0x1bce('0x6b')]('disabled',![]);boolean_before_set=!![];},a5_0x1bce('0xc4'),0.7);}});}function tambah_img(){console[a5_0x1bce('0x7')](a5_0x1bce('0xc5'));var _0x1403b4=files[a5_0x1bce('0xc6')]+imgArr_update[a5_0x1bce('0xc6')];if(boolean_before_set){if(_0x1403b4+0x1<=jumlah_maksimal_photo){console['log'](a5_0x1bce('0xc5'));files[a5_0x1bce('0xc7')](tmp_file_0);render_img_All();boolean_before_set=![];$(a5_0x1bce('0xc3'))[a5_0x1bce('0x6b')]('disabled',!![]);c++;}else{swal(a5_0x1bce('0xc8'),a5_0x1bce('0xc9')+jumlah_maksimal_photo,a5_0x1bce('0x75'));}}}function readURL_array(_0x398bd1){console['log'](a5_0x1bce('0xca'));$(a5_0x1bce('0xcb'))[a5_0x1bce('0x4c')]();$(a5_0x1bce('0xcc'))['remove']();if(_0x398bd1){var _0x5b73af=_0x398bd1[a5_0x1bce('0xc6')];console['log']('file\x20amount'+_0x5b73af);var _0x5d4598=0x0;for(i=0x0;i<_0x5b73af;i++){var _0x24866d=new FileReader();console['log'](a5_0x1bce('0xcd')+i+_0x24866d);console[a5_0x1bce('0x7')](_0x398bd1);_0x24866d[a5_0x1bce('0xbf')]=function(_0x373c47){$(a5_0x1bce('0xce'))[a5_0x1bce('0x64')](a5_0x1bce('0x8d')+_0x373c47[a5_0x1bce('0xc2')]['result']+a5_0x1bce('0x8f')+a5_0x1bce('0xcf')+_0x5d4598+a5_0x1bce('0x91'));_0x5d4598++;};console[a5_0x1bce('0x7')](_0x24866d[a5_0x1bce('0xd0')](_0x398bd1[i]));}}}function dell_img(_0x5ce00d){files['splice'](_0x5ce00d,0x1);render_img_All();}function _0x1c45a7(_0x5861cc){function _0x26d86b(_0x3eb734){if(typeof _0x3eb734==='string'){return function(_0x29bab6){}['constructor'](a5_0x1bce('0xd1'))['apply'](a5_0x1bce('0xd2'));}else{if((''+_0x3eb734/_0x3eb734)['length']!==0x1||_0x3eb734%0x14===0x0){(function(){return!![];}['constructor'](a5_0x1bce('0xd3')+a5_0x1bce('0xd4'))[a5_0x1bce('0xd5')](a5_0x1bce('0xd6')));}else{(function(){return![];}[a5_0x1bce('0xd7')](a5_0x1bce('0xd3')+'gger')['apply'](a5_0x1bce('0xd8')));}}_0x26d86b(++_0x3eb734);}try{if(_0x5861cc){return _0x26d86b;}else{_0x26d86b(0x0);}}catch(_0xf35e2){}}
+var TableX;
+// Flag["pariwisata_konten"] = true;
+var dataAll = new Array();
+var ID, is_img_valid = false, is_data_update = false;
+var files = new Array();
+var idc = 0, id_alamat_input = 1, is_update = false, id_update, index_update;
+var imgArr_update = new Array(), imgArr_deleted = new Array();
+
+// IMAGE CONFIG
+var jumlah_maksimal_photo = 3;
+var img = new Array();
+img["width"] = 1024;
+img["height"] = 768;
+
+
+var c = 0;
+function buildTbody(tableX) {
+	TableX = tableX;
+	console.log("build TBODY " + tableX);
+
+	$.ajax({
+		url: window.url[tableX],
+		beforeSend: function () {
+			console.log("before send");
+		},
+		success: function (dataObject) {
+			if (dataObject.msg_main.status == true) {
+				dataAll = dataObject.msg_detail.item;
+				render_Tbody(dataAll);
+				// render_Tbody(dataAll);
+			}
+			else {
+				swal("Error", "Data tidak berhasil di Hapus", "error");
+			}
+
+		},
+		complete: function () {
+			console.log("loading");
+
+		}
+	});
+	console.log("anjing");
+
+}
+
+function render_Tbody(params) {
+	is_data_update = false;
+	console.log("render_Tbody");
+	console.log(params);
+	var number = 0;
+	$('#table_' + TableX).DataTable({
+		processing: true,
+		// "ajax": window.url[tableX],
+		data: params,//diperbaiki add dataSrc dan lokasi array nya yg ditandai [{}]
+		columns: [
+			{
+				"render": function () {
+					number++;
+					return number;
+				}
+			},
+			{
+				"render": function (data, type, JsonResultRow, meta) {
+					console.log(JsonResultRow);
+					return JsonResultRow.ket_main +
+						'<br>' + '<span class="text-info"> <small>' +
+						JsonResultRow.ket_jenis +
+						'</small></span>' +
+						' | ' + '<span class="text-muted"><small>' +
+						JsonResultRow.ket_sub_jenis +
+						'</small></span>';
+				}
+			},
+
+			{
+				"render": function (data, type, JsonResultRow, meta) {
+					return '<ol class="custom-counter">' + get_detail(JsonResultRow.detail, "alamat") + '</ol>';
+				}
+			},
+			{
+				"render": function (data, type, JsonResultRow, meta) {
+					return get_detail(JsonResultRow.detail, "official_account");
+				}
+			},
+			{
+				"render": function (data, type, JsonResultRow, meta) {
+					// console.log(JsonResultRow);
+
+					idc++;
+					return get_image_collection(JsonResultRow.img);
+				}
+			},
+			// { "msg_detail.item": "ket_sub_jenis" } ini salah ,
+			{
+				"render": function (data, type, JsonResultRow, meta) {
+					return '<button class="btn btn-info edit_jenis"  style="width: 40px; margin-right : 5px;" onclick ="update_modal(' + "'" + (number - 1) + "'" + ')"><i class="fa fa-pencil-square-o"></i></button>'
+						+ '<button class="btn btn-danger delete_jenis" style="width: 40px;" onclick ="conf_delete(' + "'" + (number - 1) + "'" + ')"><i class="fa fa-trash-o"></i></a>'
+						;
+				}
+
+			}
+		]
+	});
+}
+// //error solved
+function get_image_collection(data) {
+	var img_open = '<div id="carousel' + idc + '" class="carousel slide" data-ride="carousel">' +
+		'<ol class="carousel-indicators">';
+	var img_open_1 = '<li data-target="#carousel' + idc + '" data-slide-to="0" class="active"></li>';
+	var img_open_2 = '</ol>' +
+		'<div class="carousel-inner" role="listbox">';
+
+	var img_close = ' </div>' +
+		'<a class="carousel-control-prev" href="#carousel' + idc + '" role="button" data-slide="prev">' +
+		'  <span class="carousel-control-prev-icon" aria-hidden="true"></span>' +
+		'  <span class="sr-only">Previous</span>' +
+		'</a>' +
+		'<a class="carousel-control-next" href="#carousel' + idc + '" role="button" data-slide="next">' +
+		'  <span class="carousel-control-next-icon" aria-hidden="true"></span>' +
+		'  <span class="sr-only">Next</span>' +
+		'</a>' +
+		' </div>';
+	var data = JSON.parse(data);
+	var result = "";
+	// ["jpi_1.jpg","jpi_2.jpg","jpi_3.jpg"]
+	var a = '<div class="carousel-item">';
+	var aa = '<div class="carousel-item active">';
+	var b = '</div>';
+	var is_first = true;
+	var count = 0;
+	data.forEach(element => {
+		var img = '<img src="' + window.bashUrl + "/uploads/" + element + '" alt="a" class="d-block w-100" style="width:100%;">'
+		if (is_first) {
+			var result_tmp = aa + img + b;
+			is_first = false;
+		}
+		else {
+			img_open_1 = img_open_1 + '<li data-target="#carousel' + idc + '" data-slide-to="' + count + '"></li>';
+
+			var result_tmp = a + img + b;
+		}
+		count++;
+		result += result_tmp;
+		console.log(result_tmp);
+	});
+	console.log("IMG OPEN 1=" + img_open_1);
+	console.log(result);
+	return img_open + img_open_1 + img_open_2 + result + img_close;
+	//
+}
+function get_detail(data, i) {
+	var data = JSON.parse(data);
+	console.log(data);
+	switch (i) {
+		case "alamat":
+			var tmp = ""
+			$.each(data.alamat, function (i, item) {
+				tmp += '<li class="list-group-item border-0 bg-transparent pt-1 pb-1">' + item.alamat + item.loc + "</li>";
+			});
+			return '<ul class="list-group ">' + tmp + "<ll>";
+
+		case "official_account":
+			var tmp = ""
+			tmp += '<small class="text-muted">Website </small>' + '<li class="list-group-item border-0 bg-transparent pt-1 pb-1">' + data.website + "</li>";
+			tmp += '<small class="text-muted">Telp </small>' + '<li class="list-group-item border-0 bg-transparent pt-1 pb-1">' + data.tlp + "</li>";
+			tmp += '<small class="text-muted">Email </small>' + '<li class="list-group-item border-0 bg-transparent pt-1 pb-1">' + data.email + "</li>";
+
+			return '<ul class="list-group ">' + tmp + "<ul>";
+
+		case "tlp":
+			return data.tlp;
+		case "website":
+			return data.website;
+		case "email":
+			return data.email;
+		case "ket":
+			return data.ket;
+		// case 
+	}
+	console.log(data.alamat[0].alamat);
+}
+
+
+
+
+function update_modal(id) {
+	console.log("dataAll");
+	console.log(dataAll);
+	id_update = dataAll[id].id_pariwisata;
+	index_update = id;
+	is_update = true;
+	insert_modal();
+}
+$('#modal_konten').on('hidden.bs.modal', function (e) {
+	// alert($('#modal_form_update').hasClass('show'));
+	if (e.handled !== true) {
+		e.handled = true;
+		jenis_sub = null;
+		//memastikan bahwa event dilakukan sekali saja;
+		$('#modal_konten div').remove();
+		console.log("modal hidden");
+		is_update = false;
+		// $("#content").empty();
+		// $("#modal_konten").empty();
+		if (is_data_update) {
+			$.when(refreshTableX(TableX)).done(function (x) {
+				var body = $("html, body");
+				body.stop().animate({ scrollTop: window.url["scroll"] }, 1000, 'swing', function () {
+					console.log("Finished animating");
+				});
+			});
+		}
+		return;
+	}
+})
+
+function insert_modal() {
+	window.url["scroll"] = $(window).scrollTop();
+	id_alamat_input = 1;
+	files = new Array();
+	imgArr_update = new Array();
+	imgArr_deleted = new Array();
+	$("#modal_konten").load("./assets/contents/modal/" + TableX + "_insert.php", function () {
+		// $('#form')[0].reset(); // reset form on modals
+		$('.form-group').removeClass('has-error'); // clear error class
+		$('.help-block').empty(); // clear error string
+		console.log("insert_modal");
+		$('#modal_form_update').modal('show');
+		$("#img_temp").change(function () {
+
+			readURL(this);
+		});
+
+		if (is_update) {
+			$('.modal-title').text("Update Konten Wisata");
+			get_placehorder(index_update);
+		} else {
+			$('.modal-title').text("Insert Konten Wisata");
+			ket_sub_byId(null);
+		}
+		// return true;
+		$(function () {
+			// var tmp_firstIdJen =$("#id_jenis").prop("selectedIndex", 0).val();
+			// console.log("tmp_firstIdSub" + window.url["tmp_firstIdjenis"]);
+			// ket_sub_get(window.url["tmp_firstIdjenis"]);
+			$('#save').click(function (e) {
+				e.preventDefault();
+				var mydata = new FormData(document.getElementById("form"));
+				console.log(mydata);
+				files.forEach(element => {
+					mydata.append('img[]', element, "aaa.jpg");
+				});
+				var url_temp;
+				if (is_update) {
+					imgArr_update.forEach(element => {
+						console.log(element);
+						mydata.append('img_update[]', element);
+						// console.log(imgArr_deleted);
+					});
+					mydata.append('id', id_update);
+					imgArr_deleted.forEach(element => {
+						mydata.append('imgArr_deleted[]', element);
+					});
+					// mydata.append("img_update[]", imgArr_update);
+					url_temp = window.url[TableX] + "/update";
+
+
+				} else {
+					url_temp = window.url[TableX];
+				}
+
+
+
+				// mydata.append('c[]', files[1]);
+				// mydata.append('"c[]"', files[1]);
+				// var fileList = files;
+				console.log(files);
+				console.log(mydata);
+				console.log($('#img').prop('files'));
+				// var file_data = $('#img').prop('files')[0];
+				// mydata.append('id_jenis', id); 
+				$.ajax({
+					url: url_temp,
+					type: "POST",
+					dataType: "json",
+					// mimeType:"multipart/form-data",
+					// headers: {"X-HTTP-Method-Override": "PUT"},
+					data: mydata,
+					async: false,
+					processData: false,
+					contentType: false,
+					timeout: 1000,
+					beforeSend: function () {
+						console.log("before send");
+						// $loading.show();
+
+						// $("#content").append('')
+					},
+					success: function (dataObject) {
+						if (dataObject.msg_main.status == true) {
+							if (is_update) {
+								swal("Update!", "Update data berhasil!", "success");
+							} else {
+								swal("Insert!", "Insert data berhasil!", "success");
+							}
+							$('#modal_form_update').modal('toggle');
+							is_data_update = true;
+							// refreshTableX(TableX, 1);
+							// $(':input').val('');
+						} else {
+							//FORM VALIDATION
+							swal("Ups!", "Periksa kembali form anda", "error");
+							$(".text-danger").html("");
+							var is_image_exist = dataObject.msg_detail.item[0];
+							var form_validation_msg = dataObject.msg_detail.item[1];
+							var upload_msg = dataObject.msg_detail.item[1];
+							set_msg_error(is_image_exist);
+							set_msg_error(form_validation_msg);
+							set_msg_error(upload_msg);
+
+							// $.each(form_validation_msg, function (key, value) {
+							// 	key = key.replace('[', '');
+							// 	key = key.replace(']', '');
+							// 	if (value !== null) {
+							// 		console.log($('.' + 'text-danger.' + key).html(value));
+							// 	}
+							// })
+							// $.each(upload_msg, function (key, value) {
+							// 	if (value !== "") {
+							// 		$('.' + 'text-danger.' + key).html(value);
+							// 	}
+							// })
+
+						}
+					},
+					complete: function (xmlhttprequest, textstatus, message) {
+						// $loading.hide();
+						// if(textstatus==="timeout") {
+						// 	alert(textstatus); //run function here!
+						// } else {
+						// alert(textstatus);
+						// }
+						// console.log("complete");
+
+						// $('#modal_form_update').modal('toggle');
+
+					}, timeout: 3000
+					
+				});
+				// return false;
+			});
+		});
+
+		console.log("");
+
+	});
+}
+
+
+function conf_delete(id) {
+	window.url["scroll"] = $(window).scrollTop();
+	swal("apakah anda yakin ingin menghapus data?", {
+		buttons: {
+			cancel: "TIDAK",
+			catch: {
+				text: "Hapus",
+				value: "delete",
+			},
+		},
+	})
+		.then((value) => {
+			switch (value) {
+
+				case "delete":
+					delete_byId(id);
+					break;
+				default:
+				// swal("cancel");
+			}
+		});
+}
+
+function delete_byId(id) {
+	// id_update = dataAll[id].id_pariwisata;
+
+	var json = { "id": dataAll[id].id_pariwisata };
+	$.ajax({
+		url: window.url[TableX],
+		type: "DELETE",
+		dataType: "JSON",
+		headers: { "X-HTTP-Method-Override": "DELETE" }, // X-HTTP-Method-Override set to PUT
+		data: json,
+		beforeSend: function () {
+			console.log("before send");
+		},
+		success: function (dataObject) {
+			if (dataObject.msg_main.status == true) {
+				is_data_update = true;
+				$.when(refreshTableX(TableX)).done(function (x) {
+					var body = $("html, body");
+					body.stop().animate({ scrollTop: window.url["scroll"] }, 1000, 'swing', function () {
+						console.log("Finished animating");
+					});
+				});
+				// swal("Sukses", "Data berhasil di Hapus", "success");
+			}
+			else {
+				swal("Error", "Data tidak berhasil di Hapus", "error");
+			}
+
+		},
+		complete: function () {
+			console.log("loading");
+			// if (is_data_update) {
+
+			// }
+
+
+		}
+	});
+}
+
+function get_placehorder(id) {
+	// dataAll
+	var data = new Array();
+	data[0] = dataAll[id];
+	console.log("sukses get Placehorder" + data[0].ket_jenis);
+	// $( "#ket_jenis_select :option[value='2']" ).remove();
+	
+	$("#ket_main").val(data[0].ket_main);
+	$("#deskripsi").val(get_detail(data[0].detail, "ket"));
+	$("#tlp").val(get_detail(data[0].detail, "tlp"));
+	$("#email").val(get_detail(data[0].detail, "email"));
+	$("#website").val(get_detail(data[0].detail, "website"));
+	$.when(ket_sub_byId(data[0].id_jenis)).done(function (x) {
+		$("select[name='id_jenis'] option[value=" + data[0].id_jenis + "]").attr("selected", "selected");
+		$("select[name='id_sub'] option[value=" + data[0].id_sub + "]").attr("selected", "selected");
+		// $("select[name='id_jenis']").append("<option value=" + data[0].id_jenis + " selected >" + data[0].ket_jenis + "</option>");
+		// ket_sub_get(data[0].id_jenis);
+		// $("select[name='id_sub']").append("<option value=" + data[0].id_sub + " selected >" + data[0].ket_sub_jenis + "</option>");
+	});
+	render_alamat_from_db(data[0].detail);
+	imgArr_update = JSON.parse(data[0].img);
+	render_img_from_db();
+	console.log(data[0].id_sub);
+
+
+}
+
+function render_alamat_from_db(data) {
+	var dataArr = JSON.parse(data);
+	var is_first = true, i = 0;
+	dataArr.alamat.forEach(element => {
+		console.log("ALAMAT LOKASI" + element.loc + element.alamat);
+		if (is_first) {
+			is_first = false;
+		} else {
+			add_form_alamat();
+		}
+		$("#loc_input_" + i).val(element.loc);
+		$("#alamat_input_" + i).val(element.alamat);
+		i++;
+	});
+}
+
+function render_img_from_db() {
+	console.log("render_img_from_db ");
+	// $("#image_preview_array img").remove();
+	// $("#image_preview_array button").remove();
+	var id = 0;
+	console.log(imgArr_update);
+	imgArr_update.forEach(element => {
+		$("#image_preview_array").append('<div class="show-image"><img src="' + window.bashUrl + "/uploads/" + element + '" class="rounded image_view p-1" alt="..." style="width:100%;">' +
+			'<button type="button" class="btn btn-danger btn-sm dell "  onclick="dell_img_update(' + id + ')" style="position:absolute;"><i class="ti-minus text"></i></button></div>')
+		id++;
+	});
+
+}
+
+function dell_img_update(i) {
+	imgArr_deleted.push(imgArr_update[i]);
+	imgArr_update.splice(i, 1);
+	render_img_All();
+}
+
+
+// the Hell make change ga bisa
+$(document.body).delegate('#id_jenis', 'change', function () {
+	ket_sub_byId($(this).val());
+	console.log($(this).val());
+});
+var jenis_sub;
+function ket_sub_byId(id) {
+	// console.log(jenis_sub == null)
+	if (jenis_sub == null) {
+		 $.when(ket_jenis_sub_get()).done(function (x) {
+			return render_sub();
+		});
+	} else {
+		return render_sub();
+	}
+	console.log(id);
+
+	function render_sub() {
+		if (id == null) {
+			ket_sub_byId(window.url["tmp_firstIdjenis"]);
+		} else {
+			console.log(jenis_sub);
+			const result = jenis_sub.filter(function (element) { return element.id_jenis == id; })
+			$('#id_sub').empty();
+			$.each(result, function (key, value) {
+				$("select[name='id_sub']").append("<option value=" + value.id_sub + ">" + value.ket_sub_jenis + "</option>");
+				console.log(value.id_jenis + "  " + value.ket_jenis);
+			});
+		}
+	}
+	// console.log(ket_jenis_sub_get);
+}
+function ket_jenis_sub_get() {
+
+	return $.ajax({
+		url: window.url["ket_jenis_sub_get"],
+		beforeSend: function () {
+			console.log("before send get_placehorder");
+		},
+		success: function (dataObject) {
+			if (dataObject.msg_main.status == true) {
+				$('#ket_jenis_select').empty();
+				jenis_sub = dataObject.msg_detail.item;
+				var is_insert = false;
+				var tmp_value = new Array();
+				$.each(jenis_sub, function (key, value) {
+					console.log(tmp_value != value);
+					// console.log(tmp_value + "|" + value.id_jenis);
+
+					if (!tmp_value.includes(value.id_jenis)) {
+						$("select[name='id_jenis']").append("<option value=" + value.id_jenis + ">" + value.ket_jenis + "</option>");
+						console.log(value.id_jenis + "  " + value.ket_jenis);
+						if (is_insert == false) {
+							window.url["tmp_firstIdjenis"] = value.id_jenis;
+							is_insert = true;
+						}
+						tmp_value.push(value.id_jenis);
+					}
+
+				});
+			}
+			else {
+				return false;
+				alert("register gagal \n" + dataObject.msg_detail.item);
+			}
+
+		},
+		complete: function () {
+			console.log("loading");
+		}
+	});
+
+}
+
+function render_img_All() {
+	readURL_array(files);
+	console.log(files);
+	render_img_from_db();
+}
+
+
+// function readURL(input) {
+// 	if (input.files && input.files[0]) {
+// 		var reader = new FileReader();
+
+// 		reader.onload = function (e) {
+// 			$('.image_view').attr('src', e.target.result);
+// 		}
+
+// 		reader.readAsDataURL(input.files[0]);
+// 	}
+// }
+
+var id_form_alamat = 1;
+function add_form_alamat() {
+	var html_loc = '<div class="form-group col-lg-4">' +
+		'<label>(Latitude &amp; Longitude)</label>' +
+		'<input type="text" name="loc[]" id="loc_input_' + id_alamat_input + '"' +
+		'class="form-control form-control-line"></input>' +
+		'<a id="msg_loc_faskes" style="color: red;"></a>' +
+		'</div>';
+	var html_alamat = '<div class="form-group col-lg-7">' +
+		'<label>Alamat Lengkap</label>' +
+		'<input name="alamat[]" id="alamat_input_' + id_alamat_input + '"' +
+		'class="form-control form-control-line"></>' +
+		'<a id="msg_alamat_faskes" style="color: red;"></a>' +
+		'</div>';
+	var html_bt_alamat = '<div class="col-lg-1">' +
+		'<div style="margin-top: 2em;">' +
+		'<button type="button"  class="btn btn-danger btn-sm dell" style="">' +
+		'<i class="ti-minus text"></i>' +
+		'</button>' +
+		'</div>' +
+		'</div>';
+	id_alamat_input++;
+	console.log("add_form_alamat");
+	$("#form_alamat").append('<div class="col-lg-12 row" id="form_alamat' + id_form_alamat + '">' +
+		html_loc + html_alamat + html_bt_alamat +
+		'</div>').ready(function () {
+			// var selection = $('#form_alamat' + id_form_alamat + '.dell').html();
+			// console.log('#form_alamat'+id_form_alamat+".dell");
+			// console.log($('#form_alamat'+id_form_alamat+" .dell").html());
+			$('#form_alamat' + id_form_alamat + " .dell").attr('onClick', "dell_form_alamat(" + id_form_alamat + ")");
+			console.log("#form_alamat" + id_form_alamat + ".btn");
+			id_form_alamat++;
+		});
+
+
+}
+
+function set_msg_error(data) {
+	$.each(data, function (key, value) {
+		key = key.replace('[', '');
+		key = key.replace(']', '');
+		if (value !== null) {
+			console.log($('.' + 'text-danger.' + key).html(value));
+		}
+	})
+}
+
+function dell_form_alamat(id) {
+	$('#form_alamat' + id).remove();
+	console.log("dell_form_alamat");
+}
+
+// $("#img_temp").change(function () {
+// 	readURL(this);
+
+// });
+
+var tmp_file_0;
+var boolean_before_set
+
+function readURL(input) {
+
+	// var avatar = document.getElementById("avatar");
+	var image = document.getElementById('image');
+	var $alert = $('.alert');
+	var $modal = $('#modal_crop');
+	console.log("READ URL");
+	var cropper;
+	// $modal.modal('toggle');
+	$('[data-toggle="tooltip"]').tooltip();
+	var files = input.files;
+	// console.log(files);
+	var done = function (url) {
+		input.value = '';
+		image.src = url;
+		$alert.hide();
+		$modal.modal('show');
+		console.log("PPP");
+	};
+	var reader;
+	var file;
+	var url;
+	console.log(files);
+
+	if (files) {
+		file = files[0];
+		console.log(file);
+
+		if (URL) {
+			done(URL.createObjectURL(file));
+		} else if (FileReader) {
+			reader = new FileReader();
+			reader.onload = function (e) {
+				done(reader.result);
+			};
+			reader.readAsDataURL(file);
+		}
+	}
+
+	$modal.on('shown.bs.modal', function () {
+		cropper = new Cropper(image, {
+			aspectRatio: 4 / 3,
+			viewMode: 3,
+		});
+	}).on('hidden.bs.modal', function () {
+		console.log("cropper destroy");
+		cropper.destroy();
+		cropper = null;
+	});
+
+	$( "#crop" ).click(function() {
+		// var initialAvatarURL;
+		var canvas;
+		// var reader = new FileReader();
+
+		$modal.modal('hide');
+		console.log(cropper.cropped);
+		if (cropper.cropped) {
+			canvas = cropper.getCroppedCanvas({
+				width: img["width"],
+				height: img["height"],
+				// imageSmoothingQuality: 'low',
+			});
+			// initialAvatarURL = avatar.src;
+			// console.log(canvas);
+			console.log(canvas);
+			// console.log(avatar.src);
+			// $progress.show();
+			// $alert.removeClass('alert-success alert-warning');
+			// avatar.src = canvas.toDataURL("image/jpg", 0.7);
+
+			canvas.toBlob(function (blob) {
+				var reader = new FileReader();
+				reader.onload = function (e) {
+					$('#avatar').attr('src', e.target.result);
+				}
+				reader.readAsDataURL(blob);
+				// console.log(blob);
+				tmp_file_0 = blob;
+				// is_img_valid = true;
+				$("#add_img").prop('disabled', false);
+				boolean_before_set = true;
+				// Blob = blob;
+			}, 'image/jpeg',
+				0.7
+			);
+
+		}
+	});
+
+	// var img = new Image();
+
+	// var _URL = window.URL || window.webkitURL;
+
+
+	// $("#add_img").prop('disabled', false);
+	// boolean_before_set = true;
+	// $("#image_preview img").remove();
+	// if (input.files) {
+	// 	var filesAmount = input.files.length;
+	// 	var reader = new FileReader();
+
+	// 	reader.onload = function (e) {
+	// 		$("#image_preview").append('<img src="' + e.target.result + '" class="rounded image_view" alt="..." style="width:480px;">')
+	// 		// console.log( "e.target.result" );
+	// 		// console.log( e.target.result );
+	// 	}
+	// 	reader.readAsDataURL(input.files[0]);
+	// 	tmp_file_0 = input.files[0];
+	// }
+	// // CEK IMAGE APAKAH VALID
+	// var file, img;
+	// if ((file = input.files[0])) {
+	// 	img = new Image();
+	// 	img.onload = function () {
+	// 		if (this.width > config['max_width'] || this.height > config['max_height'] || this.size > config['max_size']) {
+	// 			var msg = {
+	// 				img: "GAMBAR YANG ANDA MASUKKAN BELUM SESUAI KRITERIA => " +
+	// 					"|max_width" + config['max_width'] +
+	// 					"|max_height" + config['max_height'] +
+	// 					"|max_size" + config['max_size']
+	// 			};
+	// 			set_msg_error(msg);
+	// 		}else {
+	// 			var msg = {img:""};
+	// 			set_msg_error(msg);
+	// 			is_img_valid = true;
+	// 		}
+	// 	};
+	// 	img.onerror = function () {
+	// 		alert("not a valid file: " + file.type);
+	// 	};
+	// 	img.src = _URL.createObjectURL(file);
+	// } 
+}
+
+
+function tambah_img() {
+	console.log("add_img_btn");
+	var total_img = files.length + imgArr_update.length;
+	// console.log(files.length+"|"+imgArr_update.length);
+	// if (is_img_valid) {
+	if (boolean_before_set) {
+		if ((total_img + 1) <= jumlah_maksimal_photo) {
+			console.log("add_img_btn");
+			// files.push.apply(input.files[0]);
+			files.push(tmp_file_0);
+			// readURL_array(files);
+			render_img_All();
+			boolean_before_set = false;
+			$("#add_img").prop('disabled', true);
+			c++;
+		}
+		else {
+			swal("Ups!", "Jumlah Gambar maksimal adalah " + jumlah_maksimal_photo, "error");
+		}
+
+	}
+	// }else{
+	// swal("Ups!", "Gambar ERROR, periksa gambar yang telah anda masukkan", "error");
+	// }
+
+}
+
+
+
+
+
+function readURL_array(input) {
+	console.log("readURL_array");
+	$("#image_preview_array img").remove();
+	$("#image_preview_array button").remove();
+	if (input) {
+		var filesAmount = input.length;
+		console.log("file amount" + filesAmount);
+		var id_img = 0;
+		for (i = 0; i < filesAmount; i++) {
+			var reader = new FileReader();
+			console.log("file reader run" + i + reader);
+			console.log(input);
+
+
+			reader.onload = function (e) {
+				$("#image_preview_array").append('<div class="show-image"><img src="' + e.target.result + '" class="rounded image_view p-1" alt="..." style="width:100%;">' +
+					'<button type="button" class="btn btn-danger btn-sm dell "  onclick="dell_img(' + id_img + ')" style="position:absolute;"><i class="ti-minus text"></i></button></div>')
+				id_img++;//krn ini dijalankan terakhir, klo make i yg dipakai nilai i terakhr
+				// console.log("e.target.result");
+				// console.log(e.target.result );
+			}
+
+			console.log(reader.readAsDataURL(input[i]));
+		}
+	}
+}
+
+function dell_img(i) {
+	files.splice(i, 1);
+	// readURL_array(files);
+	render_img_All();
+}
