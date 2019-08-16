@@ -52,25 +52,13 @@
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="<?php echo base_url(); ?>assets/index.jpg" class="d-block w-100" alt="">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>First slide label</h5>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                    </div>
+                    <img src="<?php echo base_url(); ?>assets/index.jpg" class="d-block w-100" alt="APELMAS Kota Malang">
                 </div>
                 <div class="carousel-item">
-                    <img src="<?php echo base_url(); ?>assets/index.jpg" class="d-block w-100" alt="">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Second slide label</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
+                    <img src="<?php echo base_url(); ?>assets/index.jpg" class="d-block w-100" alt="APELMAS Kota Malang">
                 </div>
                 <div class="carousel-item">
-                    <img src="<?php echo base_url(); ?>assets/index.jpg" class="d-block w-100" alt="">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Third slide label</h5>
-                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                    </div>
+                    <img src="<?php echo base_url(); ?>assets/index.jpg" class="d-block w-100" alt="APELMAS Kota Malang">
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
@@ -100,6 +88,10 @@
             <p>Ayo kunjungi daerah-daerah tempat wisata di Kota Malang</p><br />
         </div>
 
+        <!--Pariwisata-->
+        <div class="text-center m-1">
+            <h4 class="display-5">Pariwisata</h4><hr>
+        </div>
         <div class="card-columns">
             <div id="container">
                 <div class="card" data-aos="zoom-in">
@@ -146,28 +138,65 @@
                 </div>
             </div>
         </div>
-
         <div class="col text-center" data-aos="zoom-in">
             <a href="<?php echo site_url('cPariwisata/getDaftarPariwisata'); ?>" class="btn btn-outline-primary">CEK YANG LAINNYA</a>
         </div>
-    </div>
 
-    <!--Footer-->
-    <footer class="bg-dark text-white py-5" data-aos="fade-up">
-        <div class="container">
-            <div class="row separated">
-                <div class="col-lg-6 py-5">
-                    <div class="row">
-                        <div class="col-md-8">
-                            <p><b>APELMAS</b> adalah <b>A</b>plikasi <b>PEL</b>ayanan <b>MAS</b>yarakat yang dikelola
-                                oleh Pemerintah Kota Malang. </p>
-                        </div>
+        <!--Fasilitas-->
+        <div class="text-center m-4">
+            <h4 class="display-5">Fasilitas</h4><hr>
+        </div>
+        <div class="card-columns">
+            <div id="container">
+                <div class="card" data-aos="zoom-in">
+                    <img class="card-img-top" src="<?php echo base_url(); ?>assets/image/taman_tugu.jpg" alt="Card image cap" width="270px"
+                        height="160px">
+                    <div class="card-body">
+                        <h5 class="card-title"><b><span class="counter">100</span>+</b> Wisata Taman</h5>
+                    </div>
+                </div>
+                <div class="card" data-aos="zoom-in">
+                    <img class="card-img-top" src="<?php echo base_url(); ?>assets/image/toko_oen.jpg" alt="Card image cap" width="270px"
+                        height="160px">
+                    <div class="card-body">
+                        <h5 class="card-title"><b><span class="counter">100</span>+</b> Wisata Kuliner</h5>
+                    </div>
+                </div>
+                <div class="card" data-aos="zoom-in">
+                    <img class="card-img-top" src="<?php echo base_url(); ?>assets/image/monumen_tgp.jpg" alt="Card image cap" width="270px"
+                        height="160px">
+                    <div class="card-body">
+                        <h5 class="card-title"><b><span class="counter">100</span>+</b> Wisata Sejarah</h5>
+                    </div>
+                </div>
+                <div class="card" data-aos="zoom-in">
+                    <img class="card-img-top" src="<?php echo base_url(); ?>assets/image/hotel.jpg" alt="Card image cap" width="270px"
+                        height="160px">
+                    <div class="card-body">
+                        <h5 class="card-title"><b><span class="counter">100</span>+</b> Hotel dan Penginapan</h5>
+                    </div>
+                </div>
+                <div class="card" data-aos="zoom-in">
+                    <img class="card-img-top" src="<?php echo base_url(); ?>assets/image/oleh_oleh.jpg" alt="Card image cap" width="270px"
+                        height="160px">
+                    <div class="card-body">
+                        <h5 class="card-title"><b><span class="counter">100</span>+</b> Wisata Belanja & Oleh-Oleh</h5>
+                    </div>
+                </div>
+                <div class="card" data-aos="zoom-in">
+                    <img class="card-img-top" src="<?php echo base_url(); ?>assets/image/kampung_jodipan.jpg" alt="Card image cap" width="270px"
+                        height="160px">
+                    <div class="card-body">
+                        <h5 class="card-title"><b><span class="counter">100</span>+</b> Wisata Edukasi</h5>
                     </div>
                 </div>
             </div>
-            <p class="pb-3 text-left"><b>NCC</b> Squad 2019.</p>
         </div>
-    </footer>
+        <div class="col text-center" data-aos="zoom-in">
+            <a href="<?php echo site_url('cFasilitas/getDaftarFasilitas'); ?>" class="btn btn-outline-primary">CEK YANG LAINNYA</a>
+        </div>
+
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
     <script src="<?php echo base_url(); ?>/assets/myjs/user/jquery.counterup.min.js"></script>

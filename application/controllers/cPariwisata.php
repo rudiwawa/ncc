@@ -28,37 +28,46 @@ class cPariwisata extends CI_Controller {
 	
 	public function index() {
 		$this->load->view('vHalamanUtama');
+		$this->load->view('components/footer');
 	}
 
 	public function getDaftarPariwisata() {
 		$data['daftarWisata'] = $this->mPariwisata->getDataDaftarPariwisata();
-		if ($data['daftarWisata'] == null) {
+		if ($data['daftarWisata'] == null || count($data['daftarWisata']) == 0) {
 			$this->load->view('components/404/v404');
+			$this->load->view('components/footer');
 		}
 		else {
 			$this->load->view('components/vDaftarWisata', $data);
+			$this->load->view('components/footer');
 		}
 	}
 
 	public function getSubdaftarPariwisata($subdaftar) {
 		$data['ket_jenis'] = $this->mPariwisata->getJudulWisata($subdaftar);
+		$data['jumlahSubdaftar'] = $this->mPariwisata->getJumlahSubdaftarPariwisata($subdaftar);
 		$data['subdaftarWisata'] = $this->mPariwisata->getSubdaftarDataPariwisata($subdaftar);
-		if ($data['ket_jenis'] == null && $data['subdaftarWisata'] == null) {
+		if ($data['ket_jenis'] == null && $data['subdaftarWisata'] == null || (count($data['subdaftarWisata']) == 0)) {
 			$this->load->view('components/404/v404');
+			$this->load->view('components/footer');
 		}
 		else {
 			$this->load->view('components/vSubdaftarWisata', $data);
+			$this->load->view('components/footer');
 		}
 	}
 
 	public function getDetailPariwisata($detail) {
 		$data['detailWisata'] = $this->mPariwisata->getDetailDataPariwisata($detail);
 		$data['wisataLain'] = $this->mPariwisata->getTempatWisataLain($detail);
-		if ($data['detailWisata'] == null) {
+		echo '<script type="text/javascript">console.log('.json_encode($data).');</script>';
+		if ($data['detailWisata'] == null || count($data['detailWisata']) == 0) {
 			$this->load->view('components/404/v404');
+			$this->load->view('components/footer');
 		}
 		else {
 			$this->load->view('components/vDetailWisata', $data);
+			$this->load->view('components/footer');
 		}
 	}
 }

@@ -12,6 +12,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
 
     <title>Tempat Wisata Lainnya</title>
 </head>
@@ -26,9 +27,6 @@
         <div class="row flex-nowrap justify-content-around align-items-center">
             <div class="col-4 text-center">
                 <a class="text-dark" href="<?php echo base_url(); ?>"><b>APELMAS</b> Kota Malang</a>
-            </div>
-            <div class="col-4 d-flex justify-content-end align-items-center pr-5">
-                <a class="btn btn-sm btn-outline-secondary" href="<?php echo site_url('cLogin/index'); ?>">Login</a>
             </div>
     </header>
 
@@ -50,7 +48,7 @@
 
             <div class="bd-example">
                 <div class="row">
-                    <div class="col-4">
+                    <div class="col-4" id="pilih_kategori">
                         <h4 class="eyebrow mb-3">Pilih Kategori</h4>
                         <?php foreach($daftarWisata as $row) { ?>
                         <div id="list-example" class="list-group">
@@ -59,7 +57,7 @@
                         </div>
                         <?php } ?>
                     </div>
-                    <div class="col-8">
+                    <div class="col-8" id="deskripsi">
                         <h4 class="eyebrow mb-3">DESKRIPSI</h4>
                         <div data-spy="scroll" data-target="#list-example" data-offset="0" class="scrollspy-example">
                             <?php foreach($daftarWisata as $row) { ?>
@@ -71,29 +69,10 @@
                                 <!--Subjenis-->
                                 <div class="card-deck">
                                     <div class="card">
-                                        <img class="card-img-top" src="<?php echo base_url(); ?>assets/index.jpg" alt="Card image cap">
+                                        <img class="card-img-top" src="<?php echo base_url(); ?>uploads/<?php echo $row['img']; ?>" alt="<?php echo $row['ket_jenis']; ?>">
                                         <div class="card-body">
-                                            <h5 class="card-title">Card title</h5>
-                                            <p class="card-text"><small class="text-muted">Last updated 3 mins
-                                                    ago</small>
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <img class="card-img-top" src="<?php echo base_url(); ?>assets/index.jpg" alt="Card image cap">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Card title</h5>
-                                            <p class="card-text"><small class="text-muted">Last updated 3 mins
-                                                    ago</small>
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <img class="card-img-top" src="<?php echo base_url(); ?>assets/index.jpg" alt="Card image cap">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Card title</h5>
-                                            <p class="card-text"><small class="text-muted">Last updated 3 mins
-                                                    ago</small>
+                                            <h5 class="card-title"><?php echo $row['ket_jenis']; ?></h5>
+                                            <p class="card-text"><small class="text-muted"><?php echo "Diupdate : " . $row['time_update'] . " oleh: " . "<b>" .$row['id_admin']; "</b>"?></small>
                                             </p>
                                         </div>
                                     </div>
@@ -114,23 +93,6 @@
             </div>
         </div>
     </div>
-    
-        <!--Footer-->
-        <footer class="bg-dark text-white py-5" data-aos="fade-up">
-        <div class="container">
-            <div class="row separated">
-                <div class="col-lg-6 py-5">
-                    <div class="row">
-                        <div class="col-md-8">
-                            <p><b>APELMAS</b> adalah <b>A</b>plikasi <b>PEL</b>ayanan <b>MAS</b>yarakat yang dikelola
-                                oleh Pemerintah Kota Malang. </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <p class="pb-3 text-left"><b>NCC</b> Squad 2019.</p>
-        </div>
-    </footer>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

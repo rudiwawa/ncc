@@ -49,56 +49,46 @@
 
             <div class="bd-example">
                 <div class="row">
-                    <div class="col-4">
+                    <div class="col-4" id="pilih_kategori">
                         <h4 class="eyebrow mb-3">Pilih Kategori</h4>
-                        <?php foreach($subdaftarWisata as $row) { ?>
+                        <?php foreach($jumlahSubdaftar as $row) { ?>
                         <div id="list-example" class="list-group">
-                            <a class="list-group-item list-group-item-action" href="<?php echo '#'.preg_replace('/\s+/', '', strtolower($row['ket_sub_jenis'])); ?>"><?php echo $row['ket_sub_jenis']; ?></a>
+                            <a class="list-group-item list-group-item-action" href="<?php echo '#'.preg_replace('/\s+/', '', strtolower($row['ket_sub_jenis'])); ?>"><?php echo $row['ket_sub_jenis']; ?>
+                            &nbsp;&nbsp;&nbsp;<span class="badge badge-pill badge-secondary"><?php echo $row['jumlah']; ?></span></a>
                         </div>
                         <?php } ?>
                     </div>
-                    <div class="col-8">
+                    <div class="col-8" id="deskripsi">
                         <h4 class="eyebrow mb-3">DESKRIPSI</h4>
                         <div data-spy="scroll" data-target="#list-example" data-offset="0" class="scrollspy-example">
-                        <?php foreach($subdaftarWisata as $row) { ?>
+                        <?php $counter = 0; foreach($subdaftarWisata as $row) { ?>
                             <div id="<?php echo preg_replace('/\s+/', '', strtolower($row['ket_sub_jenis'])); ?>">
                                 <!--Judul-->
-                                <h4><?php echo $row['ket_sub_jenis']; ?></h4>
+                                <?php $subjenis = $row['ket_sub_jenis'];
+                                $unique = "";
+                                 ?>
+                                <h4><?php if ($unique == null) {
+                                    $unique = $subjenis;
+                                    } else {
+                                        if ($unique == $subjenis) {
+                                            if ($unique != null) {
+                                                $unique = $subjenis;
+                                            }
+                                        }
+                                    }
+                                    echo $unique; ?></h4>
 
                                 <!--Subjenis-->
                                 <div class="card-deck">
                                     <div class="card">
-                                        <img class="card-img-top" src="<?php echo base_url(); ?>assets/index.jpg" alt="Card image cap">
+                                    <?php $datafoto = json_decode($row['img'], true); ?>    
+                                        <img class="card-img-top" src="<?php echo base_url(); ?>uploads/<?php echo $datafoto[0]; ?>" alt="<?php echo $row['ket_main']; ?>">
                                         <div class="card-body">
-                                            <h5 class="card-title">Card title</h5>
-                                            <p class="card-text"><small class="text-muted">Last updated 3 mins
-                                                    ago</small>
+                                            <h5 class="card-title"><a href="<?php echo site_url('CPariwisata/getDetailPariwisata/').$row['id_pariwisata']; ?>"><?php echo $row['ket_main']; ?></a></h5>
+                                            <p class="card-text"><small class="text-muted"><?php echo "Diupdate : " . $row['time_update'] . " oleh: " . "<b>" .$row['id_admin']; "</b>"?></small>
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="card">
-                                        <img class="card-img-top" src="<?php echo base_url(); ?>assets/index.jpg" alt="Card image cap">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Card title</h5>
-                                            <p class="card-text"><small class="text-muted">Last updated 3 mins
-                                                    ago</small>
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <img class="card-img-top" src="<?php echo base_url(); ?>assets/index.jpg" alt="Card image cap">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Card title</h5>
-                                            <p class="card-text"><small class="text-muted">Last updated 3 mins
-                                                    ago</small>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!--Buttons-->
-                                <div class="col text-right m-2">
-                                    <a href="<?php echo site_url('cPariwisata/getDetailPariwisata/'.$row['id_sub']); ?>" class="btn btn-outline-primary">Detail</a>
                                 </div>
 
                                 <hr>
@@ -110,23 +100,6 @@
             </div>
         </div>
     </div>
-
-        <!--Footer-->
-        <footer class="bg-dark text-white py-5" data-aos="fade-up">
-        <div class="container">
-            <div class="row separated">
-                <div class="col-lg-6 py-5">
-                    <div class="row">
-                        <div class="col-md-8">
-                            <p><b>APELMAS</b> adalah <b>A</b>plikasi <b>PEL</b>ayanan <b>MAS</b>yarakat yang dikelola
-                                oleh Pemerintah Kota Malang. </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <p class="pb-3 text-left"><b>NCC</b> Squad 2019.</p>
-        </div>
-    </footer>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

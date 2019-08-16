@@ -58,3 +58,59 @@ targets.forEach(function(target) {
   observer.observe(target);
 });*/
 
+/*Resize Class*/
+$(window).on('resize', function() {
+  console.log('Width: ' + $(window).width() + ',' + "Height: " + $(window).height());
+
+  var pilih_kategori = document.getElementById("pilih_kategori");
+  var deskripsi = document.getElementById("deskripsi");
+
+  console.log(pilih_kategori);
+
+  /*if ($(window).width() <=1000) {
+    Ganti kelas
+    $('#pilih_kategori').removeClass('col-4');
+    $('#deskripsi').removeClass('col-8');
+    
+    $('#pilih_kategori').addClass('col pb-2');
+    $('#pilih_kategori').one(append('</div><div class="row">'));
+
+    $('#deskripsi').addClass('pb-2');
+    $('#deskripsi').one(append('</div>'));
+  
+  } else {
+    /*Ganti Kelas
+    $('#pilih_kategori').removeClass('col pb-2');
+    $('#deskripsi').removeClass('col');
+
+    $('#pilih_kategori').addClass('col-4');
+    $('#deskripsi').addClass('col-8');
+  }*/
+
+  if ($(window).width() <= 900) {
+
+    $('#pilih_kategori').removeClass('col-4');
+    $('#pilih_kategori').addClass('col');
+    
+    $('#deskripsi').css({
+      "box-sizing": "content-box"
+    });
+
+    $('#deskripsi').removeClass('col-8');
+    $('#deskripsi').addClass('row p-4');
+
+  }
+  else {
+
+    $('#pilih_kategori').removeClass('col');
+    $('#pilih_kategori').addClass('col-4');
+    
+    $('#deskripsi').css({
+      "box-sizing": "border-box"
+    });
+
+    $('#deskripsi').removeClass('row p-4');
+    $('#deskripsi').addClass('col-8');
+  
+  }
+});

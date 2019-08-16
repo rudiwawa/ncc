@@ -12,9 +12,10 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/fe225ab5a5.js"></script>
 
-    <?php foreach($detailFasilitas as $row) { $fasilitas = $row['nama']; ?>
-    <title><?php echo $fasilitas; } ?></title>
+    <?php foreach($detailWisata as $row) { $wisata = $row['ket_main']; ?>
+    <title><?php echo $wisata; } ?></title>
 
 </head>
 
@@ -34,7 +35,8 @@
     <!--Tentang APELMAS-->
     <div class="jumbotron jumbotron-fluid parallax">
         <div class="container text-right">
-            <h2 class="display-5"><b><?php echo $fasilitas; ?></b></h2>
+            <h2 class="display-5"><b><?php echo $wisata; ?></b></h2>
+            <p>Informasi tempat wisata di Kota Malang.</p>
         </div>
     </div>
 
@@ -42,38 +44,67 @@
     <div class="wisata m-5">
         <div id="container pl-5">
             <div class="text-left" data-aos="zoom-in">
-                <h4 class="display-5"><?php echo $fasilitas; ?></h4>
-                <p>Alamat: <?php echo $row['lokasi']; ?></p>
+            <?php foreach($detailWisata as $row) { ?>
+                <h4 class="display-5"><?php echo $wisata; ?></h4>
+                    <p><i class="fa fa-map-marker"></i>
+                        <?php $detail = json_decode($row['detail'], true);
+                        echo $detail["alamat"][0]["alamat"] . "<br>"; ?>
+                    <i class="fas fa-flag"></i> <b>Lattitude:</b> <?php $location = json_decode($detail["alamat"][0]["loc"], true); 
+                    echo $location[0] . "|"; ?><b> Longitude: </b><?php echo $location[1]; ?></p>
                 <hr>
-                <h4 class="display-5">Jam Operasional</h4>
+
+                <h4 class="display-5"><i class="far fa-image"></i> Galeri</h4>
+                <?php $galeri = json_decode($row['img'], true); 
+                for($counter = 0; $counter < sizeof($galeri); $counter++) { ?>
+                    <img src="<?php echo base_url(); ?>uploads/<?php echo $galeri[$counter]; ?>" alt="<?php echo $row['ket_main']."_galleri"; ?>" width="150px" height="150px">
+                <?php } ?>
                 <hr>
-                <h4 class="display-5">Kontak</h4>
-                <p><?php echo $row['telp']; ?></p>
+
+                <h4 class="display-5"><i class="fas fa-phone"></i> Kontak</h4>
+                <?php
+                $web = $detail["website"];
+                $email = $detail["email"];
+                $telp = $detail["tlp"];
+                if ($web != null) {
+                    echo '<p><i class="fas fa-globe"></i>'."\n".$web.'<br>';
+                }
+                if ($email != null) {
+                    echo '<p><i class="fas fa-envelope"></i>'."\n".$email.'<br>';
+                }
+                if ($telp != null) {
+                    echo '<p><i class="fas fa-phone"></i>'."\n".$telp.'<br></p>';
+                }
+                ?>
                 <hr>
-                <h4 class="display-5">Galeri</h4>
+
+                <h4 class="display-5"><i class="fas fa-align-left"></i> Deskripsi</h4>
+                <p><?php echo $detail['ket']; ?></p>
                 <hr>
-                <h4 class="display-5">Deskripsi</h4>
-                <p><?php echo $row['deskripsi']; ?></p>
-                <hr>
+
+            <?php } ?>
                 <h4 class="display-5">Lihat Lainnya</h4>
-                <?php foreach($fasilitasLain as $row) { ?>
-                        <div class="card" style="width: 300px; height: 300px;">
-                            <img class="card-img-top" src="<?php echo base_url(); ?>assets/index.jpg" alt="Card image cap">
+                <div class="card-columns">
+                <?php foreach($wisataLain as $row) { 
+                    $galeri = json_decode($row['img'], true); ?>
+                        <div class="card" width="100px" height="100px">
+                            <img class="card-img-top" src="<?php echo base_url(); ?>uploads/<?php echo $galeri[0]; ?>" alt="<?php echo $row['ket_main']; ?>">
                             <div class="card-body">
-                                <h5 class="card-title"><?php echo $row['nama'];?></h5>
-                                    <p class="card-text"><small class="text-muted">Update terbaru <?php echo $row['time_update']; ?></small></p>
+                            <h5 class="card-title"><a href="<?php echo site_url('CPariwisata/getDetailPariwisata/').$row['id_pariwisata']; ?>"><?php echo $row['ket_main']; ?></a></h5>
+                                <p class="card-text"><small class="text-muted"><?php echo "Diupdate : " . $row['time_update'] . " oleh: " . "<b>" .$row['id_admin']; "</b>"?></small>
+                                            </p>
                             </div>
                         </div>
                 <?php } ?>
+                </div>
             </div>
         </div>
     </div>
 
-        <!--Footer-->
-        <footer class="bg-dark text-white py-5" data-aos="fade-up">
+<!--Footer-->
+<footer class="py-0">
         <div class="container">
             <div class="row separated">
-                <div class="col-lg-6 py-5">
+                <div class="col-lg-6 py-10">
                     <div class="row">
                         <div class="col-md-8">
                             <p><b>APELMAS</b> adalah <b>A</b>plikasi <b>PEL</b>ayanan <b>MAS</b>yarakat yang dikelola
@@ -81,8 +112,19 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-lg-6 py-10">
+                    <div class="row justify-content-end">
+                        <div class="col-lg-10">
+                        <h4 class="eyebrow mb-3">Quick Links</h4>
+                            <ul class="list-group list-group-columns">
+                                <li class="list-group-item"><a href="<?php echo site_url('CPariwisata/getDaftarPariwisata'); ?>">Halaman Pariwisata</a></li>
+                                <li class="list-group-item"><a href="<?php echo site_url('CFasilitas/getDaftarFasilitas'); ?>">Halaman Fasilitas</a></li>
+                                <li class="list-group-item"><a href="<?php echo site_url('CPencarian/getPencarian'); ?>">Pencarian</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <p class="pb-3 text-left"><b>NCC</b> Squad 2019.</p>
         </div>
     </footer>
 
