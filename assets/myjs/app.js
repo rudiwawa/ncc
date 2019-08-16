@@ -1,7 +1,12 @@
 $(document).ready(function () {
 
 	// $('#modal_crop').modal('hide');
-
+	console.log(window.bashUrl);
+	console.log();
+	var key = "tp";
+	$.ajaxSetup({
+		headers: { 'eek': $.md5(window.bashUrl+key) }       
+	});
 	// CONFIG URL AP
 	window.bashUrl = "/app";
 	window.url = new Array();

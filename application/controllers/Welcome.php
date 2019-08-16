@@ -6,6 +6,8 @@ class Welcome extends CI_Controller {
 
 	public function index()
 	{
+		$_SESSION["token"]=md5(uniqid(rand(), true));
+		// echo md5($_SESSION["token"]."tp");
 		$ready = true;
 		if($ready ){
 			$this->load->view('template/header', [
