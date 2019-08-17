@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 23, 2019 at 10:34 AM
+-- Generation Time: Aug 14, 2019 at 10:21 AM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 7.2.2
 
@@ -116,7 +116,7 @@ CREATE DEFINER=`nccsquad`@`%` FUNCTION `get_ID_main_fasilitas` () RETURNS VARCHA
     
     SELECT SUBSTRING(`get_lastID_main_fasilitas`(), 12, 5) INTO ID_v;
     SELECT CAST(ID_v AS int) INTO ID_int;
-    SELECT CONCAT('PRW',tahun,LPAD(bulan, 2,'0'),LPAD(tanggal, 2,'0'), LPAD(ID_int +1, 5,'0')) INTO result;
+    SELECT CONCAT('FAS',tahun,LPAD(bulan, 2,'0'),LPAD(tanggal, 2,'0'), LPAD(ID_int +1, 5,'0')) INTO result;
     
     RETURN result;
     
@@ -203,6 +203,29 @@ DELIMITER ;
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `admin`
+--
+
+CREATE TABLE `admin` (
+  `id_admin` int(10) NOT NULL,
+  `nama_admin` varchar(100) NOT NULL,
+  `email_admin` varchar(100) NOT NULL,
+  `password_admin` varchar(255) NOT NULL,
+  `time_update` datetime NOT NULL,
+  `activated` tinyint(1) NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`id_admin`, `nama_admin`, `email_admin`, `password_admin`, `time_update`, `activated`) VALUES
+(4, 'aaaa', 'aaa@dd.c', '$2y$10$hFd6wka9xByHqljwaUs1jO0/TIdrDQefvr/XP.3xdM7', '2019-08-13 04:29:06', 2),
+(13, 'danang', 'danangtp@student.ub.ac.id', '$2y$10$z94p6CXpgOqZ7zkoYebvvO0Cg69lmv/416rZYG9jxlycvanorp0V.', '2019-08-13 06:38:19', 0);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `fasilitas_jenis`
 --
 
@@ -221,9 +244,10 @@ CREATE TABLE `fasilitas_jenis` (
 --
 
 INSERT INTO `fasilitas_jenis` (`id_jenis`, `ket_jenis`, `img`, `img_marker`, `is_delete`, `time_update`, `id_admin`) VALUES
-('JEN0014', 'sdsdds', '55fc70a2b4c0f5d212d773eb0052a008.jpg', '0', '1', '2019-07-23 15:17:19', 'admin1'),
-('JEN0015', 'AAAA SSUUU', '95e4bf17b497e19458be698057dcf934.jpg', '0', '0', '2019-07-23 15:21:24', 'admin1'),
-('JEN0016', 'sdsdf', '18f41693014515d8d6f776eb710f2a7f.jpg', '0', '0', '2019-07-23 15:21:33', 'admin1');
+('JEN0002', 'TRANSPORTASI', 'db4731f921eadee9fc7b21f23f710ad6.jpg', '0', '0', '2019-08-12 10:55:15', 'admin1'),
+('JEN0003', 'HALTE', 'd29eaae9f8d38539c61659ce210f78d0.jpg', '0', '0', '2019-08-12 10:57:54', 'admin1'),
+('JEN0004', 'STASIUN', '63ccba92e0046f0ab7368e167349e12f.jpg', '0', '0', '2019-08-14 14:49:00', 'admin1'),
+('JEN0005', 'AAA', '5b7920cd424fee46ec5305b71b4d5163.jpg', '0', '1', '2019-08-12 11:02:01', 'admin1');
 
 -- --------------------------------------------------------
 
@@ -248,8 +272,8 @@ CREATE TABLE `fasilitas_main` (
 --
 
 INSERT INTO `fasilitas_main` (`id_fasilitas`, `id_jenis`, `id_sub`, `ket_main`, `detail`, `img`, `is_delete`, `time_update`, `id_admin`) VALUES
-('PRW2019072300002', 'JEN0016', 'SUB0003', 'Tempora alias in cor', '{\"alamat\":[{\"alamat\":\"Cupidatat quos adipi\",\"loc\":\"Dolore minima illo e\"},{\"alamat\":\"Nisi qui quia a magn\",\"loc\":\"Maiores quas vel sin\"},{\"alamat\":\"Dolor id dicta vitae\",\"loc\":\"Laborum Aut est eiu\"},{\"alamat\":\"Voluptatum non facer\",\"loc\":\"Et amet libero quib\"}],\"ket\":\"Dolore amet labore \",\"tlp\":\"Sint et vitae ipsa \",\"website\":\"https:\\/\\/www.dywogylehut.mobi\",\"email\":\"kany@mailinator.com\"}', '[\"471c2e7b2c823ff5b2c6c615db01e49b.jpg\"]', '0', '2019-07-23 15:30:10', 'admin1'),
-('PRW2019072300003', 'JEN0016', 'SUB0003', 'Autem tenetur corpor', '{\"alamat\":[{\"alamat\":\"Et eu ut non hic\",\"loc\":\"Irure consequat Qui\"}],\"ket\":\"Dolorem rerum sit o\",\"tlp\":\"A aut vel quas id om\",\"website\":\"https:\\/\\/www.fyresodubony.co\",\"email\":\"-\"}', '[\"4835061892c87106a2791096c5ff966b.jpg\",\"06a853859a39736fd531f0e1cd7ee1b6.jpg\",\"9c5f6c6d89bfd248a12a490d30541fcd.jpg\"]', '1', '2019-07-23 15:33:46', 'admin1');
+('FAS2019081200002', 'JEN0002', 'SUB0002', 'BUS', '{\"alamat\":[{\"alamat\":\"Jl. Buring No.61, 65112, Oro-oro Dowo, Kec. Klojen, Kota Malang, Jawa Timur 65119, Indonesia\",\"loc\":\"[\'0.989897\',\'0.989897\']\"},{\"alamat\":\"Jl. A. Yani No.15, Blimbing, Kec. Blimbing, Kota Malang, Jawa Timur 65126, Indonesia\",\"loc\":\"[\'-7.941967\',\'112.641457\']\"}],\"ket\":\"SDFGHJK45678\",\"tlp\":\"098765432345\",\"website\":\"https:\\/\\/lh5.com\",\"email\":\"widyatamaadi@gmail.com\"}', '[\"ac589c3f86e56a9ca2ad16d0e2623fc2.jpg\"]', '0', '2019-08-14 14:24:59', 'admin1'),
+('FAS2019081200003', 'JEN0002', 'SUB0002', 'GATAU`\'', '{\"alamat\":[{\"alamat\":\"Jl. Buring No.61, 65112, Oro-oro Dowo, Kec. Klojen, Kota Malang, Jawa Timur 65119, Indonesia\",\"loc\":\"[\'-7.969051\',\'112.624397\']\"}],\"ket\":\"ASDFGH4321[;L\",\"tlp\":\"098765432345\",\"website\":\"https:\\/\\/lh5.com\",\"email\":\"admin@admin.com\"}', '[\"8454779c3899d1cb9739111af81f558a.jpg\",\"b5a2c7c7a40ff35280d6a7c32bfa6ac6.jpg\",\"f12e97d1adcb176eb8e78ca6997a20de.jpg\"]', '0', '2019-08-14 14:23:35', 'admin1');
 
 -- --------------------------------------------------------
 
@@ -271,8 +295,46 @@ CREATE TABLE `fasilitas_sub_jenis` (
 --
 
 INSERT INTO `fasilitas_sub_jenis` (`id_sub`, `id_jenis`, `ket_sub_jenis`, `is_delete`, `time_update`, `id_admin`) VALUES
-('SUB0002', 'JEN0015', 'XXYYU', '0', '2019-07-23 15:22:02', 'admin2'),
-('SUB0003', 'JEN0016', 'AAXXY', '0', '2019-07-23 15:21:57', 'admin2');
+('SUB0002', 'JEN0002', 'DARAT', '0', '2019-08-12 11:00:04', 'admin2'),
+('SUB0003', 'JEN0002', 'LAUT', '0', '2019-08-12 10:59:58', 'admin2'),
+('SUB0004', 'JEN0004', 'KERETA', '0', '2019-08-12 11:00:28', 'admin2'),
+('SUB0005', 'JEN0002', 'sd', '0', '2019-08-14 13:50:01', 'admin2');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `keys`
+--
+
+CREATE TABLE `keys` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `key` varchar(40) NOT NULL,
+  `level` int(2) NOT NULL,
+  `ignore_limits` int(1) NOT NULL DEFAULT '0',
+  `is_private_key` int(1) NOT NULL DEFAULT '0',
+  `ip_addresses` text,
+  `date_created` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `logs`
+--
+
+CREATE TABLE `logs` (
+  `id` int(11) NOT NULL,
+  `uri` varchar(255) NOT NULL,
+  `method` varchar(6) NOT NULL,
+  `params` text,
+  `api_key` varchar(40) NOT NULL,
+  `ip_address` varchar(45) NOT NULL,
+  `time` int(11) NOT NULL,
+  `rtime` float DEFAULT NULL,
+  `authorized` varchar(1) NOT NULL,
+  `response_code` smallint(3) DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -295,18 +357,11 @@ CREATE TABLE `pariwisata_jenis` (
 --
 
 INSERT INTO `pariwisata_jenis` (`id_jenis`, `ket_jenis`, `img`, `img_marker`, `is_delete`, `time_update`, `id_admin`) VALUES
-('JEN0002', 'dfdf', 'ca57558167577b4b6d7870c8e90e303c.gif', '0', '1', '2019-07-21 17:36:24', 'admin1'),
-('JEN0003', 'dd', '45247cca59339c597d0344309f5d0176.jpg', '0', '1', '2019-07-21 17:36:53', 'admin1'),
-('JEN0004', 'dfgfdg', '72accf27ebcdc98b9f1593fa8b2beda3.jpg', '0', '1', '2019-07-21 17:40:14', 'admin1'),
-('JEN0005', 'Info Wisata', 'b4d6959c9b535f0f7966b9dc13ddf421.jpg', '0', '0', '2019-07-22 11:01:35', 'admin1'),
-('JEN0006', 'Info Penginapan', '7a53a1a168d970bea3b3f83b78a5f5b6.jpg', '0', '0', '2019-07-21 17:45:12', 'admin1'),
-('JEN0007', 'Info Oleh Oleh', 'fb3836ff9106a6033915a5a5aa3bec08.jpg', '0', '0', '2019-07-21 17:45:34', 'admin1'),
-('JEN0008', 'Info Kuliner', '66b7cfcebe4474d68fe9925104129069.jpg', '0', '1', '2019-07-22 11:00:40', 'admin1'),
-('JEN0009', ' j', '1d644ccd9a085d2183110c832183805b.jpg', '0', '1', '2019-07-22 09:38:23', 'admin1'),
-('JEN0010', ' jjn ', '763e3f79a0f795e9c39bdd94cd254797.jpg', '0', '1', '2019-07-22 09:39:05', 'admin1'),
-('JEN0011', 'Fasilitas Publik', '9cabd6b47470ad2678d407e2d9911dff.jpg', '0', '0', '2019-07-23 15:10:28', 'admin1'),
-('JEN0012', 'Fasilitas Publik', '6c2d03699bdd2bab9dead2480f65ecc3.jpg', '0', '1', '2019-07-23 15:11:03', 'admin1'),
-('JEN0013', 'XXX', 'c67c32742b3bb427d1dde2b81759de1a.jpg', '0', '1', '2019-07-23 15:14:25', 'admin1');
+('JEN0002', 'Info Tempat Wisata', '0ea6471050d8a9dd9f7b2a717486f25c.jpg', '0', '0', '2019-08-12 10:06:17', 'admin1'),
+('JEN0003', 'Info Penginapan', '321919e630ca31756562ee6b375ee2ee.jpg', '0', '0', '2019-08-14 14:11:18', 'admin1'),
+('JEN0004', 'Info- Kuliner', '894eb8bbcc6d0953ac50f7df8b3130c7.jpg', '0', '1', '2019-08-13 14:02:44', 'admin1'),
+('JEN0005', 'Info Oleh oleh', '903e557d2a14c516271cf1bea4e4826c.jpg', '0', '1', '2019-08-12 10:08:45', 'admin1'),
+('JEN0006', 'Info Oleh-oleh', '0cbda5fe38cfab6ccd4382e384082c36.jpg', '0', '0', '2019-08-14 15:07:02', 'admin1');
 
 -- --------------------------------------------------------
 
@@ -331,14 +386,11 @@ CREATE TABLE `pariwisata_main` (
 --
 
 INSERT INTO `pariwisata_main` (`id_pariwisata`, `id_jenis`, `id_sub`, `ket_main`, `detail`, `img`, `is_delete`, `time_update`, `id_admin`) VALUES
-('PRW2019072100002', 'JEN0005', 'SUB0002', 'Kampung Tridi', '{\"alamat\":[{\"alamat\":\"Jl. Temenggungan Ledok, Kesatrian, Kec. Blimbing, Kota Malang, Jawa Timur 65121\",\"loc\":\"[\\\"0.989897\\\",\\\"0.989897\\\"]\"},{\"alamat\":\"Kota Malang, Jawa Timur 65121\",\"loc\":\"[\\\"0.989897\\\",\\\"0.989897\\\"]\"}],\"ket\":\"A hot spot for photos, this cheerful village offers colorful houses with funky decor & public art.\",\"tlp\":\"0813-3623-3017\",\"website\":\"https:\\/\\/www.instagram.com\\/kampung_tridi\\/\",\"email\":\"-\"}', '[\"6143c487a49bd0c142cee449d65a8c82.jpg\"]', '0', '2019-07-22 21:07:25', 'admin1'),
-('PRW2019072100003', 'JEN0006', 'SUB0007', 'Aut harum fugiat ut', '{\"alamat\":[{\"alamat\":\"Voluptatem odio aut\",\"loc\":\"Totam veniam qui ex\"}],\"ket\":\"Accusantium beatae e\",\"tlp\":\"Eveniet labore duci\",\"website\":\"https:\\/\\/www.vywidu.co\",\"email\":\"habyzuwal@mailinator.net\"}', '[\"3f1e10448fe419f8f67e33865a2cdd83.jpg\",\"6e1458884733cb5c69c46fc09823b5d6.jpg\"]', '0', '2019-07-22 11:33:18', 'admin1'),
-('PRW2019072200004', 'JEN0006', 'SUB0006', 'Numquam ullamco inci', '{\"alamat\":[{\"alamat\":\"Voluptatum quidem ne\",\"loc\":\"Fuga A repudiandae \"}],\"ket\":\"dfdfdf\",\"tlp\":\"Sint aut eligendi qu\",\"website\":\"https:\\/\\/www.runozynulesud.tv\",\"email\":\"qetomywyf@mailinator.net\"}', '[\"a18b3eeb4a9806a6395251d1ebc750c6.jpg\",\"29c66fcf85177d714d6b7de22c1f390c.jpg\"]', '1', '2019-07-22 14:26:19', 'admin1'),
-('PRW2019072200005', 'JEN0006', 'SUB0006', 'Pariatur Sunt non ', '{\"alamat\":[{\"alamat\":\"alamat\",\"loc\":\"Quasi Nam exercitati\"}],\"ket\":\"Ipsam nobis est anim\",\"tlp\":\"Veniam quis in libe\",\"website\":\"https:\\/\\/www.varysa.ws\",\"email\":\"zuxyxo@mailinator.net\"}', '[\"7a3962e67a4f5ed1cfca7120a725cb26.jpg\"]', '1', '2019-07-22 09:17:49', 'admin1'),
-('PRW2019072200006', 'JEN0006', 'SUB0006', 'Quis a optio neque ', '{\"alamat\":[{\"alamat\":\"Ex voluptatem Sint \",\"loc\":\"Laborum Vel dolorem\"}],\"ket\":\"Sapiente ipsum ipsum\",\"tlp\":\"Quia in non cumque m\",\"website\":\"https:\\/\\/www.vadebequcecowe.net\",\"email\":\"nuquhik@mailinator.com\"}', '[\"b195ecbdd92eaf95985cf8a48149d16f.jpg\"]', '1', '2019-07-22 09:06:36', 'admin1'),
-('PRW2019072200007', 'JEN0006', 'SUB0006', 'Temporibus aut sequi', '{\"alamat\":[{\"alamat\":\"Exercitationem est e\",\"loc\":\"Commodi est minima \"},{\"alamat\":\"fui\",\"loc\":\"tuyy\"}],\"ket\":\"Maxime quia dicta et\",\"tlp\":\"Soluta est rem sapie\",\"website\":\"https:\\/\\/www.diwuhuredud.cm\",\"email\":\"wucahuqoce@mailinator.net\"}', '[\"ddbb48b70321d788f01273fa380f3f7e.jpg\",\"55ce9395a823b2518eaf128d84ca78e6.jpg\"]', '1', '2019-07-22 10:45:22', 'admin1'),
-('PRW2019072300008', 'JEN0006', 'SUB0006', 'Magni laborum Imped', '{\"alamat\":[{\"alamat\":\"Ut dolores in eligen\",\"loc\":\"Ad quod et velit qui\"},{\"alamat\":\"sdsd\",\"loc\":\"sdsd\"}],\"ket\":\"Voluptatem tempor se\",\"tlp\":\"Sequi mollit quo qua\",\"website\":\"https:\\/\\/www.buwahilypi.cm\",\"email\":\"juwuge@mailinator.com\"}', '[\"cd8b92d2c7f612a01a197169bff29aa0.jpg\"]', '0', '2019-07-23 14:05:42', 'admin1'),
-('PRW2019072300009', 'JEN0016', 'SUB0003', 'Suscipit non explica', '{\"alamat\":[{\"alamat\":\"Aute velit dolor et \",\"loc\":\"Cumque aliquid qui o\"}],\"ket\":\"Dolor exercitation p\",\"tlp\":\"Consectetur ratione\",\"website\":\"https:\\/\\/www.zyfagiq.org\",\"email\":\"nacazoc@mailinator.net\"}', '[\"e4a1928d959300920394de0956839b34.jpg\",\"3558c332a66d21c544f75a2870157676.jpg\"]', '0', '2019-07-23 15:22:36', 'admin1');
+('PRW2019081200004', 'JEN0002', 'SUB0005', 'Paroki Santa Perawan Maria dari Gunung Karmel', '{\"alamat\":[{\"alamat\":\"Jl. Buring No.61, 65112, Oro-oro Dowo, Kec. Klojen, Kota Malang, Jawa Timur 65119, Indonesia\",\"loc\":\"[\'-7.969051\',\'112.624397\']\"}],\"ket\":\"Jangan lupa ibadah wkwk\",\"tlp\":\"098765432345\",\"website\":\"www.mesjid.com\",\"email\":\"mahmoud@zalt.me\"}', '[\"2662fda4f16fd3b2ec06ab7fa48cb184.jpg\",\"7a9085bb5bcc6d9ca080d50560ab0753.jpg\",\"5c0593d08d03b88daf0bf7409eddbb13.jpg\"]', '0', '2019-08-14 14:20:51', 'admin1'),
+('PRW2019081200005', 'JEN0002', 'SUB0005', 'Alun Alun Merdeka Malang', '{\"alamat\":[{\"alamat\":\"Jl. Merdeka Selatan, Kiduldalem, Kec. Klojen, Kota Malang, Jawa Timur 65119, Indonesia\",\"loc\":\"[\'-7.982424\',\'112.630800\']\"}],\"ket\":\"Keren cuy\",\"tlp\":\"098765432345\",\"website\":\"www.alun.com\",\"email\":\"admin@admin.com\"}', '[\"a0fcea57e6319ac201115cd7e6cbb440.jpg\",\"11097b830c316171db36943f798a36ae.jpg\",\"6ebca43e01bd09f3dd225c921b179488.jpg\"]', '0', '2019-08-14 13:22:38', 'admin1'),
+('PRW2019081200006', 'JEN0002', 'SUB0005', 'Eco Edu Park', '{\"alamat\":[{\"alamat\":\"Unnamed Road, Purwantoro, Kec. Blimbing, Kota Malang, Jawa Timur 65126, Indonesia\",\"loc\":\"[\\\"-7.945877\',\'112.641905\']\"}],\"ket\":\"apa yaaa\",\"tlp\":\"098789876678\",\"website\":\"www.ccc.com\",\"email\":\"admin@admin.com\"}', '[\"d1a8b3dfacfe0de6806dd17976d5ea12.jpg\",\"c8adbb11c138252642647a495b3cd37d.jpg\"]', '0', '2019-08-14 14:52:49', 'admin1'),
+('PRW2019081400007', 'JEN0002', 'SUB0005', 'Malang Strudel', '{\"alamat\":[{\"alamat\":\"Jl. Buring No.61, 65112, Oro-oro Dowo, Kec. Klojen, Kota Malang, Jawa Timur 65119, Indonesia\",\"loc\":\"[\'-7.969051\',\'112.624397\']\"}],\"ket\":\"enak guys\",\"tlp\":\"098789876678\",\"website\":\"strudel.com\",\"email\":\"admin@admin.com\"}', '[\"91e8e1b0d7c3347807a1494eaac0a39b.jpg\",\"d06d5a80cd8b47e30617cce865e1b9de.jpg\",\"5550d9493c65175f364faca50428edee.jpg\"]', '0', '2019-08-14 15:08:49', 'admin1'),
+('PRW2019081400008', 'JEN0003', 'SUB0009', 'tejooo homestay', '{\"alamat\":[{\"alamat\":\"Jl. Buring No.61, 65112, Oro-oro Dowo, Kec. Klojen, Kota Malang, Jawa Timur 65119, Indonesia\",\"loc\":\"[\'-7.941967\',\'112.641457\']\"}],\"ket\":\"lalalaa\",\"tlp\":\"098765432345\",\"website\":\"https:\\/\\/tejotejoooo.com\",\"email\":\"widyatamaadi@gmail.com\"}', '[\"2889de7989a4c5d5eb00247d0befa09d.jpg\"]', '0', '2019-08-14 14:44:48', 'admin1');
 
 -- --------------------------------------------------------
 
@@ -360,19 +412,28 @@ CREATE TABLE `pariwisata_sub_jenis` (
 --
 
 INSERT INTO `pariwisata_sub_jenis` (`id_sub`, `id_jenis`, `ket_sub_jenis`, `is_delete`, `time_update`, `id_admin`) VALUES
-('SUB0002', 'JEN0005', 'Kampung Wisata', '0', '2019-07-22 11:01:28', 'admin2'),
-('SUB0003', 'JEN0005', 'Wisata Sejarah', '0', '2019-07-21 17:46:57', 'admin2'),
-('SUB0004', 'JEN0005', 'Wisata Religi', '0', '2019-07-21 17:47:05', 'admin2'),
-('SUB0005', 'JEN0005', 'Wisata Rekreasi', '0', '2019-07-21 17:47:14', 'admin2'),
-('SUB0006', 'JEN0006', 'Hotel', '0', '2019-07-21 17:47:31', 'admin2'),
-('SUB0007', 'JEN0006', 'Homestay', '1', '2019-07-21 17:48:19', 'admin2'),
-('SUB0008', 'JEN0006', 'Guest House', '0', '2019-07-21 17:48:08', 'admin2'),
-('SUB0009', 'JEN0005', 'dfdf', '1', '2019-07-21 17:48:33', 'admin2'),
-('SUB0010', 'JEN0010', 'myuh iuiuii uh ihi ih', '0', '2019-07-22 09:39:26', 'admin2');
+('SUB0002', 'JEN0002', 'Taman Slamet', '1', '2019-08-12 09:24:50', 'admin2'),
+('SUB0003', 'JEN0003', 'Eco Edu Park', '1', '2019-08-12 09:25:10', 'admin2'),
+('SUB0004', 'JEN0004', 'Masjid Jami', '1', '2019-08-12 09:26:04', 'admin2'),
+('SUB0005', 'JEN0002', 'Wisata Taman', '0', '2019-08-12 10:09:33', 'admin2'),
+('SUB0006', 'JEN0002', 'Wisata Edukasi', '0', '2019-08-12 10:09:44', 'admin2'),
+('SUB0007', 'JEN0002', 'Wisata Religi', '0', '2019-08-12 10:09:54', 'admin2'),
+('SUB0008', 'JEN0003', 'Hotel', '0', '2019-08-12 10:10:05', 'admin2'),
+('SUB0009', 'JEN0003', 'Homestay', '1', '2019-08-12 10:10:24', 'admin2'),
+('SUB0010', 'JEN0003', 'Guest House', '0', '2019-08-12 10:10:39', 'admin2'),
+('SUB0011', 'JEN0004', 'Unknown', '0', '2019-08-12 10:54:00', 'admin2'),
+('SUB0012', 'JEN0005', 'Unknown', '0', '2019-08-12 10:53:55', 'admin2'),
+('SUB0013', 'JEN0006', 'Strudel', '0', '2019-08-14 14:36:05', 'admin2');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`id_admin`);
 
 --
 -- Indexes for table `fasilitas_jenis`
@@ -393,6 +454,12 @@ ALTER TABLE `fasilitas_sub_jenis`
   ADD PRIMARY KEY (`id_sub`);
 
 --
+-- Indexes for table `logs`
+--
+ALTER TABLE `logs`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `pariwisata_jenis`
 --
 ALTER TABLE `pariwisata_jenis`
@@ -409,6 +476,22 @@ ALTER TABLE `pariwisata_main`
 --
 ALTER TABLE `pariwisata_sub_jenis`
   ADD PRIMARY KEY (`id_sub`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `id_admin` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+
+--
+-- AUTO_INCREMENT for table `logs`
+--
+ALTER TABLE `logs`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

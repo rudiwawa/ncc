@@ -1,0 +1,233 @@
+From 76d84614010c8f023abe73a69e57fd58adc4cb09 Mon Sep 17 00:00:00 2001
+From: rudiwawa <rudiwawa1980@gmail.com>
+Date: Wed, 14 Aug 2019 14:55:59 +0700
+Subject: [PATCH] Pariwisata -> ke Wisata
+
+---
+ application/config/form_validation.php                | 2 +-
+ application/views/template/left-sidebar-nav.php       | 6 +++---
+ assets/contents/modal/fasilitas_jenis_insert.php      | 2 +-
+ assets/contents/modal/pariwisata_jenis_insert.php     | 2 +-
+ assets/contents/modal/pariwisata_jenis_update.php     | 2 +-
+ assets/contents/modal/pariwisata_konten_insert.php    | 4 ++--
+ assets/contents/modal/pariwisata_sub_jenis_insert.php | 2 +-
+ assets/contents/modal/pariwisata_sub_jenis_update.php | 2 +-
+ assets/contents/table/fasilitas_jenis.php             | 2 +-
+ assets/contents/table/pariwisata_jenis.php            | 2 +-
+ assets/contents/table/pariwisata_konten.php           | 2 +-
+ assets/contents/table/pariwisata_sub_jenis.php        | 2 +-
+ assets/myjs/table/pariwisata_jenis.js                 | 4 ++--
+ assets/myjs/table/pariwisata_konten.js                | 4 ++--
+ 14 files changed, 19 insertions(+), 19 deletions(-)
+
+diff --git a/application/config/form_validation.php b/application/config/form_validation.php
+index abbb9a2..c7a305c 100644
+--- a/application/config/form_validation.php
++++ b/application/config/form_validation.php
+@@ -66,7 +66,7 @@ $config = array(
+                         'label' => 'Latitude & Longitude',
+                         'rules' => "required|regex_match[/".$re1.$re2.$re3.$re4.$re5.$re6.$re7.$re8.$re9."/]",
+                         'errors' =>array (
+-                                'regex_match' => "Input Email tidak valid, mohon input dengan benar. Contoh ['0.989897','0.989897']"
++                                'regex_match' => "Input Latitude & Longitude tidak valid, mohon input dengan benar. Contoh ['0.989897','0.989897']"
+                         ),
+                 ),
+                 array(
+diff --git a/application/views/template/left-sidebar-nav.php b/application/views/template/left-sidebar-nav.php
+index 19aa98f..5e5660c 100644
+--- a/application/views/template/left-sidebar-nav.php
++++ b/application/views/template/left-sidebar-nav.php
+@@ -35,9 +35,9 @@
+                 <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i
+                             class="mdi mdi-book-multiple"></i><span class="hide-menu">Wisata</span></a>
+                     <ul aria-expanded="false" class="collapse">
+-                        <li><a href="javascript:void(0)" id="pariwisata_jenis">Jenis Pariwisata</a></li>
+-                        <li><a href="javascript:void(0)" id="pariwisata_sub_jenis">Sub Jenis Pariwisata</a></li>
+-                        <li><a href="javascript:void(0)" id="pariwisata_content">Konten Pariwisata</a></li>
++                        <li><a href="javascript:void(0)" id="pariwisata_jenis">Jenis Wisata</a></li>
++                        <li><a href="javascript:void(0)" id="pariwisata_sub_jenis">Sub Jenis Wisata</a></li>
++                        <li><a href="javascript:void(0)" id="pariwisata_content">Konten Wisata</a></li>
+                     </ul>
+                 </li>
+ 
+diff --git a/assets/contents/modal/fasilitas_jenis_insert.php b/assets/contents/modal/fasilitas_jenis_insert.php
+index e720c8b..11146c4 100644
+--- a/assets/contents/modal/fasilitas_jenis_insert.php
++++ b/assets/contents/modal/fasilitas_jenis_insert.php
+@@ -2,7 +2,7 @@
+     <div class="modal-dialog">
+         <div class="modal-content">
+             <div class="modal-header">
+-                <h3 class="modal-title">Insert Jenis Pariwisata</h3>
++                <h3 class="modal-title">Insert Jenis Fasilitas</h3>
+                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+             </div>
+             <div class="modal-body form">
+diff --git a/assets/contents/modal/pariwisata_jenis_insert.php b/assets/contents/modal/pariwisata_jenis_insert.php
+index e720c8b..ab1ff8c 100644
+--- a/assets/contents/modal/pariwisata_jenis_insert.php
++++ b/assets/contents/modal/pariwisata_jenis_insert.php
+@@ -2,7 +2,7 @@
+     <div class="modal-dialog">
+         <div class="modal-content">
+             <div class="modal-header">
+-                <h3 class="modal-title">Insert Jenis Pariwisata</h3>
++                <h3 class="modal-title">Insert Jenis Wisata</h3>
+                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+             </div>
+             <div class="modal-body form">
+diff --git a/assets/contents/modal/pariwisata_jenis_update.php b/assets/contents/modal/pariwisata_jenis_update.php
+index 999205f..a655225 100644
+--- a/assets/contents/modal/pariwisata_jenis_update.php
++++ b/assets/contents/modal/pariwisata_jenis_update.php
+@@ -2,7 +2,7 @@
+     <div class="modal-dialog">
+         <div class="modal-content">
+             <div class="modal-header">
+-                <h3 class="modal-title">Edit Sub Jenis Pariwisata</h3>
++                <h3 class="modal-title">Edit Sub Jenis Wisata</h3>
+                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+             </div>
+             <div class="modal-body form">
+diff --git a/assets/contents/modal/pariwisata_konten_insert.php b/assets/contents/modal/pariwisata_konten_insert.php
+index 135947b..32a9a72 100644
+--- a/assets/contents/modal/pariwisata_konten_insert.php
++++ b/assets/contents/modal/pariwisata_konten_insert.php
+@@ -7,7 +7,7 @@
+     <div class="modal-dialog modal-lg">
+         <div class="modal-content">
+             <div class="modal-header">
+-                <h3 class="modal-title">Insert Konten Pariwisata</h3>
++                <h3 class="modal-title">Insert Konten Wisata</h3>
+                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                         aria-hidden="true">&times;</span></button>
+             </div>
+@@ -37,7 +37,7 @@
+                             </div>
+ 
+                             <div class="form-group col-lg-12    ">
+-                                <label>Nama Pariwisata</label>
++                                <label>Nama Konten Wisata</label>
+                                 <input name="ket_main" id="ket_main" class="form-control form-control-line" required>
+                                 <div class="text-danger ket_main"></div>
+                             </div>
+diff --git a/assets/contents/modal/pariwisata_sub_jenis_insert.php b/assets/contents/modal/pariwisata_sub_jenis_insert.php
+index a61cd1c..b081a4c 100644
+--- a/assets/contents/modal/pariwisata_sub_jenis_insert.php
++++ b/assets/contents/modal/pariwisata_sub_jenis_insert.php
+@@ -2,7 +2,7 @@
+     <div class="modal-dialog">
+         <div class="modal-content">
+             <div class="modal-header">
+-                <h3 class="modal-title">Insert Sub Jenis Pariwisata</h3>
++                <h3 class="modal-title">Insert Sub Jenis Wisata</h3>
+                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+             </div>
+             <div class="modal-body form">
+diff --git a/assets/contents/modal/pariwisata_sub_jenis_update.php b/assets/contents/modal/pariwisata_sub_jenis_update.php
+index 7c7795e..041ac45 100644
+--- a/assets/contents/modal/pariwisata_sub_jenis_update.php
++++ b/assets/contents/modal/pariwisata_sub_jenis_update.php
+@@ -2,7 +2,7 @@
+     <div class="modal-dialog">
+         <div class="modal-content">
+             <div class="modal-header">
+-                <h3 class="modal-title">Update Jenis Pariwisata</h3>
++                <h3 class="modal-title">Update Jenis Wisata</h3>
+                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+             </div>
+             <div class="modal-body form">
+diff --git a/assets/contents/table/fasilitas_jenis.php b/assets/contents/table/fasilitas_jenis.php
+index e214fec..623e2e4 100644
+--- a/assets/contents/table/fasilitas_jenis.php
++++ b/assets/contents/table/fasilitas_jenis.php
+@@ -2,7 +2,7 @@
+     <div class="card-body">
+         <button class="btn  waves-effect waves-light btn-primary add_data" style="position: fixed; bottom: 80px;   right: 20px; padding: 18.5px;
+     z-index: 10;" type="button" onclick="insert_modal()"><i class="fa fa-plus"></i></button>
+-        <h4 class="card-title">Jenis Pariwisata</h4>
++        <h4 class="card-title">Jenis Fasilitas</h4>
+         <h6 class="card-subtitle"></h6>
+         <div class="table-responsive m-t-40">
+             <table id="table_fasilitas_jenis" class="table table-bordered table-striped">
+diff --git a/assets/contents/table/pariwisata_jenis.php b/assets/contents/table/pariwisata_jenis.php
+index ce7814b..52d8a64 100644
+--- a/assets/contents/table/pariwisata_jenis.php
++++ b/assets/contents/table/pariwisata_jenis.php
+@@ -2,7 +2,7 @@
+     <div class="card-body">
+         <button class="btn  waves-effect waves-light btn-primary add_data" style="position: fixed; bottom: 80px;   right: 20px; padding: 18.5px;
+     z-index: 10;" type="button" onclick="insert_modal()"><i class="fa fa-plus"></i></button>
+-        <h4 class="card-title">Jenis Pariwisata</h4>
++        <h4 class="card-title">Jenis Wisata</h4>
+         <h6 class="card-subtitle"></h6>
+         <div class="table-responsive m-t-40">
+             <table id="table_pariwisata_jenis" class="table table-bordered table-striped">
+diff --git a/assets/contents/table/pariwisata_konten.php b/assets/contents/table/pariwisata_konten.php
+index 70b1362..bc07347 100644
+--- a/assets/contents/table/pariwisata_konten.php
++++ b/assets/contents/table/pariwisata_konten.php
+@@ -2,7 +2,7 @@
+     <div class="card-body">
+     <button class="btn  waves-effect waves-light btn-primary add_data" style="position: fixed; bottom: 80px;   right: 20px; padding: 18.5px;
+     z-index: 10;" type="button" onclick="insert_modal()"><i class="fa fa-plus"></i></button>
+-        <h4 class="card-title">Konten Pariwisata</h4>
++        <h4 class="card-title">Konten Wisata</h4>
+         <h6 class="card-subtitle"></h6>
+         <div class="table-responsive m-t-40">
+             <table id="table_pariwisata_konten" class="table table-bordered table-striped">
+diff --git a/assets/contents/table/pariwisata_sub_jenis.php b/assets/contents/table/pariwisata_sub_jenis.php
+index 885cfc9..d2713ee 100644
+--- a/assets/contents/table/pariwisata_sub_jenis.php
++++ b/assets/contents/table/pariwisata_sub_jenis.php
+@@ -5,7 +5,7 @@
+         <button class="btn  waves-effect waves-light btn-primary " style="position: fixed; bottom: 80px;   right: 20px; padding: 18.5px;
+     z-index: 10;" type="button" onclick="insert_modal()"><i class="fa fa-plus"></i></button>
+     <!-- <button class="right-side-toggle waves-effect waves-light btn-inverse btn btn-circle btn-sm pull-right m-l-10"><i class="ti-settings text-white"></i></button> -->
+-        <h4 class="card-title">Sub Jenis Pariwisata</h4>
++        <h4 class="card-title">Sub Jenis Wisata</h4>
+         <h6 class="card-subtitle"></h6>
+         <div class="table-responsive m-t-40">
+             <table id="table_pariwisata_sub_jenis" class="display table table-bordered table-striped">
+diff --git a/assets/myjs/table/pariwisata_jenis.js b/assets/myjs/table/pariwisata_jenis.js
+index f3842b8..13fe2d0 100644
+--- a/assets/myjs/table/pariwisata_jenis.js
++++ b/assets/myjs/table/pariwisata_jenis.js
+@@ -58,7 +58,7 @@ function update_modal(id) {
+     ID = id;
+     console.log("ID    " + id);
+     $("#modal_jenis").load("./assets/contents/modal/" + TableX + "_update.php", function () {
+-        $('.modal-title').html("update jenis pariwisata");
++        $('.modal-title').html("update jenis wisata");
+         // $('#form')[0].reset(); // reset form on modals
+         $('.form-group').removeClass('has-error'); // clear error class
+         $('.help-block').empty(); // clear error string
+@@ -144,7 +144,7 @@ function update_modal(id) {
+ 
+ function insert_modal() {
+     $("#modal_jenis").load("./assets/contents/modal/" + TableX + "_update.php", function () {
+-        $('.modal-title').html("insert jenis pariwisata");
++        $('.modal-title').html("insert jenis wisata");
+         // $('#form')[0].reset(); // reset form on modals
+         $('.form-group').removeClass('has-error'); // clear error class
+         $('.help-block').empty(); // clear error string
+diff --git a/assets/myjs/table/pariwisata_konten.js b/assets/myjs/table/pariwisata_konten.js
+index 286ba30..569abb6 100644
+--- a/assets/myjs/table/pariwisata_konten.js
++++ b/assets/myjs/table/pariwisata_konten.js
+@@ -232,10 +232,10 @@ function insert_modal() {
+ 		});
+ 
+ 		if (is_update) {
+-			$('.modal-title').text("Update Konten pariwisata");
++			$('.modal-title').text("Update Konten Wisata");
+ 			get_placehorder(index_update);
+ 		} else {
+-			$('.modal-title').text("Insert Konten pariwisata");
++			$('.modal-title').text("Insert Konten Wisata");
+ 			ket_sub_byId(null);
+ 		}
+ 		// return true;
+-- 
+2.17.1.windows.2
+
