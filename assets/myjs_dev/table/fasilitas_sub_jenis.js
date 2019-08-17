@@ -2,7 +2,7 @@ var TableX;
 var ID;
 function buildTbody(tableX) {
     TableX = tableX;
-    console.log("build TBODY " + tableX);
+    // console.log("build TBODY " + tableX);
     var number = 0;
     $('#table_' + tableX).DataTable({
         "processing": true,
@@ -35,7 +35,7 @@ $('#modal_sub').on('hidden.bs.modal', function (e) {
     if (e.handled !== true) {
         e.handled = true;
         $('#modal_sub div').remove();
-        console.log("modal hidden");
+        // console.log("modal hidden");
     }
 });
 
@@ -46,7 +46,7 @@ function update_modal(id) {
         $('#form')[0].reset(); // reset form on modals
         $('.form-group').removeClass('has-error'); // clear error class
         $('.help-block').empty(); // clear error string
-        console.log("insert_modal");
+        // console.log("insert_modal");
         $('#modal_form_update').modal('show');
         $.when(ket_jenis_get()).then(function (x) {
             get_placehorder(id);
@@ -71,7 +71,7 @@ function insert_modal() {
             $('#form')[0].reset(); // reset form on modals
             $('.form-group').removeClass('has-error'); // clear error class
             $('.help-block').empty(); // clear error string
-            console.log("insert_modal");
+            // console.log("insert_modal");
             $('#modal_form_insert').modal('show');
         });
     });
@@ -80,16 +80,16 @@ function insert_modal() {
 
 function update_save() {
     if ($("select[name='id_jenis']").length == 0) {
-        console.log("div gaada");
+        // console.log("div gaada");
     }
     var id_sub = ID;
     var id_jenis = $("select[name='id_jenis']").val();
     var ket_sub_jenis = $("textarea[name='ket_sub_jenis']").val();
     var json = { id_sub, id_jenis, ket_sub_jenis };
     //Ajax Load data from ajax
-    console.log(ID);
-    console.log(json);
-    console.log(TableX);
+    // console.log(ID);
+    // console.log(json);
+    // console.log(TableX);
     $.ajax({
         url: window.url[TableX],
         type: "PUT",
@@ -97,7 +97,7 @@ function update_save() {
         headers: { "X-HTTP-Method-Override": "PUT" }, // X-HTTP-Method-Override set to PUT
         data: json,
         beforeSend: function () {
-            console.log("before send");
+            // console.log("before send");
             $("#content").append('')
         },
         success: function (dataObject) {
@@ -114,8 +114,8 @@ function update_save() {
                 var data = dataObject.msg_detail.item;
                 $.each(data, function (key, value) {
                     if (value !== null) {
-                        console.log("not null" + key);
-                        console.log(('"' + '.text-danger.' + key + '"') + value);
+                        // console.log("not null" + key);
+                        // console.log(('"' + '.text-danger.' + key + '"') + value);
 
                         $('.' + 'text-danger.' + key).html(value);
                     }
@@ -137,15 +137,15 @@ function insert_save() {
     var ket_sub_jenis = $("textarea[name='ket_sub_jenis']").val();
     var json = { id_jenis, ket_sub_jenis };
     //Ajax Load data from ajax
-    console.log(json);
-    console.log(TableX);
+    // console.log(json);
+    // console.log(TableX);
     $.ajax({
         url: window.url[TableX],
         type: "POST",
         dataType: "JSON",
         data: json,
         beforeSend: function () {
-            console.log("before send");
+            // console.log("before send");
         },
         success: function (dataObject) {
             if (dataObject.msg_main.status == true) {
@@ -161,8 +161,8 @@ function insert_save() {
                 var data = dataObject.msg_detail.item;
                 $.each(data, function (key, value) {
                     if (value !== null) {
-                        console.log("not null" + key);
-                        console.log(('"' + '.text-danger.' + key + '"') + value);
+                        // console.log("not null" + key);
+                        // console.log(('"' + '.text-danger.' + key + '"') + value);
 
                         $('.' + 'text-danger.' + key).html(value);
                     }
@@ -172,7 +172,7 @@ function insert_save() {
 
         },
         complete: function () {
-            console.log("loading");
+            // console.log("loading");
             refreshTableX(TableX, 1);
 
             // swal("Sukses", "Data berhasil di Update", "success");
@@ -184,23 +184,23 @@ function insert_save() {
 function get_placehorder(id) {
     var json = { id };
     var data;
-    console.log("get_placehorder" + id)
+    // console.log("get_placehorder" + id)
     $.ajax({
         url: window.url["data_byId_sub"],
         type: "POST",
         dataType: "JSON",
         data: json,
         beforeSend: function () {
-            console.log("before send get_placehorder");
+            // console.log("before send get_placehorder");
         },
         success: function (dataObject) {
             if (dataObject.msg_main.status == true) {
                 data = dataObject.msg_detail.item;
-                console.log("sukses get Placehorder" + data[0].ket_jenis);
+                // console.log("sukses get Placehorder" + data[0].ket_jenis);
                 // $( "#ket_jenis_select :option[value='2']" ).remove();
                 $("select[name='id_jenis']").append("<option value=" + data[0].id_jenis + " selected >" + data[0].ket_jenis + "</option>");
                 $("textarea[name='ket_sub_jenis']").val(data[0].ket_sub_jenis);
-                console.log(data[0].id_sub);
+                // console.log(data[0].id_sub);
 
                 // console.log("placehorder");
             }
@@ -210,7 +210,7 @@ function get_placehorder(id) {
 
         },
         complete: function () {
-            console.log("loading");
+            // console.log("loading");
             // $("select[name='id_jenis']").hide().html(data).fadeIn('fast');
 
         }
@@ -249,7 +249,7 @@ function delete_byId(id) {
         headers: { "X-HTTP-Method-Override": "DELETE" }, // X-HTTP-Method-Override set to PUT
         data: json,
         beforeSend: function () {
-            console.log("before send");
+            // console.log("before send");
         },
         success: function (dataObject) {
             if (dataObject.msg_main.status == true) {
@@ -261,7 +261,7 @@ function delete_byId(id) {
 
         },
         complete: function () {
-            console.log("loading");
+            // console.log("loading");
             refreshTableX(TableX, 1);
 
 

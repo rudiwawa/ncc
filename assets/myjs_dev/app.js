@@ -1,7 +1,12 @@
 $(document).ready(function () {
 
 	// $('#modal_crop').modal('hide');
-
+	// console.log(token);
+	// console.log();
+	var key = "tp";
+	$.ajaxSetup({
+		headers: { 'eek': $.md5(token+key) }       
+	});
 	// CONFIG URL AP
 	
 	
@@ -94,7 +99,7 @@ function buildTableX(tableX) {
 	$('#crop').off('click');
 
 
-	console.log(tableX + " clicked");
+	// console.log(tableX + " clicked");
 	//load table
 	$("#content").load(window.url["asset_table_location_php"] + tableX + ".php", function () {
 		//load modelnya tableX
@@ -131,23 +136,23 @@ function refreshTableX(tableX, n) {
 }
 
 function ket_jenis_get() {
-	console.log("ket_jenis_get");
+	// console.log("ket_jenis_get");
 	return $.ajax({
 		url: window.url["ket_jenis"],
 		type: "GET",
 		dataType: "JSON",
 		beforeSend: function () {
-			console.log("before send" + "url" + window.url["ket_jenis"]);
+			// console.log("before send" + "url" + window.url["ket_jenis"]);
 		},
 		success: function (dataObject) {
 			if (dataObject.msg_main.status == true) {
 				$('#ket_jenis_select').empty();
-				console.log(dataObject.msg_detail.item);
+				// console.log(dataObject.msg_detail.item);
 				var myjson = dataObject.msg_detail.item;
 				var is_insert = false;
 				$.each(myjson, function (key, value) {
 					$("select[name='id_jenis']").append("<option value=" + value.id_jenis + ">" + value.ket_jenis + "</option>");
-					console.log(value.id_jenis + "  " + value.ket_jenis);
+					// console.log(value.id_jenis + "  " + value.ket_jenis);
 					if (is_insert == false) {
 						window.url["tmp_firstIdjenis"] = value.id_jenis;
 						is_insert = true;
@@ -160,7 +165,7 @@ function ket_jenis_get() {
 
 		},
 		complete: function () {
-			console.log("loading");
+			// console.log("loading");
 
 		}
 	});

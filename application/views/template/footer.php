@@ -8,6 +8,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <?php if($jquery):?>
     <script src='<?=base_url()?>assets/assets/plugins/jquery/jquery.min.js'></script>
+    <script src='<?=base_url()?>assets/myjs/md5.js'>
+    </script>
 <?php endif; ?>
 
 
@@ -53,7 +55,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <script src="<?=base_url()?>assets/assets/plugins/styleswitcher/jQuery.style.switcher.js"></script>
 <?php endif; ?>
 
-
+    <script>var token = "<?php echo $_SESSION['token']?>";</script>
     <script src="<?=base_url()?>assets/assets/plugins/datatables/jquery.dataTables.min.js"></script>
     <script src="<?=base_url()?>assets/myjs/compress.js"></script>
     <?php if($app): ?>

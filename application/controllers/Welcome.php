@@ -21,8 +21,8 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		// $this->load->driver('cache', array('adapter' => 'apc', 'backup' => 'file'));
-		// Variable ready menendakan apakah website masih coming soon atau sudah siap
+		$_SESSION["token"]=md5(uniqid(rand(), true));
+		// echo md5($_SESSION["token"]."tp");
 		$ready = true;
 		if($ready ){
 			// echo $this->cache->clean();
