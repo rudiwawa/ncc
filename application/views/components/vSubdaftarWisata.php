@@ -58,28 +58,31 @@
                         </div>
                         <?php } ?>
                     </div>
+                    
                     <div class="col-8" id="deskripsi">
                         <h4 class="eyebrow mb-3">DESKRIPSI</h4>
                         <div data-spy="scroll" data-target="#list-example" data-offset="0" class="scrollspy-example">
-                        <?php $counter = 0; foreach($subdaftarWisata as $row) { ?>
+                        
+                        <?php $counter = 0; $unique = ""; foreach($subdaftarWisata as $row) { ?>
                             <div id="<?php echo preg_replace('/\s+/', '', strtolower($row['ket_sub_jenis'])); ?>">
                                 <!--Judul-->
                                 <?php $subjenis = $row['ket_sub_jenis'];
-                                $unique = "";
                                  ?>
                                 <h4><?php if ($unique == null) {
                                     $unique = $subjenis;
+                                    echo $unique . '<hr>';
                                     } else {
-                                        if ($unique == $subjenis) {
+                                        if ($unique != $subjenis) {
                                             if ($unique != null) {
                                                 $unique = $subjenis;
+                                                echo $unique . '<hr>';
                                             }
                                         }
                                     }
-                                    echo $unique; ?></h4>
+                                ?></h4>
 
                                 <!--Subjenis-->
-                                <div class="card-deck">
+                                <div class="card-deck" style="width: 50%">
                                     <div class="card">
                                     <?php $datafoto = json_decode($row['img'], true); ?>    
                                         <img class="card-img-top" src="<?php echo base_url(); ?>uploads/<?php echo $datafoto[0]; ?>" alt="<?php echo $row['ket_main']; ?>">
@@ -91,10 +94,10 @@
                                     </div>
                                 </div>
 
-                                <hr>
                             </div>
                             <?php } ?>
                         </div>
+                        
                     </div>
                 </div>
             </div>

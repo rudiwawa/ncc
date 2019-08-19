@@ -86,7 +86,7 @@
                 <div class="card-columns">
                 <?php foreach($wisataLain as $row) { 
                     $galeri = json_decode($row['img'], true); ?>
-                        <div class="card" width="100px" height="100px">
+                        <div class="card">
                             <img class="card-img-top" src="<?php echo base_url(); ?>uploads/<?php echo $galeri[0]; ?>" alt="<?php echo $row['ket_main']; ?>">
                             <div class="card-body">
                             <h5 class="card-title"><a href="<?php echo site_url('CPariwisata/getDetailPariwisata/').$row['id_pariwisata']; ?>"><?php echo $row['ket_main']; ?></a></h5>

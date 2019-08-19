@@ -66,7 +66,7 @@
                                 <p><b><?php echo $row['ket_jenis']; ?></b> yang ada di Kota Malang.</p>
 
                                 <!--Subjenis-->
-                                <div class="card-deck">
+                                <div class="card-deck" style="width: 50%">
                                     <div class="card">
                                         <img class="card-img-top" src="<?php echo base_url(); ?>uploads/<?php echo $row['img']; ?>" alt="<?php echo $row['ket_jenis']; ?>">
                                         <div class="card-body">
