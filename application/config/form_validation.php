@@ -1,5 +1,16 @@
 <?php
-$config = array(
+$re1='([)';	# Any Single Character 1
+$re2="(')";	# Any Single Character 2
+$re3='([+-]?\\d*\\.\\d+)(?![-+0-9\\.])';	# Float 1
+$re4="(')";	# Any Single Character 3
+$re5='(,)';	# Any Single Character 4
+$re6="(')";	# Any Single Character 5
+$re7='([+-]?\\d*\\.\\d+)(?![-+0-9\\.])';	# Float 2
+$re8="(')";	# Any Single Character 6
+$re9='(])';	# Any Single Character 7
+
+
+$config = array( 
         'sub_jenis_insert' => array(
                 array(
                         'field' => 'id_jenis',
@@ -15,12 +26,12 @@ $config = array(
         'jenis_insert' => array(
                 array(
                         'field' => 'ket_jenis',
-                        'label' => 'ket_jenis',
+                        'label' => 'jenis',
                         'rules' => 'required',
                 ),
                 array(
                         'field' => 'img[]',
-                        'label' => 'img[]',
+                        'label' => 'gambar',
                         'rules' => 'required',
                 ),
         ),
@@ -42,7 +53,7 @@ $config = array(
                 // ),
                 array(
                         'field' => 'ket_main',
-                        'label' => 'ket_main',
+                        'label' => 'Nama Pariwisata',
                         'rules' => 'required',
                 ),
                 array(
@@ -52,8 +63,11 @@ $config = array(
                 ),
                 array(
                         'field' => 'loc[]',
-                        'label' => 'loc[]',
-                        'rules' => 'required',
+                        'label' => 'Latitude & Longitude',
+                        'rules' => "required|regex_match[/".$re1.$re2.$re3.$re4.$re5.$re6.$re7.$re8.$re9."/]",
+                        'errors' =>array (
+                                'regex_match' => "Input Latitude & Longitude tidak valid, mohon input dengan benar. Contoh ['0.989897','0.989897']"
+                        ),
                 ),
                 array(
                         'field' => 'deskripsi',
@@ -62,18 +76,19 @@ $config = array(
                 ),
                 array(
                         'field' => 'tlp',
-                        'label' => 'tlp',
-                        'rules' => 'required',
+                        'label' => 'Telepon',
+                        'rules' => 'required|callback_validate_phone|max_length[17]',
+                        
                 ),
                 array(
                         'field' => 'website',
-                        'label' => 'website',
-                        'rules' => 'required',
+                        'label' => 'Website',
+                        'rules' => 'trim|required|regex_match[/[-a-zA-Z0-9@:%_\+.~\#?&\/\/=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~\#?&\/\/=]*)?/]',
                 ),
                 array(
                         'field' => 'email',
-                        'label' => 'email',
-                        'rules' => 'required',
+                        'label' => 'Email',
+                        'rules' => 'required|valid_email',
                 ),
         ),
         'jenis_update' => array(

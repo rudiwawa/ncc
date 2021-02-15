@@ -49,12 +49,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['admin'] = 'admin/crud';
+$route['admin_panel'] = 'welcome';
+// $route['admin'] = 'admin';
 $route['admin/post'] = 'admin/post/berita';
 $route['twibbon'] = 'twibbon/twibbon';
 $route['twibbon/upload'] = 'twibbon/twibbon/upload';
 $route['twibbon/download'] = 'twibbon/twibbon/download';
-$route['default_controller'] = 'welcome';
+$route['default_controller'] = 'cPariwisata';
 $route['pricingfontkb'] = 'defaultController/pricingfontkb';
 $route['pricingf'] = 'defaultController/pricingfontkb';
 

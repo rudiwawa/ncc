@@ -45,11 +45,21 @@ class Fasilitas_konten_model extends CI_Model {
 		return $query->result_array();
 	}
 
+	public function ket_jenis_sub_get()
+    {
+        $query = $this->db->query("SELECT s.id_sub , s.id_jenis , s.ket_sub_jenis, j.ket_jenis
+        FROM fasilitas_sub_jenis s
+        JOIN fasilitas_jenis j
+        ON s.id_jenis = j.id_jenis
+        WHERE s.is_delete = '0' AND j.is_delete = '0'");
+        return $query->result_array();
+    }
+
 	public function update_byId($id,$data){
 		$cek = $this->db->get_where('fasilitas_main', array('id_fasilitas' => $id)); 
 		$count = $cek->num_rows();
 		if ($count === 0) {
-			return "ID not Exist";
+			return "ID not Exist XXX";
 		}
 		else{
 			$this->db->where('id_fasilitas', $id);

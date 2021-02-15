@@ -22,6 +22,27 @@ class Api_konten_pariwisata extends \Restserver\Libraries\REST_Controller
         $this->methods['users_delete']['limit'] = 50; // 50 requests per hour per user/key
         date_default_timezone_set('Asia/Jakarta');
         $this->now = date('Y-m-d H:i:s');
+        $header_auth = $this->input->request_headers();
+        // var_dump($header_auth['eek']);
+        // var_dump(md5($_SESSION["token"]."tp"));
+        if ($header_auth['eek']!=md5($_SESSION["token"]."tp")) {
+            redirect("/notfound");
+        }
+        // var_dump($this->input->request_headers());
+        // var_dump($this->input->is_ajax_request());
+    }
+    public function validate_phone($str)
+    {
+        if(empty($str)){
+            return true;
+        }
+        $re = '/\+?([ -]?\d+)+|\(\d+\)([ -]\d+)/';
+        $x= preg_match_all($re, $str, $matches, PREG_SET_ORDER, 0);
+        if ($x) {
+            return true;
+        }else{
+            return false;
+        }
     }
 
     public function index_get()
@@ -71,20 +92,20 @@ class Api_konten_pariwisata extends \Restserver\Libraries\REST_Controller
         );
     }
 
-    // public function ket_jenis_get()
-    // {
-    //     $data = $this->Pariwisata_konten_model->ket_jenis_get();
-    //     $this->response(
-    //         ['msg_main' => [
-    //             'status' => true,
-    //             'msg' => "get data success!",
-    //         ],
-    //             'msg_detail' => [
-    //                 'item' => $data],
-    //         ]
-    //     );
+    public function ket_jenis_sub_get()
+    {
+        $data = $this->Pariwisata_konten_model->ket_jenis_sub_get();
+        $this->response(
+            ['msg_main' => [
+                'status' => true,
+                'msg' => "get data success!",
+            ],
+                'msg_detail' => [
+                    'item' => $data],
+            ]
+        );
 
-    // }
+    }
     public function get_alamat($alamat, $loc)
     {
         foreach ($alamat as $i => $value) {
@@ -270,7 +291,7 @@ class Api_konten_pariwisata extends \Restserver\Libraries\REST_Controller
         $config['allowed_types'] = 'gif|jpg|png|JPG';
         $config['encrypt_name'] = true;
         $config['max_size'] = 600;
-        $config['max_width'] =1024;
+        $config['max_width'] = 1024;
         $config['max_height'] = 768;
         $this->load->library('upload', $config);
 
@@ -362,7 +383,7 @@ class Api_konten_pariwisata extends \Restserver\Libraries\REST_Controller
                         ]
                     );
                     $imgArr_deleted = !empty($this->post('imgArr_deleted')) ? $this->post('imgArr_deleted') : null;
-                    $this->del_img ( $imgArr_deleted );
+                    $this->del_img($imgArr_deleted);
                 } else {
                     $this->response(
                         ['msg_main' => [
@@ -412,7 +433,8 @@ class Api_konten_pariwisata extends \Restserver\Libraries\REST_Controller
         }
 
     }
-    public function del_img ($data){
+    public function del_img($data)
+    {
         // $data == ARRAY yg berisi kumpulan img yg siap dihapus
         $config['upload_path'] = './uploads/';
         // var_dump($imgArr_tmp);
@@ -426,7 +448,7 @@ class Api_konten_pariwisata extends \Restserver\Libraries\REST_Controller
                 }
             }
             return $is_success;
-        }else{
+        } else {
             return false;
         }
     }
@@ -434,14 +456,14 @@ class Api_konten_pariwisata extends \Restserver\Libraries\REST_Controller
     public function index_delete()
     {
         $id = $this->delete('id');
+        // echo($id);
         $imgArr_tmp = $this->Pariwisata_konten_model->getImg_byId($id);
         $imgArr = json_decode($imgArr_tmp[0]["img"]);
         $query = $this->Pariwisata_konten_model->delete_byId($id);
         // var_dump($query);
         if ($query) {
-            $this->del_img ($imgArr);
+            $this->del_img($imgArr);
 
-            
             $this->response(
                 ['msg_main' => [
                     'status' => true,

@@ -42,6 +42,11 @@ $this->load->view('template/left-sidebar-nav');
     <!-- Page wrapper  -->
     <!-- ============================================================== -->
     <div class="page-wrapper">
+
+    <div class="loading" id="loading_page" style="display: true; z-index :999999; position: absolute; width : 100%; height : 100%; background-color: rgba(0,0,0 , .0005)">
+    <svg class="circular" viewBox="25 25 50 50">
+        <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"></circle> </svg>
+</div>
         <!-- ============================================================== -->
         <!-- Bread crumb and right sidebar toggle -->
         <!-- ============================================================== -->
@@ -50,15 +55,15 @@ $this->load->view('template/left-sidebar-nav');
                 <h3 class="text-themecolor">Dashboard</h3>
             </div>
             <div class="col-md-7 align-self-center">
-                <ol class="breadcrumb">
+                <!-- <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
                     <li class="breadcrumb-item active">Dashboard</li>
-                </ol>
+                </ol> -->
             </div>
             <div>
-                <button
+                <!-- <button
                     class="right-side-toggle waves-effect waves-light btn-inverse btn btn-circle btn-sm pull-right m-l-10"><i
-                        class="ti-settings text-white"></i></button>
+                        class="ti-settings text-white"></i></button> -->
             </div>
         </div>
         <!-- ============================================================== -->
@@ -73,12 +78,14 @@ $this->load->view('template/left-sidebar-nav');
 
             
 
-            <div id="divmodals"></div>
+            <div id="modal_konten"></div>
+            <div id="modal_sub"></div>
+            <div id="modal_jenis"></div>
             <div id="content">
 
             </div>
             <div class="modal fade" id="modal_crop" tabindex="-1" role="dialog" aria-labelledby="modalLabel"
-                aria-hidden="true">
+                aria-hidden="true" data-backdrop="static" data-keyboard="false"  >
                 
                 <div class="modal-dialog modal-lg" >
                     <div class="modal-content">
@@ -89,8 +96,8 @@ $this->load->view('template/left-sidebar-nav');
                             </button>
                         </div>
                         <div class="modal-body">
-                            <div class="img-container">
-                                <img id="image" src="">
+                            <div class="img-container" >
+                                <img id="image" src="" style = "max-width: 100%; max-hight: 240px">
                             </div>
                         </div>
                         <div class="modal-footer">

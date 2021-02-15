@@ -22,6 +22,12 @@ class Api_jenis_pariwisata extends \Restserver\Libraries\REST_Controller
         $this->methods['users_delete']['limit'] = 50; // 50 requests per hour per user/key
         date_default_timezone_set('Asia/Jakarta');
         $this->now = date('Y-m-d H:i:s');
+        $header_auth = $this->input->request_headers();
+        // var_dump($header_auth['eek']);
+        // var_dump(md5($_SESSION["token"]."tp"));
+        if ($header_auth['eek']!=md5($_SESSION["token"]."tp")) {
+            redirect("/notfound");
+        }
     }
 
     public function index_get()
